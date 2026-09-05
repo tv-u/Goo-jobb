@@ -1,55 +1,100 @@
-name: GOO-JOBB Real Job Sync
+name: GOO-JOBB - Automatic Job Sync
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */3 * * *"
-  push:
-    branches:
-      - main
+    - cron: "17 * * * *"
 
 permissions:
   contents: write
 
 concurrency:
   group: goo-jobb-job-sync
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: 22
+          cache: npm
 
-      - name: Fetch real public jobs
-        run: node scripts/sync-static.mjs
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f package.json ]; then
+            npm install --ignore-scripts
+          else
+            echo "No npm dependencies required."
+          fi
+
+      - name: Production sync
+        run: node scripts/production-sync.mjs
 
       - name: Validate generated data
         run: |
-          test -s data/jobs.json
-          node -e "
-          const x=require('./data/jobs.json');
-          if(!Array.isArray(x.jobs)) process.exit(1);
-          console.log('REAL JOBS:',x.total);
-          console.log('SOURCES:',x.sources.length);
-          "
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
 
-      - name: Publish job data
-        run: |
-          cp data/jobs.json public/jobs.json
-          cp data/health.json public/health.json
+          const files = [
+            "public/jobs-search-index.json",
+            "public/jobs-enterprise.json",
+            "public/sync-meta.json"
+          ];
 
-      - name: Commit updated jobs
+          for (const file of files) {
+            if (!fs.existsSync(file)) {
+              throw new Error(`Missing required file: ${file}`);
+            }
+          }
+
+          const index = JSON.parse(
+            fs.readFileSync("public/jobs-search-index.json", "utf8")
+          );
+
+          const jobs = Array.isArray(index)
+            ? index
+            : Array.isArray(index.jobs)
+              ? index.jobs
+              : [];
+
+          if (!jobs.length) {
+            throw new Error("Generated job index contains zero jobs.");
+          }
+
+          console.log(`Validated ${jobs.length} real job records.`);
+          NODE
+
+      - name: Commit generated data
         run: |
           git config user.name "GOO-JOBB Bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/jobs.json public/health.json data/jobs.json data/health.json
-          git diff --cached --quiet || git commit -m "chore: sync real jobs"
-          git push
+
+          git add public scripts .github/workflows/job-sync.yml
+
+          if git diff --cached --quiet; then
+            echo "No data changes detected."
+            exit 0
+          fi
+
+          git commit -m "chore: automatic real job sync"
+
+      - name: Rebase before push
+        run: |
+          git fetch origin main
+          git rebase origin/main
+
+      - name: Push
+        run: |
+          git push origin HEAD:main

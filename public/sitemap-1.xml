@@ -17,6 +17,11 @@
   <priority>0.6</priority>
  </url>
  <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Sales</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
   <loc>https://tv-u.github.io/Goo-jobb/?category=Human%20Resources</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
@@ -62,12 +67,17 @@
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Sales</loc>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Education</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Education</loc>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Toast</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Spire</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -13743,11 +13753,6 @@
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?company=DWWA%20Personalberatung%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Spire</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T19:53:10.465Z",
+  "generatedAt": "2026-09-05T20:05:23.512Z",
   "totalSources": 7,
   "healthySources": 7,
   "failedSources": 0,
@@ -10,7 +10,7 @@
       "ok": true,
       "fetched": 101,
       "accepted": 100,
-      "elapsedMs": 3133
+      "elapsedMs": 507
     },
     {
       "id": "arbeitnow",
@@ -18,7 +18,7 @@
       "ok": true,
       "fetched": 1500,
       "accepted": 1500,
-      "elapsedMs": 9656
+      "elapsedMs": 378
     },
     {
       "id": "jobicy",
@@ -26,7 +26,7 @@
       "ok": true,
       "fetched": 200,
       "accepted": 0,
-      "elapsedMs": 3991
+      "elapsedMs": 106
     },
     {
       "id": "remotive",
@@ -34,7 +34,7 @@
       "ok": true,
       "fetched": 15,
       "accepted": 15,
-      "elapsedMs": 2240
+      "elapsedMs": 137
     },
     {
       "id": "himalayas",
@@ -42,7 +42,7 @@
       "ok": true,
       "fetched": 200,
       "accepted": 0,
-      "elapsedMs": 7943
+      "elapsedMs": 379
     },
     {
       "id": "remotelanders",
@@ -50,7 +50,7 @@
       "ok": true,
       "fetched": 4447,
       "accepted": 4447,
-      "elapsedMs": 20101
+      "elapsedMs": 1261
     },
     {
       "id": "joa",
@@ -58,7 +58,7 @@
       "ok": true,
       "fetched": 1500,
       "accepted": 1500,
-      "elapsedMs": 21098
+      "elapsedMs": 12250
     }
   ]
 }

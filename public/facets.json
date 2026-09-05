@@ -2,23 +2,23 @@
   "categories": [
     {
       "value": "Engineering",
-      "count": 1270
+      "count": 1267
     },
     {
       "value": "Healthcare",
-      "count": 674
+      "count": 675
     },
     {
       "value": "Sales & BD",
       "count": 654
     },
     {
-      "value": "Other",
-      "count": 473
-    },
-    {
       "value": "Uncategorized",
       "count": 467
+    },
+    {
+      "value": "Other",
+      "count": 454
     },
     {
       "value": "Marketing",
@@ -26,11 +26,11 @@
     },
     {
       "value": "Finance",
-      "count": 323
+      "count": 324
     },
     {
       "value": "Operations",
-      "count": 291
+      "count": 290
     },
     {
       "value": "Legal",
@@ -42,7 +42,7 @@
     },
     {
       "value": "Sales",
-      "count": 196
+      "count": 197
     },
     {
       "value": "Product",
@@ -50,7 +50,7 @@
     },
     {
       "value": "Operations & Admin",
-      "count": 149
+      "count": 150
     },
     {
       "value": "Data",
@@ -58,7 +58,7 @@
     },
     {
       "value": "Retail",
-      "count": 126
+      "count": 135
     },
     {
       "value": "Design",
@@ -70,7 +70,7 @@
     },
     {
       "value": "Hospitality",
-      "count": 78
+      "count": 80
     },
     {
       "value": "Remote",
@@ -86,7 +86,7 @@
     },
     {
       "value": "Customer Support",
-      "count": 51
+      "count": 52
     },
     {
       "value": "Software Development",
@@ -101,16 +101,16 @@
       "count": 35
     },
     {
+      "value": "Logistics & Transport",
+      "count": 34
+    },
+    {
       "value": "IT",
       "count": 34
     },
     {
-      "value": "Logistics & Transport",
-      "count": 33
-    },
-    {
       "value": "HR & Recruiting",
-      "count": 32
+      "count": 33
     },
     {
       "value": "Skilled Technician",
@@ -118,7 +118,7 @@
     },
     {
       "value": "Marketing and Communication",
-      "count": 27
+      "count": 28
     },
     {
       "value": "Manufacturing",
@@ -134,10 +134,14 @@
     },
     {
       "value": "Management",
-      "count": 19
+      "count": 20
     },
     {
       "value": "education",
+      "count": 17
+    },
+    {
+      "value": "Tech",
       "count": 17
     },
     {
@@ -146,7 +150,7 @@
     },
     {
       "value": "Commercial",
-      "count": 12
+      "count": 13
     },
     {
       "value": "(7) Business Development",
@@ -173,7 +177,7 @@
       "count": 10
     },
     {
-      "value": "Growth",
+      "value": "Product Management",
       "count": 10
     },
     {
@@ -198,6 +202,14 @@
     },
     {
       "value": "testing",
+      "count": 8
+    },
+    {
+      "value": "Customer Success",
+      "count": 8
+    },
+    {
+      "value": "Growth",
       "count": 8
     },
     {
@@ -229,19 +241,7 @@
       "count": 7
     },
     {
-      "value": "Customer Success",
-      "count": 7
-    },
-    {
-      "value": "Technology & Data",
-      "count": 7
-    },
-    {
       "value": "People",
-      "count": 7
-    },
-    {
-      "value": "Product Management",
       "count": 7
     },
     {
@@ -265,7 +265,7 @@
       "count": 6
     },
     {
-      "value": "Media Management & Delivery",
+      "value": "Tech & Engineering",
       "count": 6
     },
     {
@@ -293,14 +293,6 @@
       "count": 5
     },
     {
-      "value": "GTM",
-      "count": 5
-    },
-    {
-      "value": "Tech",
-      "count": 5
-    },
-    {
       "value": "Revenue",
       "count": 5
     },
@@ -309,11 +301,11 @@
       "count": 5
     },
     {
-      "value": "Field Engineering - Other",
+      "value": "STEM",
       "count": 5
     },
     {
-      "value": "Firefox",
+      "value": "Field Engineering - Other",
       "count": 5
     },
     {
@@ -326,10 +318,6 @@
     },
     {
       "value": "Marketing Manager",
-      "count": 5
-    },
-    {
-      "value": "Tech & Engineering",
       "count": 5
     },
     {
@@ -361,7 +349,15 @@
       "count": 4
     },
     {
+      "value": "GTM",
+      "count": 4
+    },
+    {
       "value": "Software",
+      "count": 4
+    },
+    {
+      "value": "Technology & Data",
       "count": 4
     },
     {
@@ -385,15 +381,15 @@
       "count": 4
     },
     {
+      "value": "Media Management & Delivery",
+      "count": 4
+    },
+    {
+      "value": "Business Consulting",
+      "count": 4
+    },
+    {
       "value": "SME & Growth Business",
-      "count": 4
-    },
-    {
-      "value": "Computer Software",
-      "count": 4
-    },
-    {
-      "value": "Gaming",
       "count": 4
     },
     {
@@ -441,11 +437,11 @@
       "count": 3
     },
     {
-      "value": "Innovation / Platform / Security",
+      "value": "Revenue Operations",
       "count": 3
     },
     {
-      "value": "STEM",
+      "value": "Innovation / Platform / Security",
       "count": 3
     },
     {
@@ -461,19 +457,11 @@
       "count": 3
     },
     {
+      "value": "Compliance",
+      "count": 3
+    },
+    {
       "value": "Go To Market",
-      "count": 3
-    },
-    {
-      "value": "Product & Tech",
-      "count": 3
-    },
-    {
-      "value": "All Cost Center",
-      "count": 3
-    },
-    {
-      "value": "Portfolio Company",
       "count": 3
     },
     {
@@ -481,7 +469,7 @@
       "count": 3
     },
     {
-      "value": "International",
+      "value": "Computer Software",
       "count": 3
     },
     {
@@ -490,10 +478,6 @@
     },
     {
       "value": "Solutions Architecture",
-      "count": 3
-    },
-    {
-      "value": "Business Consulting",
       "count": 3
     },
     {
@@ -605,6 +589,10 @@
       "count": 2
     },
     {
+      "value": "Product Engineering",
+      "count": 2
+    },
+    {
       "value": "Multi‑vehicle task allocation",
       "count": 2
     },
@@ -629,6 +617,14 @@
       "count": 2
     },
     {
+      "value": "Product & Development",
+      "count": 2
+    },
+    {
+      "value": "Account Executive",
+      "count": 2
+    },
+    {
       "value": "Offboarding",
       "count": 2
     },
@@ -638,14 +634,6 @@
     },
     {
       "value": "People & Talent",
-      "count": 2
-    },
-    {
-      "value": "Enterprise Sales",
-      "count": 2
-    },
-    {
-      "value": "Apps",
       "count": 2
     },
     {
@@ -665,15 +653,15 @@
       "count": 2
     },
     {
-      "value": "Compliance",
-      "count": 2
-    },
-    {
       "value": "Strategic Marketing",
       "count": 2
     },
     {
       "value": "Graduate Programs",
+      "count": 2
+    },
+    {
+      "value": "International",
       "count": 2
     },
     {
@@ -694,6 +682,10 @@
     },
     {
       "value": "Compensation and Benefits",
+      "count": 2
+    },
+    {
+      "value": "Firefox",
       "count": 2
     },
     {
@@ -777,6 +769,10 @@
       "count": 2
     },
     {
+      "value": "Portfolio Company",
+      "count": 2
+    },
+    {
       "value": "Kanzlei",
       "count": 2
     },
@@ -813,15 +809,15 @@
       "count": 1
     },
     {
+      "value": "Writing",
+      "count": 1
+    },
+    {
       "value": "non tech",
       "count": 1
     },
     {
       "value": "math",
-      "count": 1
-    },
-    {
-      "value": "Writing",
       "count": 1
     },
     {
@@ -942,10 +938,6 @@
     },
     {
       "value": "Einkauf",
-      "count": 1
-    },
-    {
-      "value": "Revenue Operations",
       "count": 1
     },
     {
@@ -1101,10 +1093,6 @@
       "count": 1
     },
     {
-      "value": "Product Engineering",
-      "count": 1
-    },
-    {
       "value": "Qualität",
       "count": 1
     },
@@ -1257,6 +1245,70 @@
       "count": 1
     },
     {
+      "value": "Anyone AI Internal Team",
+      "count": 1
+    },
+    {
+      "value": "NordVPN",
+      "count": 1
+    },
+    {
+      "value": "R&TECH",
+      "count": 1
+    },
+    {
+      "value": "BIOMEDICAL",
+      "count": 1
+    },
+    {
+      "value": "Ressources humaines",
+      "count": 1
+    },
+    {
+      "value": "International Office",
+      "count": 1
+    },
+    {
+      "value": "Trasys International",
+      "count": 1
+    },
+    {
+      "value": "Human Resources",
+      "count": 1
+    },
+    {
+      "value": "AI Ops",
+      "count": 1
+    },
+    {
+      "value": "R&D Paris",
+      "count": 1
+    },
+    {
+      "value": "Tech Services EMEA",
+      "count": 1
+    },
+    {
+      "value": "SME France",
+      "count": 1
+    },
+    {
+      "value": "International Marketing",
+      "count": 1
+    },
+    {
+      "value": "GTM Growth",
+      "count": 1
+    },
+    {
+      "value": "Finance Risk & Compliance",
+      "count": 1
+    },
+    {
+      "value": "Product Security",
+      "count": 1
+    },
+    {
       "value": "PS Field Delivery",
       "count": 1
     },
@@ -1273,67 +1325,11 @@
       "count": 1
     },
     {
+      "value": "Product & Tech",
+      "count": 1
+    },
+    {
       "value": "Talent Intelligence",
-      "count": 1
-    },
-    {
-      "value": "Investment Research",
-      "count": 1
-    },
-    {
-      "value": "Engineering Application Platform",
-      "count": 1
-    },
-    {
-      "value": "Engineering Cloud Platform",
-      "count": 1
-    },
-    {
-      "value": "Transformation Consulting",
-      "count": 1
-    },
-    {
-      "value": "Delivery Consulting",
-      "count": 1
-    },
-    {
-      "value": "Engineering II",
-      "count": 1
-    },
-    {
-      "value": "Sales & Business Development",
-      "count": 1
-    },
-    {
-      "value": "Kasten Sales 1009429",
-      "count": 1
-    },
-    {
-      "value": "Public Cloud Solutions 1008239",
-      "count": 1
-    },
-    {
-      "value": "WW Customer Success 1009886",
-      "count": 1
-    },
-    {
-      "value": "EU Sales",
-      "count": 1
-    },
-    {
-      "value": "NFL London",
-      "count": 1
-    },
-    {
-      "value": "Solutions Engineering",
-      "count": 1
-    },
-    {
-      "value": "Client Management",
-      "count": 1
-    },
-    {
-      "value": "Engineering & Data",
       "count": 1
     },
     {
@@ -1378,10 +1374,6 @@
     },
     {
       "value": "Werkstudenten",
-      "count": 1
-    },
-    {
-      "value": "Product & Development",
       "count": 1
     },
     {
@@ -1905,6 +1897,10 @@
       "count": 1
     },
     {
+      "value": "Enterprise Sales",
+      "count": 1
+    },
+    {
       "value": "AI & Automatisierung",
       "count": 1
     },
@@ -2116,7 +2112,7 @@
     },
     {
       "value": "Munich",
-      "count": 97
+      "count": 98
     },
     {
       "value": "Worldwide / Unspecified",
@@ -2124,19 +2120,19 @@
     },
     {
       "value": "London",
-      "count": 71
-    },
-    {
-      "value": "Paris",
-      "count": 65
+      "count": 70
     },
     {
       "value": "Hamburg",
-      "count": 64
+      "count": 65
     },
     {
       "value": "München",
       "count": 62
+    },
+    {
+      "value": "Paris",
+      "count": 51
     },
     {
       "value": "Singapore",
@@ -2164,7 +2160,7 @@
     },
     {
       "value": "France",
-      "count": 23
+      "count": 24
     },
     {
       "value": "Sydney",
@@ -2176,6 +2172,10 @@
     },
     {
       "value": "Germany",
+      "count": 21
+    },
+    {
+      "value": "Paris, France",
       "count": 21
     },
     {
@@ -2191,15 +2191,15 @@
       "count": 18
     },
     {
-      "value": "Remote",
-      "count": 17
-    },
-    {
       "value": "Tokyo, Japan",
       "count": 14
     },
     {
       "value": "Berlin, Germany",
+      "count": 14
+    },
+    {
+      "value": "Remote",
       "count": 14
     },
     {
@@ -2239,7 +2239,7 @@
       "count": 10
     },
     {
-      "value": "Paris, France",
+      "value": "Remote job",
       "count": 10
     },
     {
@@ -2252,10 +2252,6 @@
     },
     {
       "value": "Tokyo, Tokyo, Japan",
-      "count": 9
-    },
-    {
-      "value": "Remote job",
       "count": 9
     },
     {
@@ -2439,6 +2435,10 @@
       "count": 5
     },
     {
+      "value": "Bordeaux",
+      "count": 5
+    },
+    {
       "value": "Nürnberg",
       "count": 5
     },
@@ -2615,11 +2615,11 @@
       "count": 4
     },
     {
-      "value": "UK - London",
+      "value": "Paris, Paris",
       "count": 4
     },
     {
-      "value": "Paris, Remote",
+      "value": "UK - London",
       "count": 4
     },
     {
@@ -2884,6 +2884,10 @@
     },
     {
       "value": "Manchester",
+      "count": 3
+    },
+    {
+      "value": "Paris, Île-de-France, France",
       "count": 3
     },
     {
@@ -3535,10 +3539,6 @@
       "count": 2
     },
     {
-      "value": "Office Paris",
-      "count": 2
-    },
-    {
       "value": "Kaarst, Nordrhein-Westfalen, Deutschland",
       "count": 2
     },
@@ -3556,10 +3556,6 @@
     },
     {
       "value": "Düsseldorf, North Rhine-Westphalia",
-      "count": 2
-    },
-    {
-      "value": "Potsdam, Brandenburg",
       "count": 2
     },
     {
@@ -6627,10 +6623,6 @@
       "count": 1
     },
     {
-      "value": "Paris, Paris",
-      "count": 1
-    },
-    {
       "value": "Grenoble",
       "count": 1
     },
@@ -6691,6 +6683,10 @@
       "count": 1
     },
     {
+      "value": "Leeds",
+      "count": 1
+    },
+    {
       "value": "Manchester, Manchester, United Kingdom",
       "count": 1
     },
@@ -6723,23 +6719,15 @@
       "count": 1
     },
     {
+      "value": "Rouen, Normandie, France",
+      "count": 1
+    },
+    {
+      "value": "Europe, Paris",
+      "count": 1
+    },
+    {
       "value": "Remote-Germany, Portugal, Poland, Czech Republic",
-      "count": 1
-    },
-    {
-      "value": "Besançon, Bourgogne-Franche-Comté, France",
-      "count": 1
-    },
-    {
-      "value": "Strasbourg, France",
-      "count": 1
-    },
-    {
-      "value": "Paris, Île-de-France, France",
-      "count": 1
-    },
-    {
-      "value": "Remote, France",
       "count": 1
     },
     {
@@ -7263,6 +7251,10 @@
       "count": 1
     },
     {
+      "value": "Potsdam, Brandenburg",
+      "count": 1
+    },
+    {
       "value": "Kassel, Hesse",
       "count": 1
     },
@@ -7685,7 +7677,7 @@
       "count": 15
     },
     {
-      "value": "wppmedia",
+      "value": "Anyone Ai",
       "count": 15
     },
     {
@@ -7833,11 +7825,11 @@
       "count": 12
     },
     {
-      "value": "Anyone Ai",
+      "value": "Swile",
       "count": 12
     },
     {
-      "value": "Swile",
+      "value": "mirakllabs",
       "count": 12
     },
     {
@@ -7961,6 +7953,14 @@
       "count": 10
     },
     {
+      "value": "wppmedia",
+      "count": 10
+    },
+    {
+      "value": "capco",
+      "count": 10
+    },
+    {
       "value": "thermofisher",
       "count": 9
     },
@@ -8045,7 +8045,7 @@
       "count": 9
     },
     {
-      "value": "Voodoo",
+      "value": "Brevo",
       "count": 9
     },
     {
@@ -8281,6 +8281,10 @@
       "count": 7
     },
     {
+      "value": "Flock",
+      "count": 7
+    },
+    {
       "value": "databricks",
       "count": 7
     },
@@ -8290,10 +8294,6 @@
     },
     {
       "value": "ANGEHEUERT GmbH",
-      "count": 7
-    },
-    {
-      "value": "capco",
       "count": 7
     },
     {
@@ -8505,19 +8505,15 @@
       "count": 6
     },
     {
-      "value": "Flock",
-      "count": 6
-    },
-    {
       "value": "Lendable",
       "count": 6
     },
     {
-      "value": "Airwallex",
+      "value": "hellofresh",
       "count": 6
     },
     {
-      "value": "Dedale Intelligence",
+      "value": "Airwallex",
       "count": 6
     },
     {
@@ -8530,10 +8526,6 @@
     },
     {
       "value": "Lionflence",
-      "count": 6
-    },
-    {
-      "value": "Teampicnic",
       "count": 6
     },
     {
@@ -8769,10 +8761,6 @@
       "count": 5
     },
     {
-      "value": "Valiantys",
-      "count": 5
-    },
-    {
       "value": "Adswerve, Inc",
       "count": 5
     },
@@ -8817,7 +8805,7 @@
       "count": 5
     },
     {
-      "value": "mozilla",
+      "value": "Teampicnic",
       "count": 5
     },
     {
@@ -9193,6 +9181,10 @@
       "count": 4
     },
     {
+      "value": "Vivenu",
+      "count": 4
+    },
+    {
       "value": "Element84",
       "count": 4
     },
@@ -9241,6 +9233,10 @@
       "count": 4
     },
     {
+      "value": "mewssystems",
+      "count": 4
+    },
+    {
       "value": "Writer",
       "count": 4
     },
@@ -9262,14 +9258,6 @@
     },
     {
       "value": "OpenAI",
-      "count": 4
-    },
-    {
-      "value": "360Learning",
-      "count": 4
-    },
-    {
-      "value": "Quince",
       "count": 4
     },
     {
@@ -9781,6 +9769,10 @@
       "count": 3
     },
     {
+      "value": "Valiantys",
+      "count": 3
+    },
+    {
       "value": "Innovativesol 2",
       "count": 3
     },
@@ -9878,10 +9870,6 @@
     },
     {
       "value": "Brilliant",
-      "count": 3
-    },
-    {
-      "value": "Vivenu",
       "count": 3
     },
     {
@@ -9989,10 +9977,6 @@
       "count": 3
     },
     {
-      "value": "intercom",
-      "count": 3
-    },
-    {
       "value": "diligentcorporation",
       "count": 3
     },
@@ -10005,18 +9989,6 @@
       "count": 3
     },
     {
-      "value": "Kong",
-      "count": 3
-    },
-    {
-      "value": "atlantic.vc",
-      "count": 3
-    },
-    {
-      "value": "veeamsoftware",
-      "count": 3
-    },
-    {
       "value": "SoSafe",
       "count": 3
     },
@@ -10025,15 +9997,15 @@
       "count": 3
     },
     {
+      "value": "Quince",
+      "count": 3
+    },
+    {
       "value": "WerraEnergie GmbH",
       "count": 3
     },
     {
       "value": "Tetrascience",
-      "count": 3
-    },
-    {
-      "value": "hellofresh",
       "count": 3
     },
     {
@@ -11237,7 +11209,7 @@
       "count": 2
     },
     {
-      "value": "mewssystems",
+      "value": "sonymusicentertainment",
       "count": 2
     },
     {
@@ -11261,6 +11233,10 @@
       "count": 2
     },
     {
+      "value": "intercom",
+      "count": 2
+    },
+    {
       "value": "pmX Group",
       "count": 2
     },
@@ -11274,10 +11250,6 @@
     },
     {
       "value": "Digicert",
-      "count": 2
-    },
-    {
-      "value": "Samsara",
       "count": 2
     },
     {
@@ -11309,19 +11281,19 @@
       "count": 2
     },
     {
-      "value": "purestorage",
+      "value": "Owkin",
       "count": 2
     },
     {
-      "value": "Paradox",
+      "value": "Lemonway",
       "count": 2
     },
     {
-      "value": "Kpler",
+      "value": "Scality",
       "count": 2
     },
     {
-      "value": "Vestiairecollective",
+      "value": "Dedale Intelligence",
       "count": 2
     },
     {
@@ -11426,6 +11398,10 @@
     },
     {
       "value": "FactFinder",
+      "count": 2
+    },
+    {
+      "value": "mozilla",
       "count": 2
     },
     {
@@ -11578,6 +11554,10 @@
     },
     {
       "value": "Xylem",
+      "count": 2
+    },
+    {
+      "value": "atlantic.vc",
       "count": 2
     },
     {
@@ -14293,6 +14273,10 @@
       "count": 1
     },
     {
+      "value": "Unio Digital",
+      "count": 1
+    },
+    {
       "value": "Neumora",
       "count": 1
     },
@@ -14306,10 +14290,6 @@
     },
     {
       "value": "Altarum",
-      "count": 1
-    },
-    {
-      "value": "Unio Digital",
       "count": 1
     },
     {
@@ -14637,10 +14617,6 @@
       "count": 1
     },
     {
-      "value": "sonymusicentertainment",
-      "count": 1
-    },
-    {
       "value": "Pacvue",
       "count": 1
     },
@@ -14833,6 +14809,10 @@
       "count": 1
     },
     {
+      "value": "Samsara",
+      "count": 1
+    },
+    {
       "value": "Hims And Hers",
       "count": 1
     },
@@ -14877,6 +14857,42 @@
       "count": 1
     },
     {
+      "value": "purestorage",
+      "count": 1
+    },
+    {
+      "value": "Nord Security",
+      "count": 1
+    },
+    {
+      "value": "AMI PARIS",
+      "count": 1
+    },
+    {
+      "value": "MSF International",
+      "count": 1
+    },
+    {
+      "value": "KEYES",
+      "count": 1
+    },
+    {
+      "value": "Genetec Inc",
+      "count": 1
+    },
+    {
+      "value": "fanaticscollectibles",
+      "count": 1
+    },
+    {
+      "value": "figma",
+      "count": 1
+    },
+    {
+      "value": "wizinc",
+      "count": 1
+    },
+    {
       "value": "remotereferralboardinternaluseonly",
       "count": 1
     },
@@ -14886,30 +14902,6 @@
     },
     {
       "value": "Lexroom",
-      "count": 1
-    },
-    {
-      "value": "Heidi",
-      "count": 1
-    },
-    {
-      "value": "European Dynamics",
-      "count": 1
-    },
-    {
-      "value": "tanium",
-      "count": 1
-    },
-    {
-      "value": "nflcareers",
-      "count": 1
-    },
-    {
-      "value": "Notabene",
-      "count": 1
-    },
-    {
-      "value": "Jellyfish",
       "count": 1
     },
     {
@@ -15494,6 +15486,14 @@
     },
     {
       "value": "cluetec GmbH",
+      "count": 1
+    },
+    {
+      "value": "adlicious",
+      "count": 1
+    },
+    {
+      "value": "Bifrost Defence",
       "count": 1
     },
     {
@@ -16352,23 +16352,23 @@
   "experience": [
     {
       "value": "Other",
-      "count": 6559
+      "count": 6555
     },
     {
       "value": "Manager",
-      "count": 232
+      "count": 235
     },
     {
       "value": "Entry",
       "count": 158
     },
     {
-      "value": "Mid-Senior Level",
+      "value": "Senior",
       "count": 132
     },
     {
-      "value": "Senior",
-      "count": 131
+      "value": "Mid-Senior Level",
+      "count": 132
     },
     {
       "value": "Lead",

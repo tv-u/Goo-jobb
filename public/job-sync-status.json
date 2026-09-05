@@ -1,0 +1,386 @@
+{
+  "version": "5.0",
+  "generated_at": "2026-09-05T17:02:20.469Z",
+  "duration_ms": 30976,
+  "source_count": 36,
+  "successful_sources": 15,
+  "failed_sources": 21,
+  "total_unique_jobs": 3498,
+  "categories": {
+    "sales": 42,
+    "engineering": 3005,
+    "design": 173,
+    "marketing": 17,
+    "operations": 6,
+    "finance": 10,
+    "other": 62,
+    "healthcare": 6,
+    "data-ai": 165,
+    "product": 2,
+    "customer-support": 8,
+    "education": 1,
+    "cybersecurity": 1
+  },
+  "sources": [
+    {
+      "id": "arbeitnow",
+      "name": "Arbeitnow",
+      "type": "json",
+      "url": "https://www.arbeitnow.com/api/job-board-api",
+      "ok": true,
+      "jobs": 250,
+      "latency_ms": 4031,
+      "error": null
+    },
+    {
+      "id": "jobicy",
+      "name": "Jobicy",
+      "type": "json",
+      "url": "https://jobicy.com/api/v2/remote-jobs?count=200",
+      "ok": true,
+      "jobs": 200,
+      "latency_ms": 3484,
+      "error": null
+    },
+    {
+      "id": "remoteok",
+      "name": "Remote OK",
+      "type": "json",
+      "url": "https://remoteok.com/api",
+      "ok": true,
+      "jobs": 100,
+      "latency_ms": 3424,
+      "error": null
+    },
+    {
+      "id": "remotive",
+      "name": "Remotive",
+      "type": "json",
+      "url": "https://remotive.com/api/remote-jobs",
+      "ok": true,
+      "jobs": 15,
+      "latency_ms": 2201,
+      "error": null
+    },
+    {
+      "id": "startupjobs",
+      "name": "Startup Jobs",
+      "type": "rss",
+      "url": "https://startup.jobs/feed",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 2022,
+      "error": "HTTP 403"
+    },
+    {
+      "id": "weworkremotely",
+      "name": "We Work Remotely",
+      "type": "rss",
+      "url": "https://weworkremotely.com/remote-jobs.rss",
+      "ok": true,
+      "jobs": 91,
+      "latency_ms": 4030,
+      "error": null
+    },
+    {
+      "id": "workingnomads",
+      "name": "Working Nomads",
+      "type": "rss",
+      "url": "https://www.workingnomads.com/remote-jobs.rss",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 3355,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "remotejobs",
+      "name": "RemoteJobs.org",
+      "type": "rss",
+      "url": "https://remotejobs.org/feed",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 2309,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "nodesk",
+      "name": "NoDesk",
+      "type": "rss",
+      "url": "https://nodesk.co/remote-jobs/feed/",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 2884,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "remoteleads",
+      "name": "Remote Leads",
+      "type": "rss",
+      "url": "https://remoteleads.io/feed/",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 3628,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "dailyremote",
+      "name": "DailyRemote",
+      "type": "rss",
+      "url": "https://dailyremote.com/remote-jobs.rss",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 1570,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "jobspresso",
+      "name": "Jobspresso",
+      "type": "rss",
+      "url": "https://jobspresso.co/feed/",
+      "ok": true,
+      "jobs": 0,
+      "latency_ms": 1407,
+      "error": null
+    },
+    {
+      "id": "remote4me",
+      "name": "Remote4Me",
+      "type": "rss",
+      "url": "https://remote4me.com/feed/",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 1657,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "remotees",
+      "name": "Remotees",
+      "type": "rss",
+      "url": "https://remotees.com/feed/",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 2804,
+      "error": "HTTP 403"
+    },
+    {
+      "id": "jobboardsearch",
+      "name": "Job Board Search",
+      "type": "rss",
+      "url": "https://jobboardsearch.com/feed/",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 2039,
+      "error": "HTTP 403"
+    },
+    {
+      "id": "uk-find-job",
+      "name": "UK Find a Job",
+      "type": "rss",
+      "url": "https://findajob.dwp.gov.uk/search/rss",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 2086,
+      "error": "HTTP 503"
+    },
+    {
+      "id": "gh-stripe",
+      "name": "Stripe",
+      "type": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs?content=true",
+      "ok": true,
+      "jobs": 615,
+      "latency_ms": 5938,
+      "error": null
+    },
+    {
+      "id": "gh-anthropic",
+      "name": "Anthropic",
+      "type": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true",
+      "ok": true,
+      "jobs": 594,
+      "latency_ms": 7332,
+      "error": null
+    },
+    {
+      "id": "gh-databricks",
+      "name": "Databricks",
+      "type": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true",
+      "ok": true,
+      "jobs": 870,
+      "latency_ms": 6792,
+      "error": null
+    },
+    {
+      "id": "gh-figma",
+      "name": "Figma",
+      "type": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/figma/jobs?content=true",
+      "ok": true,
+      "jobs": 157,
+      "latency_ms": 4316,
+      "error": null
+    },
+    {
+      "id": "gh-rippling",
+      "name": "Rippling",
+      "type": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/rippling/jobs?content=true",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 481,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "gh-carta",
+      "name": "Carta",
+      "type": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/carta/jobs?content=true",
+      "ok": true,
+      "jobs": 61,
+      "latency_ms": 604,
+      "error": null
+    },
+    {
+      "id": "gh-coursera",
+      "name": "Coursera",
+      "type": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/coursera/jobs?content=true",
+      "ok": true,
+      "jobs": 22,
+      "latency_ms": 534,
+      "error": null
+    },
+    {
+      "id": "gh-github",
+      "name": "GitHub",
+      "type": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/github/jobs?content=true",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 480,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "gh-cloudflare",
+      "name": "Cloudflare",
+      "type": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs?content=true",
+      "ok": true,
+      "jobs": 331,
+      "latency_ms": 2209,
+      "error": null
+    },
+    {
+      "id": "gh-coinbase",
+      "name": "Coinbase",
+      "type": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/coinbase/jobs?content=true",
+      "ok": true,
+      "jobs": 192,
+      "latency_ms": 966,
+      "error": null
+    },
+    {
+      "id": "lever-netflix",
+      "name": "Netflix",
+      "type": "lever",
+      "url": "https://api.lever.co/v0/postings/netflix?mode=json",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 2635,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "lever-palantir",
+      "name": "Palantir",
+      "type": "lever",
+      "url": "https://api.lever.co/v0/postings/palantir?mode=json",
+      "ok": true,
+      "jobs": 0,
+      "latency_ms": 16856,
+      "error": null
+    },
+    {
+      "id": "lever-shopify",
+      "name": "Shopify",
+      "type": "lever",
+      "url": "https://api.lever.co/v0/postings/shopify?mode=json",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 2628,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "lever-affirm",
+      "name": "Affirm",
+      "type": "lever",
+      "url": "https://api.lever.co/v0/postings/affirm?mode=json",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 3022,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "lever-lyft",
+      "name": "Lyft",
+      "type": "lever",
+      "url": "https://api.lever.co/v0/postings/lyft?mode=json",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 2052,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "lever-uber",
+      "name": "Uber",
+      "type": "lever",
+      "url": "https://api.lever.co/v0/postings/uber?mode=json",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 439,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "lever-lattice",
+      "name": "Lattice",
+      "type": "lever",
+      "url": "https://api.lever.co/v0/postings/lattice?mode=json",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 2051,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "lever-vanta",
+      "name": "Vanta",
+      "type": "lever",
+      "url": "https://api.lever.co/v0/postings/vanta?mode=json",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 2050,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "lever-verkada",
+      "name": "Verkada",
+      "type": "lever",
+      "url": "https://api.lever.co/v0/postings/verkada?mode=json",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 2029,
+      "error": "HTTP 404"
+    },
+    {
+      "id": "lever-brex",
+      "name": "Brex",
+      "type": "lever",
+      "url": "https://api.lever.co/v0/postings/brex?mode=json",
+      "ok": false,
+      "jobs": 0,
+      "latency_ms": 2036,
+      "error": "HTTP 404"
+    }
+  ]
+}

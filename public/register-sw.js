@@ -1,1 +1,7 @@
-if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(()=>{});
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js", {
+      scope: "./"
+    }).catch(console.error);
+  });
+}

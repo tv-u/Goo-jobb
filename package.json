@@ -1,0 +1,15 @@
+{
+  "name": "goo-jobb",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev public --compatibility-date=2026-09-05",
+    "deploy": "wrangler pages deploy public",
+    "db:init": "wrangler d1 execute u-tv --remote --file=schema.sql",
+    "sync": "node scripts/sync.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

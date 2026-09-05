@@ -1,0 +1,23 @@
+name = "goo-jobb"
+compatibility_date = "2026-09-05"
+pages_build_output_dir = "public"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "u-tv"
+database_id = "16127660-ca97-4972-a7d1-97e9620b1271"
+
+[[kv_namespaces]]
+binding = "MY_KV"
+id = "de9fa6e9800a45e9a5d5ad8c24cbe3fd"
+
+[vars]
+APP_NAME = "GOO-JOBB"
+APP_URL = "https://goo-jobb.pages.dev"
+CACHE_VERSION = "v3"
+
+[ai]
+binding = "AI"
+
+[triggers]
+crons = ["0 */2 * * *"]

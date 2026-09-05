@@ -1,0 +1,25 @@
+export const SOURCES=[
+{id:"arbeitnow",name:"Arbeitnow",type:"json",endpoint:"https://www.arbeitnow.com/api/job-board-api"},
+{id:"jobicy",name:"Jobicy",type:"json",endpoint:"https://jobicy.com/api/v2/remote-jobs"},
+{id:"startupjobs",name:"Startup Jobs",type:"rss",endpoint:"https://startup.jobs/feed"},
+{id:"weworkremotely",name:"We Work Remotely",type:"rss",endpoint:"https://weworkremotely.com/remote-jobs.rss"},
+{id:"remoteok",name:"Remote OK",type:"json",endpoint:"https://remoteok.com/api"},
+{id:"remotive",name:"Remotive",type:"json",endpoint:"https://remotive.com/api/remote-jobs"},
+{id:"himalayas",name:"Himalayas",type:"json",endpoint:"https://himalayas.app/jobs/api"},
+{id:"remotejobs",name:"Remote Jobs",type:"rss",endpoint:"https://remotejobs.org/rss"},
+{id:"workingnomads",name:"Working Nomads",type:"rss",endpoint:"https://www.workingnomads.com/jobs/rss"},
+{id:"nodesk",name:"NoDesk",type:"rss",endpoint:"https://nodesk.co/remote-jobs/rss/"},
+{id:"remoteleads",name:"Remote Leads",type:"rss",endpoint:"https://remoteleads.io/feed"},
+{id:"dailyremote",name:"Daily Remote",type:"rss",endpoint:"https://dailyremote.com/remote-jobs.rss"},
+{id:"jobspresso",name:"Jobspresso",type:"rss",endpoint:"https://jobspresso.co/feed/"},
+{id:"remote4me",name:"Remote4Me",type:"rss",endpoint:"https://remote4me.com/feed/"},
+{id:"remotees",name:"Remotees",type:"rss",endpoint:"https://remotees.com/feed/"},
+{id:"jobboardsearch",name:"Job Board Search",type:"rss",endpoint:"https://jobboardsearch.com/feed"},
+{id:"flexjobs-public",name:"FlexJobs Public Feed",type:"rss",endpoint:"https://www.flexjobs.com/blog/feed/"},
+{id:"govuk",name:"UK Government Jobs",type:"rss",endpoint:"https://www.civilservicejobs.service.gov.uk/csr/index.cgi?SID=c.union_jobs.search&action=search&jobtype=all&sort=closingdate&order=asc&search=1&search_all=1&search=1&format=rss"},
+{id:"eures",name:"EURES",type:"rss",endpoint:"https://eures.europa.eu/index_en"},
+{id:"greenhouse-demo",name:"Greenhouse Public Boards",type:"ats-template",endpoint:"https://boards-api.greenhouse.io/v1/boards/{board}/jobs"},
+{id:"ashby-demo",name:"Ashby Public Postings",type:"ats-template",endpoint:"https://api.ashbyhq.com/posting-api/job-board/{board}"},
+{id:"lever-demo",name:"Lever Public Postings",type:"ats-template",endpoint:"https://api.lever.co/v0/postings/{company}?mode=json"}
+];
+export function enabledSources(){return SOURCES.filter(x=>!x.id.endsWith("-demo")&&x.type!=="ats-template")}

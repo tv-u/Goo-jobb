@@ -1,0 +1,11 @@
+{
+  "name": "GOO-JOBB — Global Real Jobs",
+  "short_name": "GOO-JOBB",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050507",
+  "theme_color": "#ff0080",
+  "description": "Search and discover real jobs from public job feeds and ATS sources.",
+  "icons": [{"src":"/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

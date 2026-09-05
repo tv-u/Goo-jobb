@@ -1,0 +1,1 @@
+export async function sourceHealth(db){return (await db.prepare("SELECT id,name,status,last_sync_at,last_success_at,last_error,jobs_seen,jobs_added,jobs_updated,latency_ms FROM sources ORDER BY name").all()).results||[]}

@@ -1,0 +1,2 @@
+import {json} from "../lib/utils.js";
+export async function onRequestGet({env,request}){const p=new URL(request.url).searchParams;const q=(p.get("q")||"").slice(0,100);const rows=await env.DB.prepare("SELECT company,company_slug,COUNT(*) jobs FROM jobs WHERE is_active=1 AND company LIKE ? GROUP BY company_slug ORDER BY jobs DESC LIMIT 100").bind(`%${q}%`).all();return json({companies:rows.results||[]})}

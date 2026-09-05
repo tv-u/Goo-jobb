@@ -1,0 +1,3 @@
+import {json} from "../lib/utils.js";
+import {sameOrigin} from "../lib/security.js";
+export async function onRequestPost({request,env}){if(!sameOrigin(request))return json({error:"blocked"},403);const x=await request.json().catch(()=>null);const anon=String(x?.anon_id||"").slice(0,120),email=String(x?.email||"").slice(0,254),query=String(x?.query||"").slice(0,120);if(!anon||!query)return json({error:"invalid"},400);await env.DB.prepare("INSERT INTO alerts(anon_id,email,query,filters_json,frequency) VALUES(?,?,?,?,?)").bind(anon,email,query,JSON.stringify(x.filters||{}),x.frequency||"daily").run();return json({ok:true})}

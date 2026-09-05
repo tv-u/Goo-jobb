@@ -1,0 +1,2 @@
+import {json} from "../lib/utils.js";
+export async function onRequestPost({request,env}){const x=await request.json().catch(()=>null);const anon=String(x?.anon_id||"").slice(0,120),job=Number(x?.job_id);if(!anon||!job)return json({error:"invalid"},400);await env.DB.prepare("INSERT INTO applications(anon_id,job_id,status) VALUES(?,?,?) ON CONFLICT(anon_id,job_id) DO UPDATE SET status=excluded.status,updated_at=CURRENT_TIMESTAMP").bind(anon,job,x.status||"applied").run();return json({ok:true})}

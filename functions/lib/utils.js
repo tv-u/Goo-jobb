@@ -1,0 +1,11 @@
+export const json=(data,status=200,extra={})=>new Response(JSON.stringify(data),{status,headers:{"content-type":"application/json;charset=utf-8","cache-control":"no-store",...extra}});
+export const text=(data,status=200,extra={})=>new Response(data,{status,headers:{"content-type":"text/plain;charset=utf-8",...extra}});
+export const html=(data,status=200,extra={})=>new Response(data,{status,headers:{"content-type":"text/html;charset=utf-8",...extra}});
+export const now=()=>new Date().toISOString();
+export const clean=(v,max=1000)=>String(v??"").replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g," ").trim().slice(0,max);
+export const hash=async s=>{const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")};
+export const slugify=s=>clean(s,180).toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,120)||"job";
+export const safeUrl=u=>{try{const x=new URL(u);return /^https?:$/.test(x.protocol)?x.toString():""}catch{return""}};
+export const parseCursor=c=>{try{return JSON.parse(atob(c))}catch{return null}};
+export const makeCursor=o=>btoa(JSON.stringify(o));
+export const clamp=(n,a,b)=>Math.min(b,Math.max(a,n));

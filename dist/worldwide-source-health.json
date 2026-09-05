@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-09-05T20:05:23.512Z",
+  "totalSources": 7,
+  "healthySources": 7,
+  "failedSources": 0,
+  "sources": [
+    {
+      "id": "remoteok",
+      "name": "Remote OK",
+      "ok": true,
+      "fetched": 101,
+      "accepted": 100,
+      "elapsedMs": 507
+    },
+    {
+      "id": "arbeitnow",
+      "name": "Arbeitnow",
+      "ok": true,
+      "fetched": 1500,
+      "accepted": 1500,
+      "elapsedMs": 378
+    },
+    {
+      "id": "jobicy",
+      "name": "Jobicy",
+      "ok": true,
+      "fetched": 200,
+      "accepted": 0,
+      "elapsedMs": 106
+    },
+    {
+      "id": "remotive",
+      "name": "Remotive",
+      "ok": true,
+      "fetched": 15,
+      "accepted": 15,
+      "elapsedMs": 137
+    },
+    {
+      "id": "himalayas",
+      "name": "Himalayas",
+      "ok": true,
+      "fetched": 200,
+      "accepted": 0,
+      "elapsedMs": 379
+    },
+    {
+      "id": "remotelanders",
+      "name": "Remote Landers",
+      "ok": true,
+      "fetched": 4447,
+      "accepted": 4447,
+      "elapsedMs": 1261
+    },
+    {
+      "id": "joa",
+      "name": "Job Opportunities API",
+      "ok": true,
+      "fetched": 1500,
+      "accepted": 1500,
+      "elapsedMs": 12250
+    }
+  ]
+}

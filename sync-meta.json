@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-09-05T21:49:29.291Z",
+  "status": "healthy",
+  "engine": "worldwide-source-expansion",
+  "totalValidJobs": 10053,
+  "currentSyncJobs": 2334,
+  "sourceCount": 40,
+  "healthySources": 34,
+  "failedSources": 6,
+  "fakeJobs": false,
+  "syntheticJobs": 0,
+  "worldwide": true
+}

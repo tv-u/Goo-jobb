@@ -1,0 +1,255 @@
+{
+  "generatedAt": "2026-09-05T21:52:55.658Z",
+  "categories": [
+    {
+      "name": "sales",
+      "jobs": 45
+    },
+    {
+      "name": "software-engineering",
+      "jobs": 31
+    },
+    {
+      "name": "finance-and-accounting",
+      "jobs": 18
+    },
+    {
+      "name": "technical-support",
+      "jobs": 17
+    },
+    {
+      "name": "product-and-operations",
+      "jobs": 14
+    },
+    {
+      "name": "customer-support-and-success",
+      "jobs": 13
+    },
+    {
+      "name": "data-science-and-analytics",
+      "jobs": 8
+    },
+    {
+      "name": "business-development",
+      "jobs": 8
+    },
+    {
+      "name": "healthcare-and-medical",
+      "jobs": 8
+    },
+    {
+      "name": "marketing-and-sales",
+      "jobs": 7
+    },
+    {
+      "name": "devops-and-infrastructure",
+      "jobs": 5
+    },
+    {
+      "name": "cybersecurity",
+      "jobs": 5
+    },
+    {
+      "name": "seo",
+      "jobs": 5
+    },
+    {
+      "name": "hr-and-recruiting",
+      "jobs": 4
+    },
+    {
+      "name": "web-ui-and-ux-design",
+      "jobs": 3
+    },
+    {
+      "name": "creative-and-design",
+      "jobs": 3
+    },
+    {
+      "name": "education-and-e-learning",
+      "jobs": 2
+    },
+    {
+      "name": "project-and-program-management",
+      "jobs": 2
+    },
+    {
+      "name": "admin-and-virtual-assistance",
+      "jobs": 1
+    },
+    {
+      "name": "legal-and-compliance",
+      "jobs": 1
+    }
+  ],
+  "locations": [
+    {
+      "name": "usa",
+      "jobs": 93
+    },
+    {
+      "name": "canada-usa",
+      "jobs": 12
+    },
+    {
+      "name": "philippines",
+      "jobs": 10
+    },
+    {
+      "name": "mexico",
+      "jobs": 10
+    },
+    {
+      "name": "uk",
+      "jobs": 7
+    },
+    {
+      "name": "canada",
+      "jobs": 6
+    },
+    {
+      "name": "anywhere",
+      "jobs": 6
+    },
+    {
+      "name": "emea",
+      "jobs": 5
+    },
+    {
+      "name": "latam",
+      "jobs": 4
+    },
+    {
+      "name": "australia",
+      "jobs": 4
+    },
+    {
+      "name": "europe",
+      "jobs": 4
+    },
+    {
+      "name": "spain",
+      "jobs": 3
+    },
+    {
+      "name": "germany",
+      "jobs": 2
+    },
+    {
+      "name": "europe-usa",
+      "jobs": 2
+    },
+    {
+      "name": "emea-latam-canada-usa",
+      "jobs": 2
+    },
+    {
+      "name": "europe-netherlands",
+      "jobs": 2
+    },
+    {
+      "name": "germany-ireland-spain-sweden-uk",
+      "jobs": 2
+    },
+    {
+      "name": "france-germany-netherlands-uk",
+      "jobs": 2
+    },
+    {
+      "name": "latam-europe-usa",
+      "jobs": 1
+    },
+    {
+      "name": "costa-rica",
+      "jobs": 1
+    },
+    {
+      "name": "malaysia-mexico",
+      "jobs": 1
+    },
+    {
+      "name": "brazil",
+      "jobs": 1
+    },
+    {
+      "name": "italy",
+      "jobs": 1
+    },
+    {
+      "name": "france",
+      "jobs": 1
+    },
+    {
+      "name": "australia-new-zealand",
+      "jobs": 1
+    },
+    {
+      "name": "ireland",
+      "jobs": 1
+    },
+    {
+      "name": "latam-canada-europe-usa",
+      "jobs": 1
+    },
+    {
+      "name": "china-hong-kong-philippines-vietnam",
+      "jobs": 1
+    },
+    {
+      "name": "china-hong-kong-thailand-vietnam",
+      "jobs": 1
+    },
+    {
+      "name": "bulgaria",
+      "jobs": 1
+    },
+    {
+      "name": "denmark",
+      "jobs": 1
+    },
+    {
+      "name": "apac-emea",
+      "jobs": 1
+    },
+    {
+      "name": "czechia-europe",
+      "jobs": 1
+    },
+    {
+      "name": "thailand",
+      "jobs": 1
+    },
+    {
+      "name": "romania",
+      "jobs": 1
+    },
+    {
+      "name": "argentina-australia-brazil-ireland-italy-japan-poland-spain-uae-uk-usa",
+      "jobs": 1
+    },
+    {
+      "name": "ireland-uk",
+      "jobs": 1
+    },
+    {
+      "name": "poland",
+      "jobs": 1
+    },
+    {
+      "name": "ukraine",
+      "jobs": 1
+    },
+    {
+      "name": "japan",
+      "jobs": 1
+    },
+    {
+      "name": "uae",
+      "jobs": 1
+    },
+    {
+      "name": "argentina",
+      "jobs": 1
+    }
+  ]
+}

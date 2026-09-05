@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Career AI Tools | GOO-JOBB</title>
+<meta name="description" content="Practical browser-based career tools.">
+<link rel="canonical" href="/Goo-jobb/career/">
+
+<link rel="stylesheet" href="/Goo-jobb/career/goo-career.css">
+
+</head>
+<body>
+<div class="career-shell">
+
+<section class="career-hero">
+<h1>Career Tools</h1>
+<p>Real browser-side tools. No fake AI claims and no fabricated credentials.</p>
+</section>
+
+<h2>Resume Summary Builder</h2>
+<form id="resume-tool-form" class="career-form">
+<input id="resume-name" placeholder="Name">
+<input id="resume-role" placeholder="Target role">
+<input id="resume-skills" placeholder="Skills">
+<textarea id="resume-experience" placeholder="Experience and achievements"></textarea>
+<button class="career-button">Generate Summary</button>
+</form>
+<textarea id="resume-tool-output" class="career-output"></textarea>
+
+<h2>Cover Letter Builder</h2>
+<form id="cover-tool-form" class="career-form">
+<input id="cover-role" placeholder="Role">
+<input id="cover-company" placeholder="Company">
+<input id="cover-skills" placeholder="Relevant skills">
+<button class="career-button alt">Generate Cover Letter</button>
+</form>
+<textarea id="cover-tool-output" class="career-output"></textarea>
+
+<h2>Interview Question Generator</h2>
+<form id="interview-tool-form" class="career-form">
+<input id="interview-role" placeholder="Target role">
+<button class="career-button">Generate Questions</button>
+</form>
+<ol id="interview-output"></ol>
+
+<h2>Skill Assessment</h2>
+<form id="skill-test-form" class="career-form">
+<div data-question>
+<p>Which metric is most useful for evaluating a completed project?</p>
+<label>
+<input type="radio" name="q1" data-correct="true">
+Measured outcome
+</label>
+<label>
+<input type="radio" name="q1">
+Number of meetings
+</label>
+</div>
+
+<div data-question>
+<p>What makes a resume bullet stronger?</p>
+<label>
+<input type="radio" name="q2" data-correct="true">
+Specific action and measurable result
+</label>
+<label>
+<input type="radio" name="q2">
+Generic responsibility
+</label>
+</div>
+
+<button class="career-button">Check Score</button>
+</form>
+<p id="skill-test-output"></p>
+
+</div>
+
+<script src="/Goo-jobb/career/goo-career-hub.js" defer></script>
+
+</body>
+</html>

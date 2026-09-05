@@ -1,0 +1,201 @@
+name: GOO-JOBB Extra Sources Live Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "07 * * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: goo-jobb-extra-live
+  cancel-in-progress: false
+
+jobs:
+
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Check extra sources
+        run: node scripts/goo-jobb-source-health.mjs
+
+      - name: Existing real-job sync
+        run: node scripts/goo-jobb-master-sync.mjs
+
+      - name: Build enterprise index
+        run: node scripts/build-enterprise-index.mjs
+
+      - name: Build search index
+        run: node scripts/build-v2-search.mjs
+
+      - name: Build SEO index
+        run: node scripts/build-seo-v2.mjs
+
+      - name: Validate jobs
+        run: node scripts/goo-jobb-validate.mjs
+
+      - name: Verify generated datasets
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          for f in \
+            public/jobs.json \
+            public/jobs-enterprise.json \
+            public/jobs-worldwide.json \
+            public/jobs-search-index.json
+          do
+            test -s "$f"
+            echo "OK: $f $(wc -c < "$f") bytes"
+          done
+
+          node <<'NODE'
+          const fs = require("fs");
+
+          const files = [
+            "public/jobs.json",
+            "public/jobs-enterprise.json",
+            "public/jobs-worldwide.json",
+            "public/jobs-search-index.json"
+          ];
+
+          for (const file of files) {
+            const data = JSON.parse(fs.readFileSync(file, "utf8"));
+            const jobs = Array.isArray(data)
+              ? data
+              : Array.isArray(data.jobs)
+                ? data.jobs
+                : Array.isArray(data.results)
+                  ? data.results
+                  : [];
+
+            if (!jobs.length) {
+              throw new Error(`${file}: EMPTY JOB DATA`);
+            }
+
+            let fake = 0;
+            let missingUrl = 0;
+
+            for (const job of jobs) {
+              const title = String(job.title || job.name || "").trim();
+              const url = String(
+                job.url ||
+                job.applyUrl ||
+                job.apply_url ||
+                job.link ||
+                ""
+              ).trim();
+
+              if (!title || !url) {
+                missingUrl++;
+              }
+
+              if (
+                /dummy|placeholder|example job|test job|fake job/i.test(
+                  JSON.stringify(job)
+                )
+              ) {
+                fake++;
+              }
+            }
+
+            if (fake) {
+              throw new Error(`${file}: fake=${fake}`);
+            }
+
+            console.log(
+              `${file}: jobs=${jobs.length} invalid=${missingUrl} fake=${fake}`
+            );
+          }
+          NODE
+
+      - name: Commit generated data
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          git config user.name "GOO-JOBB Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add \
+            public \
+            scripts/goo-jobb-extra-sources.json \
+            scripts/goo-jobb-source-health.mjs
+
+          if git diff --cached --quiet; then
+            echo "NO DATA CHANGES"
+          else
+            git commit -m "chore: extra free job source sync [skip ci]"
+            git push origin HEAD:main
+          fi
+
+  pages:
+    needs: sync
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Build Pages artifact
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          rm -rf dist
+          mkdir -p dist
+
+          cp -a public/. dist/
+
+          if [ -f index.html ]; then
+            cp index.html dist/index.html
+          fi
+
+          touch dist/.nojekyll
+
+          test -s dist/jobs.json
+          test -s dist/jobs-worldwide.json
+          test -s dist/jobs-enterprise.json
+          test -s dist/jobs-search-index.json
+
+          echo "PAGES DATA:"
+          ls -lh \
+            dist/jobs.json \
+            dist/jobs-worldwide.json \
+            dist/jobs-enterprise.json \
+            dist/jobs-search-index.json
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

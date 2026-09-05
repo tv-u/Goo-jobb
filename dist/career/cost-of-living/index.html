@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cost of Living Calculator | GOO-JOBB</title>
+<meta name="description" content="Compare personal budgets using your own inputs.">
+<link rel="canonical" href="/Goo-jobb/career/">
+
+<link rel="stylesheet" href="/Goo-jobb/career/goo-career.css">
+
+</head>
+<body>
+<div class="career-shell">
+
+<section class="career-hero">
+<h1>Cost of Living Calculator</h1>
+<p>
+This calculator does not invent market prices.
+Enter actual monthly estimates for the cities you want to compare.
+</p>
+</section>
+
+<form class="career-form" id="col-form">
+<input id="col-a" type="number" min="0" step="0.01" placeholder="City A monthly cost">
+<input id="col-b" type="number" min="0" step="0.01" placeholder="City B monthly cost">
+<button class="career-button">Compare</button>
+</form>
+
+<h2 id="col-result"></h2>
+
+<script>
+document.getElementById("col-form").addEventListener("submit",function(e){
+ e.preventDefault();
+ const a=Number(document.getElementById("col-a").value);
+ const b=Number(document.getElementById("col-b").value);
+ const r=document.getElementById("col-result");
+ if(!a || !b){
+   r.textContent="Enter both monthly estimates.";
+   return;
+ }
+ const diff=((b-a)/a)*100;
+ r.textContent=
+   "City B is "+Math.abs(diff).toFixed(1)+"% "+
+   (diff>=0?"higher":"lower")+" than City A.";
+});
+</script>
+
+</div>
+
+<script src="/Goo-jobb/career/goo-career-hub.js" defer></script>
+
+</body>
+</html>

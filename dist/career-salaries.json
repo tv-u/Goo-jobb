@@ -1,0 +1,997 @@
+{
+  "provider": "Jobicy",
+  "generatedAt": "2026-09-05T21:52:55.660Z",
+  "methodology": "Only salary values explicitly supplied by source listings are included.",
+  "salaries": [
+    {
+      "title": "Forward Deployment Engineer, AI - US Remote",
+      "company": "PerfectServe",
+      "location": "USA",
+      "salaryMin": 120000,
+      "salaryMax": 140000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152605-forward-deployment-engineer-ai-us-remote"
+    },
+    {
+      "title": "Financial Operations Intern",
+      "company": "Dutchie",
+      "location": "USA",
+      "salaryMin": 18,
+      "salaryMax": 25,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152603-financial-operations-intern"
+    },
+    {
+      "title": "Forward Deployment Engineer, AI - Canada Remote",
+      "company": "PerfectServe",
+      "location": "Canada",
+      "salaryMin": 165000,
+      "salaryMax": 195000,
+      "currency": "CAD",
+      "url": "https://jobicy.com/jobs/152601-forward-deployment-engineer-ai-canada-remote"
+    },
+    {
+      "title": "Account Executive, PNW",
+      "company": "Dutchie",
+      "location": "USA",
+      "salaryMin": 144000,
+      "salaryMax": 188000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152599-account-executive-pnw"
+    },
+    {
+      "title": "Junior Web Builder (Fully Remote, PH-Based Only, Fresh Grads Welcome to Apply)",
+      "company": "Luxury Presence",
+      "location": "Philippines",
+      "salaryMin": 500,
+      "salaryMax": 500,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152598-junior-web-builder-fully-remote-ph-based-only-fresh-grads-welcome-to-apply"
+    },
+    {
+      "title": "Senior Manager, Fund Administration (Accounting)",
+      "company": "Juniper Square",
+      "location": "Canada,  USA",
+      "salaryMin": 160000,
+      "salaryMax": 175000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152594-senior-manager-fund-administration-accounting"
+    },
+    {
+      "title": "Support Representative I",
+      "company": "Paytient",
+      "location": "USA",
+      "salaryMin": 17,
+      "salaryMax": 20,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152592-support-representative-i"
+    },
+    {
+      "title": "Manager, Fund Administration (Accounting)",
+      "company": "Juniper Square",
+      "location": "Canada,  USA",
+      "salaryMin": 130000,
+      "salaryMax": 140000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152591-manager-fund-administration-accounting"
+    },
+    {
+      "title": "Digital Marketing Specialist",
+      "company": "6sense",
+      "location": "USA",
+      "salaryMin": 113185,
+      "salaryMax": 125005,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152590-digital-marketing-specialist"
+    },
+    {
+      "title": "Director, Fund Administration (Accounting)",
+      "company": "Juniper Square",
+      "location": "Canada,  USA",
+      "salaryMin": 180000,
+      "salaryMax": 200000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152588-director-fund-administration-accounting"
+    },
+    {
+      "title": "Benefits Partner",
+      "company": "6sense",
+      "location": "USA",
+      "salaryMin": 77919,
+      "salaryMax": 114281,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152586-benefits-partner"
+    },
+    {
+      "title": "Multimedia Designer / Learning Experience (Remote - Costa Rica Only)",
+      "company": "Varicent",
+      "location": "Costa Rica",
+      "salaryMin": 14360800,
+      "salaryMax": 18846200,
+      "currency": "CRC",
+      "url": "https://jobicy.com/jobs/152584-multimedia-designer-learning-experience-remote-costa-rica-only"
+    },
+    {
+      "title": "GTM Engineer (Mexico Only - Remote)",
+      "company": "Varicent",
+      "location": "Mexico",
+      "salaryMin": 457200,
+      "salaryMax": 600000,
+      "currency": "MXN",
+      "url": "https://jobicy.com/jobs/152580-gtm-engineer-mexico-only-remote"
+    },
+    {
+      "title": "Solutions Engineer - UK (German Speaking)",
+      "company": "Quantum Metric",
+      "location": "UK",
+      "salaryMin": 70000,
+      "salaryMax": 95000,
+      "currency": "GBP",
+      "url": "https://jobicy.com/jobs/152578-solutions-engineer-uk-german-speaking"
+    },
+    {
+      "title": "Solutions Engineer - Spain (Italian Speaking)",
+      "company": "Quantum Metric",
+      "location": "Spain",
+      "salaryMin": 60000,
+      "salaryMax": 80000,
+      "currency": "EUR",
+      "url": "https://jobicy.com/jobs/152575-solutions-engineer-spain-italian-speaking"
+    },
+    {
+      "title": "Solution Engineer",
+      "company": "RelationalAI",
+      "location": "Anywhere",
+      "salaryMin": 170000,
+      "salaryMax": 200000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152574-solution-engineer-3"
+    },
+    {
+      "title": "Solutions Engineer - Spain (German Speaking)",
+      "company": "Quantum Metric",
+      "location": "Spain",
+      "salaryMin": 60000,
+      "salaryMax": 80000,
+      "currency": "EUR",
+      "url": "https://jobicy.com/jobs/152571-solutions-engineer-spain-german-speaking"
+    },
+    {
+      "title": "Customer Support Engineer",
+      "company": "RelationalAI",
+      "location": "USA",
+      "salaryMin": 140000,
+      "salaryMax": 160000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152570-customer-support-engineer-2"
+    },
+    {
+      "title": "Former Founder",
+      "company": "Roboflow",
+      "location": "USA",
+      "salaryMin": 70000,
+      "salaryMax": 150000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152563-former-founder"
+    },
+    {
+      "title": "AI Transformation Owner, CRO",
+      "company": "GitLab",
+      "location": "USA",
+      "salaryMin": 139200,
+      "salaryMax": 235200,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152562-ai-transformation-owner-cro"
+    },
+    {
+      "title": "Senior Channel Enablement Manager",
+      "company": "Fastly",
+      "location": "USA",
+      "salaryMin": 129470,
+      "salaryMax": 155364,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152561-senior-channel-enablement-manager"
+    },
+    {
+      "title": "Enterprise Account Executive",
+      "company": "Roboflow",
+      "location": "USA",
+      "salaryMin": 300000,
+      "salaryMax": 300000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152560-enterprise-account-executive-20"
+    },
+    {
+      "title": "Business Development Executive",
+      "company": "Thoughtworks",
+      "location": "USA",
+      "salaryMin": 242000,
+      "salaryMax": 466000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/150753-business-development-executive"
+    },
+    {
+      "title": "Majors Account Director - Key Customers | West Coast | Remote",
+      "company": "Grafana Labs",
+      "location": "USA",
+      "salaryMin": 350000,
+      "salaryMax": 380000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/150212-majors-account-director-key-customers-west-coast-remote"
+    },
+    {
+      "title": "Enterprise Sales Executive - MHS",
+      "company": "QuinStreet",
+      "location": "USA",
+      "salaryMin": 90000,
+      "salaryMax": 100000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/150203-enterprise-sales-executive-mhs"
+    },
+    {
+      "title": "Customer Support Manager",
+      "company": "Cribl",
+      "location": "USA",
+      "salaryMin": 116000,
+      "salaryMax": 181000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/150213-customer-support-manager-2"
+    },
+    {
+      "title": "Digital Sales Executive",
+      "company": "QuinStreet",
+      "location": "USA",
+      "salaryMin": 80000,
+      "salaryMax": 100000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/150232-digital-sales-executive"
+    },
+    {
+      "title": "Customer Evidence Marketing Manager (Canada)",
+      "company": "PointClickCare",
+      "location": "Canada",
+      "salaryMin": 30000,
+      "salaryMax": null,
+      "currency": "BRL",
+      "url": "https://jobicy.com/jobs/150222-customer-evidence-marketing-manager-canada"
+    },
+    {
+      "title": "Customer Success Engineer",
+      "company": "Veeam Software",
+      "location": "Germany",
+      "salaryMin": 100000,
+      "salaryMax": null,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/150236-customer-success-engineer-4"
+    },
+    {
+      "title": "Sales Assistant",
+      "company": "NightOwl Consulting",
+      "location": "Philippines",
+      "salaryMin": 600000,
+      "salaryMax": 720000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/150234-sales-assistant"
+    },
+    {
+      "title": "Senior Customer Success Manager - Mid-Market, TX",
+      "company": "MagicSchool AI",
+      "location": "USA",
+      "salaryMin": 104000,
+      "salaryMax": 120000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/150224-senior-customer-success-manager-mid-market-tx"
+    },
+    {
+      "title": "Regional Sales Manager",
+      "company": "ExtraHop",
+      "location": "USA",
+      "salaryMin": 150000,
+      "salaryMax": 180000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/150245-regional-sales-manager"
+    },
+    {
+      "title": "Senior Account Executive II, Financial Services",
+      "company": "Collibra",
+      "location": "USA",
+      "salaryMin": 140000,
+      "salaryMax": 175000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152554-senior-account-executive-ii-financial-services"
+    },
+    {
+      "title": "Account Manager, Corporate",
+      "company": "AlphaSense",
+      "location": "USA",
+      "salaryMin": 96000,
+      "salaryMax": 120000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152552-account-manager-corporate"
+    },
+    {
+      "title": "Staff Software Engineer- UI Foundations Team",
+      "company": "Amplitude",
+      "location": "USA",
+      "salaryMin": 173000,
+      "salaryMax": 264000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152550-staff-software-engineer-ui-foundations-team"
+    },
+    {
+      "title": "Senior Site Reliability Engineer I",
+      "company": "Braze",
+      "location": "Canada",
+      "salaryMin": 153815,
+      "salaryMax": 277000,
+      "currency": "CAD",
+      "url": "https://jobicy.com/jobs/152549-senior-site-reliability-engineer-i"
+    },
+    {
+      "title": "Head of Product Marketing",
+      "company": "Amplitude",
+      "location": "USA",
+      "salaryMin": 285000,
+      "salaryMax": 476000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152548-head-of-product-marketing"
+    },
+    {
+      "title": "Senior Account Executive - Healthcare",
+      "company": "Collibra",
+      "location": "USA",
+      "salaryMin": 140000,
+      "salaryMax": 175000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152546-senior-account-executive-healthcare"
+    },
+    {
+      "title": "Financial Data & Systems Analyst",
+      "company": "CCOF",
+      "location": "USA",
+      "salaryMin": 92000,
+      "salaryMax": 100000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152542-financial-data-systems-analyst"
+    },
+    {
+      "title": "Director of Strategy & Analytics",
+      "company": "Beyond Finance",
+      "location": "USA",
+      "salaryMin": 146810,
+      "salaryMax": 203084,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152541-director-of-strategy-analytics"
+    },
+    {
+      "title": "Senior Software Engineer, Frontend",
+      "company": "Phantom",
+      "location": "LATAM,  Canada,  Europe,  USA",
+      "salaryMin": 180000,
+      "salaryMax": 220000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152539-senior-software-engineer-frontend"
+    },
+    {
+      "title": "Farm Certification Specialist",
+      "company": "CCOF",
+      "location": "USA",
+      "salaryMin": 57363,
+      "salaryMax": 60000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152537-farm-certification-specialist"
+    },
+    {
+      "title": "Customer Service Representative",
+      "company": "Beyond Finance",
+      "location": "USA",
+      "salaryMin": 19,
+      "salaryMax": 20,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152536-customer-service-representative-5"
+    },
+    {
+      "title": "Technical Consultant, Strategic, Oracle Cloud",
+      "company": "Ramp",
+      "location": "Canada,  USA",
+      "salaryMin": 212000,
+      "salaryMax": 291000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152531-technical-consultant-strategic-oracle-cloud"
+    },
+    {
+      "title": "Business Operations Director",
+      "company": "HackerOne",
+      "location": "USA",
+      "salaryMin": 229000,
+      "salaryMax": 255000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152530-business-operations-director"
+    },
+    {
+      "title": "Senior Software Engineer (Revenue)",
+      "company": "Zuora",
+      "location": "USA",
+      "salaryMin": 164800,
+      "salaryMax": 226600,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152529-senior-software-engineer-revenue"
+    },
+    {
+      "title": "Solutions Consultant, Post Sales, Mid-Market",
+      "company": "Ramp",
+      "location": "Canada,  USA",
+      "salaryMin": 168000,
+      "salaryMax": 231000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152528-solutions-consultant-post-sales-mid-market"
+    },
+    {
+      "title": "Senior Director, Community",
+      "company": "HackerOne",
+      "location": "USA",
+      "salaryMin": 247000,
+      "salaryMax": 302000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152527-senior-director-community"
+    },
+    {
+      "title": "Senior Software Engineer",
+      "company": "Zuora",
+      "location": "USA",
+      "salaryMin": 164800,
+      "salaryMax": 226600,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152526-senior-software-engineer-6"
+    },
+    {
+      "title": "Customer Success Associate (Sustainability)",
+      "company": "Worldly",
+      "location": "China,  Hong Kong,  Philippines,  Vietnam",
+      "salaryMin": 15000,
+      "salaryMax": 25000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152525-customer-success-associate-sustainability"
+    },
+    {
+      "title": "Technical Consultant, S/4HANA",
+      "company": "Ramp",
+      "location": "Canada,  USA",
+      "salaryMin": 212000,
+      "salaryMax": 291000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152524-technical-consultant-s-4hana"
+    },
+    {
+      "title": "Product Security Analyst",
+      "company": "HackerOne",
+      "location": "USA",
+      "salaryMin": 135000,
+      "salaryMax": 155000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152523-product-security-analyst"
+    },
+    {
+      "title": "Senior Java Engineer",
+      "company": "Zuora",
+      "location": "USA",
+      "salaryMin": 164800,
+      "salaryMax": 226600,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152522-senior-java-engineer"
+    },
+    {
+      "title": "Growth Marketer (6-Month Contract)",
+      "company": "Worldly",
+      "location": "USA",
+      "salaryMin": 75,
+      "salaryMax": 100,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152521-growth-marketer-6-month-contract"
+    },
+    {
+      "title": "Solutions Consultant, Commercial",
+      "company": "Ramp",
+      "location": "Canada,  USA",
+      "salaryMin": 132000,
+      "salaryMax": 189000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152520-solutions-consultant-commercial"
+    },
+    {
+      "title": "Revenue Advisor",
+      "company": "Zuora",
+      "location": "USA",
+      "salaryMin": 99500,
+      "salaryMax": 193200,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152519-revenue-advisor"
+    },
+    {
+      "title": "Customer Success Manager | Sustainability | Fashion Supply Chains",
+      "company": "Worldly",
+      "location": "Europe",
+      "salaryMin": 65000,
+      "salaryMax": 85000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152518-customer-success-manager-sustainability-fashion-supply-chains"
+    },
+    {
+      "title": "Technical Consultant, Mid-Market",
+      "company": "Ramp",
+      "location": "USA",
+      "salaryMin": 168000,
+      "salaryMax": 231000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152517-technical-consultant-mid-market"
+    },
+    {
+      "title": "Senior GTM Systems & Process Engineer",
+      "company": "HackerOne",
+      "location": "USA",
+      "salaryMin": 175000,
+      "salaryMax": 190000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152516-senior-gtm-systems-process-engineer"
+    },
+    {
+      "title": "Solutions Consultant, Mid-Market",
+      "company": "Ramp",
+      "location": "Canada,  USA",
+      "salaryMin": 168000,
+      "salaryMax": 231000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152515-solutions-consultant-mid-market"
+    },
+    {
+      "title": "Senior Security Engineer, Detection and Response",
+      "company": "HackerOne",
+      "location": "USA",
+      "salaryMin": 182000,
+      "salaryMax": 202000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152514-senior-security-engineer-detection-and-response"
+    },
+    {
+      "title": "Customer Solution Engineer - Quote to Cash",
+      "company": "Zuora",
+      "location": "USA",
+      "salaryMin": 99500,
+      "salaryMax": 193200,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152513-customer-solution-engineer-quote-to-cash"
+    },
+    {
+      "title": "Senior Manager/Director, Finance",
+      "company": "Worldly",
+      "location": "USA",
+      "salaryMin": 160000,
+      "salaryMax": 200000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152512-senior-manager-director-finance"
+    },
+    {
+      "title": "Partner Consultant, Accounting",
+      "company": "Ramp",
+      "location": "Canada,  USA",
+      "salaryMin": 151000,
+      "salaryMax": 207000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152510-partner-consultant-accounting"
+    },
+    {
+      "title": "Vice President, Go-To-Market Operations",
+      "company": "HackerOne",
+      "location": "USA",
+      "salaryMin": 300000,
+      "salaryMax": 350000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152509-vice-president-go-to-market-operations"
+    },
+    {
+      "title": "Product Marketing Manager, Supplier Network Growth",
+      "company": "Worldly",
+      "location": "China,  Hong Kong,  Thailand,  Vietnam",
+      "salaryMin": 40000,
+      "salaryMax": 48000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152508-product-marketing-manager-supplier-network-growth"
+    },
+    {
+      "title": "Recruiting Systems Specialist",
+      "company": "Applied Intuition",
+      "location": "USA",
+      "salaryMin": 45,
+      "salaryMax": 50,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152506-recruiting-systems-specialist"
+    },
+    {
+      "title": "Software Engineer, Security, Stablecoin",
+      "company": "Ramp",
+      "location": "USA",
+      "salaryMin": 189000,
+      "salaryMax": 330000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152505-software-engineer-security-stablecoin"
+    },
+    {
+      "title": "Senior Manager, AI Engineering",
+      "company": "HackerOne",
+      "location": "USA",
+      "salaryMin": 240000,
+      "salaryMax": 280000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152504-senior-manager-ai-engineering"
+    },
+    {
+      "title": "Senior Territory Manager, NYC or Northern NJ",
+      "company": "Quartzy",
+      "location": "USA",
+      "salaryMin": 105000,
+      "salaryMax": 125000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152503-senior-territory-manager-nyc-or-northern-nj"
+    },
+    {
+      "title": "Account Manager, Supply Chain ESG",
+      "company": "Worldly",
+      "location": "Europe,  USA",
+      "salaryMin": 100000,
+      "salaryMax": 110000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152502-account-manager-supply-chain-esg"
+    },
+    {
+      "title": "Data Analyst, Clinical Data Effectiveness",
+      "company": "Clover Health",
+      "location": "USA",
+      "salaryMin": 77000,
+      "salaryMax": 100000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/150923-data-analyst-clinical-data-effectiveness"
+    },
+    {
+      "title": "Part Time Remote Psychiatric Nurse Practitioner - Fee For Service",
+      "company": "Thriveworks",
+      "location": "USA",
+      "salaryMin": 71000,
+      "salaryMax": 102000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/150151-part-time-remote-psychiatric-nurse-practitioner-fee-for-service-2"
+    },
+    {
+      "title": "Care Manager",
+      "company": "Centene Corporation",
+      "location": "USA",
+      "salaryMin": 56200,
+      "salaryMax": 101000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/150169-care-manager"
+    },
+    {
+      "title": "Technology Alliances Manager",
+      "company": "NetBox Labs",
+      "location": "USA",
+      "salaryMin": 130000,
+      "salaryMax": 145000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/150165-technology-alliances-manager"
+    },
+    {
+      "title": "Senior Accident Reconstruction Engineer",
+      "company": "J.S. Held",
+      "location": "USA",
+      "salaryMin": 100000,
+      "salaryMax": 180000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/150161-senior-accident-reconstruction-engineer"
+    },
+    {
+      "title": "Senior Lifecycle Marketing Manager",
+      "company": "Chime",
+      "location": "USA",
+      "salaryMin": 150000,
+      "salaryMax": null,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/150166-senior-lifecycle-marketing-manager"
+    },
+    {
+      "title": "Backend Engineer III",
+      "company": "Monzo",
+      "location": "UK",
+      "salaryMin": 85000,
+      "salaryMax": 110000,
+      "currency": "GBP",
+      "url": "https://jobicy.com/jobs/152499-backend-engineer-iii"
+    },
+    {
+      "title": "Director of Engineering, Cloud & Reliability",
+      "company": "Boulevard",
+      "location": "USA",
+      "salaryMin": 209500,
+      "salaryMax": 270000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152496-director-of-engineering-cloud-reliability-2"
+    },
+    {
+      "title": "Backend Engineer - Platform - Stacks | Sweden | Remote",
+      "company": "Grafana Labs",
+      "location": "Germany,  Ireland,  Spain,  Sweden,  UK",
+      "salaryMin": 609985,
+      "salaryMax": 762481,
+      "currency": "SEK",
+      "url": "https://jobicy.com/jobs/152495-backend-engineer-platform-stacks-sweden-remote"
+    },
+    {
+      "title": "Anaplan Support Analyst",
+      "company": "Monzo",
+      "location": "UK",
+      "salaryMin": 42500,
+      "salaryMax": 50000,
+      "currency": "GBP",
+      "url": "https://jobicy.com/jobs/152494-anaplan-support-analyst"
+    },
+    {
+      "title": "Creative Director",
+      "company": "Boulevard",
+      "location": "USA",
+      "salaryMin": 149500,
+      "salaryMax": 175000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152491-creative-director"
+    },
+    {
+      "title": "Backend Engineer - Platform - Stacks | Spain | Remote",
+      "company": "Grafana Labs",
+      "location": "Germany,  Ireland,  Spain,  Sweden,  UK",
+      "salaryMin": 65000,
+      "salaryMax": 81000,
+      "currency": "EUR",
+      "url": "https://jobicy.com/jobs/152490-backend-engineer-platform-stacks-spain-remote"
+    },
+    {
+      "title": "Organic Search Marketer - SEO/AEO",
+      "company": "Mercury",
+      "location": "Canada,  USA",
+      "salaryMin": 142400,
+      "salaryMax": 197800,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152489-organic-search-marketer-seo-aeo"
+    },
+    {
+      "title": "Web Strategy, SEO & AI Lead",
+      "company": "Harness",
+      "location": "USA",
+      "salaryMin": 130000,
+      "salaryMax": 150000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152486-web-strategy-seo-ai-lead"
+    },
+    {
+      "title": "Account Executive, Mid Market (Southeast)",
+      "company": "Samsara",
+      "location": "USA",
+      "salaryMin": 152000,
+      "salaryMax": 190000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152483-account-executive-mid-market-southeast"
+    },
+    {
+      "title": "Account Executive, Mid Market (Northeast)",
+      "company": "Samsara",
+      "location": "USA",
+      "salaryMin": 152000,
+      "salaryMax": 190000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152481-account-executive-mid-market-northeast"
+    },
+    {
+      "title": "Account Executive, Mid Market (Midwest)",
+      "company": "Samsara",
+      "location": "USA",
+      "salaryMin": 152000,
+      "salaryMax": 190000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152479-account-executive-mid-market-midwest"
+    },
+    {
+      "title": "Account Executive, Commercial ( West)",
+      "company": "Samsara",
+      "location": "USA",
+      "salaryMin": 106050,
+      "salaryMax": 151500,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152473-account-executive-commercial-west"
+    },
+    {
+      "title": "Senior Product Manager (Healthcare Vertical)",
+      "company": "Nextiva",
+      "location": "USA",
+      "salaryMin": 110000,
+      "salaryMax": 170000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152468-senior-product-manager-healthcare-vertical"
+    },
+    {
+      "title": "Procure-to-Pay Buyer",
+      "company": "LevelUp",
+      "location": "Philippines",
+      "salaryMin": 80000,
+      "salaryMax": 90000,
+      "currency": "PHP",
+      "url": "https://jobicy.com/jobs/152467-procure-to-pay-buyer"
+    },
+    {
+      "title": "Account Executive, Commercial",
+      "company": "Samsara",
+      "location": "USA",
+      "salaryMin": 106050,
+      "salaryMax": 151500,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152466-account-executive-commercial"
+    },
+    {
+      "title": "Senior Engineering Manager",
+      "company": "Nextiva",
+      "location": "USA",
+      "salaryMin": 105000,
+      "salaryMax": 160000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152465-senior-engineering-manager"
+    },
+    {
+      "title": "Marketing Operations Specialist",
+      "company": "LevelUp",
+      "location": "Philippines",
+      "salaryMin": 50000,
+      "salaryMax": 60000,
+      "currency": "PHP",
+      "url": "https://jobicy.com/jobs/152464-marketing-operations-specialist-2"
+    },
+    {
+      "title": "Principal Product Manager (Omnichannel CX)",
+      "company": "Nextiva",
+      "location": "USA",
+      "salaryMin": 130000,
+      "salaryMax": 200000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152461-principal-product-manager-omnichannel-cx"
+    },
+    {
+      "title": "L1 Hosting Tech Support Agent",
+      "company": "LevelUp",
+      "location": "Philippines",
+      "salaryMin": 35000,
+      "salaryMax": 40000,
+      "currency": "PHP",
+      "url": "https://jobicy.com/jobs/152460-l1-hosting-tech-support-agent"
+    },
+    {
+      "title": "Helpdesk Support Agent 6-Month Fixed-Term Contract",
+      "company": "LevelUp",
+      "location": "Philippines",
+      "salaryMin": 30000,
+      "salaryMax": 35000,
+      "currency": "PHP",
+      "url": "https://jobicy.com/jobs/152456-helpdesk-support-agent-6-month-fixed-term-contract"
+    },
+    {
+      "title": "Senior Account Executive | Upmarket | New Logo",
+      "company": "Jamf",
+      "location": "USA",
+      "salaryMin": 81100,
+      "salaryMax": 179400,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152453-senior-account-executive-upmarket-new-logo"
+    },
+    {
+      "title": "Blockchain Security Expert - AI Track",
+      "company": "CertiK",
+      "location": "USA",
+      "salaryMin": 120000,
+      "salaryMax": 180000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152451-blockchain-security-expert-ai-track"
+    },
+    {
+      "title": "Head of Product Design - Remote (US/CANADA)",
+      "company": "Luxury Presence",
+      "location": "Canada,  USA",
+      "salaryMin": 275000,
+      "salaryMax": 315000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152448-head-of-product-design-remote-us-canada"
+    },
+    {
+      "title": "Blockchain Security Engineer - Senior Level (Solidity / Rust / Golang )",
+      "company": "CertiK",
+      "location": "USA",
+      "salaryMin": 102000,
+      "salaryMax": 180000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152447-blockchain-security-engineer-senior-level-solidity-rust-golang"
+    },
+    {
+      "title": "Functional Consultant (Finance Systems / ERP Implementation)",
+      "company": "Launchpad Technologies",
+      "location": "LATAM",
+      "salaryMin": 3800,
+      "salaryMax": 4200,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152446-functional-consultant-finance-systems-erp-implementation-2"
+    },
+    {
+      "title": "Digital Success Strategy Manager",
+      "company": "Jamf",
+      "location": "USA",
+      "salaryMin": 104000,
+      "salaryMax": 162000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152445-digital-success-strategy-manager"
+    },
+    {
+      "title": "Director of Launch Operations",
+      "company": "Luxury Presence",
+      "location": "USA",
+      "salaryMin": 190000,
+      "salaryMax": 220000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152444-director-of-launch-operations"
+    },
+    {
+      "title": "Brand Designer",
+      "company": "Tailscale",
+      "location": "USA",
+      "salaryMin": 117750,
+      "salaryMax": 153000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152442-brand-designer"
+    },
+    {
+      "title": "Billing Engineer",
+      "company": "Tailscale",
+      "location": "USA",
+      "salaryMin": 143000,
+      "salaryMax": 179000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152438-billing-engineer"
+    },
+    {
+      "title": "Senior Manager/Director of Revenue Accounting (100% Remote - USA)",
+      "company": "Hopper",
+      "location": "USA",
+      "salaryMin": 180000,
+      "salaryMax": 240000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152437-senior-manager-director-of-revenue-accounting-100-remote-usa"
+    },
+    {
+      "title": "Online Psychiatric Nurse Practitioner (PMHNP)",
+      "company": "Uplift",
+      "location": "USA",
+      "salaryMin": 73,
+      "salaryMax": 160,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152436-online-psychiatric-nurse-practitioner-pmhnp"
+    },
+    {
+      "title": "Account Executive - Mid-Central",
+      "company": "Garner Health",
+      "location": "USA",
+      "salaryMin": 160000,
+      "salaryMax": 175000,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152432-account-executive-mid-central"
+    },
+    {
+      "title": "SHI Channel Sales Engineer",
+      "company": "Commvault",
+      "location": "USA",
+      "salaryMin": 93500,
+      "salaryMax": 182850,
+      "currency": "USD",
+      "url": "https://jobicy.com/jobs/152430-shi-channel-sales-engineer"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-09-05T18:06:55.121Z",
+  "total": 456,
+  "sources": [
+    {
+      "source": "Arbeitnow",
+      "status": "ok",
+      "jobs": 250,
+      "synced_at": "2026-09-05T18:06:51.324Z"
+    },
+    {
+      "source": "Jobicy",
+      "status": "ok",
+      "jobs": 0,
+      "synced_at": "2026-09-05T18:06:51.549Z"
+    },
+    {
+      "source": "Remote OK",
+      "status": "ok",
+      "jobs": 100,
+      "synced_at": "2026-09-05T18:06:52.141Z"
+    },
+    {
+      "source": "Remotive",
+      "status": "ok",
+      "jobs": 15,
+      "synced_at": "2026-09-05T18:06:52.267Z"
+    },
+    {
+      "source": "Himalayas",
+      "status": "ok",
+      "jobs": 0,
+      "synced_at": "2026-09-05T18:06:52.393Z"
+    },
+    {
+      "source": "We Work Remotely",
+      "status": "ok",
+      "jobs": 91,
+      "synced_at": "2026-09-05T18:06:53.285Z"
+    },
+    {
+      "source": "Startup Jobs",
+      "status": "error",
+      "jobs": 0,
+      "error": "HTTP 403",
+      "synced_at": "2026-09-05T18:06:53.587Z"
+    },
+    {
+      "source": "Working Nomads",
+      "status": "ok",
+      "jobs": 0,
+      "synced_at": "2026-09-05T18:06:54.220Z"
+    },
+    {
+      "source": "RemoteFR",
+      "status": "error",
+      "jobs": 0,
+      "error": "HTTP 404",
+      "synced_at": "2026-09-05T18:06:54.821Z"
+    },
+    {
+      "source": "Remote Leads",
+      "status": "error",
+      "jobs": 0,
+      "error": "HTTP 404",
+      "synced_at": "2026-09-05T18:06:55.119Z"
+    }
+  ]
+}

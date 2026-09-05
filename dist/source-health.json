@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-09-05T20:22:54.080Z",
+  "sources": [
+    {
+      "id": "remoteok",
+      "name": "Remote OK",
+      "healthy": true,
+      "fetched": 101,
+      "accepted": 100,
+      "elapsedMs": 624
+    },
+    {
+      "id": "jobicy",
+      "name": "Jobicy",
+      "healthy": true,
+      "fetched": 200,
+      "accepted": 0,
+      "elapsedMs": 287
+    },
+    {
+      "id": "remotive",
+      "name": "Remotive",
+      "healthy": true,
+      "fetched": 15,
+      "accepted": 15,
+      "elapsedMs": 144
+    },
+    {
+      "id": "arbeitnow",
+      "name": "Arbeitnow",
+      "healthy": true,
+      "fetched": 2100,
+      "accepted": 2100,
+      "elapsedMs": 33905
+    },
+    {
+      "id": "himalayas",
+      "name": "Himalayas",
+      "healthy": true,
+      "fetched": 400,
+      "accepted": 0,
+      "elapsedMs": 7065
+    },
+    {
+      "id": "remotelanders",
+      "name": "Remote Landers",
+      "healthy": true,
+      "fetched": 4447,
+      "accepted": 4447,
+      "elapsedMs": 14377
+    }
+  ]
+}

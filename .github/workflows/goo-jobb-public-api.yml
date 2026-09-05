@@ -1,0 +1,143 @@
+name: GOO-JOBB Public Job APIs Live Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7 * * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: goo-jobb-public-api
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci --no-audit --no-fund
+          elif [ -f package.json ]; then
+            npm install --no-audit --no-fund
+          fi
+
+      - name: Run public API connectors
+        run: node scripts/goo-jobb-public-api-sync.mjs
+
+      - name: Run existing master sync
+        run: |
+          if [ -f scripts/goo-jobb-master-sync.mjs ]; then
+            node scripts/goo-jobb-master-sync.mjs
+          fi
+
+      - name: Re-run public API sync
+        run: node scripts/goo-jobb-public-api-sync.mjs
+
+      - name: Build indexes
+        run: |
+          if [ -f scripts/build-enterprise-index.mjs ]; then
+            node scripts/build-enterprise-index.mjs
+          fi
+
+          if [ -f scripts/build-v2-search.mjs ]; then
+            node scripts/build-v2-search.mjs
+          fi
+
+          if [ -f scripts/build-seo-v2.mjs ]; then
+            node scripts/build-seo-v2.mjs
+          fi
+
+      - name: Validate
+        run: |
+          if [ -f scripts/goo-jobb-validate.mjs ]; then
+            node scripts/goo-jobb-validate.mjs
+          fi
+
+          test -s public/jobs-public-api.json
+          test -s public/public-api-health.json
+
+      - name: Commit generated data
+        run: |
+          git config user.name "GOO-JOBB Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add public
+
+          if git diff --cached --quiet; then
+            echo "NO DATA CHANGES"
+          else
+            git commit -m "chore: sync live public job APIs"
+            git push origin main
+          fi
+
+  deploy:
+    needs: sync
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Prepare Pages artifact
+        run: |
+          rm -rf dist
+          mkdir -p dist
+
+          if [ -d public ]; then
+            cp -a public/. dist/
+          fi
+
+          if [ -f index.html ]; then
+            cp index.html dist/index.html
+          fi
+
+          mkdir -p dist/public
+
+          if [ -d public ]; then
+            cp -a public/. dist/public/
+          fi
+
+          touch dist/.nojekyll
+
+          echo "ROOT DATA:"
+          ls -lh dist/jobs-public-api.json || true
+          ls -lh dist/public-api-health.json || true
+
+          test -s dist/jobs-public-api.json
+          test -s dist/public-api-health.json
+          test -s dist/index.html
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

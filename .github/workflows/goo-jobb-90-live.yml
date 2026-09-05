@@ -1,0 +1,209 @@
+name: GOO-JOBB 90 Source Live Jobs
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: goo-jobb-90-live
+  cancel-in-progress: false
+
+jobs:
+
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci --no-audit --no-fund
+
+      - name: Test new 50 sources
+        run: node scripts/goo-jobb-50-health.mjs
+
+      - name: Existing 40 source sync
+        run: node scripts/goo-jobb-master-sync.mjs
+
+      - name: Merge 90 source registry
+        run: node scripts/goo-jobb-merge-90.mjs
+
+      - name: Enterprise index
+        run: node scripts/build-enterprise-index.mjs
+
+      - name: Search index
+        run: node scripts/build-v2-search.mjs
+
+      - name: SEO
+        run: node scripts/build-seo-v2.mjs
+
+      - name: Validate
+        run: node scripts/goo-jobb-validate.mjs
+
+      - name: Hard validation
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          for f in \
+            public/jobs.json \
+            public/jobs-enterprise.json \
+            public/jobs-worldwide.json \
+            public/jobs-search-index.json \
+            public/source-health/new-50.json \
+            public/source-health/source-registry-90.json
+          do
+            test -s "$f"
+            echo "PASS $f"
+          done
+
+          node <<'NODE'
+          const fs = require("fs");
+
+          const files = [
+            "public/jobs.json",
+            "public/jobs-enterprise.json",
+            "public/jobs-worldwide.json",
+            "public/jobs-search-index.json"
+          ];
+
+          for (const file of files) {
+            const data = JSON.parse(fs.readFileSync(file, "utf8"));
+
+            const jobs =
+              Array.isArray(data)
+                ? data
+                : Array.isArray(data.jobs)
+                  ? data.jobs
+                  : [];
+
+            if (!jobs.length) {
+              throw new Error(`${file}: EMPTY`);
+            }
+
+            let fake = 0;
+            let bad = 0;
+
+            for (const job of jobs) {
+              const text = JSON.stringify(job);
+
+              const title =
+                job.title ||
+                job.name ||
+                "";
+
+              const url =
+                job.url ||
+                job.applyUrl ||
+                job.apply_url ||
+                job.link ||
+                "";
+
+              if (!title || !url) bad++;
+
+              if (
+                /dummy|placeholder|fake job|example job|test job/i.test(text)
+              ) {
+                fake++;
+              }
+            }
+
+            if (fake > 0) {
+              throw new Error(`${file}: FAKE JOBS=${fake}`);
+            }
+
+            console.log(
+              `${file}: ${jobs.length} jobs | bad=${bad} | fake=${fake}`
+            );
+          }
+
+          const registry = JSON.parse(
+            fs.readFileSync(
+              "public/source-health/source-registry-90.json",
+              "utf8"
+            )
+          );
+
+          console.log(
+            `SOURCE REGISTRY = ${registry.totalRegisteredSources}`
+          );
+          NODE
+
+      - name: Commit generated data
+        shell: bash
+        run: |
+          git config user.name "GOO-JOBB Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add public scripts
+
+          if git diff --cached --quiet; then
+            echo "No generated changes"
+          else
+            git commit -m "chore: sync 90-source real job index [skip ci]"
+            git push origin main
+          fi
+
+  pages:
+    needs: sync
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Build Pages
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+
+          rm -rf dist
+          mkdir -p dist
+
+          cp -a public/. dist/
+
+          if [ -f index.html ]; then
+            cp index.html dist/index.html
+          fi
+
+          touch dist/.nojekyll
+
+          test -s dist/jobs-worldwide.json
+          test -s dist/jobs-enterprise.json
+          test -s dist/jobs.json
+          test -s dist/source-health/new-50.json
+          test -s dist/source-health/source-registry-90.json
+
+          echo "DEPLOY ARTIFACT READY"
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

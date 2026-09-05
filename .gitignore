@@ -1,0 +1,5 @@
+.goo-*
+.goo-jobb-*
+goo-jobb-audit-*.log
+*.backup.*
+index.html.backup.*

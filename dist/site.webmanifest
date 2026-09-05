@@ -1,0 +1,9 @@
+{
+  "name":"GOO-JOBB Worldwide Jobs",
+  "short_name":"GOO-JOBB",
+  "start_url":"/Goo-jobb/",
+  "display":"standalone",
+  "background_color":"#080808",
+  "theme_color":"#080808",
+  "description":"Worldwide job discovery platform"
+}

@@ -1,0 +1,1181 @@
+{
+  "provider": "Jobicy",
+  "generatedAt": "2026-09-05T21:52:55.640Z",
+  "companies": [
+    {
+      "slug": "luxury-presence",
+      "name": "Luxury Presence",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2022/05/f2b241fb769140fff2f70e8efaf5c0ff.jpg",
+      "jobs": 6,
+      "locations": [
+        "Canada",
+        "LATAM",
+        "Philippines",
+        "Canada,  USA",
+        "USA"
+      ],
+      "categories": [
+        "Data Science & Analytics",
+        "Software Engineering",
+        "Web, UI & UX Design",
+        "Product & Operations"
+      ]
+    },
+    {
+      "slug": "perfectserve",
+      "name": "PerfectServe",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2022/04/7e6f5669fc8c9ea0aa484ce7c3058599.jpg",
+      "jobs": 2,
+      "locations": [
+        "USA",
+        "Canada"
+      ],
+      "categories": [
+        "Software Engineering"
+      ]
+    },
+    {
+      "slug": "language-services-associates",
+      "name": "Language Services Associates",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/2a0ea3d8-221.png",
+      "jobs": 3,
+      "locations": [
+        "Anywhere"
+      ],
+      "categories": [
+        "Customer Support & Success"
+      ]
+    },
+    {
+      "slug": "dutchie",
+      "name": "Dutchie",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2022/02/305a6ae1871314b06b00082374e7ba74.jpeg",
+      "jobs": 2,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Finance & Accounting",
+        "Sales"
+      ]
+    },
+    {
+      "slug": "juniper-square",
+      "name": "Juniper Square",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2022/01/90c359a8bed816e81ea39fa33a8314f3.png",
+      "jobs": 3,
+      "locations": [
+        "Canada,  USA"
+      ],
+      "categories": [
+        "Finance & Accounting"
+      ]
+    },
+    {
+      "slug": "6sense",
+      "name": "6sense",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/08/b5ec98b2-221.png",
+      "jobs": 3,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Customer Support & Success",
+        "Marketing & Sales",
+        "HR & Recruiting"
+      ]
+    },
+    {
+      "slug": "paytient",
+      "name": "Paytient",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2020/11/WRILS-201106203316-390610.jpg",
+      "jobs": 2,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Technical Support",
+        "Software Engineering"
+      ]
+    },
+    {
+      "slug": "labelbox",
+      "name": "Labelbox",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2022/09/dcbbfe05a44a6824e2cacd581d54aee6.jpeg",
+      "jobs": 1,
+      "locations": [
+        "LATAM,  Europe,  USA"
+      ],
+      "categories": [
+        "HR & Recruiting"
+      ]
+    },
+    {
+      "slug": "varicent",
+      "name": "Varicent",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/c86166a8-221.jpeg",
+      "jobs": 2,
+      "locations": [
+        "Costa Rica",
+        "Mexico"
+      ],
+      "categories": [
+        "Education & E-learning",
+        "Product & Operations"
+      ]
+    },
+    {
+      "slug": "serve-robotics",
+      "name": "Serve Robotics",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/08/8ad805d9-221.png",
+      "jobs": 1,
+      "locations": [
+        "Malaysia,  Mexico"
+      ],
+      "categories": [
+        "Data Science & Analytics"
+      ]
+    },
+    {
+      "slug": "docplanner",
+      "name": "Docplanner",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/08/84f2fa86-221.png",
+      "jobs": 1,
+      "locations": [
+        "Brazil"
+      ],
+      "categories": [
+        "Finance & Accounting"
+      ]
+    },
+    {
+      "slug": "assetwatch",
+      "name": "AssetWatch",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/118c6be8-221.png",
+      "jobs": 1,
+      "locations": [
+        "Mexico"
+      ],
+      "categories": [
+        "Software Engineering"
+      ]
+    },
+    {
+      "slug": "ajax-systems",
+      "name": "Ajax Systems",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/572c9c27-221.png",
+      "jobs": 3,
+      "locations": [
+        "Mexico",
+        "Italy",
+        "France"
+      ],
+      "categories": [
+        "Sales",
+        "Technical Support"
+      ]
+    },
+    {
+      "slug": "quantum-metric",
+      "name": "Quantum Metric",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/52363ead-221.jpg",
+      "jobs": 3,
+      "locations": [
+        "UK",
+        "Spain"
+      ],
+      "categories": [
+        "Sales"
+      ]
+    },
+    {
+      "slug": "devrev",
+      "name": "DevRev",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/b31a8683-221.png",
+      "jobs": 2,
+      "locations": [
+        "USA",
+        "Australia"
+      ],
+      "categories": [
+        "Business Development",
+        "Technical Support"
+      ]
+    },
+    {
+      "slug": "relationalai",
+      "name": "RelationalAI",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/476c6344-221.jpg",
+      "jobs": 2,
+      "locations": [
+        "Anywhere",
+        "USA"
+      ],
+      "categories": [
+        "Software Engineering",
+        "Technical Support"
+      ]
+    },
+    {
+      "slug": "roboflow",
+      "name": "Roboflow",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2026/06/8cd75e4b-221.webp",
+      "jobs": 3,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Technical Support",
+        "Product & Operations",
+        "Sales"
+      ]
+    },
+    {
+      "slug": "gitlab",
+      "name": "GitLab",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2020/12/WRILS-201207055737-109952.jpg",
+      "jobs": 2,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Sales",
+        "Product & Operations"
+      ]
+    },
+    {
+      "slug": "fastly",
+      "name": "Fastly",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2021/10/127f9e4bbbdb8767bef358a23bf7f73d.jpeg",
+      "jobs": 3,
+      "locations": [
+        "UK",
+        "USA",
+        "Germany"
+      ],
+      "categories": [
+        "Sales",
+        "Education & E-learning"
+      ]
+    },
+    {
+      "slug": "spreedly",
+      "name": "Spreedly",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2021/10/c7ecd47f20eec380edf63d11c0dad38d.png",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Finance & Accounting"
+      ]
+    },
+    {
+      "slug": "thoughtworks",
+      "name": "Thoughtworks",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/41d94d08-221.png",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Business Development"
+      ]
+    },
+    {
+      "slug": "molina-healthcare",
+      "name": "Molina Healthcare",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/aff0375a-221.jpeg",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Product & Operations"
+      ]
+    },
+    {
+      "slug": "meta",
+      "name": "Meta",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/750f86a9-221.jpeg",
+      "jobs": 2,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Customer Support & Success",
+        "Web, UI & UX Design"
+      ]
+    },
+    {
+      "slug": "hubspot",
+      "name": "HubSpot",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2020/11/WRILS-201117203951-356443.png",
+      "jobs": 3,
+      "locations": [
+        "Australia,  New Zealand",
+        "USA",
+        "Australia"
+      ],
+      "categories": [
+        "Customer Support & Success",
+        "Sales"
+      ]
+    },
+    {
+      "slug": "concept-plus",
+      "name": "Concept Plus",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/36eab772-221.png",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Business Development"
+      ]
+    },
+    {
+      "slug": "grafana-labs",
+      "name": "Grafana Labs",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2021/11/42a3c42246467ec231dd876e92b63452.jpeg",
+      "jobs": 3,
+      "locations": [
+        "USA",
+        "Germany,  Ireland,  Spain,  Sweden,  UK"
+      ],
+      "categories": [
+        "Sales",
+        "Software Engineering"
+      ]
+    },
+    {
+      "slug": "reddit",
+      "name": "Reddit",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2020/10/Reddit.jpg",
+      "jobs": 2,
+      "locations": [
+        "Canada"
+      ],
+      "categories": [
+        "Data Science & Analytics"
+      ]
+    },
+    {
+      "slug": "quinstreet",
+      "name": "QuinStreet",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/aee34c75-221.jpeg",
+      "jobs": 2,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Sales"
+      ]
+    },
+    {
+      "slug": "cribl",
+      "name": "Cribl",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/65d82c04-221.jpeg",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Customer Support & Success"
+      ]
+    },
+    {
+      "slug": "pointclickcare",
+      "name": "PointClickCare",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2022/02/94d5c7bae5858d7e126022ed422c639c.jpeg",
+      "jobs": 1,
+      "locations": [
+        "Canada"
+      ],
+      "categories": [
+        "Marketing & Sales"
+      ]
+    },
+    {
+      "slug": "cresta",
+      "name": "Cresta",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2022/08/4d686e40b22cf2510b627c59afe5fd95.jpg",
+      "jobs": 1,
+      "locations": [
+        "Spain"
+      ],
+      "categories": [
+        "Sales"
+      ]
+    },
+    {
+      "slug": "veeam-software",
+      "name": "Veeam Software",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/f7716b71-221.jpg",
+      "jobs": 1,
+      "locations": [
+        "Germany"
+      ],
+      "categories": [
+        "Technical Support"
+      ]
+    },
+    {
+      "slug": "nightowl-consulting",
+      "name": "NightOwl Consulting",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2026/07/b1dd7409831a-221.webp",
+      "jobs": 1,
+      "locations": [
+        "Philippines"
+      ],
+      "categories": [
+        "Admin & Virtual Assistance"
+      ]
+    },
+    {
+      "slug": "instructure",
+      "name": "Instructure",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2022/04/430057884baf037dd2aa1e1e017e72b6.jpg",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Product & Operations"
+      ]
+    },
+    {
+      "slug": "mirantis",
+      "name": "Mirantis",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2026/06/a5526a1a-221.webp",
+      "jobs": 1,
+      "locations": [
+        "Europe"
+      ],
+      "categories": [
+        "Software Engineering"
+      ]
+    },
+    {
+      "slug": "magicschool-ai",
+      "name": "MagicSchool AI",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/d61b2189-221.jpeg",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Customer Support & Success"
+      ]
+    },
+    {
+      "slug": "extrahop",
+      "name": "ExtraHop",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/4800f505-221.jpg",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Sales"
+      ]
+    },
+    {
+      "slug": "alphasense",
+      "name": "AlphaSense",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/01960e94-221.jpg",
+      "jobs": 2,
+      "locations": [
+        "Ireland",
+        "USA"
+      ],
+      "categories": [
+        "Sales",
+        "Customer Support & Success"
+      ]
+    },
+    {
+      "slug": "collibra",
+      "name": "Collibra",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/25583c1c-221.jpg",
+      "jobs": 3,
+      "locations": [
+        "USA",
+        "Australia"
+      ],
+      "categories": [
+        "Sales"
+      ]
+    },
+    {
+      "slug": "amplitude",
+      "name": "Amplitude",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/bda3af21-221.jpg",
+      "jobs": 3,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Sales",
+        "Software Engineering",
+        "Marketing & Sales"
+      ]
+    },
+    {
+      "slug": "braze",
+      "name": "Braze",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/86f743f0-221-1.png",
+      "jobs": 1,
+      "locations": [
+        "Canada"
+      ],
+      "categories": [
+        "DevOps & Infrastructure"
+      ]
+    },
+    {
+      "slug": "fueled",
+      "name": "Fueled",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2022/05/fe49a96d-221.jpg",
+      "jobs": 2,
+      "locations": [
+        "Anywhere",
+        "USA"
+      ],
+      "categories": [
+        "Software Engineering",
+        "SEO"
+      ]
+    },
+    {
+      "slug": "solace",
+      "name": "Solace",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/4e37a66b-221.png",
+      "jobs": 2,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Healthcare & Medical",
+        "Product & Operations"
+      ]
+    },
+    {
+      "slug": "demandbase-inc",
+      "name": "Demandbase, Inc.",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/664c17c5-221.jpg",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Business Development"
+      ]
+    },
+    {
+      "slug": "ccof",
+      "name": "CCOF",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/e382aaa0-221.png",
+      "jobs": 2,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Finance & Accounting",
+        "Legal & Compliance"
+      ]
+    },
+    {
+      "slug": "beyond-finance",
+      "name": "Beyond Finance",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2022/01/68cd015e123539d873279c7b82f1ca6a.jpg",
+      "jobs": 2,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Data Science & Analytics",
+        "Customer Support & Success"
+      ]
+    },
+    {
+      "slug": "phantom",
+      "name": "Phantom",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/08/3d0a3a49-221.png",
+      "jobs": 1,
+      "locations": [
+        "LATAM,  Canada,  Europe,  USA"
+      ],
+      "categories": [
+        "Software Engineering"
+      ]
+    },
+    {
+      "slug": "ramp",
+      "name": "Ramp",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/7fafb2d0-221.png",
+      "jobs": 8,
+      "locations": [
+        "Canada,  USA",
+        "USA"
+      ],
+      "categories": [
+        "Technical Support",
+        "Sales",
+        "Finance & Accounting",
+        "Software Engineering"
+      ]
+    },
+    {
+      "slug": "hackerone",
+      "name": "HackerOne",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/8937d355-221.png",
+      "jobs": 7,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Product & Operations",
+        "Cybersecurity",
+        "Software Engineering"
+      ]
+    },
+    {
+      "slug": "zuora",
+      "name": "Zuora",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/43baa0bd-221.jpg",
+      "jobs": 5,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Software Engineering",
+        "Finance & Accounting",
+        "Sales"
+      ]
+    },
+    {
+      "slug": "worldly",
+      "name": "Worldly",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/2fe6d418-221.jpg",
+      "jobs": 6,
+      "locations": [
+        "China,  Hong Kong,  Philippines,  Vietnam",
+        "USA",
+        "Europe",
+        "China,  Hong Kong,  Thailand,  Vietnam",
+        "Europe,  USA"
+      ],
+      "categories": [
+        "Customer Support & Success",
+        "Marketing & Sales",
+        "Finance & Accounting",
+        "Sales"
+      ]
+    },
+    {
+      "slug": "sumup",
+      "name": "SumUp",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/5d0d49e9-221.jpg",
+      "jobs": 1,
+      "locations": [
+        "Bulgaria"
+      ],
+      "categories": [
+        "Finance & Accounting"
+      ]
+    },
+    {
+      "slug": "applied-intuition",
+      "name": "Applied Intuition",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/8726d2bf-221.png",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "HR & Recruiting"
+      ]
+    },
+    {
+      "slug": "quartzy",
+      "name": "Quartzy",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2021/05/Jobicy-210510094717-355417.jpg",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Sales"
+      ]
+    },
+    {
+      "slug": "clover-health",
+      "name": "Clover Health",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/8d4e74b3-221.jpg",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Data Science & Analytics"
+      ]
+    },
+    {
+      "slug": "ncr-voyix",
+      "name": "NCR Voyix",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/2fcbc094-221.png",
+      "jobs": 1,
+      "locations": [
+        "Denmark"
+      ],
+      "categories": [
+        "Technical Support"
+      ]
+    },
+    {
+      "slug": "levelup",
+      "name": "LevelUp",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/31e98500-221.png",
+      "jobs": 6,
+      "locations": [
+        "Philippines"
+      ],
+      "categories": [
+        "Technical Support",
+        "Finance & Accounting",
+        "Marketing & Sales"
+      ]
+    },
+    {
+      "slug": "thriveworks",
+      "name": "Thriveworks",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2026/07/241b96ba298d-221.webp",
+      "jobs": 2,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Healthcare & Medical"
+      ]
+    },
+    {
+      "slug": "intellect",
+      "name": "Intellect",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/ae1f68b4-221.jpg",
+      "jobs": 2,
+      "locations": [
+        "Australia",
+        "Thailand"
+      ],
+      "categories": [
+        "Healthcare & Medical"
+      ]
+    },
+    {
+      "slug": "canonical",
+      "name": "Canonical",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/b4d068a9-221-1.png",
+      "jobs": 8,
+      "locations": [
+        "EMEA,  LATAM,  Canada,  USA",
+        "EMEA",
+        "APAC,  EMEA"
+      ],
+      "categories": [
+        "Software Engineering",
+        "Product & Operations",
+        "Finance & Accounting",
+        "HR & Recruiting"
+      ]
+    },
+    {
+      "slug": "centene-corporation",
+      "name": "Centene Corporation",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/39e51050-221.png",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Healthcare & Medical"
+      ]
+    },
+    {
+      "slug": "netbox-labs",
+      "name": "NetBox Labs",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/df239a55-221.png",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Business Development"
+      ]
+    },
+    {
+      "slug": "wiser-solutions",
+      "name": "Wiser Solutions",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/8589528a-221.jpg",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Sales"
+      ]
+    },
+    {
+      "slug": "j-s-held",
+      "name": "J.S. Held",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2026/07/c07a8b907401-221.webp",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Software Engineering"
+      ]
+    },
+    {
+      "slug": "nebius",
+      "name": "Nebius",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2026/06/d90c0566-221.webp",
+      "jobs": 4,
+      "locations": [
+        "Czechia,  Europe",
+        "Europe",
+        "Europe,  Netherlands"
+      ],
+      "categories": [
+        "Software Engineering",
+        "DevOps & Infrastructure"
+      ]
+    },
+    {
+      "slug": "saas-group",
+      "name": "saas.group",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/f6d362c3-221-1.png",
+      "jobs": 1,
+      "locations": [
+        "Europe"
+      ],
+      "categories": [
+        "DevOps & Infrastructure"
+      ]
+    },
+    {
+      "slug": "chime",
+      "name": "Chime",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2023/02/6c7c8b16d921fbf3394e228f1554ef5e.jpeg",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Marketing & Sales"
+      ]
+    },
+    {
+      "slug": "nagarro",
+      "name": "Nagarro",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/93252b0c-221.png",
+      "jobs": 1,
+      "locations": [
+        "Philippines"
+      ],
+      "categories": [
+        "Creative & Design"
+      ]
+    },
+    {
+      "slug": "monzo",
+      "name": "Monzo",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/5b4c0ec3-221.jpg",
+      "jobs": 2,
+      "locations": [
+        "UK"
+      ],
+      "categories": [
+        "Software Engineering",
+        "Technical Support"
+      ]
+    },
+    {
+      "slug": "teramind",
+      "name": "Teramind",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2026/06/5f73db18-221.png",
+      "jobs": 1,
+      "locations": [
+        "Romania"
+      ],
+      "categories": [
+        "Product & Operations"
+      ]
+    },
+    {
+      "slug": "boulevard",
+      "name": "Boulevard",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2021/12/a45167e12b0ed51058a884cf9cd0c76f.png",
+      "jobs": 2,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "DevOps & Infrastructure",
+        "Creative & Design"
+      ]
+    },
+    {
+      "slug": "who-gives-a-crap",
+      "name": "Who Gives A Crap",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/389bf597-221.png",
+      "jobs": 1,
+      "locations": [
+        "Philippines"
+      ],
+      "categories": [
+        "Finance & Accounting"
+      ]
+    },
+    {
+      "slug": "mercury",
+      "name": "Mercury",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2023/11/dfb1112a-221.jpeg",
+      "jobs": 1,
+      "locations": [
+        "Canada,  USA"
+      ],
+      "categories": [
+        "SEO"
+      ]
+    },
+    {
+      "slug": "stripe",
+      "name": "Stripe",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2020/10/WRILS-201011073943-272457.png",
+      "jobs": 1,
+      "locations": [
+        "Canada,  USA"
+      ],
+      "categories": [
+        "SEO"
+      ]
+    },
+    {
+      "slug": "harness",
+      "name": "Harness",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2022/01/3b1ed4078f521827fd4fd3f1ead4e484.jpg",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "SEO"
+      ]
+    },
+    {
+      "slug": "elevenlabs",
+      "name": "Elevenlabs",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/e01b4c5d-221.png",
+      "jobs": 1,
+      "locations": [
+        "Argentina,  Australia,  Brazil,  Ireland,  Italy,  Japan,  Poland,  Spain,  UAE,  UK,  USA"
+      ],
+      "categories": [
+        "SEO"
+      ]
+    },
+    {
+      "slug": "samsara",
+      "name": "Samsara",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/dd26f5ca-221.jpg",
+      "jobs": 11,
+      "locations": [
+        "USA",
+        "Ireland,  UK",
+        "UK",
+        "Mexico",
+        "France,  Germany,  Netherlands,  UK"
+      ],
+      "categories": [
+        "Sales",
+        "Business Development",
+        "Finance & Accounting"
+      ]
+    },
+    {
+      "slug": "vonage",
+      "name": "Vonage",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/1bac058d-221.jpg",
+      "jobs": 9,
+      "locations": [
+        "UK",
+        "Mexico",
+        "Poland",
+        "Anywhere"
+      ],
+      "categories": [
+        "Business Development",
+        "Sales",
+        "Data Science & Analytics",
+        "Project & Program Management",
+        "Finance & Accounting",
+        "Software Engineering"
+      ]
+    },
+    {
+      "slug": "nextiva",
+      "name": "Nextiva",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/5863278d-221.jpeg",
+      "jobs": 4,
+      "locations": [
+        "USA",
+        "Ukraine"
+      ],
+      "categories": [
+        "Product & Operations",
+        "Software Engineering",
+        "Technical Support"
+      ]
+    },
+    {
+      "slug": "jamf",
+      "name": "Jamf",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/6ac94784-221.jpg",
+      "jobs": 3,
+      "locations": [
+        "USA",
+        "Japan"
+      ],
+      "categories": [
+        "Sales",
+        "Customer Support & Success"
+      ]
+    },
+    {
+      "slug": "certik",
+      "name": "CertiK",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2021/03/Jobicy-210308091023-955845.jpg",
+      "jobs": 2,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Cybersecurity"
+      ]
+    },
+    {
+      "slug": "launchpad-technologies",
+      "name": "Launchpad Technologies",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/ed43694d-221.png",
+      "jobs": 2,
+      "locations": [
+        "LATAM"
+      ],
+      "categories": [
+        "Software Engineering",
+        "Project & Program Management"
+      ]
+    },
+    {
+      "slug": "tailscale",
+      "name": "Tailscale",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/d3fa2e99-221.png",
+      "jobs": 2,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Creative & Design",
+        "Software Engineering"
+      ]
+    },
+    {
+      "slug": "hopper",
+      "name": "Hopper",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2020/10/WRILS-201020164254-931520.jpg",
+      "jobs": 2,
+      "locations": [
+        "UAE",
+        "USA"
+      ],
+      "categories": [
+        "Business Development",
+        "Finance & Accounting"
+      ]
+    },
+    {
+      "slug": "uplift",
+      "name": "Uplift",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2022/01/bc1ca23b75dfd2e8c88bbc68bc684817-e1643313682487.png",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Healthcare & Medical"
+      ]
+    },
+    {
+      "slug": "caylent",
+      "name": "Caylent",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/9ed8d81b-221.jpg",
+      "jobs": 1,
+      "locations": [
+        "Argentina"
+      ],
+      "categories": [
+        "Data Science & Analytics"
+      ]
+    },
+    {
+      "slug": "bayesian-health",
+      "name": "Bayesian Health",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/08/f74593d8-221.png",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Healthcare & Medical"
+      ]
+    },
+    {
+      "slug": "garner-health",
+      "name": "Garner Health",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/08/5ba0f621-221.png",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Sales"
+      ]
+    },
+    {
+      "slug": "dune",
+      "name": "Dune",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/9fd6085e-221.png",
+      "jobs": 1,
+      "locations": [
+        "Europe,  USA"
+      ],
+      "categories": [
+        "Software Engineering"
+      ]
+    },
+    {
+      "slug": "commvault",
+      "name": "Commvault",
+      "logo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/2b87d27b-221-1.jpeg",
+      "jobs": 1,
+      "locations": [
+        "USA"
+      ],
+      "categories": [
+        "Sales"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tv-u.github.io/Goo-jobb/sitemap.xml
+
+# Career Hub
+Allow: /Goo-jobb/career/

@@ -1,0 +1,12 @@
+{
+  "name":"GOO-JOBB Local AI",
+  "version":"1.0.0",
+  "mode":"browser-local",
+  "capabilities":[
+    "job-query-ranking",
+    "keyword-matching",
+    "skill-matching",
+    "location-matching",
+    "salary-text-normalization"
+  ]
+}

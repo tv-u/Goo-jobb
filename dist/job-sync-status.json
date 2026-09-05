@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-05T17:51:08.543Z",
+  "durationMs": 8644,
+  "realJobs": 359,
+  "sources": 4,
+  "healthySources": 4,
+  "failedSources": 0,
+  "sourceHealth": [
+    {
+      "name": "jobicy",
+      "url": "https://jobicy.com/api/v2/remote-jobs?count=200",
+      "ok": true,
+      "attempts": 1,
+      "error": null
+    },
+    {
+      "name": "remoteok",
+      "url": "https://remoteok.com/api",
+      "ok": true,
+      "attempts": 1,
+      "error": null
+    },
+    {
+      "name": "remotive",
+      "url": "https://remotive.com/api/remote-jobs?limit=100",
+      "ok": true,
+      "attempts": 1,
+      "error": null
+    },
+    {
+      "name": "arbeitnow",
+      "url": "https://www.arbeitnow.com/api/job-board-api",
+      "ok": true,
+      "attempts": 1,
+      "error": null
+    }
+  ]
+}

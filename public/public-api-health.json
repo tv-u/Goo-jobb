@@ -1,0 +1,174 @@
+{
+  "generatedAt": "2026-09-05T22:19:12.838Z",
+  "connectorCount": 20,
+  "healthySources": 16,
+  "failedSources": 4,
+  "fetchedRecords": 615,
+  "uniqueJobs": 596,
+  "sources": [
+    {
+      "id": "himalayas-json",
+      "name": "Himalayas",
+      "status": "failed",
+      "fetched": 0,
+      "accepted": 0,
+      "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+      "checkedAt": "2026-09-05T22:19:04.380Z"
+    },
+    {
+      "id": "himalayas-rss",
+      "name": "Himalayas RSS",
+      "status": "failed",
+      "fetched": 0,
+      "accepted": 0,
+      "error": "Unexpected token '<', \"<?xml vers\"... is not valid JSON",
+      "checkedAt": "2026-09-05T22:19:04.652Z"
+    },
+    {
+      "id": "jobicy",
+      "name": "Jobicy",
+      "status": "healthy",
+      "fetched": 200,
+      "accepted": 0,
+      "checkedAt": "2026-09-05T22:19:04.958Z"
+    },
+    {
+      "id": "jobicy-engineering",
+      "name": "Jobicy Engineering",
+      "status": "healthy",
+      "fetched": 200,
+      "accepted": 0,
+      "checkedAt": "2026-09-05T22:19:05.247Z"
+    },
+    {
+      "id": "jobicy-marketing",
+      "name": "Jobicy Marketing",
+      "status": "healthy",
+      "fetched": 200,
+      "accepted": 0,
+      "checkedAt": "2026-09-05T22:19:05.527Z"
+    },
+    {
+      "id": "jobicy-data-science",
+      "name": "Jobicy Data Science",
+      "status": "healthy",
+      "fetched": 99,
+      "accepted": 0,
+      "checkedAt": "2026-09-05T22:19:05.799Z"
+    },
+    {
+      "id": "remotejobs-org",
+      "name": "RemoteJobs.org",
+      "status": "healthy",
+      "fetched": 50,
+      "accepted": 50,
+      "checkedAt": "2026-09-05T22:19:06.120Z"
+    },
+    {
+      "id": "remotejobs-programming",
+      "name": "RemoteJobs.org Programming",
+      "status": "healthy",
+      "fetched": 50,
+      "accepted": 50,
+      "checkedAt": "2026-09-05T22:19:06.435Z"
+    },
+    {
+      "id": "remotejobs-design",
+      "name": "RemoteJobs.org Design",
+      "status": "healthy",
+      "fetched": 50,
+      "accepted": 50,
+      "checkedAt": "2026-09-05T22:19:06.734Z"
+    },
+    {
+      "id": "remotejobs-marketing",
+      "name": "RemoteJobs.org Marketing",
+      "status": "healthy",
+      "fetched": 50,
+      "accepted": 50,
+      "checkedAt": "2026-09-05T22:19:07.051Z"
+    },
+    {
+      "id": "remotejobs-data-science",
+      "name": "RemoteJobs.org Data Science",
+      "status": "healthy",
+      "fetched": 50,
+      "accepted": 50,
+      "checkedAt": "2026-09-05T22:19:07.350Z"
+    },
+    {
+      "id": "remotejobs-devops",
+      "name": "RemoteJobs.org DevOps",
+      "status": "healthy",
+      "fetched": 50,
+      "accepted": 50,
+      "checkedAt": "2026-09-05T22:19:07.653Z"
+    },
+    {
+      "id": "remote-landers",
+      "name": "Remote Landers",
+      "status": "failed",
+      "fetched": 0,
+      "accepted": 0,
+      "error": "HTTP 403",
+      "checkedAt": "2026-09-05T22:19:07.918Z"
+    },
+    {
+      "id": "jobremotely",
+      "name": "JobRemotely",
+      "status": "healthy",
+      "fetched": 0,
+      "accepted": 0,
+      "checkedAt": "2026-09-05T22:19:09.021Z"
+    },
+    {
+      "id": "arbeitnow",
+      "name": "Arbeitnow",
+      "status": "healthy",
+      "fetched": 250,
+      "accepted": 250,
+      "checkedAt": "2026-09-05T22:19:09.632Z"
+    },
+    {
+      "id": "remotive",
+      "name": "Remotive",
+      "status": "healthy",
+      "fetched": 15,
+      "accepted": 15,
+      "checkedAt": "2026-09-05T22:19:09.909Z"
+    },
+    {
+      "id": "remote-landers-engineering",
+      "name": "Remote Landers Engineering",
+      "status": "failed",
+      "fetched": 0,
+      "accepted": 0,
+      "error": "HTTP 403",
+      "checkedAt": "2026-09-05T22:19:10.179Z"
+    },
+    {
+      "id": "remote-landers-us",
+      "name": "Remote Landers USA",
+      "status": "healthy",
+      "fetched": 50,
+      "accepted": 50,
+      "checkedAt": "2026-09-05T22:19:10.459Z"
+    },
+    {
+      "id": "jobremotely-engineering",
+      "name": "JobRemotely Engineering",
+      "status": "healthy",
+      "fetched": 0,
+      "accepted": 0,
+      "checkedAt": "2026-09-05T22:19:11.634Z"
+    },
+    {
+      "id": "jobremotely-design",
+      "name": "JobRemotely Design",
+      "status": "healthy",
+      "fetched": 0,
+      "accepted": 0,
+      "checkedAt": "2026-09-05T22:19:12.585Z"
+    }
+  ]
+}

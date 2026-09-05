@@ -1,37 +1,13 @@
 {
-  "generatedAt": "2026-09-05T20:33:19.900Z",
+  "generatedAt": "2026-09-05T20:44:25.235Z",
   "status": "healthy",
-  "pipeline": "GOO-JOBB Fail-Safe Production Sync",
-  "repository": "tv-u/Goo-jobb",
-  "pages": "https://tv-u.github.io/Goo-jobb/",
-  "automaticSync": true,
-  "zeroJobProtection": true,
+  "engine": "worldwide-source-expansion",
+  "totalValidJobs": 9928,
+  "currentSyncJobs": 2341,
+  "sourceCount": 40,
+  "healthySources": 34,
+  "failedSources": 6,
   "fakeJobs": false,
-  "syntheticJobs": false,
-  "engine": "scripts/source-expansion.mjs",
-  "jobCount": 8713,
-  "uniqueCount": 8713,
-  "sourceCount": 12,
-  "sources": {
-    "Job Opportunities API": 1500,
-    "Remote Landers": 4447,
-    "Remote OK": 100,
-    "Remotive": 15,
-    "Arbeitnow": 2257,
-    "jobicy": 200,
-    "weworkremotely": 90,
-    "wwr-customer-support": 18,
-    "wwr-sales-marketing": 57,
-    "wwr-devops": 4,
-    "wwr-programming": 18,
-    "wwr-design": 7
-  },
-  "files": {
-    "worldwide": true,
-    "enterprise": true,
-    "searchIndex": true,
-    "facets": true,
-    "companies": true,
-    "sitemap": true
-  }
+  "syntheticJobs": 0,
+  "worldwide": true
 }

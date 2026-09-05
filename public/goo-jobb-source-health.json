@@ -1,0 +1,463 @@
+{
+  "generatedAt": "2026-09-05T20:44:25.233Z",
+  "sourceCount": 40,
+  "healthySources": 34,
+  "failedSources": 6,
+  "acceptedFromCurrentSync": 2341,
+  "totalValidJobs": 9928,
+  "fakeJobs": 0,
+  "syntheticJobs": 0,
+  "sources": [
+    "himalayas-rss",
+    "Arbeitnow",
+    "arbeitnow-page-2",
+    "arbeitnow",
+    "arbeitnow-page-1",
+    "jobscollider",
+    "remote-first-engineering",
+    "We Work Remotely",
+    "weworkremotely",
+    "wwr-customer-support",
+    "wwr-sales-marketing",
+    "Remote OK",
+    "remoteok",
+    "jobicy-usa",
+    "jobicy-data-science",
+    "jobicy-marketing",
+    "jobicy-europe",
+    "remoteok-dev",
+    "remoteok-marketing",
+    "jobicy-engineering",
+    "jobicy-apac",
+    "jobicy-anywhere",
+    "remoteok-data",
+    "Remotive",
+    "remotive",
+    "remoteok-design",
+    "wwr-design",
+    "remoteok-python",
+    "remoteok-javascript",
+    "wwr-programming",
+    "Job Opportunities API",
+    "Remote Landers",
+    "remote-landers",
+    "arbeitnow-page-3",
+    "jobicy",
+    "wwr-devops"
+  ],
+  "sourceResults": [
+    {
+      "source": "jobicy",
+      "url": "https://jobicy.com/api/v2/remote-jobs?count=200",
+      "fetched": 200,
+      "accepted": 200,
+      "ok": true,
+      "error": null,
+      "ms": 3328
+    },
+    {
+      "source": "remoteok",
+      "url": "https://remoteok.com/api",
+      "fetched": 101,
+      "accepted": 100,
+      "ok": true,
+      "error": null,
+      "ms": 2809
+    },
+    {
+      "source": "remotive",
+      "url": "https://remotive.com/api/remote-jobs",
+      "fetched": 15,
+      "accepted": 15,
+      "ok": true,
+      "error": null,
+      "ms": 1858
+    },
+    {
+      "source": "arbeitnow",
+      "url": "https://www.arbeitnow.com/api/job-board-api",
+      "fetched": 250,
+      "accepted": 250,
+      "ok": true,
+      "error": null,
+      "ms": 3414
+    },
+    {
+      "source": "himalayas",
+      "url": "https://himalayas.app/jobs/api?limit=20",
+      "fetched": 20,
+      "accepted": 0,
+      "ok": true,
+      "error": null,
+      "ms": 2476
+    },
+    {
+      "source": "weworkremotely",
+      "url": "https://weworkremotely.com/remote-jobs.rss",
+      "fetched": 91,
+      "accepted": 91,
+      "ok": true,
+      "error": null,
+      "ms": 3544
+    },
+    {
+      "source": "wwr-programming",
+      "url": "https://weworkremotely.com/categories/remote-programming-jobs.rss",
+      "fetched": 25,
+      "accepted": 25,
+      "ok": true,
+      "error": null,
+      "ms": 2508
+    },
+    {
+      "source": "wwr-design",
+      "url": "https://weworkremotely.com/categories/remote-design-jobs.rss",
+      "fetched": 17,
+      "accepted": 17,
+      "ok": true,
+      "error": null,
+      "ms": 2545
+    },
+    {
+      "source": "wwr-sales-marketing",
+      "url": "https://weworkremotely.com/categories/remote-sales-and-marketing-jobs.rss",
+      "fetched": 68,
+      "accepted": 68,
+      "ok": true,
+      "error": null,
+      "ms": 1878
+    },
+    {
+      "source": "wwr-customer-support",
+      "url": "https://weworkremotely.com/categories/remote-customer-support-jobs.rss",
+      "fetched": 28,
+      "accepted": 28,
+      "ok": true,
+      "error": null,
+      "ms": 1288
+    },
+    {
+      "source": "wwr-devops",
+      "url": "https://weworkremotely.com/categories/remote-devops-and-sysadmin-jobs.rss",
+      "fetched": 0,
+      "accepted": 0,
+      "ok": false,
+      "error": "HTTP 403",
+      "ms": 4045
+    },
+    {
+      "source": "remoteok-rss",
+      "url": "https://remoteok.com/remote-jobs.rss",
+      "fetched": 0,
+      "accepted": 0,
+      "ok": false,
+      "error": "HTTP 410",
+      "ms": 3621
+    },
+    {
+      "source": "himalayas-rss",
+      "url": "https://himalayas.app/jobs/rss",
+      "fetched": 20,
+      "accepted": 20,
+      "ok": true,
+      "error": null,
+      "ms": 656
+    },
+    {
+      "source": "remote-landers",
+      "url": "https://remotelanders.com/api/jobs?limit=100&page=1",
+      "fetched": 100,
+      "accepted": 100,
+      "ok": true,
+      "error": null,
+      "ms": 2903
+    },
+    {
+      "source": "fourdayweek",
+      "url": "https://4dayweek.io/api/jobs",
+      "fetched": 25,
+      "accepted": 0,
+      "ok": true,
+      "error": null,
+      "ms": 1638
+    },
+    {
+      "source": "remote-first-jobs",
+      "url": "https://remotefirstjobs.com/rss",
+      "fetched": 0,
+      "accepted": 0,
+      "ok": true,
+      "error": null,
+      "ms": 1611
+    },
+    {
+      "source": "hireweb3",
+      "url": "https://hireweb3.io/rss",
+      "fetched": 0,
+      "accepted": 0,
+      "ok": true,
+      "error": null,
+      "ms": 5972
+    },
+    {
+      "source": "jobscollider",
+      "url": "https://jobscollider.com/remote-jobs.rss",
+      "fetched": 100,
+      "accepted": 100,
+      "ok": true,
+      "error": null,
+      "ms": 3060
+    },
+    {
+      "source": "remote-first-engineering",
+      "url": "https://remotefirstjobs.com/remote-jobs.rss",
+      "fetched": 100,
+      "accepted": 100,
+      "ok": true,
+      "error": null,
+      "ms": 3187
+    },
+    {
+      "source": "working-nomads",
+      "url": "https://www.workingnomads.com/jobs/rss",
+      "fetched": 0,
+      "accepted": 0,
+      "ok": true,
+      "error": null,
+      "ms": 3429
+    },
+    {
+      "source": "dailyremote",
+      "url": "https://dailyremote.com/remote-jobs.rss",
+      "fetched": 0,
+      "accepted": 0,
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 4504
+    },
+    {
+      "source": "remote4me",
+      "url": "https://remote4me.com/feed/",
+      "fetched": 0,
+      "accepted": 0,
+      "ok": false,
+      "error": "HTTP 404",
+      "ms": 4468
+    },
+    {
+      "source": "remotees",
+      "url": "https://remotees.com/feed/",
+      "fetched": 0,
+      "accepted": 0,
+      "ok": false,
+      "error": "HTTP 403",
+      "ms": 9247
+    },
+    {
+      "source": "remoteok-dev",
+      "url": "https://remoteok.com/api?tag=dev",
+      "fetched": 100,
+      "accepted": 99,
+      "ok": true,
+      "error": null,
+      "ms": 992
+    },
+    {
+      "source": "remoteok-design",
+      "url": "https://remoteok.com/api?tag=design",
+      "fetched": 101,
+      "accepted": 100,
+      "ok": true,
+      "error": null,
+      "ms": 1021
+    },
+    {
+      "source": "remoteok-python",
+      "url": "https://remoteok.com/api?tag=python",
+      "fetched": 101,
+      "accepted": 100,
+      "ok": true,
+      "error": null,
+      "ms": 956
+    },
+    {
+      "source": "remoteok-javascript",
+      "url": "https://remoteok.com/api?tag=javascript",
+      "fetched": 101,
+      "accepted": 100,
+      "ok": true,
+      "error": null,
+      "ms": 957
+    },
+    {
+      "source": "remoteok-data",
+      "url": "https://remoteok.com/api?tag=data",
+      "fetched": 101,
+      "accepted": 100,
+      "ok": true,
+      "error": null,
+      "ms": 796
+    },
+    {
+      "source": "remoteok-marketing",
+      "url": "https://remoteok.com/api?tag=marketing",
+      "fetched": 101,
+      "accepted": 100,
+      "ok": true,
+      "error": null,
+      "ms": 868
+    },
+    {
+      "source": "jobicy-usa",
+      "url": "https://jobicy.com/api/v2/remote-jobs?count=200&geo=usa",
+      "fetched": 200,
+      "accepted": 200,
+      "ok": true,
+      "error": null,
+      "ms": 4420
+    },
+    {
+      "source": "jobicy-europe",
+      "url": "https://jobicy.com/api/v2/remote-jobs?count=200&geo=europe",
+      "fetched": 200,
+      "accepted": 200,
+      "ok": true,
+      "error": null,
+      "ms": 2989
+    },
+    {
+      "source": "jobicy-apac",
+      "url": "https://jobicy.com/api/v2/remote-jobs?count=200&geo=apac",
+      "fetched": 200,
+      "accepted": 200,
+      "ok": true,
+      "error": null,
+      "ms": 2745
+    },
+    {
+      "source": "jobicy-anywhere",
+      "url": "https://jobicy.com/api/v2/remote-jobs?count=200&geo=anywhere",
+      "fetched": 129,
+      "accepted": 129,
+      "ok": true,
+      "error": null,
+      "ms": 2393
+    },
+    {
+      "source": "jobicy-engineering",
+      "url": "https://jobicy.com/api/v2/remote-jobs?count=200&industry=engineering",
+      "fetched": 200,
+      "accepted": 200,
+      "ok": true,
+      "error": null,
+      "ms": 2474
+    },
+    {
+      "source": "jobicy-marketing",
+      "url": "https://jobicy.com/api/v2/remote-jobs?count=200&industry=marketing",
+      "fetched": 200,
+      "accepted": 200,
+      "ok": true,
+      "error": null,
+      "ms": 2193
+    },
+    {
+      "source": "jobicy-data-science",
+      "url": "https://jobicy.com/api/v2/remote-jobs?count=200&industry=data-science",
+      "fetched": 99,
+      "accepted": 99,
+      "ok": true,
+      "error": null,
+      "ms": 2110
+    },
+    {
+      "source": "arbeitnow-page-1",
+      "url": "https://www.arbeitnow.com/api/job-board-api?page=1",
+      "fetched": 250,
+      "accepted": 250,
+      "ok": true,
+      "error": null,
+      "ms": 3298
+    },
+    {
+      "source": "arbeitnow-page-2",
+      "url": "https://www.arbeitnow.com/api/job-board-api?page=2",
+      "fetched": 250,
+      "accepted": 250,
+      "ok": true,
+      "error": null,
+      "ms": 2952
+    },
+    {
+      "source": "arbeitnow-page-3",
+      "url": "https://www.arbeitnow.com/api/job-board-api?page=3",
+      "fetched": 100,
+      "accepted": 100,
+      "ok": true,
+      "error": null,
+      "ms": 1934
+    },
+    {
+      "source": "himalayas-page-2",
+      "url": "https://himalayas.app/jobs/api?limit=20&cursor=20",
+      "fetched": 0,
+      "accepted": 0,
+      "ok": false,
+      "error": "HTTP 400",
+      "ms": 4003
+    }
+  ],
+  "countries": {
+    "Worldwide": 5964,
+    "United States": 2062,
+    "Brazil": 38,
+    "France": 200,
+    "United Kingdom": 264,
+    "Germany": 267,
+    "Canada": 209,
+    "India": 81,
+    "Japan": 55,
+    "Poland": 46,
+    "Singapore": 58,
+    "United Arab Emirates": 7,
+    "Australia": 82,
+    "Netherlands": 40,
+    "Mexico": 71,
+    "Spain": 36,
+    "Argentina": 6,
+    "Italy": 27,
+    "China": 6,
+    "Ireland": 40,
+    "Denmark": 43,
+    "Portugal": 39,
+    "Israel": 5,
+    "Switzerland": 36,
+    "Sweden": 25,
+    "Belgium": 44,
+    "Norway": 30,
+    "South Africa": 31,
+    "Finland": 30,
+    "Austria": 38,
+    "South Korea": 11,
+    "New Zealand": 36,
+    "Kenya": 1
+  },
+  "categories": {
+    "Human Resources": 258,
+    "Technology": 2406,
+    "Other": 4065,
+    "Finance": 184,
+    "Customer Support": 125,
+    "Marketing": 867,
+    "Legal": 182,
+    "Design": 428,
+    "Sales": 940,
+    "Education": 22,
+    "Healthcare": 451
+  },
+  "modes": {
+    "On-site": 8711,
+    "Remote": 1019,
+    "Hybrid": 198
+  }
+}

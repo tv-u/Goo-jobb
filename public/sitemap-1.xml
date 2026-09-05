@@ -22,6 +22,11 @@
   <priority>0.6</priority>
  </url>
  <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Human%20Resources</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
   <loc>https://tv-u.github.io/Goo-jobb/?category=Healthcare</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
@@ -32,12 +37,7 @@
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Design</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Customer%20Support</loc>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Sales</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -47,12 +47,12 @@
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Sales</loc>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Design</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Human%20Resources</loc>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Customer%20Support</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -82,7 +82,17 @@
   <priority>0.6</priority>
  </url>
  <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Mural</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
   <loc>https://tv-u.github.io/Goo-jobb/?company=Spire</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Brain%20Co.</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -2213,11 +2223,6 @@
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?company=Branch</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Mural</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -15817,6 +15822,61 @@
   <priority>0.6</priority>
  </url>
  <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Swissitsecuritygroup</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=B%C3%A4cker%20G%C3%B6rtz%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=QAware%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=FELD%20M</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Holy</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=GR%C3%9CNE'S%20LEIHH%C3%84USER%20GmbH%20%26%20Co.%20KG</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=YOSHI</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Studyflix%20Gmbh</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=IPG%20Automotive%20-%20Personio</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Parking%20Solutions%20Deutschland%20Gmbh</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Ppro</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
   <loc>https://tv-u.github.io/Goo-jobb/?location=Worldwide</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
@@ -24603,6 +24663,26 @@
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?location=Marseille%2C%20France</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Ludwigshafen%2C%20Rheinland-Pfalz%2C%20Deutschland</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=B%C3%BCro%20K%C3%B6ln</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Karlsruhe%20Fautenbruchstra%C3%9Fe</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=DE%20-%20Mainz</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>

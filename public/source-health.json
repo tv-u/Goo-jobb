@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T20:01:32.468Z",
+  "generatedAt": "2026-09-05T20:22:54.080Z",
   "sources": [
     {
       "id": "remoteok",
@@ -7,7 +7,7 @@
       "healthy": true,
       "fetched": 101,
       "accepted": 100,
-      "elapsedMs": 3156
+      "elapsedMs": 624
     },
     {
       "id": "jobicy",
@@ -15,7 +15,7 @@
       "healthy": true,
       "fetched": 200,
       "accepted": 0,
-      "elapsedMs": 3420
+      "elapsedMs": 287
     },
     {
       "id": "remotive",
@@ -23,15 +23,15 @@
       "healthy": true,
       "fetched": 15,
       "accepted": 15,
-      "elapsedMs": 2405
+      "elapsedMs": 144
     },
     {
       "id": "arbeitnow",
       "name": "Arbeitnow",
       "healthy": true,
-      "fetched": 2212,
-      "accepted": 2212,
-      "elapsedMs": 42347
+      "fetched": 2100,
+      "accepted": 2100,
+      "elapsedMs": 33905
     },
     {
       "id": "himalayas",
@@ -39,7 +39,7 @@
       "healthy": true,
       "fetched": 400,
       "accepted": 0,
-      "elapsedMs": 17696
+      "elapsedMs": 7065
     },
     {
       "id": "remotelanders",
@@ -47,7 +47,7 @@
       "healthy": true,
       "fetched": 4447,
       "accepted": 4447,
-      "elapsedMs": 39024
+      "elapsedMs": 14377
     }
   ]
 }

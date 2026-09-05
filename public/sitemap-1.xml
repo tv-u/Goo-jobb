@@ -222,17 +222,17 @@
   <priority>0.6</priority>
  </url>
  <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Writing</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
   <loc>https://tv-u.github.io/Goo-jobb/?category=non%20tech</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?category=math</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Writing</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -2737,11 +2737,6 @@
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Makler</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
   <loc>https://tv-u.github.io/Goo-jobb/?category=25000%20-%20Commercial</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
@@ -2912,36 +2907,6 @@
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Quality%20Assurance%20%26%20Regulatory%20Affairs</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=B2C%20Channels%20EU</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=People%20%26%20Finance</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Student%20%26%20Early%20Professionals</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Technical</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Recruitment%20and%20hr</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
   <loc>https://tv-u.github.io/Goo-jobb/?category=Biogas</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
@@ -3053,6 +3018,41 @@
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?category=CRM</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Makler</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Quality%20Assurance%20%26%20Regulatory%20Affairs</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=B2C%20Channels%20EU</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=People%20%26%20Finance</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Student%20%26%20Early%20Professionals</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Technical</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Recruitment%20and%20hr</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -6427,6 +6427,11 @@
   <priority>0.6</priority>
  </url>
  <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Coalition%20Technologies</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
   <loc>https://tv-u.github.io/Goo-jobb/?company=Astrek%20Careers</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
@@ -6443,11 +6448,6 @@
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?company=OrderYOYO</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Coalition%20Technologies</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -8527,17 +8527,17 @@
   <priority>0.6</priority>
  </url>
  <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Lemon.io</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
   <loc>https://tv-u.github.io/Goo-jobb/?company=Royal%20Caribbean%20Group</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?company=Larsen%20%26amp%3B%20Toubro</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Lemon.io</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -10322,6 +10322,11 @@
   <priority>0.6</priority>
  </url>
  <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Unio%20Digital</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
   <loc>https://tv-u.github.io/Goo-jobb/?company=Neumora</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
@@ -10388,11 +10393,6 @@
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?company=Zip</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Unio%20Digital</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -12962,6 +12962,16 @@
   <priority>0.6</priority>
  </url>
  <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=adlicious</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Bifrost%20Defence</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
   <loc>https://tv-u.github.io/Goo-jobb/?company=VOLENTUM%20Deutschland%20GmbH</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
@@ -14517,26 +14527,6 @@
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Pmone</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Neuplaner</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Lpe%20Immobilien%20Management%20Gmbh</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Deltavision</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
   <loc>https://tv-u.github.io/Goo-jobb/?company=Freedom%20Finance%20Germany%20GmbH</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
@@ -15302,256 +15292,6 @@
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=imperex%20Consulting%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=morefire%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=everii%20Group%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=einklang</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=FlexPeople%C2%AE%20-%20Your%20Career%20Network</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Creatal%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=simtrabps</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=RiJu%20Connecting%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Volt%20Venture%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=PayCenter%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=rilaton%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Hochschul-IT-Services.nrw</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Packmatic</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Bugaga%20Werbeagentur%20e.K.</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=INC%20Innovation%20Center%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Almased%20Wellness%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Scandinavian%20home</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Movinga%20%2F%20MoveAgain%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Just%20Hiring</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=LWB%20Group</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=think%20about%20IT%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Nickel%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=nearshorefriends%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=cureVision%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=finwyz%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Kiyo%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=solreco%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Andreas%20Plumari%2C%20B%C3%BCro%20f%C3%BCr%20Deutsche%20Verm%C3%B6gensberatung</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Swiss%20Life%20Select</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=bkb%20GmbH%20Steuerberatungsgesellschaft</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=JetztJob</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=n-komm%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=MURIS%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Kohnle%20%26%20Partner</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=NXT%20Hero%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Raya%20Diagnostics%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Manti%20Manti%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Fierro%20Hiring%20Solutions%20Andrea%20Fierro</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=KSGOC%20-%20K%C3%BChn%20%26%20Sellinger%20Group%20of%20Companies</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Datwyler%20IT%20Infra</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Recare%20Deutschland%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Trusted%20Shops%20SE%20(DE)</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Strategy%20Core%20Ventures%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=SpotOn%20Solutions</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=6PM%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=BuchhaltungsButler</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Medivise%20Healthcare%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Civey%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Greenpocket</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Steuerberater%20Rico%20Sarnoch</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
   <loc>https://tv-u.github.io/Goo-jobb/?company=Primark%20Mode%20Ltd.%20%26%20Co.%20KG</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
@@ -15768,11 +15508,6 @@
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?company=FlexIT%20Consulting%20GmbH</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?company=Satisfyer</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -16028,6 +15763,281 @@
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?company=OPUS%20ONE%20Recruitment%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Pmone</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Neuplaner</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Lpe%20Immobilien%20Management%20Gmbh</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Deltavision</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=imperex%20Consulting%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=morefire%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=everii%20Group%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=einklang</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=FlexPeople%C2%AE%20-%20Your%20Career%20Network</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Creatal%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=simtrabps</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=RiJu%20Connecting%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Volt%20Venture%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=PayCenter%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=rilaton%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Hochschul-IT-Services.nrw</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Packmatic</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Bugaga%20Werbeagentur%20e.K.</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=INC%20Innovation%20Center%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Almased%20Wellness%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Scandinavian%20home</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Movinga%20%2F%20MoveAgain%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Just%20Hiring</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=LWB%20Group</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=think%20about%20IT%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Nickel%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=nearshorefriends%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=cureVision%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=finwyz%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Kiyo%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=solreco%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Andreas%20Plumari%2C%20B%C3%BCro%20f%C3%BCr%20Deutsche%20Verm%C3%B6gensberatung</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Swiss%20Life%20Select</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=bkb%20GmbH%20Steuerberatungsgesellschaft</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=JetztJob</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=n-komm%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=MURIS%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Kohnle%20%26%20Partner</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=NXT%20Hero%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Raya%20Diagnostics%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Manti%20Manti%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Fierro%20Hiring%20Solutions%20Andrea%20Fierro</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=KSGOC%20-%20K%C3%BChn%20%26%20Sellinger%20Group%20of%20Companies</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Datwyler%20IT%20Infra</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Recare%20Deutschland%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Trusted%20Shops%20SE%20(DE)</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Strategy%20Core%20Ventures%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=SpotOn%20Solutions</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=6PM%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=BuchhaltungsButler</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Medivise%20Healthcare%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Civey%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Greenpocket</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Steuerberater%20Rico%20Sarnoch</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Satisfyer</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -22057,11 +22067,6 @@
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?location=Potsdam%2C%20Brandenburg</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
   <loc>https://tv-u.github.io/Goo-jobb/?location=Aachen%2C%20Germany</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
@@ -22912,6 +22917,11 @@
   <priority>0.6</priority>
  </url>
  <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Potsdam%2C%20Brandenburg</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
   <loc>https://tv-u.github.io/Goo-jobb/?location=Kassel%2C%20Hesse</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
@@ -23457,67 +23467,7 @@
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?location=Montabaur</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?location=Halle%2C%20North%20Rhine-Westphalia</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?location=Taunusstein</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?location=Bochum</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?location=Langen</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?location=Donaueschingen</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?location=Heitersheim</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?location=Landau</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?location=Weingarten</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?location=Wittlich</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?location=Hattersheim%20am%20Main</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?location=Cologne%2C%20Nordrhein-Westfalen%2C%20Germany</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?location=Gilching</loc>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Winterbach</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -23703,6 +23653,71 @@
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?location=Schmalkalden</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Bochum</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Montabaur</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Halle%2C%20North%20Rhine-Westphalia</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Taunusstein</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Langen</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Donaueschingen</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Heitersheim</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Landau</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Weingarten</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Wittlich</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Hattersheim%20am%20Main</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Cologne%2C%20Nordrhein-Westfalen%2C%20Germany</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Gilching</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>

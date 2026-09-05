@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-05T20:28:13.472Z",
-  "durationMs": 1703,
+  "generatedAt": "2026-09-05T20:33:19.455Z",
+  "durationMs": 2267,
   "count": 758,
   "sourceCount": 11,
   "healthySources": 11,
@@ -23,7 +23,7 @@
       "url": "https://remoteok.com/api",
       "ok": true,
       "attempts": 1,
-      "bytes": 371068,
+      "bytes": 370268,
       "jobsParsed": 101,
       "error": null
     },
@@ -53,7 +53,7 @@
       "url": "https://himalayas.app/jobs/rss",
       "ok": true,
       "attempts": 1,
-      "bytes": 164011,
+      "bytes": 125601,
       "jobsParsed": 0,
       "error": null
     },

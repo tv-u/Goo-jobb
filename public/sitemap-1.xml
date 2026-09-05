@@ -17,37 +17,17 @@
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Healthcare</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Marketing</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Human%20Resources</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
   <loc>https://tv-u.github.io/Goo-jobb/?category=Other</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
  <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Healthcare</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
   <loc>https://tv-u.github.io/Goo-jobb/?category=Technology</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Legal</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Sales</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -58,6 +38,26 @@
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?category=Customer%20Support</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Marketing</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Sales</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Human%20Resources</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Legal</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>

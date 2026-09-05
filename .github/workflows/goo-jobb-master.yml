@@ -170,6 +170,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     permissions:
       contents: read
       pages: write
@@ -191,6 +195,7 @@ jobs:
           path: "."
 
       - name: Deploy Pages
+        id: deployment
         uses: actions/deploy-pages@v4
 
       - name: Deployment complete

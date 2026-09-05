@@ -1,571 +1,604 @@
 import fs from "node:fs/promises";
-import crypto from "node:crypto";
 
-const UA =
-  "GOO-JOBB-Real-Jobs/1.0 (+https://tv-u.github.io/Goo-jobb/)";
+const UA = "GOO-JOBB/2026 (+https://tv-u.github.io/Goo-jobb/)";
+const TIMEOUT = 18000;
+const MAX_JOBS = 100000;
 
-const REQUEST_TIMEOUT = 20000;
+const sources = [
+  {
+    id:"arbeitnow",
+    name:"Arbeitnow",
+    type:"json",
+    url:"https://www.arbeitnow.com/api/job-board-api"
+  },
+  {
+    id:"jobicy",
+    name:"Jobicy",
+    type:"json",
+    url:"https://jobicy.com/api/v2/remote-jobs?count=200"
+  },
+  {
+    id:"remoteok",
+    name:"Remote OK",
+    type:"json",
+    url:"https://remoteok.com/api"
+  },
+  {
+    id:"remotive",
+    name:"Remotive",
+    type:"json",
+    url:"https://remotive.com/api/remote-jobs?limit=100"
+  },
+  {
+    id:"workingnomads",
+    name:"Working Nomads",
+    type:"rss",
+    url:"https://www.workingnomads.com/jobs/rss"
+  },
+  {
+    id:"weworkremotely",
+    name:"We Work Remotely",
+    type:"rss",
+    url:"https://weworkremotely.com/remote-jobs.rss"
+  },
+  {
+    id:"jobspresso",
+    name:"Jobspresso",
+    type:"rss",
+    url:"https://jobspresso.co/feed/"
+  },
+  {
+    id:"dailyremote",
+    name:"DailyRemote",
+    type:"rss",
+    url:"https://dailyremote.com/remote-jobs/feed"
+  },
+  {
+    id:"remoteleads",
+    name:"Remote Leads",
+    type:"rss",
+    url:"https://remoteleads.io/feed/"
+  },
+  {
+    id:"remote4me",
+    name:"Remote4Me",
+    type:"rss",
+    url:"https://remote4me.com/feed/"
+  },
+  {
+    id:"jobboardsearch",
+    name:"Job Board Search",
+    type:"rss",
+    url:"https://jobboardsearch.com/feed/"
+  },
+  {
+    id:"uk-find-a-job",
+    name:"UK Find a Job",
+    type:"rss",
+    url:"https://findajob.dwp.gov.uk/search?rss=true"
+  },
 
-function clean(v = "") {
-  return String(v)
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/<!\[CDATA\[|\]\]>/g, "")
-    .replace(/&nbsp;/gi, " ")
-    .replace(/&amp;/gi, "&")
-    .replace(/&quot;/gi, '"')
-    .replace(/&#39;/gi, "'")
-    .replace(/&lt;/gi, "<")
-    .replace(/&gt;/gi, ">")
-    .replace(/\s+/g, " ")
+  ...[
+    "stripe",
+    "anthropic",
+    "databricks",
+    "figma",
+    "carta",
+    "coursera",
+    "cloudflare",
+    "coinbase",
+    "hubspot",
+    "reddit",
+    "asana",
+    "airtable",
+    "brex",
+    "gusto",
+    "intercom",
+    "duolingo"
+  ].map(board => ({
+    id:`greenhouse:${board}`,
+    name:`Greenhouse:${board}`,
+    type:"greenhouse",
+    url:`https://boards-api.greenhouse.io/v1/boards/${board}/jobs?content=true`
+  })),
+
+  ...[
+    "openai",
+    "linear",
+    "ramp",
+    "posthog",
+    "replit",
+    "perplexity",
+    "cursor"
+  ].map(board => ({
+    id:`ashby:${board}`,
+    name:`Ashby:${board}`,
+    type:"ashby",
+    url:`https://api.ashbyhq.com/posting-api/job-board/${board}`
+  })),
+
+  ...[
+    "palantir",
+    "lattice",
+    "vanta",
+    "verkada",
+    "brex"
+  ].map(board => ({
+    id:`lever:${board}`,
+    name:`Lever:${board}`,
+    type:"lever",
+    url:`https://api.lever.co/v0/postings/${board}?mode=json`
+  }))
+];
+
+function clean(v){
+  return String(v ?? "")
+    .replace(/\s+/g," ")
     .trim();
 }
 
-function hash(v) {
-  return crypto
-    .createHash("sha256")
-    .update(String(v))
-    .digest("hex")
-    .slice(0, 32);
-}
-
-function remote(title, location, description) {
-  return /remote|worldwide|work from home|work-from-home|anywhere|distributed/i.test(
-    `${title} ${location} ${description}`
+function stripHtml(v){
+  return clean(
+    String(v ?? "")
+      .replace(/<script[\s\S]*?<\/script>/gi," ")
+      .replace(/<style[\s\S]*?<\/style>/gi," ")
+      .replace(/<[^>]+>/g," ")
+      .replace(/&nbsp;/gi," ")
+      .replace(/&amp;/gi,"&")
+      .replace(/&quot;/gi,'"')
+      .replace(/&#39;/gi,"'")
   );
 }
 
-function category(title, description) {
-  const t = `${title} ${description}`.toLowerCase();
-
-  if (
-    /software|developer|engineer|devops|frontend|backend|full stack|programmer|qa engineer|sre/.test(
-      t
-    )
-  )
-    return "Engineering";
-
-  if (/data scientist|data engineer|analytics|machine learning|artificial intelligence|\bai\b/.test(t))
-    return "Data & AI";
-
-  if (/product manager|product owner|product lead/.test(t))
-    return "Product";
-
-  if (/design|designer|ux|ui|creative/.test(t))
-    return "Design";
-
-  if (/marketing|seo|content|growth|brand/.test(t))
-    return "Marketing";
-
-  if (/sales|account executive|business development/.test(t))
-    return "Sales";
-
-  if (/finance|accounting|financial|bookkeeper/.test(t))
-    return "Finance";
-
-  if (/human resources|recruiter|recruiting|talent/.test(t))
-    return "Human Resources";
-
-  if (/customer support|customer success|technical support/.test(t))
-    return "Customer Support";
-
-  if (/operations|supply chain|logistics|procurement/.test(t))
-    return "Operations";
-
-  if (/healthcare|nurse|medical|clinical|pharmacy/.test(t))
-    return "Healthcare";
-
-  if (/teacher|education|instructor|tutor|professor/.test(t))
-    return "Education";
-
-  return "Other";
+function slug(v){
+  return clean(v)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g,"-")
+    .replace(/^-+|-+$/g,"")
+    .slice(0,100);
 }
 
-function normalize(x, source) {
+function validUrl(v){
+  try{
+    const u = new URL(v);
+    return /^https?:$/.test(u.protocol);
+  }catch{
+    return false;
+  }
+}
+
+function canonicalUrl(v){
+  try{
+    const u = new URL(v);
+    u.hash = "";
+    [
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_term",
+      "utm_content",
+      "gh_src"
+    ].forEach(x=>u.searchParams.delete(x));
+    return u.toString();
+  }catch{
+    return "";
+  }
+}
+
+function hashKey(v){
+  let h = 2166136261;
+  for(let i=0;i<v.length;i++){
+    h ^= v.charCodeAt(i);
+    h = Math.imul(h,16777619);
+  }
+  return (h>>>0).toString(16);
+}
+
+function isoDate(v){
+  const d = new Date(v || "");
+  return Number.isNaN(d.getTime())
+    ? new Date().toISOString()
+    : d.toISOString();
+}
+
+function normalizeJob(raw, source){
   const title = clean(
-    x.title ||
-      x.name ||
-      x.position ||
-      x.job_title ||
-      x.text ||
-      ""
+    raw.title ||
+    raw.name ||
+    raw.position ||
+    raw.jobTitle ||
+    raw.role
   );
-
-  const url =
-    x.url ||
-    x.link ||
-    x.job_url ||
-    x.apply_url ||
-    x.applyUrl ||
-    x.hostedUrl ||
-    x.jobUrl ||
-    "";
-
-  if (!title || !/^https?:\/\//i.test(url)) return null;
 
   const company = clean(
-    x.company_name ||
-      x.company ||
-      x.companyName ||
-      x.organization ||
-      x.employer ||
-      source
+    raw.company_name ||
+    raw.companyName ||
+    raw.company ||
+    raw.employer ||
+    raw.organization ||
+    raw.company?.name ||
+    source.name
   );
 
   const location = clean(
-    x.location ||
-      x.jobGeo ||
-      x.job_geo ||
-      x.candidate_required_location ||
-      x.city ||
-      x.workplace ||
-      x.locations ||
-      ""
+    raw.location ||
+    raw.candidate_required_location ||
+    raw.locations ||
+    raw.jobLocation ||
+    raw.workplace ||
+    raw.address?.addressLocality ||
+    ""
   );
 
-  const description = clean(
-    x.description ||
-      x.jobDescription ||
-      x.content ||
-      x.snippet ||
-      x.summary ||
-      ""
+  const description = stripHtml(
+    raw.description ||
+    raw.jobDescription ||
+    raw.descriptionHtml ||
+    raw.content ||
+    raw.summary ||
+    ""
   );
 
-  const published =
-    x.publication_date ||
-    x.published ||
-    x.pubDate ||
-    x.created_at ||
-    x.createdAt ||
-    x.updated_at ||
-    x.updatedAt ||
-    x.date ||
-    new Date().toISOString();
+  const url =
+    raw.url ||
+    raw.apply_url ||
+    raw.applyUrl ||
+    raw.absolute_url ||
+    raw.hostedUrl ||
+    raw.jobUrl ||
+    raw.link ||
+    raw.redirect_url ||
+    raw.applyLink ||
+    "";
 
-  const id = hash(
-    `${title}|${company}|${url.replace(/[?#].*$/, "").replace(/\/$/, "")}`
-  );
+  if(!title || title.length < 2) return null;
+  if(!validUrl(url)) return null;
+
+  const applyUrl = url;
+
+  const remote =
+    /remote|work from home|worldwide|distributed/i.test(
+      `${title} ${location} ${description}`
+    );
+
+  const category =
+    /software|engineer|developer|devops|backend|frontend|full stack|data|machine learning|ai|cloud|security|cyber/i.test(title)
+      ? "Engineering & Technology"
+      : /design|ux|ui|creative/i.test(title)
+      ? "Design"
+      : /marketing|seo|content|growth/i.test(title)
+      ? "Marketing"
+      : /sales|business development|account executive/i.test(title)
+      ? "Sales"
+      : /finance|accounting|audit/i.test(title)
+      ? "Finance"
+      : /human resources|recruiter|talent/i.test(title)
+      ? "Human Resources"
+      : /customer|support|success/i.test(title)
+      ? "Customer Success"
+      : /product manager|product management/i.test(title)
+      ? "Product"
+      : /health|nurse|medical|clinical/i.test(title)
+      ? "Healthcare"
+      : /teacher|education|instructor|professor/i.test(title)
+      ? "Education"
+      : "Other";
 
   return {
-    id,
+    id: hashKey(
+      canonicalUrl(applyUrl) ||
+      `${title}|${company}|${location}`
+    ),
+    slug: `${slug(title)}-${hashKey(company+"|"+location)}`,
     title,
-    company: company || "Employer",
-    location: location || "Location not specified",
-    category: category(title, description),
-    description,
-    url,
-    source,
-    published,
-    remote: remote(title, location, description),
-    tags: clean(x.tags || x.skills || "")
+    company,
+    location: location || (remote ? "Remote" : "Worldwide"),
+    remote,
+    category,
+    description: description.slice(0,20000),
+    url: applyUrl,
+    applyUrl,
+    source: source.name,
+    sourceId: source.id,
+    publishedAt: isoDate(
+      raw.publication_date ||
+      raw.published_at ||
+      raw.publishedAt ||
+      raw.created_at ||
+      raw.createdAt ||
+      raw.updated_at ||
+      raw.updatedAt
+    ),
+    fetchedAt: new Date().toISOString()
   };
 }
 
-async function fetchText(url) {
-  const controller = new AbortController();
-  const timer = setTimeout(
-    () => controller.abort(),
-    REQUEST_TIMEOUT
-  );
+function extractJsonJobs(data, source){
+  if(Array.isArray(data)){
+    return data.map(x=>normalizeJob(x,source)).filter(Boolean);
+  }
 
-  try {
-    const response = await fetch(url, {
-      redirect: "follow",
-      headers: {
-        "user-agent": UA,
-        accept:
-          "application/json,application/rss+xml,application/atom+xml,application/xml,text/xml,*/*"
-      },
-      signal: controller.signal
+  if(Array.isArray(data?.jobs)){
+    return data.jobs.map(x=>normalizeJob(x,source)).filter(Boolean);
+  }
+
+  if(Array.isArray(data?.data)){
+    return data.data.map(x=>normalizeJob(x,source)).filter(Boolean);
+  }
+
+  if(Array.isArray(data?.postings)){
+    return data.postings.map(x=>normalizeJob(x,source)).filter(Boolean);
+  }
+
+  return [];
+}
+
+function xmlEntities(s){
+  return String(s)
+    .replace(/&amp;/g,"&")
+    .replace(/&lt;/g,"<")
+    .replace(/&gt;/g,">")
+    .replace(/&quot;/g,'"')
+    .replace(/&#39;/g,"'");
+}
+
+function tag(block,name){
+  const re = new RegExp(
+    `<${name}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${name}>`,
+    "i"
+  );
+  const m = block.match(re);
+  return m ? xmlEntities(stripHtml(m[1])) : "";
+}
+
+function linkTag(block){
+  const a = block.match(
+    /<link(?:\s[^>]*)?>([\s\S]*?)<\/link>/i
+  );
+  if(a) return xmlEntities(stripHtml(a[1]));
+
+  const b = block.match(
+    /<link[^>]+href=["']([^"']+)["'][^>]*\/?>/i
+  );
+  return b ? b[1] : "";
+}
+
+function parseFeed(xml,source){
+  const blocks = xml.match(
+    /<(item|entry)(?:\s[^>]*)?>[\s\S]*?<\/\1>/gi
+  ) || [];
+
+  return blocks.map(block=>{
+    const url = linkTag(block);
+
+    return normalizeJob({
+      title:tag(block,"title"),
+      description:
+        tag(block,"description") ||
+        tag(block,"content") ||
+        tag(block,"summary"),
+      location:
+        tag(block,"location") ||
+        tag(block,"job:location"),
+      published_at:
+        tag(block,"pubDate") ||
+        tag(block,"published") ||
+        tag(block,"updated"),
+      url
+    },source);
+  }).filter(Boolean);
+}
+
+async function fetchText(url){
+  const controller = new AbortController();
+  const timer = setTimeout(()=>controller.abort(),TIMEOUT);
+
+  try{
+    const r = await fetch(url,{
+      signal:controller.signal,
+      headers:{
+        "User-Agent":UA,
+        "Accept":
+          "application/json, application/rss+xml, application/atom+xml, text/xml, */*"
+      }
     });
 
-    const text = await response.text();
+    if(!r.ok){
+      throw new Error(`HTTP ${r.status}`);
+    }
 
     return {
-      ok: response.ok,
-      status: response.status,
-      contentType: response.headers.get("content-type") || "",
-      text
+      status:r.status,
+      contentType:r.headers.get("content-type") || "",
+      text:await r.text()
     };
-  } finally {
+  }finally{
     clearTimeout(timer);
   }
 }
 
-function parseXml(text, source) {
-  const result = [];
+async function runSource(source){
+  try{
+    const result = await fetchText(source.url);
+    let jobs = [];
 
-  const blocks = [
-    ...text.matchAll(
-      /<(item|entry)\b[\s\S]*?<\/\1>/gi
-    )
-  ].map((m) => m[0]);
+    if(
+      source.type === "rss" ||
+      /xml|rss|atom/i.test(result.contentType)
+    ){
+      jobs = parseFeed(result.text,source);
+    }else{
+      let data;
 
-  for (const block of blocks) {
-    const get = (tag) => {
-      const re = new RegExp(
-        `<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`,
-        "i"
-      );
+      try{
+        data = JSON.parse(result.text);
+      }catch{
+        jobs = parseFeed(result.text,source);
+      }
 
-      const match = block.match(re);
-      return match ? match[1] : "";
-    };
-
-    let link = get("link");
-
-    if (!link) {
-      const m = block.match(
-        /<link[^>]+href=["']([^"']+)["']/i
-      );
-
-      link = m ? m[1] : "";
+      if(data){
+        if(source.type === "ashby"){
+          jobs = (data.jobs || data.postings || [])
+            .map(x=>normalizeJob({
+              title:x.title,
+              description:x.descriptionPlain || x.descriptionHtml || x.description,
+              location:
+                Array.isArray(x.location)
+                  ? x.location.join(", ")
+                  : x.location,
+              url:x.jobUrl || x.applyUrl || x.hostedUrl,
+              publishedAt:x.publishedAt || x.createdAt,
+              company:x.companyName || source.name
+            },source))
+            .filter(Boolean);
+        }else{
+          jobs = extractJsonJobs(data,source);
+        }
+      }
     }
-
-    const job = normalize(
-      {
-        title: get("title"),
-        link,
-        description:
-          get("description") ||
-          get("summary") ||
-          get("content"),
-        company: get("company"),
-        location: get("location"),
-        published:
-          get("pubDate") ||
-          get("published") ||
-          get("updated")
-      },
-      source
-    );
-
-    if (job) result.push(job);
-  }
-
-  return result;
-}
-
-function parseJson(text, source) {
-  let data;
-
-  try {
-    data = JSON.parse(text);
-  } catch {
-    return [];
-  }
-
-  const list = Array.isArray(data)
-    ? data
-    : data.jobs ||
-      data.data ||
-      data.results ||
-      data.postings ||
-      data.items ||
-      [];
-
-  if (!Array.isArray(list)) return [];
-
-  return list
-    .map((x) => normalize(x, source))
-    .filter(Boolean);
-}
-
-async function source(name, url, type = "auto") {
-  try {
-    const response = await fetchText(url);
-
-    if (!response.ok) {
-      return {
-        name,
-        url,
-        count: 0,
-        error: `HTTP ${response.status}`,
-        jobs: []
-      };
-    }
-
-    const looksXml =
-      type === "xml" ||
-      /xml|rss|atom/i.test(response.contentType) ||
-      /<(rss|feed|item|entry)\b/i.test(
-        response.text.slice(0, 1000)
-      );
-
-    const jobs = looksXml
-      ? parseXml(response.text, name)
-      : parseJson(response.text, name);
 
     return {
-      name,
-      url,
-      count: jobs.length,
-      error: null,
+      source,
+      ok:true,
+      count:jobs.length,
       jobs
     };
-  } catch (error) {
+  }catch(error){
     return {
-      name,
-      url,
-      count: 0,
-      error: String(error.message || error),
-      jobs: []
+      source,
+      ok:false,
+      count:0,
+      jobs:[],
+      error:String(error?.message || error)
     };
   }
 }
 
-/*
- * Public sources.
- *
- * These are deliberately limited to endpoints that can be
- * queried without embedding private API keys.
- */
-const SOURCES = [
-  [
-    "Arbeitnow",
-    "https://www.arbeitnow.com/api/job-board-api"
-  ],
-  [
-    "Jobicy",
-    "https://jobicy.com/api/v2/remote-jobs?count=200"
-  ],
-  [
-    "RemoteOK",
-    "https://remoteok.com/api"
-  ],
-  [
-    "Remotive",
-    "https://remotive.com/api/remote-jobs?limit=200"
-  ],
-  [
-    "WeWorkRemotely",
-    "https://weworkremotely.com/remote-jobs.rss",
-    "xml"
-  ],
-  [
-    "WorkingNomads",
-    "https://www.workingnomads.com/jobsapi"
-  ],
-  [
-    "Jobspresso",
-    "https://jobspresso.co/feed/",
-    "xml"
-  ],
-  [
-    "RemoteLeads",
-    "https://remoteleads.com/feed/",
-    "xml"
-  ],
-  [
-    "DailyRemote",
-    "https://dailyremote.com/remote-jobs/feed",
-    "xml"
-  ],
-  [
-    "Remote4Me",
-    "https://remote4me.com/feed/",
-    "xml"
-  ],
-  [
-    "Remotees",
-    "https://remotees.com/feed/",
-    "xml"
-  ],
-  [
-    "JobBoardSearch",
-    "https://jobboardsearch.com/feed",
-    "xml"
-  ],
-  [
-    "UK Find a Job",
-    "https://findajob.dwp.gov.uk/search/feed",
-    "xml"
-  ]
-];
+function dedupe(jobs){
+  const map = new Map();
 
-const GREENHOUSE = [
-  "stripe",
-  "anthropic",
-  "databricks",
-  "figma",
-  "carta",
-  "coursera",
-  "cloudflare",
-  "coinbase",
-  "hubspot",
-  "reddit",
-  "asana",
-  "airtable",
-  "brex",
-  "gusto",
-  "intercom",
-  "duolingo"
-];
+  for(const job of jobs){
+    const key =
+      canonicalUrl(job.applyUrl) ||
+      `${job.title}|${job.company}|${job.location}`.toLowerCase();
 
-const ASHBY = [
-  "openai",
-  "linear",
-  "ramp",
-  "posthog",
-  "replit",
-  "perplexity",
-  "cursor"
-];
+    if(!map.has(key)){
+      map.set(key,job);
+    }
+  }
 
-const LEVER = [
-  "palantir",
-  "lattice",
-  "vanta",
-  "verkada"
-];
+  return [...map.values()];
+}
 
-const tasks = [
-  ...SOURCES.map(
-    ([name, url, type]) => () =>
-      source(name, url, type)
-  ),
-
-  ...GREENHOUSE.map(
-    (board) => () =>
-      source(
-        `Greenhouse:${board}`,
-        `https://boards-api.greenhouse.io/v1/boards/${board}/jobs?content=true`
-      )
-  ),
-
-  ...ASHBY.map(
-    (board) => () =>
-      source(
-        `Ashby:${board}`,
-        `https://api.ashbyhq.com/posting-api/job-board/${board}`
-      )
-  ),
-
-  ...LEVER.map(
-    (board) => () =>
-      source(
-        `Lever:${board}`,
-        `https://api.lever.co/v0/postings/${board}?mode=json`
-      )
-  )
-];
-
-const results = [];
-
-for (let i = 0; i < tasks.length; i += 8) {
-  const batch = await Promise.all(
-    tasks.slice(i, i + 8).map((task) => task())
-  );
-
-  results.push(...batch);
-
-  console.log(
-    `BATCH ${Math.floor(i / 8) + 1}:`,
-    batch
-      .map(
-        (x) =>
-          `${x.name}=${x.count}${
-            x.error ? ` [${x.error}]` : ""
-          }`
-      )
-      .join(" | ")
+function sortJobs(jobs){
+  return jobs.sort((a,b)=>
+    new Date(b.publishedAt) -
+    new Date(a.publishedAt)
   );
 }
 
-/*
- * Deduplicate by canonical URL first, then by content identity.
- */
-const byUrl = new Map();
+async function main(){
+  console.log("========================================");
+  console.log("GOO-JOBB REAL JOB ENGINE");
+  console.log("Starting...");
+  console.log(`Connectors: ${sources.length}`);
+  console.log("========================================");
 
-for (const result of results) {
-  for (const job of result.jobs) {
-    const key = job.url
-      .replace(/[?#].*$/, "")
-      .replace(/\/$/, "")
-      .toLowerCase();
+  const started = Date.now();
+  const results = [];
 
-    if (!key) continue;
+  const BATCH = 10;
 
-    const previous = byUrl.get(key);
+  for(let i=0;i<sources.length;i+=BATCH){
+    const batch = sources.slice(i,i+BATCH);
 
-    if (
-      !previous ||
-      job.description.length >
-        previous.description.length
-    ) {
-      byUrl.set(key, job);
+    const out = await Promise.all(
+      batch.map(runSource)
+    );
+
+    results.push(...out);
+
+    for(const r of out){
+      console.log(
+        `${r.source.name}: ${r.ok ? r.count : "ERROR"}`
+        + (r.error ? ` ${r.error}` : "")
+      );
     }
+  }
+
+  let jobs = dedupe(
+    results.flatMap(x=>x.jobs)
+  );
+
+  jobs = sortJobs(jobs).slice(0,MAX_JOBS);
+
+  const now = new Date().toISOString();
+
+  const sourceStatus = results.map(r=>({
+    id:r.source.id,
+    name:r.source.name,
+    type:r.source.type,
+    endpoint:r.source.url,
+    ok:r.ok,
+    jobs:r.count,
+    error:r.error || null,
+    checkedAt:now
+  }));
+
+  const payload = {
+    version:1,
+    generatedAt:now,
+    total:jobs.length,
+    maxCapacity:MAX_JOBS,
+    realOnly:true,
+    jobs
+  };
+
+  const status = {
+    generatedAt:now,
+    totalJobs:jobs.length,
+    connectorCount:sources.length,
+    activeSources:sourceStatus.filter(x=>x.ok && x.jobs>0).length,
+    failedSources:sourceStatus.filter(x=>!x.ok).length,
+    elapsedMs:Date.now()-started,
+    sources:sourceStatus
+  };
+
+  await fs.mkdir("public",{recursive:true});
+
+  await fs.writeFile(
+    "public/jobs.json",
+    JSON.stringify(payload),
+    "utf8"
+  );
+
+  await fs.writeFile(
+    "public/job-sync-status.json",
+    JSON.stringify(status,null,2),
+    "utf8"
+  );
+
+  await fs.writeFile(
+    "public/jobs-count.txt",
+    String(jobs.length),
+    "utf8"
+  );
+
+  console.log("========================================");
+  console.log("REAL JOB DATA:");
+  console.log(`Jobs: ${jobs.length}`);
+  console.log(`Active sources: ${status.activeSources}`);
+  console.log(`Connectors: ${status.connectorCount}`);
+  console.log(`Failed sources: ${status.failedSources}`);
+  console.log(`Time: ${status.elapsedMs} ms`);
+  console.log("========================================");
+
+  if(jobs.length === 0){
+    throw new Error("ZERO REAL JOBS — deployment stopped");
   }
 }
 
-const jobs = [...byUrl.values()]
-  .filter(
-    (job) =>
-      job.title &&
-      job.company &&
-      /^https?:\/\//i.test(job.url)
-  )
-  .sort(
-    (a, b) =>
-      new Date(b.published || 0) -
-      new Date(a.published || 0)
-  );
-
-const generatedAt = new Date().toISOString();
-
-const dataset = {
-  version: 3,
-  generated_at: generatedAt,
-  total: jobs.length,
-  connector_count: results.length,
-  active_source_count: results.filter(
-    (x) => x.count > 0
-  ).length,
-  jobs
-};
-
-await fs.mkdir("public", { recursive: true });
-
-await fs.writeFile(
-  "public/jobs.json",
-  JSON.stringify(dataset)
-);
-
-await fs.writeFile(
-  "public/job-sync-status.json",
-  JSON.stringify(
-    {
-      generated_at: generatedAt,
-      total_jobs: jobs.length,
-      connector_count: results.length,
-      active_sources: results.filter(
-        (x) => x.count > 0
-      ).length,
-      sources: results.map(
-        ({ jobs: _jobs, ...rest }) => rest
-      )
-    },
-    null,
-    2
-  )
-);
-
-console.log("");
-console.log("========================================");
-console.log("GOO-JOBB REAL DATA SYNC");
-console.log("========================================");
-console.log("CONNECTORS :", results.length);
-console.log(
-  "ACTIVE     :",
-  dataset.active_source_count
-);
-console.log("REAL JOBS  :", dataset.total);
-console.log("========================================");
-
-if (dataset.total === 0) {
-  throw new Error(
-    "No real jobs returned. Nothing fabricated."
-  );
-}
+main().catch(err=>{
+  console.error(err);
+  process.exit(1);
+});

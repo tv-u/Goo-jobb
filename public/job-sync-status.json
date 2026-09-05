@@ -1,248 +1,410 @@
 {
-  "generated_at": "2026-09-05T17:22:12.383Z",
-  "total_jobs": 2032,
-  "connector_count": 40,
-  "active_sources": 12,
+  "generatedAt": "2026-09-05T17:30:59.024Z",
+  "totalJobs": 5640,
+  "connectorCount": 40,
+  "activeSources": 27,
+  "failedSources": 10,
+  "elapsedMs": 43526,
   "sources": [
     {
+      "id": "arbeitnow",
       "name": "Arbeitnow",
-      "url": "https://www.arbeitnow.com/api/job-board-api",
-      "count": 250,
-      "error": null
+      "type": "json",
+      "endpoint": "https://www.arbeitnow.com/api/job-board-api",
+      "ok": true,
+      "jobs": 250,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "jobicy",
       "name": "Jobicy",
-      "url": "https://jobicy.com/api/v2/remote-jobs?count=200",
-      "count": 0,
-      "error": null
+      "type": "json",
+      "endpoint": "https://jobicy.com/api/v2/remote-jobs?count=200",
+      "ok": true,
+      "jobs": 200,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
-      "name": "RemoteOK",
-      "url": "https://remoteok.com/api",
-      "count": 100,
-      "error": null
+      "id": "remoteok",
+      "name": "Remote OK",
+      "type": "json",
+      "endpoint": "https://remoteok.com/api",
+      "ok": true,
+      "jobs": 100,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "remotive",
       "name": "Remotive",
-      "url": "https://remotive.com/api/remote-jobs?limit=200",
-      "count": 15,
-      "error": null
+      "type": "json",
+      "endpoint": "https://remotive.com/api/remote-jobs?limit=100",
+      "ok": true,
+      "jobs": 15,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
-      "name": "WeWorkRemotely",
-      "url": "https://weworkremotely.com/remote-jobs.rss",
-      "count": 91,
-      "error": null
+      "id": "workingnomads",
+      "name": "Working Nomads",
+      "type": "rss",
+      "endpoint": "https://www.workingnomads.com/jobs/rss",
+      "ok": true,
+      "jobs": 0,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
-      "name": "WorkingNomads",
-      "url": "https://www.workingnomads.com/jobsapi",
-      "count": 0,
-      "error": null
+      "id": "weworkremotely",
+      "name": "We Work Remotely",
+      "type": "rss",
+      "endpoint": "https://weworkremotely.com/remote-jobs.rss",
+      "ok": true,
+      "jobs": 91,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "jobspresso",
       "name": "Jobspresso",
-      "url": "https://jobspresso.co/feed/",
-      "count": 0,
-      "error": null
+      "type": "rss",
+      "endpoint": "https://jobspresso.co/feed/",
+      "ok": true,
+      "jobs": 0,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
-      "name": "RemoteLeads",
-      "url": "https://remoteleads.com/feed/",
-      "count": 0,
-      "error": "fetch failed"
-    },
-    {
+      "id": "dailyremote",
       "name": "DailyRemote",
-      "url": "https://dailyremote.com/remote-jobs/feed",
-      "count": 0,
-      "error": "HTTP 404"
+      "type": "rss",
+      "endpoint": "https://dailyremote.com/remote-jobs/feed",
+      "ok": false,
+      "jobs": 0,
+      "error": "HTTP 404",
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "remoteleads",
+      "name": "Remote Leads",
+      "type": "rss",
+      "endpoint": "https://remoteleads.io/feed/",
+      "ok": false,
+      "jobs": 0,
+      "error": "HTTP 404",
+      "checkedAt": "2026-09-05T17:30:59.024Z"
+    },
+    {
+      "id": "remote4me",
       "name": "Remote4Me",
-      "url": "https://remote4me.com/feed/",
-      "count": 0,
-      "error": "HTTP 404"
+      "type": "rss",
+      "endpoint": "https://remote4me.com/feed/",
+      "ok": false,
+      "jobs": 0,
+      "error": "HTTP 404",
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
-      "name": "Remotees",
-      "url": "https://remotees.com/feed/",
-      "count": 0,
-      "error": "HTTP 403"
+      "id": "jobboardsearch",
+      "name": "Job Board Search",
+      "type": "rss",
+      "endpoint": "https://jobboardsearch.com/feed/",
+      "ok": false,
+      "jobs": 0,
+      "error": "HTTP 403",
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
-      "name": "JobBoardSearch",
-      "url": "https://jobboardsearch.com/feed",
-      "count": 0,
-      "error": "HTTP 403"
-    },
-    {
+      "id": "uk-find-a-job",
       "name": "UK Find a Job",
-      "url": "https://findajob.dwp.gov.uk/search/feed",
-      "count": 0,
-      "error": "HTTP 503"
+      "type": "rss",
+      "endpoint": "https://findajob.dwp.gov.uk/search?rss=true",
+      "ok": false,
+      "jobs": 0,
+      "error": "HTTP 503",
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:stripe",
       "name": "Greenhouse:stripe",
-      "url": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs?content=true",
+      "ok": true,
+      "jobs": 615,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:anthropic",
       "name": "Greenhouse:anthropic",
-      "url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true",
+      "ok": true,
+      "jobs": 594,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:databricks",
       "name": "Greenhouse:databricks",
-      "url": "https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true",
+      "ok": true,
+      "jobs": 870,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:figma",
       "name": "Greenhouse:figma",
-      "url": "https://boards-api.greenhouse.io/v1/boards/figma/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/figma/jobs?content=true",
+      "ok": true,
+      "jobs": 157,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:carta",
       "name": "Greenhouse:carta",
-      "url": "https://boards-api.greenhouse.io/v1/boards/carta/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/carta/jobs?content=true",
+      "ok": true,
+      "jobs": 61,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:coursera",
       "name": "Greenhouse:coursera",
-      "url": "https://boards-api.greenhouse.io/v1/boards/coursera/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/coursera/jobs?content=true",
+      "ok": true,
+      "jobs": 22,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:cloudflare",
       "name": "Greenhouse:cloudflare",
-      "url": "https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs?content=true",
+      "ok": true,
+      "jobs": 331,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:coinbase",
       "name": "Greenhouse:coinbase",
-      "url": "https://boards-api.greenhouse.io/v1/boards/coinbase/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/coinbase/jobs?content=true",
+      "ok": true,
+      "jobs": 192,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:hubspot",
       "name": "Greenhouse:hubspot",
-      "url": "https://boards-api.greenhouse.io/v1/boards/hubspot/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/hubspot/jobs?content=true",
+      "ok": true,
+      "jobs": 0,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:reddit",
       "name": "Greenhouse:reddit",
-      "url": "https://boards-api.greenhouse.io/v1/boards/reddit/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/reddit/jobs?content=true",
+      "ok": true,
+      "jobs": 148,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:asana",
       "name": "Greenhouse:asana",
-      "url": "https://boards-api.greenhouse.io/v1/boards/asana/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/asana/jobs?content=true",
+      "ok": true,
+      "jobs": 115,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:airtable",
       "name": "Greenhouse:airtable",
-      "url": "https://boards-api.greenhouse.io/v1/boards/airtable/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/airtable/jobs?content=true",
+      "ok": true,
+      "jobs": 16,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:brex",
       "name": "Greenhouse:brex",
-      "url": "https://boards-api.greenhouse.io/v1/boards/brex/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/brex/jobs?content=true",
+      "ok": true,
+      "jobs": 282,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:gusto",
       "name": "Greenhouse:gusto",
-      "url": "https://boards-api.greenhouse.io/v1/boards/gusto/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/gusto/jobs?content=true",
+      "ok": true,
+      "jobs": 95,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:intercom",
       "name": "Greenhouse:intercom",
-      "url": "https://boards-api.greenhouse.io/v1/boards/intercom/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/intercom/jobs?content=true",
+      "ok": true,
+      "jobs": 131,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "greenhouse:duolingo",
       "name": "Greenhouse:duolingo",
-      "url": "https://boards-api.greenhouse.io/v1/boards/duolingo/jobs?content=true",
-      "count": 0,
-      "error": null
+      "type": "greenhouse",
+      "endpoint": "https://boards-api.greenhouse.io/v1/boards/duolingo/jobs?content=true",
+      "ok": true,
+      "jobs": 89,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "ashby:openai",
       "name": "Ashby:openai",
-      "url": "https://api.ashbyhq.com/posting-api/job-board/openai",
-      "count": 779,
-      "error": null
+      "type": "ashby",
+      "endpoint": "https://api.ashbyhq.com/posting-api/job-board/openai",
+      "ok": true,
+      "jobs": 779,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "ashby:linear",
       "name": "Ashby:linear",
-      "url": "https://api.ashbyhq.com/posting-api/job-board/linear",
-      "count": 29,
-      "error": null
+      "type": "ashby",
+      "endpoint": "https://api.ashbyhq.com/posting-api/job-board/linear",
+      "ok": true,
+      "jobs": 29,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "ashby:ramp",
       "name": "Ashby:ramp",
-      "url": "https://api.ashbyhq.com/posting-api/job-board/ramp",
-      "count": 142,
-      "error": null
+      "type": "ashby",
+      "endpoint": "https://api.ashbyhq.com/posting-api/job-board/ramp",
+      "ok": true,
+      "jobs": 142,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "ashby:posthog",
       "name": "Ashby:posthog",
-      "url": "https://api.ashbyhq.com/posting-api/job-board/posthog",
-      "count": 9,
-      "error": null
+      "type": "ashby",
+      "endpoint": "https://api.ashbyhq.com/posting-api/job-board/posthog",
+      "ok": true,
+      "jobs": 9,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "ashby:replit",
       "name": "Ashby:replit",
-      "url": "https://api.ashbyhq.com/posting-api/job-board/replit",
-      "count": 71,
-      "error": null
+      "type": "ashby",
+      "endpoint": "https://api.ashbyhq.com/posting-api/job-board/replit",
+      "ok": true,
+      "jobs": 71,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "ashby:perplexity",
       "name": "Ashby:perplexity",
-      "url": "https://api.ashbyhq.com/posting-api/job-board/perplexity",
-      "count": 112,
-      "error": null
+      "type": "ashby",
+      "endpoint": "https://api.ashbyhq.com/posting-api/job-board/perplexity",
+      "ok": true,
+      "jobs": 112,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "ashby:cursor",
       "name": "Ashby:cursor",
-      "url": "https://api.ashbyhq.com/posting-api/job-board/cursor",
-      "count": 124,
-      "error": null
+      "type": "ashby",
+      "endpoint": "https://api.ashbyhq.com/posting-api/job-board/cursor",
+      "ok": true,
+      "jobs": 124,
+      "error": null,
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "lever:palantir",
       "name": "Lever:palantir",
-      "url": "https://api.lever.co/v0/postings/palantir?mode=json",
-      "count": 310,
-      "error": null
+      "type": "lever",
+      "endpoint": "https://api.lever.co/v0/postings/palantir?mode=json",
+      "ok": false,
+      "jobs": 0,
+      "error": "This operation was aborted",
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "lever:lattice",
       "name": "Lever:lattice",
-      "url": "https://api.lever.co/v0/postings/lattice?mode=json",
-      "count": 0,
-      "error": "HTTP 404"
+      "type": "lever",
+      "endpoint": "https://api.lever.co/v0/postings/lattice?mode=json",
+      "ok": false,
+      "jobs": 0,
+      "error": "HTTP 404",
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "lever:vanta",
       "name": "Lever:vanta",
-      "url": "https://api.lever.co/v0/postings/vanta?mode=json",
-      "count": 0,
-      "error": "HTTP 404"
+      "type": "lever",
+      "endpoint": "https://api.lever.co/v0/postings/vanta?mode=json",
+      "ok": false,
+      "jobs": 0,
+      "error": "HTTP 404",
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     },
     {
+      "id": "lever:verkada",
       "name": "Lever:verkada",
-      "url": "https://api.lever.co/v0/postings/verkada?mode=json",
-      "count": 0,
-      "error": "HTTP 404"
+      "type": "lever",
+      "endpoint": "https://api.lever.co/v0/postings/verkada?mode=json",
+      "ok": false,
+      "jobs": 0,
+      "error": "HTTP 404",
+      "checkedAt": "2026-09-05T17:30:59.024Z"
+    },
+    {
+      "id": "lever:brex",
+      "name": "Lever:brex",
+      "type": "lever",
+      "endpoint": "https://api.lever.co/v0/postings/brex?mode=json",
+      "ok": false,
+      "jobs": 0,
+      "error": "HTTP 404",
+      "checkedAt": "2026-09-05T17:30:59.024Z"
     }
   ]
 }

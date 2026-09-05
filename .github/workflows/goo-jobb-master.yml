@@ -1,0 +1,201 @@
+name: GOO-JOBB MASTER DEPLOY
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: goo-jobb-production
+  cancel-in-progress: false
+
+jobs:
+  sync-build:
+    name: REAL JOB SYNC + BUILD
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          clean: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - name: Validate website
+        shell: bash
+        run: |
+          set -e
+
+          test -f public/index.html
+
+          echo "Website files OK."
+
+      - name: Real job sync
+        shell: bash
+        continue-on-error: true
+        run: |
+          set +e
+
+          if [ -f scripts/goo-jobb-master-sync.mjs ]; then
+            node scripts/goo-jobb-master-sync.mjs
+          elif [ -f scripts/production-sync.mjs ]; then
+            node scripts/production-sync.mjs
+          elif [ -f scripts/source-expansion.mjs ]; then
+            node scripts/source-expansion.mjs
+          elif [ -f scripts/enterprise-engine.mjs ]; then
+            node scripts/enterprise-engine.mjs
+          else
+            echo "No sync engine available."
+          fi
+
+          echo "Sync step completed safely."
+
+      - name: Build enterprise index
+        shell: bash
+        continue-on-error: true
+        run: |
+          if [ -f scripts/build-enterprise-index.mjs ]; then
+            node scripts/build-enterprise-index.mjs
+          else
+            echo "Enterprise builder not found."
+          fi
+
+      - name: Build V2 search
+        shell: bash
+        continue-on-error: true
+        run: |
+          if [ -f scripts/build-v2-search.mjs ]; then
+            node scripts/build-v2-search.mjs
+          else
+            echo "V2 search builder not found."
+          fi
+
+      - name: Build SEO
+        shell: bash
+        continue-on-error: true
+        run: |
+          if [ -f scripts/build-seo-v2.mjs ]; then
+            node scripts/build-seo-v2.mjs
+          else
+            echo "SEO builder not found."
+          fi
+
+      - name: Validate generated JSON
+        shell: bash
+        run: |
+          set -e
+
+          for f in \
+            public/jobs.json \
+            public/jobs-enterprise.json \
+            public/jobs-worldwide.json \
+            public/jobs-search-index.json
+          do
+            if [ -f "$f" ]; then
+              node -e "JSON.parse(require('fs').readFileSync('$f','utf8')); console.log('$f OK')"
+            fi
+          done
+
+          echo "JSON validation complete."
+
+      - name: Commit generated data
+        shell: bash
+        run: |
+          set -e
+
+          git config user.name "GOO-JOBB Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add public scripts
+
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+            exit 0
+          fi
+
+          git commit -m "chore: automatic real job sync"
+
+      - name: Safe push
+        shell: bash
+        run: |
+          set -e
+
+          git fetch origin main
+
+          for attempt in 1 2 3 4 5; do
+
+            echo "PUSH ATTEMPT: $attempt"
+
+            if git push origin HEAD:main; then
+              echo "PUSH SUCCESS"
+              exit 0
+            fi
+
+            echo "Remote changed. Rebasing..."
+
+            git fetch origin main
+
+            if git rebase origin/main; then
+              continue
+            fi
+
+            git rebase --abort || true
+
+            git reset --soft origin/main
+            git add public scripts
+
+            if ! git diff --cached --quiet; then
+              git commit -m "chore: synchronize real job data"
+            fi
+
+            sleep $((attempt * 2))
+          done
+
+          echo "Push failed after retries."
+          exit 1
+
+  pages:
+    name: GITHUB PAGES DEPLOYMENT
+    needs: sync-build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+
+      - name: Checkout final main
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: "."
+
+      - name: Deploy Pages
+        uses: actions/deploy-pages@v4
+
+      - name: Deployment complete
+        run: |
+          echo "======================================"
+          echo " GOO-JOBB PAGES DEPLOYMENT SUCCESS"
+          echo "======================================"
+          echo "https://tv-u.github.io/Goo-jobb/"

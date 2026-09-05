@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-05T20:26:33.221Z",
-  "durationMs": 1797,
+  "generatedAt": "2026-09-05T20:28:13.472Z",
+  "durationMs": 1703,
   "count": 758,
   "sourceCount": 11,
   "healthySources": 11,
@@ -53,7 +53,7 @@
       "url": "https://himalayas.app/jobs/rss",
       "ok": true,
       "attempts": 1,
-      "bytes": 163078,
+      "bytes": 164011,
       "jobsParsed": 0,
       "error": null
     },

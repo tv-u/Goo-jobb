@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-05T20:23:28.779Z",
-  "durationMs": 2277,
+  "generatedAt": "2026-09-05T20:26:33.221Z",
+  "durationMs": 1797,
   "count": 758,
   "sourceCount": 11,
   "healthySources": 11,
@@ -23,7 +23,7 @@
       "url": "https://remoteok.com/api",
       "ok": true,
       "attempts": 1,
-      "bytes": 370268,
+      "bytes": 371068,
       "jobsParsed": 101,
       "error": null
     },

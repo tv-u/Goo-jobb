@@ -17,12 +17,7 @@
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Customer%20Support</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Technology</loc>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Human%20Resources</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -32,7 +27,27 @@
   <priority>0.6</priority>
  </url>
  <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Technology</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Healthcare</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
   <loc>https://tv-u.github.io/Goo-jobb/?category=Other</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Design</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Customer%20Support</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -43,21 +58,6 @@
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?category=Legal</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Healthcare</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Human%20Resources</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Design</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -15792,6 +15792,26 @@
   <priority>0.6</priority>
  </url>
  <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Aikido%20Security</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Lengow</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Pricehubble</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Infosys%20Consulting%20Europe</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
   <loc>https://tv-u.github.io/Goo-jobb/?location=Worldwide</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
@@ -24553,6 +24573,31 @@
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?location=Saint-Etienne%2C%20Auvergne-Rh%C3%B4ne-Alpes%2C%20France</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=EVRY%2C%20%C3%8Ele-de-France%2C%20France</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Brest%2C%20Bretagne%2C%20France</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Nantes%2C%20France</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Bayonne%2C%20France</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Marseille%2C%20France</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>

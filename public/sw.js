@@ -1,4 +1,4 @@
-const CACHE_NAME="goo-jobb-live-v2";
+const CACHE_NAME = "goo-jobb-v4";
 
 self.addEventListener(
  "install",

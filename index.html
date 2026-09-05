@@ -278,7 +278,30 @@ input:focus,select:focus{
  .jobs{grid-template-columns:1fr}
 }
 </style>
-</head>
+
+<!-- GOO_JOBB_FINAL_SEO_RUNTIME -->
+<link rel="sitemap" type="application/xml" href="./sitemap.xml">
+<link rel="manifest" href="./site.webmanifest">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+
+<script>
+window.GOO_JOBB_CONFIG={
+  site:"https://tv-u.github.io/Goo-jobb",
+  jobs:"./jobs-worldwide.json",
+  enterprise:"./jobs-worldwide.json",
+  searchIndex:"./jobs-worldwide.json",
+  sitemap:"./sitemap.xml",
+  jobPages:"./jobs/"
+};
+</script>
+
+<div id="ad-top"></div>
+<div id="ad-middle"></div>
+<div id="ad-bottom"></div>
+
+<script src="./ai/goo-jobb-ads.js" defer></script>
+<!-- /GOO_JOBB_FINAL_SEO_RUNTIME -->
+\n</head>
 
 <body>
 
@@ -522,7 +545,7 @@ function render(){
 async function load(){
  try{
   const [jobsRes,statusRes]=await Promise.all([
-   fetch("./jobs.json?ts="+Date.now(),{
+   fetch("./jobs-worldwide.json?ts="+Date.now(),{
     cache:"no-store"
    }),
    fetch("./job-sync-status.json?ts="+Date.now(),{
@@ -530,7 +553,7 @@ async function load(){
    })
   ]);
 
-  if(!jobsRes.ok) throw new Error("jobs.json HTTP "+jobsRes.status);
+  if(!jobsRes.ok) throw new Error("./jobs-worldwide.json HTTP "+jobsRes.status);
 
   const data=await jobsRes.json();
   allJobs=Array.isArray(data)

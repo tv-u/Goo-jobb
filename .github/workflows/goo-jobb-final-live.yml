@@ -1,0 +1,155 @@
+name: GOO-JOBB Final Live Pipeline
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: goo-jobb-pages
+  cancel-in-progress: false
+
+jobs:
+
+  sync-build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies on Ubuntu
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f package.json ]; then
+            npm install
+          fi
+
+      - name: Real job sync
+        run: |
+          node scripts/goo-jobb-master-sync.mjs
+
+      - name: Build enterprise indexes
+        run: |
+          for f in \
+            scripts/goo-jobb-enterprise-index.mjs \
+            scripts/goo-jobb-enterprise-index-v2.mjs \
+            scripts/goo-jobb-seo-pages.mjs \
+            scripts/goo-jobb-taxonomy-pages.mjs \
+            scripts/goo-jobb-sitemap.mjs
+          do
+            if [ -f "$f" ]; then
+              node "$f" || true
+            fi
+          done
+
+      - name: Build route map
+        run: |
+          node scripts/goo-jobb-route-map.mjs
+
+      - name: Validate generated data
+        run: |
+          node <<'NODE'
+          const fs=require('fs');
+
+          const files=[
+            'public/jobs-worldwide.json',
+            'public/jobs-enterprise.json',
+            'public/jobs-search-index.json'
+          ];
+
+          for(const file of files){
+            if(!fs.existsSync(file)) throw new Error(`Missing ${file}`);
+
+            const x=JSON.parse(fs.readFileSync(file,'utf8'));
+
+            if(!Array.isArray(x) || !x.length){
+              throw new Error(`Empty/invalid ${file}`);
+            }
+
+            for(const j of x){
+              if(!j || !j.title || !j.company || !(j.url||j.applyUrl||j.link)){
+                throw new Error(`Invalid job record in ${file}`);
+              }
+            }
+          }
+
+          console.log('Generated datasets valid');
+          NODE
+
+      - name: Commit generated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add public scripts
+
+          if git diff --cached --quiet; then
+            echo "No generated changes"
+          else
+            git commit -m "chore: refresh GOO-JOBB live jobs"
+            git push origin main
+          fi
+
+      - name: Build Pages artifact
+        run: |
+          rm -rf dist
+          mkdir -p dist
+
+          cp -a public/. dist/
+
+          for f in \
+            jobs-worldwide.json \
+            jobs-enterprise.json \
+            jobs-search-index.json \
+            sync-meta.json \
+            job-page-map.json \
+            jobs-seo-index.json \
+            robots.txt \
+            sitemap.xml \
+            site.webmanifest
+          do
+            if [ -f "public/$f" ]; then
+              cp -f "public/$f" "dist/$f"
+            fi
+          done
+
+          if [ ! -f dist/index.html ] && [ -f index.html ]; then
+            cp -f index.html dist/index.html
+          fi
+
+          test -f dist/index.html
+          test -f dist/jobs-worldwide.json
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: sync-build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

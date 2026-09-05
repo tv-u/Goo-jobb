@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Search Jobs Worldwide | GOO-JOBB</title>
+<meta name="description" content="Search real job listings from multiple employment sources worldwide on GOO-JOBB.">
+<link rel="canonical" href="https://tv-u.github.io/Goo-jobb/search/">
+<meta property="og:title" content="Search Jobs Worldwide | GOO-JOBB">
+<meta property="og:description" content="Search worldwide job listings.">
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebSite",
+ "name":"GOO-JOBB",
+ "url":"https://tv-u.github.io/Goo-jobb/",
+ "potentialAction":{
+   "@type":"SearchAction",
+   "target":"https://tv-u.github.io/Goo-jobb/search/?q={search_term_string}",
+   "query-input":"required name=search_term_string"
+ }
+}
+</script>
+<style>
+body{margin:0;background:#070707;color:#eee;font-family:system-ui}
+main{max-width:1000px;margin:auto;padding:24px}
+input{width:100%;box-sizing:border-box;padding:15px;border-radius:12px;border:1px solid #333;background:#111;color:#fff}
+.card{margin-top:12px;padding:16px;border:1px solid #292929;border-radius:14px;background:#111}
+a{color:#00ff88;text-decoration:none}
+small{color:#999}
+</style>
+</head>
+<body>
+<main>
+<a href="../">← GOO-JOBB</a>
+<h1>Search Jobs Worldwide</h1>
+<input id="q" placeholder="Search title, company, location..." autocomplete="off">
+<div id="status">Loading jobs…</div>
+<div id="results"></div>
+</main>
+<script>
+(async()=>{
+const status=document.getElementById("status");
+const results=document.getElementById("results");
+const input=document.getElementById("q");
+
+function esc(v){
+return String(v??"").replace(/[&<>"']/g,m=>({
+"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+}[m]));
+}
+
+let jobs=[];
+
+try{
+const r=await fetch("../jobs-worldwide.json",{cache:"no-store"});
+jobs=await r.json();
+if(!Array.isArray(jobs)) throw new Error("Invalid dataset");
+status.textContent=jobs.length+" jobs loaded";
+}catch(e){
+status.textContent="Unable to load live job dataset.";
+return;
+}
+
+function render(){
+const q=input.value.trim().toLowerCase();
+
+const list=q?
+jobs.filter(j=>{
+const s=[
+j.title,j.company,j.location,j.category,j.description
+].join(" ").toLowerCase();
+return s.includes(q);
+}).slice(0,100)
+:jobs.slice(0,50);
+
+results.innerHTML=list.map(j=>{
+const title=esc(j.title||"Job");
+const company=esc(j.company||"Employer");
+const location=esc(j.location||"Worldwide");
+const url=j.url||j.applyUrl||j.link||"#";
+
+return `<div class="card">
+<a href="${esc(url)}" target="_blank" rel="nofollow noopener">
+<strong>${title}</strong>
+</a>
+<div>${company}</div>
+<small>${location}</small>
+</div>`;
+}).join("")||"<p>No matching jobs found.</p>";
+}
+
+input.addEventListener("input",render);
+
+const params=new URLSearchParams(location.search);
+input.value=params.get("q")||"";
+
+render();
+})();
+</script>
+</body>
+</html>

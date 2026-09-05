@@ -1,0 +1,93 @@
+{
+  "version": "2026-09-06",
+  "policy": {
+    "existingSourcesPreserved": true,
+    "dedupeBy": ["url", "source+externalId", "title+company+url"],
+    "rejectFake": true,
+    "requireApplyUrl": true,
+    "requireHttp200": true,
+    "respectAttribution": true
+  },
+  "sources": [
+    {
+      "id": "remoteok-json",
+      "name": "Remote OK",
+      "type": "json",
+      "url": "https://remoteok.com/api",
+      "license": "public-feed",
+      "attribution": "Remote OK"
+    },
+    {
+      "id": "himalayas-json",
+      "name": "Himalayas",
+      "type": "json",
+      "url": "https://himalayas.app/jobs/api?limit=20",
+      "license": "public-api",
+      "attribution": "Himalayas"
+    },
+    {
+      "id": "himalayas-rss",
+      "name": "Himalayas RSS",
+      "type": "rss",
+      "url": "https://himalayas.app/jobs/rss",
+      "license": "public-rss",
+      "attribution": "Himalayas"
+    },
+    {
+      "id": "jobicy-json",
+      "name": "Jobicy",
+      "type": "json",
+      "url": "https://jobicy.com/api/v2/remote-jobs?count=200",
+      "license": "public-api",
+      "attribution": "Jobicy"
+    },
+    {
+      "id": "jobicy-rss",
+      "name": "Jobicy RSS",
+      "type": "rss",
+      "url": "https://jobicy.com/jobs/feed",
+      "license": "public-rss",
+      "attribution": "Jobicy"
+    },
+    {
+      "id": "remotive-json",
+      "name": "Remotive",
+      "type": "json",
+      "url": "https://remotive.com/api/remote-jobs?limit=100",
+      "license": "public-api",
+      "attribution": "Remotive"
+    },
+    {
+      "id": "remotejobs-org",
+      "name": "RemoteJobs.org",
+      "type": "json",
+      "url": "https://remotejobs.org/api/v1/jobs",
+      "license": "public-api",
+      "attribution": "RemoteJobs.org"
+    },
+    {
+      "id": "themuse-page1",
+      "name": "The Muse",
+      "type": "json",
+      "url": "https://www.themuse.com/api/public/jobs?page=1",
+      "license": "public-api",
+      "attribution": "The Muse"
+    },
+    {
+      "id": "themuse-page2",
+      "name": "The Muse Page 2",
+      "type": "json",
+      "url": "https://www.themuse.com/api/public/jobs?page=2",
+      "license": "public-api",
+      "attribution": "The Muse"
+    },
+    {
+      "id": "themuse-page3",
+      "name": "The Muse Page 3",
+      "type": "json",
+      "url": "https://www.themuse.com/api/public/jobs?page=3",
+      "license": "public-api",
+      "attribution": "The Muse"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "version": "1.0.0",
+  "policy": "public-no-key-connectors",
+  "connectors": [
+    {
+      "id": "himalayas-json",
+      "name": "Himalayas",
+      "type": "json",
+      "url": "https://himalayas.app/api",
+      "sourceUrl": "https://himalayas.app",
+      "attribution": "Himalayas"
+    },
+    {
+      "id": "himalayas-rss",
+      "name": "Himalayas RSS",
+      "type": "rss",
+      "url": "https://himalayas.app/jobs/rss",
+      "sourceUrl": "https://himalayas.app",
+      "attribution": "Himalayas"
+    },
+    {
+      "id": "jobicy",
+      "name": "Jobicy",
+      "type": "json",
+      "url": "https://jobicy.com/api/v2/remote-jobs?count=200",
+      "sourceUrl": "https://jobicy.com",
+      "attribution": "Jobicy"
+    },
+    {
+      "id": "jobicy-engineering",
+      "name": "Jobicy Engineering",
+      "type": "json",
+      "url": "https://jobicy.com/api/v2/remote-jobs?count=200&industry=engineering",
+      "sourceUrl": "https://jobicy.com",
+      "attribution": "Jobicy"
+    },
+    {
+      "id": "jobicy-marketing",
+      "name": "Jobicy Marketing",
+      "type": "json",
+      "url": "https://jobicy.com/api/v2/remote-jobs?count=200&industry=marketing",
+      "sourceUrl": "https://jobicy.com",
+      "attribution": "Jobicy"
+    },
+    {
+      "id": "jobicy-data-science",
+      "name": "Jobicy Data Science",
+      "type": "json",
+      "url": "https://jobicy.com/api/v2/remote-jobs?count=200&industry=data-science",
+      "sourceUrl": "https://jobicy.com",
+      "attribution": "Jobicy"
+    },
+    {
+      "id": "remotejobs-org",
+      "name": "RemoteJobs.org",
+      "type": "json",
+      "url": "https://remotejobs.org/api/v1/jobs?limit=50&offset=0",
+      "sourceUrl": "https://remotejobs.org",
+      "attribution": "RemoteJobs.org"
+    },
+    {
+      "id": "remotejobs-programming",
+      "name": "RemoteJobs.org Programming",
+      "type": "json",
+      "url": "https://remotejobs.org/api/v1/jobs?category=programming&limit=50&offset=0",
+      "sourceUrl": "https://remotejobs.org",
+      "attribution": "RemoteJobs.org"
+    },
+    {
+      "id": "remotejobs-design",
+      "name": "RemoteJobs.org Design",
+      "type": "json",
+      "url": "https://remotejobs.org/api/v1/jobs?category=design&limit=50&offset=0",
+      "sourceUrl": "https://remotejobs.org",
+      "attribution": "RemoteJobs.org"
+    },
+    {
+      "id": "remotejobs-marketing",
+      "name": "RemoteJobs.org Marketing",
+      "type": "json",
+      "url": "https://remotejobs.org/api/v1/jobs?category=marketing&limit=50&offset=0",
+      "sourceUrl": "https://remotejobs.org",
+      "attribution": "RemoteJobs.org"
+    },
+    {
+      "id": "remotejobs-data-science",
+      "name": "RemoteJobs.org Data Science",
+      "type": "json",
+      "url": "https://remotejobs.org/api/v1/jobs?category=data-science&limit=50&offset=0",
+      "sourceUrl": "https://remotejobs.org",
+      "attribution": "RemoteJobs.org"
+    },
+    {
+      "id": "remotejobs-devops",
+      "name": "RemoteJobs.org DevOps",
+      "type": "json",
+      "url": "https://remotejobs.org/api/v1/jobs?category=devops&limit=50&offset=0",
+      "sourceUrl": "https://remotejobs.org",
+      "attribution": "RemoteJobs.org"
+    },
+    {
+      "id": "remote-landers",
+      "name": "Remote Landers",
+      "type": "json",
+      "url": "https://remotelanders.com/api/jobs",
+      "sourceUrl": "https://remotelanders.com",
+      "attribution": "Remote Landers"
+    },
+    {
+      "id": "jobremotely",
+      "name": "JobRemotely",
+      "type": "json",
+      "url": "https://jobremotely.io/api/v1/jobs?limit=50",
+      "sourceUrl": "https://jobremotely.io",
+      "attribution": "JobRemotely"
+    },
+    {
+      "id": "arbeitnow",
+      "name": "Arbeitnow",
+      "type": "json",
+      "url": "https://arbeitnow.com/api/job-board-api",
+      "sourceUrl": "https://arbeitnow.com",
+      "attribution": "Arbeitnow"
+    },
+    {
+      "id": "remotive",
+      "name": "Remotive",
+      "type": "json",
+      "url": "https://remotive.com/api/remote-jobs?limit=100",
+      "sourceUrl": "https://remotive.com",
+      "attribution": "Remotive"
+    },
+    {
+      "id": "remote-landers-engineering",
+      "name": "Remote Landers Engineering",
+      "type": "json",
+      "url": "https://remotelanders.com/api/jobs?category=Engineering",
+      "sourceUrl": "https://remotelanders.com",
+      "attribution": "Remote Landers"
+    },
+    {
+      "id": "remote-landers-us",
+      "name": "Remote Landers USA",
+      "type": "json",
+      "url": "https://remotelanders.com/api/jobs?location=United%20States",
+      "sourceUrl": "https://remotelanders.com",
+      "attribution": "Remote Landers"
+    },
+    {
+      "id": "jobremotely-engineering",
+      "name": "JobRemotely Engineering",
+      "type": "json",
+      "url": "https://jobremotely.io/api/v1/jobs?category=engineering&limit=50",
+      "sourceUrl": "https://jobremotely.io",
+      "attribution": "JobRemotely"
+    },
+    {
+      "id": "jobremotely-design",
+      "name": "JobRemotely Design",
+      "type": "json",
+      "url": "https://jobremotely.io/api/v1/jobs?category=design&limit=50",
+      "sourceUrl": "https://jobremotely.io",
+      "attribution": "JobRemotely"
+    }
+  ]
+}

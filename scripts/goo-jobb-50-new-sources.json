@@ -1,0 +1,329 @@
+[
+  {
+    "id":"weworkremotely",
+    "name":"We Work Remotely",
+    "type":"rss",
+    "url":"https://weworkremotely.com/remote-jobs.rss"
+  },
+  {
+    "id":"remoteok",
+    "name":"Remote OK",
+    "type":"json",
+    "url":"https://remoteok.com/api"
+  },
+  {
+    "id":"remotive",
+    "name":"Remotive",
+    "type":"json",
+    "url":"https://remotive.com/api/remote-jobs?limit=100"
+  },
+  {
+    "id":"jobicy",
+    "name":"Jobicy",
+    "type":"json",
+    "url":"https://jobicy.com/api/v2/remote-jobs?count=200"
+  },
+  {
+    "id":"himalayas",
+    "name":"Himalayas",
+    "type":"json",
+    "url":"https://himalayas.app/jobs/api?limit=20"
+  },
+  {
+    "id":"himalayas-rss",
+    "name":"Himalayas RSS",
+    "type":"rss",
+    "url":"https://himalayas.app/jobs/rss"
+  },
+  {
+    "id":"remotejobs-org",
+    "name":"RemoteJobs.org",
+    "type":"json",
+    "url":"https://remotejobs.org/api/v1/jobs"
+  },
+  {
+    "id":"themuse-1",
+    "name":"The Muse",
+    "type":"json",
+    "url":"https://www.themuse.com/api/public/jobs?page=1"
+  },
+  {
+    "id":"themuse-2",
+    "name":"The Muse 2",
+    "type":"json",
+    "url":"https://www.themuse.com/api/public/jobs?page=2"
+  },
+  {
+    "id":"themuse-3",
+    "name":"The Muse 3",
+    "type":"json",
+    "url":"https://www.themuse.com/api/public/jobs?page=3"
+  },
+
+  {
+    "id":"workingnomads",
+    "name":"Working Nomads",
+    "type":"rss",
+    "url":"https://www.workingnomads.com/jobs/rss"
+  },
+  {
+    "id":"remote4me",
+    "name":"Remote4Me",
+    "type":"rss",
+    "url":"https://remote4me.com/feed"
+  },
+  {
+    "id":"remotees",
+    "name":"Remotees",
+    "type":"rss",
+    "url":"https://remotees.com/feed"
+  },
+  {
+    "id":"dailyremote",
+    "name":"DailyRemote",
+    "type":"rss",
+    "url":"https://dailyremote.com/feed"
+  },
+  {
+    "id":"virtualvocations",
+    "name":"Virtual Vocations",
+    "type":"rss",
+    "url":"https://www.virtualvocations.com/rss/"
+  },
+  {
+    "id":"remote-co",
+    "name":"Remote.co",
+    "type":"rss",
+    "url":"https://remote.co/feed/"
+  },
+  {
+    "id":"remoteok-rss",
+    "name":"Remote OK RSS",
+    "type":"rss",
+    "url":"https://remoteok.com/remote-jobs.rss"
+  },
+  {
+    "id":"fourdayweek",
+    "name":"4 Day Week",
+    "type":"rss",
+    "url":"https://4dayweek.io/feed"
+  },
+  {
+    "id":"justremote",
+    "name":"JustRemote",
+    "type":"rss",
+    "url":"https://justremote.co/feed"
+  },
+  {
+    "id":"remoteleaf",
+    "name":"RemoteLeaf",
+    "type":"rss",
+    "url":"https://remoteleaf.com/feed"
+  },
+
+  {
+    "id":"startupjobs",
+    "name":"Startup Jobs",
+    "type":"rss",
+    "url":"https://startup.jobs/rss"
+  },
+  {
+    "id":"landingjobs",
+    "name":"Landing.Jobs",
+    "type":"rss",
+    "url":"https://landing.jobs/feed"
+  },
+  {
+    "id":"arbeitnow",
+    "name":"Arbeitnow",
+    "type":"json",
+    "url":"https://www.arbeitnow.com/api/job-board-api"
+  },
+  {
+    "id":"arbeitnow-rss",
+    "name":"Arbeitnow RSS",
+    "type":"rss",
+    "url":"https://www.arbeitnow.com/feed"
+  },
+  {
+    "id":"jobspresso",
+    "name":"Jobspresso",
+    "type":"rss",
+    "url":"https://jobspresso.co/feed/"
+  },
+  {
+    "id":"eurojobs",
+    "name":"EuroJobs",
+    "type":"rss",
+    "url":"https://www.eurojobs.com/feed/"
+  },
+  {
+    "id":"careerjet",
+    "name":"Careerjet",
+    "type":"rss",
+    "url":"https://www.careerjet.com/rss/search"
+  },
+  {
+    "id":"adzuna",
+    "name":"Adzuna",
+    "type":"api",
+    "url":"https://api.adzuna.com/v1/api/jobs/us/search/1"
+  },
+  {
+    "id":"greenhouse",
+    "name":"Greenhouse",
+    "type":"api",
+    "url":"https://boards-api.greenhouse.io/v1/boards"
+  },
+  {
+    "id":"lever",
+    "name":"Lever",
+    "type":"api",
+    "url":"https://api.lever.co/v0/postings"
+  },
+
+  {
+    "id":"wellfound",
+    "name":"Wellfound",
+    "type":"rss",
+    "url":"https://wellfound.com/jobs.rss"
+  },
+  {
+    "id":"dice",
+    "name":"Dice",
+    "type":"rss",
+    "url":"https://www.dice.com/jobs/rss"
+  },
+  {
+    "id":"remotewoman",
+    "name":"Remote Woman",
+    "type":"rss",
+    "url":"https://remotewoman.com/feed/"
+  },
+  {
+    "id":"remoteok-eu",
+    "name":"Remote OK Europe",
+    "type":"json",
+    "url":"https://remoteok.com/api?tags=eu"
+  },
+  {
+    "id":"remoteok-dev",
+    "name":"Remote OK Developer",
+    "type":"json",
+    "url":"https://remoteok.com/api?tags=dev"
+  },
+  {
+    "id":"remoteok-design",
+    "name":"Remote OK Design",
+    "type":"json",
+    "url":"https://remoteok.com/api?tags=design"
+  },
+  {
+    "id":"remoteok-marketing",
+    "name":"Remote OK Marketing",
+    "type":"json",
+    "url":"https://remoteok.com/api?tags=marketing"
+  },
+  {
+    "id":"remoteok-sales",
+    "name":"Remote OK Sales",
+    "type":"json",
+    "url":"https://remoteok.com/api?tags=sales"
+  },
+  {
+    "id":"remoteok-support",
+    "name":"Remote OK Support",
+    "type":"json",
+    "url":"https://remoteok.com/api?tags=support"
+  },
+  {
+    "id":"jobicy-dev",
+    "name":"Jobicy Developer",
+    "type":"json",
+    "url":"https://jobicy.com/api/v2/remote-jobs?count=100&tag=dev"
+  },
+  {
+    "id":"jobicy-design",
+    "name":"Jobicy Design",
+    "type":"json",
+    "url":"https://jobicy.com/api/v2/remote-jobs?count=100&tag=design"
+  },
+  {
+    "id":"jobicy-marketing",
+    "name":"Jobicy Marketing",
+    "type":"json",
+    "url":"https://jobicy.com/api/v2/remote-jobs?count=100&tag=marketing"
+  },
+  {
+    "id":"jobicy-sales",
+    "name":"Jobicy Sales",
+    "type":"json",
+    "url":"https://jobicy.com/api/v2/remote-jobs?count=100&tag=sales"
+  },
+  {
+    "id":"jobicy-support",
+    "name":"Jobicy Support",
+    "type":"json",
+    "url":"https://jobicy.com/api/v2/remote-jobs?count=100&tag=support"
+  },
+  {
+    "id":"himalayas-dev",
+    "name":"Himalayas Developer",
+    "type":"json",
+    "url":"https://himalayas.app/jobs/api?limit=20&category=development"
+  },
+  {
+    "id":"himalayas-design",
+    "name":"Himalayas Design",
+    "type":"json",
+    "url":"https://himalayas.app/jobs/api?limit=20&category=design"
+  },
+  {
+    "id":"himalayas-marketing",
+    "name":"Himalayas Marketing",
+    "type":"json",
+    "url":"https://himalayas.app/jobs/api?limit=20&category=marketing"
+  },
+  {
+    "id":"himalayas-sales",
+    "name":"Himalayas Sales",
+    "type":"json",
+    "url":"https://himalayas.app/jobs/api?limit=20&category=sales"
+  },
+  {
+    "id":"himalayas-support",
+    "name":"Himalayas Support",
+    "type":"json",
+    "url":"https://himalayas.app/jobs/api?limit=20&category=customer-support"
+  },
+  {
+    "id":"remotive-dev",
+    "name":"Remotive Developer",
+    "type":"json",
+    "url":"https://remotive.com/api/remote-jobs?category=software-dev&limit=100"
+  },
+  {
+    "id":"remotive-design",
+    "name":"Remotive Design",
+    "type":"json",
+    "url":"https://remotive.com/api/remote-jobs?category=design&limit=100"
+  },
+  {
+    "id":"remotive-marketing",
+    "name":"Remotive Marketing",
+    "type":"json",
+    "url":"https://remotive.com/api/remote-jobs?category=marketing&limit=100"
+  },
+  {
+    "id":"remotive-sales",
+    "name":"Remotive Sales",
+    "type":"json",
+    "url":"https://remotive.com/api/remote-jobs?category=sales-business&limit=100"
+  },
+  {
+    "id":"remotive-support",
+    "name":"Remotive Customer Support",
+    "type":"json",
+    "url":"https://remotive.com/api/remote-jobs?category=customer-support&limit=100"
+  }
+]

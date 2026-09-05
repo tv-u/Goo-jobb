@@ -1,18 +1,12 @@
 {
-  "name": "GOO-JOBB Local AI",
-  "version": "4.0.0",
-  "type": "client-side-nlp",
-  "apiKeyRequired": false,
-  "features": [
-    "job matching",
-    "skills extraction",
-    "skills gap analysis",
-    "resume analysis",
-    "job summarization",
-    "cover letter generation",
-    "interview question generation",
-    "natural language job search",
-    "career suggestions",
-    "job quality heuristics"
+  "name":"GOO-JOBB Local AI",
+  "version":"1.0.0",
+  "mode":"browser-local",
+  "capabilities":[
+    "job-query-ranking",
+    "keyword-matching",
+    "skill-matching",
+    "location-matching",
+    "salary-text-normalization"
   ]
 }

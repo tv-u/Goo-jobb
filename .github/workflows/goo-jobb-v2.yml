@@ -1,0 +1,109 @@
+name: GOO-JOBB V2 Worldwide Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "11 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: goo-jobb-v2
+  cancel-in-progress: false
+
+jobs:
+
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Acquire real jobs
+        run: node scripts/goo-jobb-v2.mjs
+
+      - name: Build search
+        run: node scripts/build-v2-search.mjs
+
+      - name: Build SEO
+        run: node scripts/build-seo-v2.mjs
+
+      - name: Validate
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+
+          const files = [
+            "public/jobs-worldwide.json",
+            "public/jobs-search-index.json",
+            "public/jobs-facets.json",
+            "public/companies-index.json",
+            "public/goo-jobb-meta.json",
+            "public/source-health.json",
+            "public/sitemap-index.xml"
+          ];
+
+          for (const file of files) {
+            if (!fs.existsSync(file)) {
+              throw new Error(`Missing: ${file}`);
+            }
+          }
+
+          const jobs=JSON.parse(
+            fs.readFileSync(
+              "public/jobs-worldwide.json",
+              "utf8"
+            )
+          );
+
+          if(!Array.isArray(jobs)||!jobs.length){
+            throw new Error(
+              "ZERO REAL JOBS - deployment blocked"
+            );
+          }
+
+          for(const j of jobs){
+            if(!j.title||!j.company||!j.url){
+              throw new Error(
+                "Invalid job record detected"
+              );
+            }
+          }
+
+          console.log(
+            `VALIDATED: ${jobs.length} real jobs`
+          );
+          NODE
+
+      - name: Commit generated data
+        run: |
+          git config user.name "GOO-JOBB Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add public scripts .github/workflows
+
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "chore: GOO-JOBB worldwide real job sync"
+          fi
+
+      - name: Rebase
+        run: |
+          git fetch origin main
+          git rebase origin/main
+
+      - name: Push
+        run: |
+          git push origin HEAD:main

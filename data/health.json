@@ -1,69 +1,69 @@
 {
-  "generated_at": "2026-09-05T17:41:19.688Z",
+  "generated_at": "2026-09-05T17:43:39.988Z",
   "total": 456,
   "sources": [
     {
       "source": "Arbeitnow",
       "status": "ok",
       "jobs": 250,
-      "synced_at": "2026-09-05T17:41:15.899Z"
+      "synced_at": "2026-09-05T17:43:37.468Z"
     },
     {
       "source": "Jobicy",
       "status": "ok",
       "jobs": 0,
-      "synced_at": "2026-09-05T17:41:16.140Z"
+      "synced_at": "2026-09-05T17:43:37.536Z"
     },
     {
       "source": "Remote OK",
       "status": "ok",
       "jobs": 100,
-      "synced_at": "2026-09-05T17:41:16.758Z"
+      "synced_at": "2026-09-05T17:43:38.066Z"
     },
     {
       "source": "Remotive",
       "status": "ok",
       "jobs": 15,
-      "synced_at": "2026-09-05T17:41:16.950Z"
+      "synced_at": "2026-09-05T17:43:38.134Z"
     },
     {
       "source": "Himalayas",
       "status": "ok",
       "jobs": 0,
-      "synced_at": "2026-09-05T17:41:17.177Z"
+      "synced_at": "2026-09-05T17:43:38.224Z"
     },
     {
       "source": "We Work Remotely",
       "status": "ok",
       "jobs": 91,
-      "synced_at": "2026-09-05T17:41:17.976Z"
+      "synced_at": "2026-09-05T17:43:38.815Z"
     },
     {
       "source": "Startup Jobs",
       "status": "error",
       "jobs": 0,
       "error": "HTTP 403",
-      "synced_at": "2026-09-05T17:41:18.101Z"
+      "synced_at": "2026-09-05T17:43:38.978Z"
     },
     {
       "source": "Working Nomads",
       "status": "ok",
       "jobs": 0,
-      "synced_at": "2026-09-05T17:41:18.772Z"
+      "synced_at": "2026-09-05T17:43:39.426Z"
     },
     {
       "source": "RemoteFR",
       "status": "error",
       "jobs": 0,
       "error": "HTTP 404",
-      "synced_at": "2026-09-05T17:41:19.377Z"
+      "synced_at": "2026-09-05T17:43:39.841Z"
     },
     {
       "source": "Remote Leads",
       "status": "error",
       "jobs": 0,
       "error": "HTTP 404",
-      "synced_at": "2026-09-05T17:41:19.685Z"
+      "synced_at": "2026-09-05T17:43:39.985Z"
     }
   ]
 }

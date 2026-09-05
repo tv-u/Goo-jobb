@@ -1,69 +1,69 @@
 {
-  "generated_at": "2026-09-05T17:56:35.813Z",
+  "generated_at": "2026-09-05T17:57:52.514Z",
   "total": 456,
   "sources": [
     {
       "source": "Arbeitnow",
       "status": "ok",
       "jobs": 250,
-      "synced_at": "2026-09-05T17:56:31.828Z"
+      "synced_at": "2026-09-05T17:57:49.220Z"
     },
     {
       "source": "Jobicy",
       "status": "ok",
       "jobs": 0,
-      "synced_at": "2026-09-05T17:56:31.957Z"
+      "synced_at": "2026-09-05T17:57:49.316Z"
     },
     {
       "source": "Remote OK",
       "status": "ok",
       "jobs": 100,
-      "synced_at": "2026-09-05T17:56:32.650Z"
+      "synced_at": "2026-09-05T17:57:49.908Z"
     },
     {
       "source": "Remotive",
       "status": "ok",
       "jobs": 15,
-      "synced_at": "2026-09-05T17:56:32.764Z"
+      "synced_at": "2026-09-05T17:57:49.982Z"
     },
     {
       "source": "Himalayas",
       "status": "ok",
       "jobs": 0,
-      "synced_at": "2026-09-05T17:56:32.915Z"
+      "synced_at": "2026-09-05T17:57:50.179Z"
     },
     {
       "source": "We Work Remotely",
       "status": "ok",
       "jobs": 91,
-      "synced_at": "2026-09-05T17:56:33.822Z"
+      "synced_at": "2026-09-05T17:57:50.648Z"
     },
     {
       "source": "Startup Jobs",
       "status": "error",
       "jobs": 0,
       "error": "HTTP 403",
-      "synced_at": "2026-09-05T17:56:34.029Z"
+      "synced_at": "2026-09-05T17:57:51.259Z"
     },
     {
       "source": "Working Nomads",
       "status": "ok",
       "jobs": 0,
-      "synced_at": "2026-09-05T17:56:34.731Z"
+      "synced_at": "2026-09-05T17:57:51.648Z"
     },
     {
       "source": "RemoteFR",
       "status": "error",
       "jobs": 0,
       "error": "HTTP 404",
-      "synced_at": "2026-09-05T17:56:35.264Z"
+      "synced_at": "2026-09-05T17:57:52.224Z"
     },
     {
       "source": "Remote Leads",
       "status": "error",
       "jobs": 0,
       "error": "HTTP 404",
-      "synced_at": "2026-09-05T17:56:35.810Z"
+      "synced_at": "2026-09-05T17:57:52.511Z"
     }
   ]
 }

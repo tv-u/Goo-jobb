@@ -15,35 +15,81 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+
+      - name: Checkout repository
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
+          clean: true
+          persist-credentials: true
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
         with:
-          node-version: 22
+          node-version: 24
           cache: npm
+          check-latest: true
 
       - name: Install dependencies
+        shell: bash
         run: |
+          set -e
           if [ -f package-lock.json ]; then
-            npm ci
+            npm ci --ignore-scripts
           elif [ -f package.json ]; then
-            npm install --ignore-scripts
+            npm install --ignore-scripts --no-audit --no-fund
           else
-            echo "No npm dependencies required."
+            echo "No package.json. Continuing."
           fi
 
-      - name: Production sync
-        run: node scripts/production-sync.mjs
-
-      - name: Validate generated data
+      - name: Production real-job sync
+        shell: bash
         run: |
+          set -e
+          node scripts/production-sync.mjs
+
+      - name: Optional enterprise index
+        shell: bash
+        continue-on-error: true
+        run: |
+          if [ -f scripts/build-enterprise-index.mjs ]; then
+            node scripts/build-enterprise-index.mjs
+          else
+            echo "Enterprise index builder not present."
+          fi
+
+      - name: Optional worldwide search index
+        shell: bash
+        continue-on-error: true
+        run: |
+          if [ -f scripts/build-v2-search.mjs ]; then
+            node scripts/build-v2-search.mjs
+          else
+            echo "V2 search builder not present."
+          fi
+
+      - name: Optional SEO build
+        shell: bash
+        continue-on-error: true
+        run: |
+          if [ -f scripts/build-seo-v2.mjs ]; then
+            node scripts/build-seo-v2.mjs
+          elif [ -f scripts/build-enterprise-index.mjs ]; then
+            echo "SEO handled by enterprise builder."
+          else
+            echo "SEO builder not present."
+          fi
+
+      - name: Final hard validation
+        shell: bash
+        run: |
+          set -e
+
+          test -f public/sync-meta.json
+
           node --input-type=module <<'NODE'
           import fs from "node:fs";
 
@@ -59,42 +105,160 @@ jobs:
             }
           }
 
-          const index = JSON.parse(
-            fs.readFileSync("public/jobs-search-index.json", "utf8")
-          );
-
-          const jobs = Array.isArray(index)
-            ? index
-            : Array.isArray(index.jobs)
-              ? index.jobs
-              : [];
-
-          if (!jobs.length) {
-            throw new Error("Generated job index contains zero jobs.");
+          function read(file) {
+            return JSON.parse(fs.readFileSync(file, "utf8"));
           }
 
-          console.log(`Validated ${jobs.length} real job records.`);
+          function jobsFrom(data) {
+            if (Array.isArray(data)) return data;
+            if (data && Array.isArray(data.jobs)) return data.jobs;
+            if (data && Array.isArray(data.data)) return data.data;
+            if (data && Array.isArray(data.results)) return data.results;
+            return [];
+          }
+
+          let all = [];
+
+          for (const file of files.slice(0, 2)) {
+            all.push(...jobsFrom(read(file)));
+          }
+
+          const valid = all.filter(j => {
+            if (!j || typeof j !== "object") return false;
+
+            const title = String(j.title || "").trim();
+
+            const company = String(
+              j.company ||
+              j.company_name ||
+              j.employer ||
+              ""
+            ).trim();
+
+            const url = String(
+              j.canonicalUrl ||
+              j.url ||
+              j.applyUrl ||
+              j.apply_url ||
+              ""
+            ).trim();
+
+            return title.length >= 2 &&
+                   company.length >= 1 &&
+                   /^https?:\/\//i.test(url);
+          });
+
+          const unique = new Map();
+
+          for (const job of valid) {
+            const key = String(
+              job.canonicalUrl ||
+              job.url ||
+              job.applyUrl ||
+              `${job.title}|${job.company}|${job.location}`
+            ).toLowerCase();
+
+            if (!unique.has(key)) {
+              unique.set(key, job);
+            }
+          }
+
+          if (!unique.size) {
+            throw new Error("ZERO VALID REAL JOBS");
+          }
+
+          const meta = read("public/sync-meta.json");
+
+          if (meta.fakeJobs === true) {
+            throw new Error("Fake jobs flag detected.");
+          }
+
+          console.log(`VALID REAL JOBS: ${unique.size}`);
+          console.log(`SYNC STATUS: ${meta.status}`);
+          console.log(`ENGINE: ${meta.engine}`);
           NODE
 
       - name: Commit generated data
+        shell: bash
         run: |
+          set -e
+
           git config user.name "GOO-JOBB Bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add public scripts .github/workflows/job-sync.yml
+          git add public scripts .github/workflows
 
           if git diff --cached --quiet; then
-            echo "No data changes detected."
+            echo "No generated changes."
             exit 0
           fi
 
-          git commit -m "chore: automatic real job sync"
+          git commit -m "chore: resilient automatic real job sync"
 
-      - name: Rebase before push
+      - name: Rebase and push with retry
+        shell: bash
         run: |
+          set -e
+
           git fetch origin main
-          git rebase origin/main
 
-      - name: Push
+          if ! git rebase origin/main; then
+            git rebase --abort || true
+            git reset --soft origin/main
+            git add public scripts .github/workflows
+
+            if git diff --cached --quiet; then
+              echo "Nothing to push after synchronization."
+              exit 0
+            fi
+
+            git commit -m "chore: synchronize real job dataset"
+          fi
+
+          for attempt in 1 2 3 4 5; do
+            echo "Push attempt $attempt..."
+
+            if git push origin HEAD:main; then
+              echo "PUSH SUCCESS"
+              exit 0
+            fi
+
+            echo "Push failed. Refreshing origin/main..."
+            git fetch origin main
+
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              git reset --soft origin/main
+              git add public scripts .github/workflows
+
+              if ! git diff --cached --quiet; then
+                git commit -m "chore: synchronize real job dataset"
+              fi
+            fi
+
+            sleep $((attempt * 3))
+          done
+
+          echo "Push failed after 5 attempts."
+          exit 1
+
+      - name: Final status
+        if: always()
+        shell: bash
         run: |
-          git push origin HEAD:main
+          echo "======================================"
+          echo " GOO-JOBB ACTION FINISHED"
+          echo "======================================"
+          git status --short || true
+          if [ -f public/sync-meta.json ]; then
+            node --input-type=module <<'NODE'
+            import fs from "node:fs";
+            const m = JSON.parse(
+              fs.readFileSync("public/sync-meta.json", "utf8")
+            );
+            console.log("STATUS:", m.status);
+            console.log("REAL JOBS:", m.jobCount);
+            console.log("SOURCES:", m.sourceCount);
+            console.log("ENGINE:", m.engine);
+            NODE
+          fi

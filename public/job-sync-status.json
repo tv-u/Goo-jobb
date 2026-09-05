@@ -1,23 +1,23 @@
 {
   "version": "5.0",
-  "generated_at": "2026-09-05T17:02:20.469Z",
-  "duration_ms": 30976,
+  "generated_at": "2026-09-05T17:04:09.778Z",
+  "duration_ms": 4411,
   "source_count": 36,
   "successful_sources": 15,
   "failed_sources": 21,
   "total_unique_jobs": 3498,
   "categories": {
+    "design": 173,
     "sales": 42,
     "engineering": 3005,
-    "design": 173,
     "marketing": 17,
     "operations": 6,
-    "finance": 10,
+    "data-ai": 165,
     "other": 62,
     "healthcare": 6,
-    "data-ai": 165,
     "product": 2,
     "customer-support": 8,
+    "finance": 10,
     "education": 1,
     "cybersecurity": 1
   },
@@ -29,7 +29,7 @@
       "url": "https://www.arbeitnow.com/api/job-board-api",
       "ok": true,
       "jobs": 250,
-      "latency_ms": 4031,
+      "latency_ms": 322,
       "error": null
     },
     {
@@ -39,7 +39,7 @@
       "url": "https://jobicy.com/api/v2/remote-jobs?count=200",
       "ok": true,
       "jobs": 200,
-      "latency_ms": 3484,
+      "latency_ms": 137,
       "error": null
     },
     {
@@ -49,7 +49,7 @@
       "url": "https://remoteok.com/api",
       "ok": true,
       "jobs": 100,
-      "latency_ms": 3424,
+      "latency_ms": 1000,
       "error": null
     },
     {
@@ -59,7 +59,7 @@
       "url": "https://remotive.com/api/remote-jobs",
       "ok": true,
       "jobs": 15,
-      "latency_ms": 2201,
+      "latency_ms": 179,
       "error": null
     },
     {
@@ -69,7 +69,7 @@
       "url": "https://startup.jobs/feed",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 2022,
+      "latency_ms": 290,
       "error": "HTTP 403"
     },
     {
@@ -79,7 +79,7 @@
       "url": "https://weworkremotely.com/remote-jobs.rss",
       "ok": true,
       "jobs": 91,
-      "latency_ms": 4030,
+      "latency_ms": 766,
       "error": null
     },
     {
@@ -89,7 +89,7 @@
       "url": "https://www.workingnomads.com/remote-jobs.rss",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 3355,
+      "latency_ms": 353,
       "error": "HTTP 404"
     },
     {
@@ -99,7 +99,7 @@
       "url": "https://remotejobs.org/feed",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 2309,
+      "latency_ms": 346,
       "error": "HTTP 404"
     },
     {
@@ -109,7 +109,7 @@
       "url": "https://nodesk.co/remote-jobs/feed/",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 2884,
+      "latency_ms": 373,
       "error": "HTTP 404"
     },
     {
@@ -119,7 +119,7 @@
       "url": "https://remoteleads.io/feed/",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 3628,
+      "latency_ms": 512,
       "error": "HTTP 404"
     },
     {
@@ -129,8 +129,8 @@
       "url": "https://dailyremote.com/remote-jobs.rss",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 1570,
-      "error": "HTTP 404"
+      "latency_ms": 100,
+      "error": "HTTP 403"
     },
     {
       "id": "jobspresso",
@@ -139,7 +139,7 @@
       "url": "https://jobspresso.co/feed/",
       "ok": true,
       "jobs": 0,
-      "latency_ms": 1407,
+      "latency_ms": 52,
       "error": null
     },
     {
@@ -149,7 +149,7 @@
       "url": "https://remote4me.com/feed/",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 1657,
+      "latency_ms": 73,
       "error": "HTTP 404"
     },
     {
@@ -159,7 +159,7 @@
       "url": "https://remotees.com/feed/",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 2804,
+      "latency_ms": 193,
       "error": "HTTP 403"
     },
     {
@@ -169,7 +169,7 @@
       "url": "https://jobboardsearch.com/feed/",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 2039,
+      "latency_ms": 133,
       "error": "HTTP 403"
     },
     {
@@ -179,7 +179,7 @@
       "url": "https://findajob.dwp.gov.uk/search/rss",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 2086,
+      "latency_ms": 829,
       "error": "HTTP 503"
     },
     {
@@ -189,7 +189,7 @@
       "url": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs?content=true",
       "ok": true,
       "jobs": 615,
-      "latency_ms": 5938,
+      "latency_ms": 574,
       "error": null
     },
     {
@@ -199,7 +199,7 @@
       "url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true",
       "ok": true,
       "jobs": 594,
-      "latency_ms": 7332,
+      "latency_ms": 828,
       "error": null
     },
     {
@@ -209,7 +209,7 @@
       "url": "https://boards-api.greenhouse.io/v1/boards/databricks/jobs?content=true",
       "ok": true,
       "jobs": 870,
-      "latency_ms": 6792,
+      "latency_ms": 1049,
       "error": null
     },
     {
@@ -219,7 +219,7 @@
       "url": "https://boards-api.greenhouse.io/v1/boards/figma/jobs?content=true",
       "ok": true,
       "jobs": 157,
-      "latency_ms": 4316,
+      "latency_ms": 379,
       "error": null
     },
     {
@@ -229,7 +229,7 @@
       "url": "https://boards-api.greenhouse.io/v1/boards/rippling/jobs?content=true",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 481,
+      "latency_ms": 29,
       "error": "HTTP 404"
     },
     {
@@ -239,7 +239,7 @@
       "url": "https://boards-api.greenhouse.io/v1/boards/carta/jobs?content=true",
       "ok": true,
       "jobs": 61,
-      "latency_ms": 604,
+      "latency_ms": 58,
       "error": null
     },
     {
@@ -249,7 +249,7 @@
       "url": "https://boards-api.greenhouse.io/v1/boards/coursera/jobs?content=true",
       "ok": true,
       "jobs": 22,
-      "latency_ms": 534,
+      "latency_ms": 44,
       "error": null
     },
     {
@@ -259,7 +259,7 @@
       "url": "https://boards-api.greenhouse.io/v1/boards/github/jobs?content=true",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 480,
+      "latency_ms": 25,
       "error": "HTTP 404"
     },
     {
@@ -269,7 +269,7 @@
       "url": "https://boards-api.greenhouse.io/v1/boards/cloudflare/jobs?content=true",
       "ok": true,
       "jobs": 331,
-      "latency_ms": 2209,
+      "latency_ms": 305,
       "error": null
     },
     {
@@ -279,7 +279,7 @@
       "url": "https://boards-api.greenhouse.io/v1/boards/coinbase/jobs?content=true",
       "ok": true,
       "jobs": 192,
-      "latency_ms": 966,
+      "latency_ms": 128,
       "error": null
     },
     {
@@ -289,7 +289,7 @@
       "url": "https://api.lever.co/v0/postings/netflix?mode=json",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 2635,
+      "latency_ms": 500,
       "error": "HTTP 404"
     },
     {
@@ -299,7 +299,7 @@
       "url": "https://api.lever.co/v0/postings/palantir?mode=json",
       "ok": true,
       "jobs": 0,
-      "latency_ms": 16856,
+      "latency_ms": 1754,
       "error": null
     },
     {
@@ -309,7 +309,7 @@
       "url": "https://api.lever.co/v0/postings/shopify?mode=json",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 2628,
+      "latency_ms": 494,
       "error": "HTTP 404"
     },
     {
@@ -319,7 +319,7 @@
       "url": "https://api.lever.co/v0/postings/affirm?mode=json",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 3022,
+      "latency_ms": 499,
       "error": "HTTP 404"
     },
     {
@@ -329,7 +329,7 @@
       "url": "https://api.lever.co/v0/postings/lyft?mode=json",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 2052,
+      "latency_ms": 88,
       "error": "HTTP 404"
     },
     {
@@ -339,7 +339,7 @@
       "url": "https://api.lever.co/v0/postings/uber?mode=json",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 439,
+      "latency_ms": 89,
       "error": "HTTP 404"
     },
     {
@@ -349,7 +349,7 @@
       "url": "https://api.lever.co/v0/postings/lattice?mode=json",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 2051,
+      "latency_ms": 88,
       "error": "HTTP 404"
     },
     {
@@ -359,7 +359,7 @@
       "url": "https://api.lever.co/v0/postings/vanta?mode=json",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 2050,
+      "latency_ms": 90,
       "error": "HTTP 404"
     },
     {
@@ -369,7 +369,7 @@
       "url": "https://api.lever.co/v0/postings/verkada?mode=json",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 2029,
+      "latency_ms": 326,
       "error": "HTTP 404"
     },
     {
@@ -379,7 +379,7 @@
       "url": "https://api.lever.co/v0/postings/brex?mode=json",
       "ok": false,
       "jobs": 0,
-      "latency_ms": 2036,
+      "latency_ms": 337,
       "error": "HTTP 404"
     }
   ]

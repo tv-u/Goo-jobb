@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-09-05T19:56:50.477Z",
+  "jobCount": 758,
+  "uniqueCount": 758,
+  "status": "healthy",
+  "pipeline": "GOO-JOBB Production Sync",
+  "repository": "tv-u/Goo-jobb",
+  "pages": "https://tv-u.github.io/Goo-jobb/",
+  "automaticSync": true,
+  "zeroJobProtection": true,
+  "indexBuilt": true,
+  "sitemapBuilt": true
+}

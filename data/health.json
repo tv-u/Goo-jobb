@@ -1,69 +1,69 @@
 {
-  "generated_at": "2026-09-05T17:22:28.524Z",
+  "generated_at": "2026-09-05T17:31:55.021Z",
   "total": 456,
   "sources": [
     {
       "source": "Arbeitnow",
       "status": "ok",
       "jobs": 250,
-      "synced_at": "2026-09-05T17:22:26.279Z"
+      "synced_at": "2026-09-05T17:31:51.171Z"
     },
     {
       "source": "Jobicy",
       "status": "ok",
       "jobs": 0,
-      "synced_at": "2026-09-05T17:22:26.466Z"
+      "synced_at": "2026-09-05T17:31:51.300Z"
     },
     {
       "source": "Remote OK",
       "status": "ok",
       "jobs": 100,
-      "synced_at": "2026-09-05T17:22:26.924Z"
+      "synced_at": "2026-09-05T17:31:51.867Z"
     },
     {
       "source": "Remotive",
       "status": "ok",
       "jobs": 15,
-      "synced_at": "2026-09-05T17:22:27.058Z"
+      "synced_at": "2026-09-05T17:31:52.005Z"
     },
     {
       "source": "Himalayas",
       "status": "ok",
       "jobs": 0,
-      "synced_at": "2026-09-05T17:22:27.207Z"
+      "synced_at": "2026-09-05T17:31:52.141Z"
     },
     {
       "source": "We Work Remotely",
       "status": "ok",
       "jobs": 91,
-      "synced_at": "2026-09-05T17:22:27.763Z"
+      "synced_at": "2026-09-05T17:31:52.903Z"
     },
     {
       "source": "Startup Jobs",
       "status": "error",
       "jobs": 0,
       "error": "HTTP 403",
-      "synced_at": "2026-09-05T17:22:27.902Z"
+      "synced_at": "2026-09-05T17:31:53.493Z"
     },
     {
       "source": "Working Nomads",
       "status": "ok",
       "jobs": 0,
-      "synced_at": "2026-09-05T17:22:28.117Z"
+      "synced_at": "2026-09-05T17:31:54.203Z"
     },
     {
       "source": "RemoteFR",
       "status": "error",
       "jobs": 0,
       "error": "HTTP 404",
-      "synced_at": "2026-09-05T17:22:28.308Z"
+      "synced_at": "2026-09-05T17:31:54.694Z"
     },
     {
       "source": "Remote Leads",
       "status": "error",
       "jobs": 0,
       "error": "HTTP 404",
-      "synced_at": "2026-09-05T17:22:28.522Z"
+      "synced_at": "2026-09-05T17:31:55.018Z"
     }
   ]
 }

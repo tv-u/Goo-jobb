@@ -1,0 +1,90 @@
+name: GOO-JOBB Worldwide Real Jobs
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "37 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: goo-jobb-worldwide
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch worldwide real jobs
+        run: node scripts/worldwide-real-engine.mjs
+
+      - name: Build search index
+        run: node scripts/build-search-engine.mjs
+
+      - name: Validate
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+
+          const jobs = JSON.parse(
+            fs.readFileSync("public/jobs-worldwide.json","utf8")
+          );
+
+          if (!Array.isArray(jobs)) {
+            throw new Error("jobs-worldwide.json is not an array");
+          }
+
+          if (jobs.length === 0) {
+            throw new Error("ZERO REAL JOBS - deployment blocked");
+          }
+
+          const invalid = jobs.filter(
+            j => !j.title || !j.company || !j.url
+          );
+
+          if (invalid.length) {
+            throw new Error(
+              `Invalid job records: ${invalid.length}`
+            );
+          }
+
+          console.log(
+            `VALIDATED REAL JOBS: ${jobs.length}`
+          );
+          NODE
+
+      - name: Commit
+        run: |
+          git config user.name "GOO-JOBB Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add public scripts .github/workflows
+
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+
+          git commit -m "chore: worldwide real job sync"
+
+      - name: Rebase
+        run: |
+          git fetch origin main
+          git rebase origin/main
+
+      - name: Push
+        run: |
+          git push origin HEAD:main

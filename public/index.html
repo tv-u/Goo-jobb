@@ -3,133 +3,773 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GOO-JOBB — World-Class Real Job Search</title>
-<meta name="description" content="Search 50,000+ real jobs from verified public sources. Advanced filters, AI tools, and fast search.">
-<link rel="canonical" href="/">
-<link rel="manifest" href="/manifest.webmanifest">
-<meta name="theme-color" content="#6366f1">
+<meta name="theme-color" content="#050505">
+<meta name="robots" content="index,follow">
+<meta name="description" content="GOO-JOBB — worldwide real job search from public job sources. Search remote, onsite and hybrid jobs across categories and companies.">
+<link rel="canonical" href="https://tv-u.github.io/Goo-jobb/">
+<title>GOO-JOBB — Worldwide Real Jobs</title>
+
 <style>
-:root { --bg: #0a0a12; --panel: #141420; --border: #2a2a3a; --text: #f0f0f5; --muted: #9a9ab0; --primary: #6366f1; --accent: #a855f7; --green: #10b981; --yellow: #f59e0b; }
-* { box-sizing: border-box; margin:0; padding:0; }
-body { background: radial-gradient(circle at 20% 20%, #1a1a2e, var(--bg)); color: var(--text); font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; }
-.wrap { max-width: 1200px; margin: auto; padding: 20px; }
-header { display:flex; justify-content:space-between; align-items:center; padding:20px 0; border-bottom:1px solid var(--border); }
-.logo { font-size:1.8rem; font-weight:900; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-.nav-links { display:flex; gap:20px; }
-.nav-links a { color: var(--muted); text-decoration:none; font-weight:600; }
-.nav-links a:hover { color: var(--text); }
-.hero { text-align:center; padding:60px 0 40px; }
-.hero h1 { font-size:3rem; margin-bottom:10px; }
-.hero p { color: var(--muted); max-width:600px; margin:0 auto 30px; }
-.search-box { display:flex; gap:10px; max-width:800px; margin:auto; background:var(--panel); padding:15px; border-radius:15px; border:1px solid var(--border); }
-.search-box input, .search-box select, .search-box button { padding:12px; border-radius:10px; border:1px solid var(--border); background:#1e1e2e; color:var(--text); }
-.search-box input { flex:1; }
-.search-box button { background: linear-gradient(135deg, var(--primary), var(--accent)); color:white; font-weight:bold; cursor:pointer; border:none; }
-.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; margin:30px 0; }
-.stat-card { background:var(--panel); border:1px solid var(--border); padding:20px; border-radius:15px; text-align:center; }
-.stat-card .num { font-size:2rem; font-weight:800; color: var(--green); }
-.stat-card .label { color:var(--muted); }
-.filters { display:flex; gap:10px; flex-wrap:wrap; margin:20px 0; }
-.filter-pill { background:var(--panel); border:1px solid var(--border); padding:8px 16px; border-radius:20px; cursor:pointer; color:var(--muted); }
-.filter-pill.active { background: var(--primary); color:white; border-color:var(--primary); }
-.jobs-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:15px; }
-.job-card { background:var(--panel); border:1px solid var(--border); border-radius:15px; padding:20px; transition: transform .2s; }
-.job-card:hover { transform: translateY(-3px); border-color:var(--primary); }
-.job-card h3 { font-size:1.2rem; margin-bottom:5px; }
-.job-card .company { color:var(--green); font-weight:600; }
-.job-card .meta { color:var(--muted); font-size:0.9rem; margin:8px 0; }
-.job-card .skills { margin-top:10px; }
-.job-card .skill-tag { display:inline-block; background:#2a2a3a; padding:4px 8px; border-radius:10px; font-size:0.8rem; margin-right:5px; }
-.job-card .apply-btn { display:inline-block; margin-top:15px; background:var(--primary); color:white; padding:10px 20px; border-radius:8px; text-decoration:none; font-weight:bold; }
-.job-card .apply-btn:hover { background:var(--accent); }
-footer { margin-top:50px; padding:30px 0; text-align:center; color:var(--muted); border-top:1px solid var(--border); }
-@media(max-width:700px) { .search-box { flex-direction:column; } .hero h1 { font-size:2.2rem; } }
+:root{
+ --bg:#050505;
+ --panel:#0d0d0d;
+ --panel2:#121212;
+ --text:#f7f7f7;
+ --muted:#8e8e8e;
+ --pink:#ff0080;
+ --green:#00ff88;
+ --yellow:#ffdd00;
+ --border:#242424;
+ --shadow:0 20px 70px rgba(0,0,0,.45);
+}
+
+*{box-sizing:border-box}
+
+body{
+ margin:0;
+ background:
+ radial-gradient(circle at 15% 0%,rgba(255,0,128,.10),transparent 30%),
+ radial-gradient(circle at 85% 0%,rgba(0,255,136,.07),transparent 30%),
+ var(--bg);
+ color:var(--text);
+ font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+a{color:inherit;text-decoration:none}
+
+.container{
+ width:min(1500px,94%);
+ margin:auto;
+}
+
+.header{
+ position:sticky;
+ top:0;
+ z-index:50;
+ background:rgba(5,5,5,.88);
+ backdrop-filter:blur(18px);
+ border-bottom:1px solid var(--border);
+}
+
+.nav{
+ min-height:72px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:20px;
+}
+
+.logo{
+ font-size:28px;
+ font-weight:900;
+ letter-spacing:-1px;
+}
+
+.logo b{color:var(--pink)}
+.logo span{color:var(--green)}
+
+.live{
+ color:var(--green);
+ font-size:12px;
+ font-weight:800;
+ letter-spacing:1px;
+}
+
+.hero{
+ padding:65px 0 35px;
+}
+
+.badge{
+ display:inline-flex;
+ padding:8px 13px;
+ border:1px solid rgba(0,255,136,.25);
+ border-radius:999px;
+ color:var(--green);
+ background:rgba(0,255,136,.05);
+ font-size:12px;
+ font-weight:800;
+}
+
+h1{
+ max-width:900px;
+ margin:18px 0 10px;
+ font-size:clamp(42px,7vw,82px);
+ line-height:.95;
+ letter-spacing:-4px;
+}
+
+h1 em{
+ color:var(--pink);
+ font-style:normal;
+}
+
+.hero p{
+ max-width:800px;
+ color:var(--muted);
+ font-size:18px;
+ line-height:1.7;
+}
+
+.search{
+ display:grid;
+ grid-template-columns:2fr 1.2fr auto;
+ gap:10px;
+ margin-top:28px;
+}
+
+input,select,button{
+ min-height:52px;
+ border-radius:12px;
+ border:1px solid var(--border);
+ background:var(--panel);
+ color:var(--text);
+ padding:0 16px;
+ font:inherit;
+}
+
+input:focus,select:focus{
+ outline:2px solid rgba(255,0,128,.35);
+ border-color:var(--pink);
+}
+
+button{
+ cursor:pointer;
+ font-weight:800;
+}
+
+.primary{
+ background:linear-gradient(135deg,var(--pink),#ff4ba9);
+ border:0;
+}
+
+.stats{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:12px;
+ margin:20px 0 25px;
+}
+
+.stat{
+ padding:22px;
+ background:linear-gradient(145deg,#111,#090909);
+ border:1px solid var(--border);
+ border-radius:18px;
+ box-shadow:var(--shadow);
+}
+
+.stat strong{
+ display:block;
+ font-size:30px;
+ color:var(--green);
+}
+
+.stat span{
+ color:var(--muted);
+ font-size:11px;
+ font-weight:800;
+ letter-spacing:1px;
+}
+
+.layout{
+ display:grid;
+ grid-template-columns:280px 1fr;
+ gap:18px;
+ align-items:start;
+}
+
+.sidebar{
+ position:sticky;
+ top:90px;
+ background:rgba(13,13,13,.9);
+ border:1px solid var(--border);
+ border-radius:18px;
+ padding:18px;
+}
+
+.sidebar h3{
+ margin-top:0;
+}
+
+.filter{
+ margin:12px 0;
+}
+
+.filter label{
+ display:block;
+ color:var(--muted);
+ font-size:12px;
+ margin-bottom:7px;
+}
+
+.filter input,
+.filter select{
+ width:100%;
+ min-height:44px;
+}
+
+.resultsbar{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:10px;
+ margin-bottom:12px;
+}
+
+.resultsbar strong{
+ color:var(--yellow);
+}
+
+.jobs{
+ display:grid;
+ gap:12px;
+}
+
+.job{
+ background:linear-gradient(145deg,#111,#090909);
+ border:1px solid var(--border);
+ border-radius:18px;
+ padding:22px;
+ transition:.2s;
+}
+
+.job:hover{
+ transform:translateY(-2px);
+ border-color:rgba(255,0,128,.35);
+}
+
+.jobtop{
+ display:flex;
+ justify-content:space-between;
+ gap:15px;
+}
+
+.job h2{
+ margin:0 0 8px;
+ font-size:20px;
+}
+
+.company{
+ color:var(--pink);
+ font-weight:800;
+}
+
+.meta{
+ display:flex;
+ flex-wrap:wrap;
+ gap:7px;
+ margin:12px 0;
+}
+
+.tag{
+ padding:6px 9px;
+ border-radius:999px;
+ border:1px solid #292929;
+ background:#151515;
+ color:#bbb;
+ font-size:11px;
+}
+
+.remote{
+ color:var(--green);
+ border-color:rgba(0,255,136,.25);
+}
+
+.jobdesc{
+ color:#aaa;
+ line-height:1.6;
+ max-height:72px;
+ overflow:hidden;
+}
+
+.actions{
+ display:flex;
+ flex-wrap:wrap;
+ gap:8px;
+ margin-top:15px;
+}
+
+.actions a,
+.actions button{
+ min-height:40px;
+ padding:0 12px;
+}
+
+.apply{
+ background:var(--green);
+ color:#00160d;
+ border:0;
+}
+
+.save{
+ background:#151515;
+}
+
+.empty{
+ text-align:center;
+ padding:70px 20px;
+ color:var(--muted);
+ border:1px dashed #333;
+ border-radius:18px;
+}
+
+@media(max-width:900px){
+ .layout{grid-template-columns:1fr}
+ .sidebar{position:static}
+ .search{grid-template-columns:1fr}
+ .stats{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:550px){
+ .stats{grid-template-columns:1fr 1fr}
+ h1{letter-spacing:-2px}
+ .jobtop{display:block}
+}
 </style>
 </head>
+
 <body>
-<div class="wrap">
-<header>
-  <div class="logo">GOO-JOBB</div>
-  <nav class="nav-links">
-    <a href="/">Home</a>
-    <a href="/remote-jobs">Remote</a>
-    <a href="/categories">Categories</a>
-    <a href="/ai-tools">AI Tools</a>
-  </nav>
+
+<header class="header">
+ <div class="container nav">
+  <a class="logo" href="./"><b>GOO</b>-<span>JOBB</span></a>
+  <div class="live">● REAL JOB DATA • WORLDWIDE</div>
+ </div>
 </header>
+
+<main class="container">
+
 <section class="hero">
-  <h1>World-Class Real Job Search</h1>
-  <p>Find your next opportunity from 50,000+ verified jobs across the globe.</p>
-  <form id="searchForm" class="search-box">
-    <input type="text" id="q" placeholder="Job title, skill, company...">
-    <input type="text" id="loc" placeholder="Location or Remote">
-    <button type="submit">Search</button>
-  </form>
+ <span class="badge">● LIVE WORLDWIDE JOB ENGINE</span>
+
+ <h1>Find your next <em>real job.</em></h1>
+
+ <p>
+ Search verified public job listings across companies, categories,
+ countries, remote opportunities and employment types.
+ </p>
+
+ <div class="search">
+  <input id="q" placeholder="Job title, company, skill...">
+  <input id="location" placeholder="Country, city, remote...">
+  <button class="primary" id="searchBtn">Search Jobs</button>
+ </div>
 </section>
-<section class="stats" id="stats"></section>
-<div class="filters" id="categoryFilters"></div>
-<main id="jobsContainer" class="jobs-grid"></main>
-<footer>GOO-JOBB © 2026 · Real Jobs · Worldwide</footer>
-</div>
-<script src="/ads.js"></script>
-<script src="/register-sw.js"></script>
+
+<section class="stats">
+ <div class="stat">
+  <strong id="total">—</strong>
+  <span>REAL LISTINGS</span>
+ </div>
+
+ <div class="stat">
+  <strong id="companies">—</strong>
+  <span>COMPANIES</span>
+ </div>
+
+ <div class="stat">
+  <strong id="categories">—</strong>
+  <span>CATEGORIES</span>
+ </div>
+
+ <div class="stat">
+  <strong id="sources">—</strong>
+  <span>SOURCES</span>
+ </div>
+</section>
+
+<section class="layout">
+
+<aside class="sidebar">
+
+ <h3>Advanced Filters</h3>
+
+ <div class="filter">
+  <label>Category</label>
+  <select id="category">
+   <option value="">All categories</option>
+  </select>
+ </div>
+
+ <div class="filter">
+  <label>Employment</label>
+  <select id="type">
+   <option value="">All types</option>
+  </select>
+ </div>
+
+ <div class="filter">
+  <label>Experience</label>
+  <select id="experience">
+   <option value="">All experience</option>
+  </select>
+ </div>
+
+ <div class="filter">
+  <label>Source</label>
+  <select id="source">
+   <option value="">All sources</option>
+  </select>
+ </div>
+
+ <div class="filter">
+  <label>Mode</label>
+  <select id="mode">
+   <option value="">All</option>
+   <option value="remote">Remote</option>
+   <option value="onsite">On-site</option>
+  </select>
+ </div>
+
+ <div class="filter">
+  <label>Sort</label>
+  <select id="sort">
+   <option value="newest">Newest</option>
+   <option value="company">Company</option>
+   <option value="title">Title</option>
+  </select>
+ </div>
+
+ <button id="reset" style="width:100%;margin-top:10px">
+  Reset Filters
+ </button>
+
+</aside>
+
+<section>
+
+ <div class="resultsbar">
+  <div>
+   <strong id="count">0</strong> jobs found
+  </div>
+
+  <button id="clearSaved">
+   Clear Saved
+  </button>
+ </div>
+
+ <div id="jobs" class="jobs"></div>
+
+</section>
+
+</section>
+
+</main>
+
 <script>
-const API = '/api';
-let currentPage = 1;
-let currentQuery = '';
-let currentLocation = '';
-let currentCategory = '';
-function escapeHtml(s) { const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
-function formatNumber(n) { if (n >= 1000000) return (n/1000000).toFixed(1)+'M'; if (n >= 1000) return (n/1000).toFixed(0)+'K'; return n.toString(); }
-async function loadStats() {
-  try { const r = await fetch(API+'/stats'); const s = await r.json();
-    document.getElementById('stats').innerHTML = `
-      <div class="stat-card"><div class="num">${formatNumber(s.jobs)}</div><div class="label">Active Jobs</div></div>
-      <div class="stat-card"><div class="num">${formatNumber(s.companies)}</div><div class="label">Companies</div></div>
-      <div class="stat-card"><div class="num">${formatNumber(s.countries)}</div><div class="label">Countries</div></div>
-      <div class="stat-card"><div class="num">${s.sources}</div><div class="label">Sources</div></div>`;
-  } catch(e) {}
+let jobs=[];
+let filtered=[];
+let saved=new Set(
+ JSON.parse(localStorage.getItem("goo-jobb-saved") || "[]")
+);
+
+const $=id=>document.getElementById(id);
+
+function escapeHTML(v){
+ return String(v ?? "")
+  .replaceAll("&","&amp;")
+  .replaceAll("<","&lt;")
+  .replaceAll(">","&gt;")
+  .replaceAll('"',"&quot;")
+  .replaceAll("'","&#039;");
 }
-async function loadCategories() {
-  try { const r = await fetch(API+'/categories'); const d = await r.json();
-    const container = document.getElementById('categoryFilters');
-    container.innerHTML = '<span class="filter-pill active" data-cat="">All</span>';
-    d.categories.forEach(c => {
-      container.innerHTML += `<span class="filter-pill" data-cat="${c.category}">${c.category} (${c.jobs})</span>`;
-    });
-    container.querySelectorAll('.filter-pill').forEach(pill => {
-      pill.onclick = () => {
-        container.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
-        pill.classList.add('active');
-        currentCategory = pill.dataset.cat;
-        currentPage = 1;
-        loadJobs(true);
-      };
-    });
-  } catch(e) {}
+
+function fillSelect(id,values){
+ const el=$(id);
+ const first=el.options[0].textContent;
+ el.innerHTML=`<option value="">${first}</option>`;
+
+ values
+  .filter(Boolean)
+  .sort((a,b)=>a.localeCompare(b))
+  .forEach(v=>{
+   const o=document.createElement("option");
+   o.value=v;
+   o.textContent=v;
+   el.appendChild(o);
+  });
 }
-async function loadJobs(reset = false) {
-  if (reset) { currentPage = 1; document.getElementById('jobsContainer').innerHTML = ''; }
-  const params = new URLSearchParams({ limit: '24', page: currentPage, q: currentQuery, location: currentLocation, category: currentCategory });
-  try {
-    const r = await fetch(API+'/jobs?'+params); const d = await r.json();
-    document.getElementById('jobsContainer').insertAdjacentHTML('beforeend', d.jobs.map(j => `
-      <article class="job-card">
-        <h3>${escapeHtml(j.title)}</h3>
-        <div class="company">${escapeHtml(j.company)}</div>
-        <div class="meta">📍 ${escapeHtml(j.location)} · ${escapeHtml(j.remote_type)} · ${escapeHtml(j.category)}</div>
-        <div class="skills">${(j.skills||[]).slice(0,5).map(s => `<span class="skill-tag">${escapeHtml(s)}</span>`).join('')}</div>
-        <a href="${escapeHtml(j.apply_url)}" target="_blank" class="apply-btn">Apply ↗</a>
-      </article>`).join(''));
-    if (d.next_cursor) {
-      currentPage++;
-      const observer = new IntersectionObserver((entries) => { if (entries[0].isIntersecting) { observer.disconnect(); loadJobs(); } });
-      observer.observe(document.querySelector('.job-card:last-child'));
+
+function getText(j){
+ return [
+  j.title,
+  j.company,
+  j.location,
+  j.category,
+  j.employmentType,
+  j.experience,
+  j.description,
+  j.source
+ ].join(" ").toLowerCase();
+}
+
+function render(){
+ const q=$("q").value.trim().toLowerCase();
+ const loc=$("location").value.trim().toLowerCase();
+ const cat=$("category").value;
+ const type=$("type").value;
+ const exp=$("experience").value;
+ const source=$("source").value;
+ const mode=$("mode").value;
+ const sort=$("sort").value;
+
+ filtered=jobs.filter(j=>{
+  const text=getText(j);
+
+  if(q && !text.includes(q)) return false;
+
+  if(loc &&
+    !String(j.location||"").toLowerCase().includes(loc)
+  ) return false;
+
+  if(cat && j.category!==cat) return false;
+  if(type && j.employmentType!==type) return false;
+  if(exp && j.experience!==exp) return false;
+  if(source && j.source!==source) return false;
+
+  if(mode==="remote" && !j.remote) return false;
+  if(mode==="onsite" && j.remote) return false;
+
+  return true;
+ });
+
+ filtered.sort((a,b)=>{
+  if(sort==="company")
+   return String(a.company).localeCompare(String(b.company));
+
+  if(sort==="title")
+   return String(a.title).localeCompare(String(b.title));
+
+  return (
+   (Date.parse(b.postedAt||"")||0) -
+   (Date.parse(a.postedAt||"")||0)
+  );
+ });
+
+ $("count").textContent=
+  filtered.length.toLocaleString();
+
+ const fragment=document.createDocumentFragment();
+
+ if(!filtered.length){
+  $("jobs").innerHTML=
+   '<div class="empty">No matching real jobs found.</div>';
+  return;
+ }
+
+ filtered.slice(0,500).forEach(j=>{
+  const article=document.createElement("article");
+  article.className="job";
+
+  const savedNow=saved.has(j.id);
+
+  article.innerHTML=`
+   <div class="jobtop">
+    <div>
+     <h2>${escapeHTML(j.title)}</h2>
+     <div class="company">${escapeHTML(j.company)}</div>
+    </div>
+   </div>
+
+   <div class="meta">
+    <span class="tag">${escapeHTML(j.category)}</span>
+    <span class="tag">${escapeHTML(j.location)}</span>
+    ${
+      j.remote
+      ? '<span class="tag remote">REMOTE</span>'
+      : '<span class="tag">ON-SITE / HYBRID</span>'
     }
-  } catch(e) {}
+    ${
+      j.employmentType
+      ? `<span class="tag">${escapeHTML(j.employmentType)}</span>`
+      : ""
+    }
+    ${
+      j.experience
+      ? `<span class="tag">${escapeHTML(j.experience)}</span>`
+      : ""
+    }
+    <span class="tag">${escapeHTML(j.source)}</span>
+   </div>
+
+   ${
+    j.salary
+    ? `<div class="tag">${escapeHTML(j.salary)}</div>`
+    : ""
+   }
+
+   <p class="jobdesc">
+    ${escapeHTML(j.description || "Open the original listing for full details.")}
+   </p>
+
+   <div class="actions">
+    <a
+      class="apply"
+      href="${escapeHTML(j.applyUrl || j.url)}"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >Apply</a>
+
+    <a
+      href="${escapeHTML(j.url)}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >Original Listing</a>
+
+    <button class="save" data-save="${escapeHTML(j.id)}">
+      ${savedNow ? "★ Saved" : "☆ Save"}
+    </button>
+
+    <button
+      data-share="${escapeHTML(j.id)}"
+    >Share</button>
+   </div>
+  `;
+
+  fragment.appendChild(article);
+ });
+
+ $("jobs").replaceChildren(fragment);
+
+ document.querySelectorAll("[data-save]").forEach(btn=>{
+  btn.onclick=()=>{
+   const id=btn.dataset.save;
+
+   if(saved.has(id)) saved.delete(id);
+   else saved.add(id);
+
+   localStorage.setItem(
+    "goo-jobb-saved",
+    JSON.stringify([...saved])
+   );
+
+   render();
+  };
+ });
+
+ document.querySelectorAll("[data-share]").forEach(btn=>{
+  btn.onclick=async()=>{
+   const j=jobs.find(x=>x.id===btn.dataset.share);
+   if(!j) return;
+
+   const data={
+    title:j.title,
+    text:`${j.title} — ${j.company}`,
+    url:j.applyUrl||j.url
+   };
+
+   try{
+    if(navigator.share)
+      await navigator.share(data);
+    else{
+      await navigator.clipboard.writeText(data.url);
+      btn.textContent="Copied";
+      setTimeout(()=>btn.textContent="Share",1200);
+    }
+   }catch{}
+  };
+ });
 }
-document.getElementById('searchForm').onsubmit = (e) => { e.preventDefault(); currentQuery = document.getElementById('q').value; currentLocation = document.getElementById('loc').value; loadJobs(true); };
-loadStats(); loadCategories(); loadJobs(true);
+
+async function boot(){
+ try{
+  const r=await fetch("./jobs-worldwide.json",{
+   cache:"no-store"
+  });
+
+  if(!r.ok)
+   throw new Error("job dataset unavailable");
+
+  jobs=await r.json();
+
+  if(!Array.isArray(jobs))
+   throw new Error("invalid dataset");
+
+  $("total").textContent=
+   jobs.length.toLocaleString();
+
+  $("companies").textContent=
+   new Set(jobs.map(x=>x.company).filter(Boolean)).size.toLocaleString();
+
+  $("categories").textContent=
+   new Set(jobs.map(x=>x.category).filter(Boolean)).size.toLocaleString();
+
+  $("sources").textContent=
+   new Set(jobs.map(x=>x.source).filter(Boolean)).size.toLocaleString();
+
+  fillSelect(
+   "category",
+   [...new Set(jobs.map(x=>x.category))]
+  );
+
+  fillSelect(
+   "type",
+   [...new Set(jobs.map(x=>x.employmentType))]
+  );
+
+  fillSelect(
+   "experience",
+   [...new Set(jobs.map(x=>x.experience))]
+  );
+
+  fillSelect(
+   "source",
+   [...new Set(jobs.map(x=>x.source))]
+  );
+
+  render();
+
+ }catch(e){
+  $("jobs").innerHTML=
+   `<div class="empty">
+    Real job dataset could not be loaded.<br>
+    Sync the repository and refresh.
+   </div>`;
+ }
+}
+
+[
+ "q",
+ "location",
+ "category",
+ "type",
+ "experience",
+ "source",
+ "mode",
+ "sort"
+].forEach(id=>{
+ $(id).addEventListener(
+  "input",
+  render
+ );
+
+ $(id).addEventListener(
+  "change",
+  render
+ );
+});
+
+$("searchBtn").onclick=render;
+
+$("reset").onclick=()=>{
+ $("q").value="";
+ $("location").value="";
+ $("category").value="";
+ $("type").value="";
+ $("experience").value="";
+ $("source").value="";
+ $("mode").value="";
+ $("sort").value="newest";
+ render();
+};
+
+$("clearSaved").onclick=()=>{
+ saved.clear();
+ localStorage.removeItem("goo-jobb-saved");
+ render();
+};
+
+boot();
 </script>
+
 </body>
 </html>

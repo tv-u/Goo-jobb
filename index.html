@@ -2,44 +2,878 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#070709">
+<meta name="description" content="GOO-JOBB — Search real jobs from multiple public sources worldwide.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg">
 <title>GOO-JOBB — Real Jobs Worldwide</title>
-<meta name="description" content="Search real jobs worldwide across public company career feeds, ATS boards and job APIs.">
-<link rel="canonical" href="/">
-<meta name="theme-color" content="#ff0080">
-<link rel="manifest" href="/manifest.webmanifest">
+
 <style>
-:root{--bg:#050507;--panel:#0d0d12;--line:#22222b;--pink:#ff0080;--green:#00ff88;--yellow:#ffdd00;--text:#f5f7fb;--muted:#9aa0ad}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#24102b,transparent 42%),var(--bg);color:var(--text);font:15px system-ui,-apple-system,Segoe UI,sans-serif}
-a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:20px}.nav{display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{font-weight:900;font-size:25px;letter-spacing:-1px}.brand b{color:var(--pink)}.pill{border:1px solid var(--line);padding:9px 13px;border-radius:999px;background:#0b0b10}
-.hero{padding:65px 0 30px;text-align:center}.hero h1{font-size:clamp(38px,7vw,76px);line-height:.95;margin:0 0 18px}.hero h1 span{color:var(--green)}.hero p{color:var(--muted);max-width:680px;margin:0 auto 25px;font-size:17px}
-.search{display:grid;grid-template-columns:1fr 190px 130px;gap:10px;max-width:900px;margin:auto}.input,.select,.btn{min-height:52px;border:1px solid var(--line);border-radius:14px;background:#0c0c11;color:var(--text);padding:0 15px}.btn{cursor:pointer;background:linear-gradient(135deg,var(--pink),#7d22ff);font-weight:800}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:25px 0}.stat,.card{border:1px solid var(--line);background:linear-gradient(180deg,#101017,#0a0a0e);border-radius:18px;padding:17px}.stat strong{font-size:26px;color:var(--yellow)}.muted{color:var(--muted)}
-.toolbar{display:flex;gap:10px;justify-content:space-between;align-items:center;margin:20px 0}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.card h3{margin:0 0 7px}.company{color:var(--green)}.tag{display:inline-block;border:1px solid #30303b;border-radius:999px;padding:4px 8px;margin:4px 4px 0 0;color:#cfd3dc;font-size:12px}.apply{display:inline-block;margin-top:13px;color:var(--yellow);font-weight:800}
-.bottom{position:sticky;bottom:0;background:#07070add;backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:12px;text-align:center;margin-top:35px}
-@media(max-width:750px){.search,.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.hero{padding-top:35px}}
+:root{
+--bg:#070709;
+--card:#111116;
+--card2:#16161c;
+--text:#f6f7f9;
+--muted:#9ca3af;
+--line:#272731;
+--pink:#ff0080;
+--green:#00ff88;
+--yellow:#ffdd00;
+--red:#ff4d67;
+--radius:18px;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:
+radial-gradient(circle at 10% 0%,rgba(255,0,128,.09),transparent 28%),
+radial-gradient(circle at 90% 0%,rgba(0,255,136,.07),transparent 25%),
+var(--bg);
+color:var(--text);
+font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+button,input,select{font:inherit}
+
+button{cursor:pointer}
+
+a{text-decoration:none;color:inherit}
+
+.header{
+position:sticky;
+top:0;
+z-index:100;
+background:rgba(7,7,9,.9);
+backdrop-filter:blur(18px);
+border-bottom:1px solid var(--line);
+}
+
+.nav{
+max-width:1500px;
+margin:auto;
+padding:14px 18px;
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.logo{
+font-size:25px;
+font-weight:1000;
+letter-spacing:-1.4px;
+}
+
+.logo span{color:var(--pink)}
+
+.live{
+display:flex;
+align-items:center;
+gap:6px;
+font-size:11px;
+font-weight:900;
+color:var(--green);
+}
+
+.live i{
+width:8px;
+height:8px;
+border-radius:50%;
+background:var(--green);
+box-shadow:0 0 15px var(--green);
+}
+
+.spacer{flex:1}
+
+.navbutton{
+border:1px solid var(--line);
+background:var(--card);
+color:#fff;
+padding:9px 13px;
+border-radius:10px;
+}
+
+.hero{
+max-width:1500px;
+margin:auto;
+padding:55px 18px 28px;
+}
+
+.kicker{
+color:var(--green);
+font-size:12px;
+font-weight:950;
+letter-spacing:1.8px;
+}
+
+h1{
+font-size:clamp(42px,7vw,82px);
+line-height:.92;
+letter-spacing:-4px;
+margin:12px 0;
+}
+
+.gradient{
+background:linear-gradient(90deg,var(--pink),#fff,var(--green));
+background-clip:text;
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{
+max-width:800px;
+color:var(--muted);
+font-size:17px;
+line-height:1.65;
+}
+
+.search{
+display:grid;
+grid-template-columns:2fr 1.2fr 1fr auto;
+gap:9px;
+margin-top:27px;
+}
+
+.input,.select{
+width:100%;
+background:var(--card);
+border:1px solid var(--line);
+color:#fff;
+padding:14px;
+border-radius:12px;
+outline:none;
+}
+
+.input:focus,.select:focus{
+border-color:var(--pink);
+}
+
+.primary{
+background:var(--pink);
+color:#fff;
+border:0;
+padding:14px 22px;
+border-radius:12px;
+font-weight:950;
+}
+
+.stats{
+max-width:1500px;
+margin:auto;
+padding:0 18px;
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:10px;
+}
+
+.stat{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:14px;
+padding:15px;
+}
+
+.stat strong{
+display:block;
+font-size:23px;
+}
+
+.stat span{
+color:var(--muted);
+font-size:11px;
+}
+
+.filters{
+max-width:1500px;
+margin:22px auto 0;
+padding:0 18px;
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+}
+
+.filter{
+background:var(--card);
+border:1px solid var(--line);
+color:var(--muted);
+padding:9px 13px;
+border-radius:999px;
+}
+
+.filter.active{
+border-color:var(--green);
+color:var(--green);
+}
+
+.content{
+max-width:1500px;
+margin:auto;
+padding:25px 18px 90px;
+}
+
+.heading{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:15px;
+}
+
+.heading h2{
+margin:0;
+font-size:25px;
+}
+
+.heading span{
+color:var(--muted);
+font-size:13px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:14px;
+}
+
+.job{
+background:linear-gradient(180deg,var(--card2),var(--card));
+border:1px solid var(--line);
+border-radius:var(--radius);
+padding:19px;
+transition:.2s;
+}
+
+.job:hover{
+transform:translateY(-3px);
+border-color:#454550;
+}
+
+.badges{
+display:flex;
+gap:6px;
+flex-wrap:wrap;
+margin-bottom:11px;
+}
+
+.badge{
+font-size:10px;
+font-weight:950;
+background:#1e1e26;
+padding:5px 8px;
+border-radius:7px;
+}
+
+.badge.remote{
+background:rgba(0,255,136,.08);
+color:var(--green);
+}
+
+.badge.source{
+color:var(--yellow);
+}
+
+.jobtitle{
+font-size:18px;
+font-weight:950;
+line-height:1.3;
+display:block;
+}
+
+.company{
+font-weight:750;
+margin-top:7px;
+}
+
+.meta{
+margin-top:9px;
+color:var(--muted);
+font-size:12px;
+line-height:1.7;
+}
+
+.description{
+margin-top:11px;
+color:#aeb4be;
+font-size:12px;
+line-height:1.55;
+display:-webkit-box;
+-webkit-line-clamp:4;
+-webkit-box-orient:vertical;
+overflow:hidden;
+}
+
+.actions{
+display:flex;
+gap:7px;
+margin-top:17px;
+}
+
+.apply{
+flex:1;
+background:var(--green);
+color:#00170d;
+padding:11px;
+border-radius:10px;
+text-align:center;
+font-weight:950;
+}
+
+.save{
+background:#1c1c23;
+border:1px solid var(--line);
+color:#fff;
+border-radius:10px;
+padding:11px 14px;
+}
+
+.more{
+display:flex;
+justify-content:center;
+margin:28px 0;
+}
+
+.more button{
+background:var(--card);
+border:1px solid var(--line);
+color:#fff;
+padding:13px 25px;
+border-radius:12px;
+font-weight:900;
+}
+
+.empty{
+grid-column:1/-1;
+padding:60px 20px;
+text-align:center;
+background:var(--card);
+border:1px dashed var(--line);
+border-radius:18px;
+color:var(--muted);
+}
+
+.footer{
+border-top:1px solid var(--line);
+text-align:center;
+padding:35px 18px;
+color:var(--muted);
+font-size:12px;
+}
+
+@media(max-width:1050px){
+.search{grid-template-columns:1fr 1fr}
+.grid{grid-template-columns:repeat(2,1fr)}
+.stats{grid-template-columns:repeat(3,1fr)}
+}
+
+@media(max-width:650px){
+.hero{padding-top:35px}
+h1{letter-spacing:-2px}
+.search{grid-template-columns:1fr}
+.grid{grid-template-columns:1fr}
+.stats{grid-template-columns:repeat(2,1fr)}
+.navbutton{display:none}
+}
 </style>
 </head>
+
 <body>
-<div class="wrap">
-<nav class="nav"><a class="brand" href="/">GOO-<b>JOBB</b></a><div><a class="pill" href="/api/sitemap">Sitemap</a> <button class="pill" onclick="install()">Install</button></div></nav>
-<section class="hero"><h1>Find <span>real jobs.</span><br>Worldwide.</h1><p>One search across public career feeds, ATS boards and open job APIs. No fake listings.</p>
-<form id="search" class="search"><input id="q" class="input" placeholder="Job title, skill, company…"><input id="loc" class="input" placeholder="Country or city"><button class="btn">Search</button></form></section>
-<section id="stats" class="stats"></section>
-<div class="toolbar"><strong id="heading">Latest jobs</strong><select id="sort" class="select"><option value="new">Newest</option><option value="relevance">Relevance</option></select></div>
-<main id="jobs" class="grid"></main>
-<div class="bottom"><button class="btn" onclick="loadJobs(true)">Load more</button></div>
+
+<header class="header">
+<nav class="nav">
+<a class="logo" href="./">GOO-<span>JOBB</span></a>
+<div class="live"><i></i> LIVE JOB DATA</div>
+<div class="spacer"></div>
+<button class="navbutton" onclick="scrollToJobs()">Jobs</button>
+<button class="navbutton" onclick="showSaved()">Saved</button>
+</nav>
+</header>
+
+<section class="hero">
+<div class="kicker">REAL JOB DISCOVERY ENGINE</div>
+
+<h1>
+Find your next
+<span class="gradient">real job.</span>
+</h1>
+
+<p>
+Search current public job listings across multiple job sources.
+No generated vacancies. No fake employers. Each listing retains
+its original application URL and source.
+</p>
+
+<div class="search">
+<input id="q" class="input" placeholder="Job title, skill, company">
+<input id="location" class="input" placeholder="Location or Remote">
+
+<select id="category" class="select">
+<option value="">All categories</option>
+<option>Engineering</option>
+<option>Data & AI</option>
+<option>Product</option>
+<option>Design</option>
+<option>Marketing</option>
+<option>Sales</option>
+<option>Finance</option>
+<option>Human Resources</option>
+<option>Customer Support</option>
+<option>Operations</option>
+<option>Healthcare</option>
+<option>Education</option>
+</select>
+
+<button class="primary" onclick="searchJobs()">Search Jobs</button>
 </div>
-<script src="/ads.js"></script><script src="/register-sw.js"></script>
+</section>
+
+<section class="stats">
+<div class="stat">
+<strong id="total">0</strong>
+<span>Real listings</span>
+</div>
+
+<div class="stat">
+<strong id="shown">0</strong>
+<span>Shown</span>
+</div>
+
+<div class="stat">
+<strong id="sourceCount">0</strong>
+<span>Active sources</span>
+</div>
+
+<div class="stat">
+<strong id="remoteCount">0</strong>
+<span>Remote</span>
+</div>
+
+<div class="stat">
+<strong id="updated">—</strong>
+<span>Last sync</span>
+</div>
+</section>
+
+<div class="filters">
+<button class="filter active" data-filter="all">All</button>
+<button class="filter" data-filter="remote">Remote</button>
+<button class="filter" data-filter="saved">Saved</button>
+<button class="filter" data-filter="recent">Recent</button>
+
+<select id="sort" class="select" style="width:auto" onchange="render()">
+<option value="newest">Newest</option>
+<option value="relevance">Relevance</option>
+<option value="company">Company A-Z</option>
+<option value="title">Title A-Z</option>
+</select>
+</div>
+
+<main id="jobs" class="content">
+<div class="heading">
+<h2>Latest Jobs</h2>
+<span id="matchCount"></span>
+</div>
+
+<div id="grid" class="grid"></div>
+
+<div id="more" class="more"></div>
+</main>
+
+<footer class="footer">
+GOO-JOBB • Real public job listings • Original application links
+</footer>
+
 <script>
-let cursor="",q="",loc="";
-const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
-async function api(u){const r=await fetch(u);if(!r.ok)throw Error("Request failed");return r.json()}
-async function stats(){try{const s=await api("/api/stats");document.getElementById("stats").innerHTML=[["Active jobs",s.jobs],["Companies",s.companies],["Countries",s.countries],["Sources",s.sources]].map(x=>`<div class="stat"><strong>${x[1]??0}</strong><div class="muted">${x[0]}</div></div>`).join("")}catch{}}
-async function loadJobs(reset=false){if(reset){cursor="";document.getElementById("jobs").innerHTML=""}const p=new URLSearchParams({limit:"24"});if(q)p.set("q",q);if(loc)p.set("location",loc);if(cursor)p.set("cursor",cursor);p.set("sort",document.getElementById("sort").value);try{const d=await api("/api/jobs?"+p);cursor=d.next_cursor||"";document.getElementById("heading").textContent=`${d.total??0} matching jobs`;document.getElementById("jobs").insertAdjacentHTML("beforeend",d.jobs.map(j=>`<article class="card"><div class="muted">${esc(j.category)} · ${esc(j.remote_type)}</div><h3><a href="/jobs/${encodeURIComponent(j.slug)}">${esc(j.title)}</a></h3><div class="company">${esc(j.company)}</div><p class="muted">${esc(j.location||"Worldwide")} · ${esc(j.country||"")}</p><div>${(j.skills||[]).slice(0,7).map(x=>`<span class="tag">${esc(x)}</span>`).join("")}</div><a class="apply" href="${esc(j.apply_url)}" target="_blank" rel="nofollow noopener">Apply ↗</a></article>`).join(""))}catch(e){document.getElementById("jobs").innerHTML='<div class="card">Unable to load jobs right now. Please retry.</div>'}}
-document.getElementById("search").onsubmit=e=>{e.preventDefault();q=document.getElementById("q").value.trim();loc=document.getElementById("loc").value.trim();loadJobs(true)};
-document.getElementById("sort").onchange=()=>loadJobs(true);
-let deferred;window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferred=e});window.install=()=>deferred?.prompt();
-stats();loadJobs(true);
+const DATA="./jobs.json";
+
+let jobs=[];
+let filtered=[];
+let mode="all";
+let page=1;
+const PAGE_SIZE=60;
+
+let saved=new Set(
+ JSON.parse(
+   localStorage.getItem("goo-jobb-saved")||"[]"
+ )
+);
+
+const $=id=>document.getElementById(id);
+
+function esc(value){
+ return String(value??"").replace(/[&<>"']/g,c=>({
+ "&":"&amp;",
+ "<":"&lt;",
+ ">":"&gt;",
+ '"':"&quot;",
+ "'":"&#39;"
+ }[c]));
+}
+
+function cleanText(value){
+ return String(value||"")
+   .replace(/<[^>]*>/g," ")
+   .replace(/\s+/g," ")
+   .trim();
+}
+
+function isRemote(job){
+ return job.remote===true ||
+ /remote|worldwide|anywhere|work from home|distributed/i.test(
+   `${job.location} ${job.title}`
+ );
+}
+
+function scrollToJobs(){
+ $("jobs").scrollIntoView({behavior:"smooth"});
+}
+
+function showSaved(){
+ mode="saved";
+ document.querySelectorAll(".filter").forEach(x=>{
+   x.classList.toggle("active",x.dataset.filter==="saved");
+ });
+ searchJobs();
+ scrollToJobs();
+}
+
+async function loadJobs(){
+
+ $("grid").innerHTML=
+ `<div class="empty">
+ Loading real job listings…
+ </div>`;
+
+ try{
+
+   const response=await fetch(
+     DATA+"?v="+Date.now(),
+     {cache:"no-store"}
+   );
+
+   if(!response.ok)
+     throw new Error("Dataset HTTP "+response.status);
+
+   const data=await response.json();
+
+   jobs=Array.isArray(data)
+     ? data
+     : (data.jobs||[]);
+
+   jobs=jobs.filter(
+     job=>
+       job &&
+       job.title &&
+       job.company &&
+       job.url
+   );
+
+   $("total").textContent=
+     jobs.length.toLocaleString();
+
+   $("remoteCount").textContent=
+     jobs.filter(isRemote).length.toLocaleString();
+
+   $("sourceCount").textContent=
+     data.active_source_count ??
+     new Set(jobs.map(x=>x.source)).size;
+
+   $("updated").textContent=
+     data.generated_at
+       ? new Date(data.generated_at).toLocaleString()
+       : "Live";
+
+   searchJobs();
+
+ }catch(error){
+
+   console.error(error);
+
+   $("grid").innerHTML=
+   `<div class="empty">
+      Job dataset is temporarily refreshing.
+      Please refresh shortly.
+    </div>`;
+ }
+}
+
+function searchJobs(){
+
+ const query=
+   $("q").value.toLowerCase().trim();
+
+ const location=
+   $("location").value.toLowerCase().trim();
+
+ const category=
+   $("category").value.toLowerCase().trim();
+
+ filtered=jobs.filter(job=>{
+
+   const text=
+     `${job.title} ${job.company} ${job.description} ${job.tags}`
+     .toLowerCase();
+
+   const loc=
+     `${job.location} ${job.country}`
+     .toLowerCase();
+
+   const queryOK=
+     !query || text.includes(query);
+
+   const locationOK=
+     !location ||
+     loc.includes(location) ||
+     isRemote(job);
+
+   const categoryOK=
+     !category ||
+     String(job.category||"").toLowerCase()===category;
+
+   return queryOK &&
+          locationOK &&
+          categoryOK;
+ });
+
+ if(mode==="remote")
+   filtered=filtered.filter(isRemote);
+
+ if(mode==="saved")
+   filtered=filtered.filter(x=>saved.has(x.id));
+
+ if(mode==="recent")
+   filtered=filtered.filter(job=>{
+     const time=new Date(
+       job.published||job.updated||0
+     ).getTime();
+
+     return Date.now()-time<
+       7*24*60*60*1000;
+   });
+
+ page=1;
+ render();
+}
+
+function relevance(job,query){
+
+ if(!query)return 0;
+
+ const title=
+   String(job.title||"").toLowerCase();
+
+ const company=
+   String(job.company||"").toLowerCase();
+
+ const description=
+   String(job.description||"").toLowerCase();
+
+ let score=0;
+
+ if(title.includes(query))score+=100;
+ if(company.includes(query))score+=50;
+ if(description.includes(query))score+=10;
+
+ return score;
+}
+
+function render(){
+
+ const sort=$("sort").value;
+ const query=$("q").value.toLowerCase().trim();
+
+ const list=[...filtered];
+
+ if(sort==="relevance"){
+   list.sort(
+     (a,b)=>
+       relevance(b,query)-
+       relevance(a,query)
+   );
+ }
+
+ else if(sort==="company"){
+   list.sort(
+     (a,b)=>
+       String(a.company).localeCompare(
+         String(b.company)
+       )
+   );
+ }
+
+ else if(sort==="title"){
+   list.sort(
+     (a,b)=>
+       String(a.title).localeCompare(
+         String(b.title)
+       )
+   );
+ }
+
+ else{
+   list.sort(
+     (a,b)=>
+       new Date(b.published||0)-
+       new Date(a.published||0)
+   );
+ }
+
+ filtered=list;
+
+ const visible=
+   list.slice(
+     0,
+     page*PAGE_SIZE
+   );
+
+ $("shown").textContent=
+   visible.length.toLocaleString();
+
+ $("matchCount").textContent=
+   `${list.length.toLocaleString()} matching jobs`;
+
+ $("grid").innerHTML=
+   visible.length
+   ? visible.map(card).join("")
+   : `<div class="empty">
+        No matching jobs found.
+      </div>`;
+
+ $("more").innerHTML=
+   visible.length<list.length
+   ? `<button onclick="page++;render()">
+        Load ${Math.min(
+          PAGE_SIZE,
+          list.length-visible.length
+        )} more jobs
+      </button>`
+   : "";
+}
+
+function card(job){
+
+ const remoteBadge=
+   isRemote(job)
+   ? `<span class="badge remote">REMOTE</span>`
+   : "";
+
+ const date=job.published
+   ? new Date(job.published).toLocaleDateString()
+   : "Current";
+
+ return `
+ <article class="job">
+
+ <div class="badges">
+   ${remoteBadge}
+   <span class="badge source">
+     ${esc(job.source||"Public source")}
+   </span>
+   <span class="badge">
+     ${esc(job.category||"Other")}
+   </span>
+ </div>
+
+ <a
+   class="jobtitle"
+   href="${esc(job.url)}"
+   target="_blank"
+   rel="noopener noreferrer"
+ >
+   ${esc(job.title)}
+ </a>
+
+ <div class="company">
+   ${esc(job.company)}
+ </div>
+
+ <div class="meta">
+   📍 ${esc(job.location||"Location not specified")}
+   <br>
+   🕒 ${esc(date)}
+ </div>
+
+ ${
+   job.description
+   ? `<div class="description">
+        ${esc(cleanText(job.description))}
+      </div>`
+   : ""
+ }
+
+ <div class="actions">
+
+ <a
+   class="apply"
+   href="${esc(job.url)}"
+   target="_blank"
+   rel="noopener noreferrer"
+ >
+   View / Apply ↗
+ </a>
+
+ <button
+   class="save"
+   onclick='toggleSave(${JSON.stringify(job.id)})'
+ >
+   ${saved.has(job.id)?"★":"☆"}
+ </button>
+
+ </div>
+
+ </article>
+ `;
+}
+
+function toggleSave(id){
+
+ if(saved.has(id))
+   saved.delete(id);
+ else
+   saved.add(id);
+
+ localStorage.setItem(
+   "goo-jobb-saved",
+   JSON.stringify([...saved])
+ );
+
+ render();
+}
+
+document.querySelectorAll(".filter")
+.forEach(button=>{
+ button.addEventListener("click",()=>{
+   document
+     .querySelectorAll(".filter")
+     .forEach(x=>x.classList.remove("active"));
+
+   button.classList.add("active");
+
+   mode=button.dataset.filter;
+
+   searchJobs();
+ });
+});
+
+$("q").addEventListener(
+ "keydown",
+ e=>{
+   if(e.key==="Enter")searchJobs();
+ }
+);
+
+$("location").addEventListener(
+ "keydown",
+ e=>{
+   if(e.key==="Enter")searchJobs();
+ }
+);
+
+loadJobs();
 </script>
-</body></html>
+
+</body>
+</html>

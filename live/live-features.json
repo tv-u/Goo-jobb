@@ -1,55 +1,50 @@
 {
-  "version": "2.0",
+  "version": "2026.09.06.1",
   "site": "GOO-JOBB",
-  "autoDeploy": true,
-  "cacheBust": true,
-  "features": {
-    "worldwideJobs": {
-      "enabled": true
+  "enabled": true,
+  "homeVisible": true,
+  "features": [
+    {
+      "id": "worldwide-jobs",
+      "name": "Worldwide Live Jobs",
+      "description": "Real jobs collected from public job sources.",
+      "status": "LIVE"
     },
-    "smartSearch": {
-      "enabled": true
+    {
+      "id": "smart-search",
+      "name": "Smart Job Search",
+      "description": "Fast client-side job search and relevance ranking.",
+      "status": "LIVE"
     },
-    "localAI": {
-      "enabled": true
+    {
+      "id": "career-intelligence",
+      "name": "Career Intelligence",
+      "description": "Local browser-based career and job intelligence.",
+      "status": "LIVE"
     },
-    "jobMatch": {
-      "enabled": true
+    {
+      "id": "remote-jobs",
+      "name": "Remote Jobs",
+      "description": "Remote opportunities from supported live sources.",
+      "status": "LIVE"
     },
-    "resumeAnalyzer": {
-      "enabled": true
+    {
+      "id": "seo-job-pages",
+      "name": "SEO Job Pages",
+      "description": "Search-engine-friendly individual job pages.",
+      "status": "LIVE"
     },
-    "skillExtractor": {
-      "enabled": true
+    {
+      "id": "source-health",
+      "name": "Source Health",
+      "description": "Live source synchronization and health metadata.",
+      "status": "LIVE"
     },
-    "salaryIntel": {
-      "enabled": true
-    },
-    "remoteDetector": {
-      "enabled": true
-    },
-    "seoJobPages": {
-      "enabled": true
-    },
-    "sourceHealth": {
-      "enabled": true
-    },
-    "liveUpdates": {
-      "enabled": true
-    },
-    "pwa": {
-      "enabled": true
+    {
+      "id": "pwa",
+      "name": "Progressive Web App",
+      "description": "Installable and mobile-friendly experience.",
+      "status": "LIVE"
     }
-  },
-  "ai": {
-    "engine": "local-browser",
-    "apiKeyRequired": false,
-    "externalLLM": false
-  },
-  "ui": {
-    "header": true,
-    "footer": true,
-    "aiPanel": true,
-    "mobileNav": true
-  }
+  ]
 }

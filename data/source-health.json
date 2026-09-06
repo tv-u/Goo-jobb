@@ -1,126 +1,36 @@
 {
-  "generated_at": "2026-09-06T08:12:42.653914+00:00",
-  "configured": 13,
-  "live": 8,
-  "degraded": 5,
-  "total_jobs": 721,
+  "updated_at": "2026-09-06T08:13:20.900080+00:00",
   "sources": [
     {
-      "name": "Arbeitnow",
-      "endpoint": "https://www.arbeitnow.com/api/job-board-api",
-      "type": "json",
-      "status": "LIVE",
-      "http": 200,
-      "jobs_seen": 250,
-      "latency_ms": 5156
+      "source": "arbeitnow",
+      "status": "ok",
+      "jobs": 0
     },
     {
-      "name": "Jobicy",
-      "endpoint": "https://jobicy.com/api/v2/remote-jobs",
-      "type": "json",
-      "status": "LIVE",
-      "http": 200,
-      "jobs_seen": 0,
-      "latency_ms": 4129
+      "source": "remoteok",
+      "status": "error",
+      "jobs": 0,
+      "error": "'list' object has no attribute 'get'"
     },
     {
-      "name": "Remote OK",
-      "endpoint": "https://remoteok.com/api",
-      "type": "json",
-      "status": "LIVE",
-      "http": 200,
-      "jobs_seen": 0,
-      "latency_ms": 2878
+      "source": "remotive",
+      "status": "ok",
+      "jobs": 15
     },
     {
-      "name": "Remotive",
-      "endpoint": "https://remotive.com/api/remote-jobs",
-      "type": "json",
-      "status": "LIVE",
-      "http": 200,
-      "jobs_seen": 15,
-      "latency_ms": 2099
+      "source": "jobicy",
+      "status": "ok",
+      "jobs": 0
     },
     {
-      "name": "Himalayas",
-      "endpoint": "https://himalayas.app/jobs/api",
-      "type": "json",
-      "status": "LIVE",
-      "http": 200,
-      "jobs_seen": 0,
-      "latency_ms": 2304
+      "source": "himalayas",
+      "status": "ok",
+      "jobs": 0
     },
     {
-      "name": "We Work Remotely",
-      "endpoint": "https://weworkremotely.com/remote-jobs.rss",
-      "type": "rss",
-      "status": "LIVE",
-      "http": 200,
-      "jobs_seen": 91,
-      "latency_ms": 3714
-    },
-    {
-      "name": "Working Nomads",
-      "endpoint": "https://www.workingnomads.com/jobs/rss",
-      "type": "rss",
-      "status": "LIVE",
-      "http": 200,
-      "jobs_seen": 0,
-      "latency_ms": 4374
-    },
-    {
-      "name": "Startup Jobs",
-      "endpoint": "https://startup.jobs/feed",
-      "type": "rss",
-      "status": "DEGRADED",
-      "jobs_seen": 0,
-      "error": "HTTP Error 403: Forbidden",
-      "latency_ms": 1353
-    },
-    {
-      "name": "Remote Jobs",
-      "endpoint": "https://remotejobs.org/rss",
-      "type": "rss",
-      "status": "DEGRADED",
-      "jobs_seen": 0,
-      "error": "HTTP Error 404: Not Found",
-      "latency_ms": 1367
-    },
-    {
-      "name": "NoDesk",
-      "endpoint": "https://nodesk.co/remote-jobs/rss/",
-      "type": "rss",
-      "status": "DEGRADED",
-      "jobs_seen": 0,
-      "error": "HTTP Error 404: Not Found",
-      "latency_ms": 1156
-    },
-    {
-      "name": "Daily Remote",
-      "endpoint": "https://dailyremote.com/remote-jobs.rss",
-      "type": "rss",
-      "status": "DEGRADED",
-      "jobs_seen": 0,
-      "error": "HTTP Error 404: Not Found",
-      "latency_ms": 1705
-    },
-    {
-      "name": "Jobspresso",
-      "endpoint": "https://jobspresso.co/feed/",
-      "type": "rss",
-      "status": "LIVE",
-      "http": 200,
-      "jobs_seen": 0,
-      "latency_ms": 1531
-    },
-    {
-      "name": "Remote4Me",
-      "endpoint": "https://remote4me.com/feed/",
-      "type": "rss",
-      "status": "DEGRADED",
-      "jobs_seen": 0,
-      "error": "HTTP Error 404: Not Found",
-      "latency_ms": 1702
+      "source": "weworkremotely",
+      "status": "ok",
+      "jobs": 91
     }
   ]
 }

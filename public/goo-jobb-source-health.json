@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-05T23:16:06.921Z",
+  "generatedAt": "2026-09-06T00:27:19.991Z",
   "sourceCount": 40,
   "healthySources": 34,
   "failedSources": 6,
-  "acceptedFromCurrentSync": 2306,
-  "totalValidJobs": 10161,
+  "acceptedFromCurrentSync": 2336,
+  "totalValidJobs": 10280,
   "fakeJobs": 0,
   "syntheticJobs": 0,
   "sources": [
@@ -53,7 +53,7 @@
       "accepted": 200,
       "ok": true,
       "error": null,
-      "ms": 202
+      "ms": 205
     },
     {
       "source": "remoteok",
@@ -62,7 +62,7 @@
       "accepted": 100,
       "ok": true,
       "error": null,
-      "ms": 568
+      "ms": 511
     },
     {
       "source": "remotive",
@@ -71,7 +71,7 @@
       "accepted": 15,
       "ok": true,
       "error": null,
-      "ms": 70
+      "ms": 86
     },
     {
       "source": "arbeitnow",
@@ -80,7 +80,7 @@
       "accepted": 250,
       "ok": true,
       "error": null,
-      "ms": 261
+      "ms": 255
     },
     {
       "source": "himalayas",
@@ -89,7 +89,7 @@
       "accepted": 0,
       "ok": true,
       "error": null,
-      "ms": 97
+      "ms": 93
     },
     {
       "source": "weworkremotely",
@@ -98,7 +98,7 @@
       "accepted": 91,
       "ok": true,
       "error": null,
-      "ms": 601
+      "ms": 563
     },
     {
       "source": "wwr-programming",
@@ -107,7 +107,7 @@
       "accepted": 25,
       "ok": true,
       "error": null,
-      "ms": 282
+      "ms": 286
     },
     {
       "source": "wwr-design",
@@ -116,7 +116,7 @@
       "accepted": 17,
       "ok": true,
       "error": null,
-      "ms": 292
+      "ms": 334
     },
     {
       "source": "wwr-sales-marketing",
@@ -125,7 +125,7 @@
       "accepted": 68,
       "ok": true,
       "error": null,
-      "ms": 437
+      "ms": 380
     },
     {
       "source": "wwr-customer-support",
@@ -134,7 +134,7 @@
       "accepted": 28,
       "ok": true,
       "error": null,
-      "ms": 665
+      "ms": 259
     },
     {
       "source": "wwr-devops",
@@ -143,7 +143,7 @@
       "accepted": 0,
       "ok": false,
       "error": "HTTP 301",
-      "ms": 2719
+      "ms": 2670
     },
     {
       "source": "remoteok-rss",
@@ -152,7 +152,7 @@
       "accepted": 0,
       "ok": false,
       "error": "HTTP 410",
-      "ms": 2663
+      "ms": 2534
     },
     {
       "source": "himalayas-rss",
@@ -161,7 +161,7 @@
       "accepted": 20,
       "ok": true,
       "error": null,
-      "ms": 20
+      "ms": 36
     },
     {
       "source": "remote-landers",
@@ -170,7 +170,7 @@
       "accepted": 100,
       "ok": true,
       "error": null,
-      "ms": 1338
+      "ms": 1091
     },
     {
       "source": "fourdayweek",
@@ -179,7 +179,7 @@
       "accepted": 0,
       "ok": true,
       "error": null,
-      "ms": 111
+      "ms": 76
     },
     {
       "source": "remote-first-jobs",
@@ -188,7 +188,7 @@
       "accepted": 0,
       "ok": true,
       "error": null,
-      "ms": 116
+      "ms": 162
     },
     {
       "source": "hireweb3",
@@ -197,7 +197,7 @@
       "accepted": 0,
       "ok": true,
       "error": null,
-      "ms": 2552
+      "ms": 712
     },
     {
       "source": "jobscollider",
@@ -206,7 +206,7 @@
       "accepted": 100,
       "ok": true,
       "error": null,
-      "ms": 176
+      "ms": 228
     },
     {
       "source": "remote-first-engineering",
@@ -215,7 +215,7 @@
       "accepted": 100,
       "ok": true,
       "error": null,
-      "ms": 182
+      "ms": 117
     },
     {
       "source": "working-nomads",
@@ -224,7 +224,7 @@
       "accepted": 0,
       "ok": true,
       "error": null,
-      "ms": 753
+      "ms": 441
     },
     {
       "source": "dailyremote",
@@ -233,7 +233,7 @@
       "accepted": 0,
       "ok": false,
       "error": "HTTP 404",
-      "ms": 2624
+      "ms": 2725
     },
     {
       "source": "remote4me",
@@ -242,7 +242,7 @@
       "accepted": 0,
       "ok": false,
       "error": "HTTP 404",
-      "ms": 2614
+      "ms": 2665
     },
     {
       "source": "remotees",
@@ -251,7 +251,7 @@
       "accepted": 0,
       "ok": false,
       "error": "HTTP 404",
-      "ms": 4013
+      "ms": 3281
     },
     {
       "source": "remoteok-dev",
@@ -260,7 +260,7 @@
       "accepted": 99,
       "ok": true,
       "error": null,
-      "ms": 503
+      "ms": 396
     },
     {
       "source": "remoteok-design",
@@ -269,7 +269,7 @@
       "accepted": 100,
       "ok": true,
       "error": null,
-      "ms": 658
+      "ms": 417
     },
     {
       "source": "remoteok-python",
@@ -278,7 +278,7 @@
       "accepted": 100,
       "ok": true,
       "error": null,
-      "ms": 459
+      "ms": 356
     },
     {
       "source": "remoteok-javascript",
@@ -287,7 +287,7 @@
       "accepted": 100,
       "ok": true,
       "error": null,
-      "ms": 439
+      "ms": 373
     },
     {
       "source": "remoteok-data",
@@ -296,7 +296,7 @@
       "accepted": 100,
       "ok": true,
       "error": null,
-      "ms": 436
+      "ms": 365
     },
     {
       "source": "remoteok-marketing",
@@ -305,7 +305,7 @@
       "accepted": 100,
       "ok": true,
       "error": null,
-      "ms": 457
+      "ms": 387
     },
     {
       "source": "jobicy-usa",
@@ -314,7 +314,7 @@
       "accepted": 200,
       "ok": true,
       "error": null,
-      "ms": 40
+      "ms": 1171
     },
     {
       "source": "jobicy-europe",
@@ -323,7 +323,7 @@
       "accepted": 200,
       "ok": true,
       "error": null,
-      "ms": 33
+      "ms": 1067
     },
     {
       "source": "jobicy-apac",
@@ -332,7 +332,7 @@
       "accepted": 200,
       "ok": true,
       "error": null,
-      "ms": 1394
+      "ms": 1037
     },
     {
       "source": "jobicy-anywhere",
@@ -341,7 +341,7 @@
       "accepted": 129,
       "ok": true,
       "error": null,
-      "ms": 1294
+      "ms": 871
     },
     {
       "source": "jobicy-engineering",
@@ -350,7 +350,7 @@
       "accepted": 200,
       "ok": true,
       "error": null,
-      "ms": 61
+      "ms": 64
     },
     {
       "source": "jobicy-marketing",
@@ -359,16 +359,16 @@
       "accepted": 200,
       "ok": true,
       "error": null,
-      "ms": 28
+      "ms": 42
     },
     {
       "source": "jobicy-data-science",
       "url": "https://jobicy.com/api/v2/remote-jobs?count=200&industry=data-science",
-      "fetched": 99,
-      "accepted": 99,
+      "fetched": 94,
+      "accepted": 94,
       "ok": true,
       "error": null,
-      "ms": 20
+      "ms": 37
     },
     {
       "source": "arbeitnow-page-1",
@@ -377,7 +377,7 @@
       "accepted": 250,
       "ok": true,
       "error": null,
-      "ms": 127
+      "ms": 140
     },
     {
       "source": "arbeitnow-page-2",
@@ -386,7 +386,7 @@
       "accepted": 250,
       "ok": true,
       "error": null,
-      "ms": 216
+      "ms": 313
     },
     {
       "source": "arbeitnow-page-3",
@@ -395,7 +395,7 @@
       "accepted": 100,
       "ok": true,
       "error": null,
-      "ms": 51
+      "ms": 138
     },
     {
       "source": "himalayas-page-2",
@@ -404,30 +404,30 @@
       "accepted": 0,
       "ok": false,
       "error": "HTTP 400",
-      "ms": 2538
+      "ms": 2597
     }
   ],
   "countries": {
-    "Worldwide": 5757,
+    "Worldwide": 5778,
+    "Australia": 85,
+    "United Kingdom": 352,
+    "Japan": 57,
+    "United States": 2329,
+    "Canada": 221,
     "Kenya": 3,
-    "United States": 2291,
     "Sweden": 26,
-    "Canada": 214,
     "Nigeria": 1,
     "South Africa": 32,
     "Italy": 30,
     "United Arab Emirates": 9,
     "Israel": 7,
-    "France": 238,
+    "France": 279,
     "Poland": 48,
     "India": 84,
     "Brazil": 40,
     "Belgium": 45,
-    "Australia": 84,
     "Mexico": 72,
-    "United Kingdom": 344,
-    "Germany": 328,
-    "Japan": 56,
+    "Germany": 330,
     "Singapore": 60,
     "Netherlands": 41,
     "Spain": 36,
@@ -444,21 +444,21 @@
     "New Zealand": 36
   },
   "categories": {
-    "Design": 419,
-    "Marketing": 952,
-    "Other": 3917,
-    "Sales": 929,
-    "Finance": 192,
-    "Technology": 2639,
+    "Healthcare": 461,
+    "Other": 3924,
+    "Marketing": 967,
+    "Design": 430,
+    "Human Resources": 332,
+    "Technology": 2693,
+    "Finance": 198,
+    "Customer Support": 122,
+    "Sales": 945,
     "Legal": 186,
-    "Human Resources": 325,
-    "Healthcare": 459,
-    "Customer Support": 121,
     "Education": 22
   },
   "modes": {
-    "On-site": 8731,
-    "Remote": 1129,
-    "Hybrid": 301
+    "On-site": 8798,
+    "Remote": 1150,
+    "Hybrid": 332
   }
 }

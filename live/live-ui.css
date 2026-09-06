@@ -1,0 +1,26 @@
+#goo-live-header{position:sticky;top:0;z-index:9999;background:rgba(0,0,0,.94);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.12)}
+.goo-live-head{max-width:1400px;margin:auto;min-height:58px;padding:8px 16px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.goo-live-brand{font-size:21px;font-weight:900;color:#ff0080;text-decoration:none}
+.goo-live-nav{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.goo-live-nav a,.goo-live-nav button{color:#fff;background:transparent;border:0;text-decoration:none;padding:9px 11px;border-radius:9px;cursor:pointer;font:inherit}
+.goo-live-nav a:hover,.goo-live-nav button:hover{background:rgba(255,255,255,.1);color:#00ff88}
+#goo-live-footer{margin-top:55px;background:#050505;border-top:1px solid rgba(255,255,255,.1)}
+.goo-live-foot{max-width:1400px;margin:auto;padding:35px 18px;display:grid;grid-template-columns:2fr 2fr 1fr;gap:25px;color:#aaa}
+.goo-live-foot strong{color:#ff0080;font-size:21px}
+.goo-live-foot a{color:#ddd;text-decoration:none;margin-right:12px}
+.goo-live-foot a:hover{color:#00ff88}
+.goo-ai-overlay{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.78);backdrop-filter:blur(12px);padding:15px;overflow:auto}
+.goo-ai-card{max-width:800px;margin:7vh auto;background:#101010;border:1px solid #333;border-radius:18px;padding:24px;color:#fff}
+.goo-ai-close{float:right;background:none;border:0;color:#fff;font-size:30px;cursor:pointer}
+.goo-ai-input{width:100%;box-sizing:border-box;padding:14px;margin:14px 0;background:#050505;color:#fff;border:1px solid #333;border-radius:10px}
+.goo-ai-button{background:#ff0080;color:#fff;border:0;border-radius:10px;padding:12px 18px;font-weight:800;cursor:pointer}
+.goo-ai-job{padding:14px 0;border-bottom:1px solid #292929;display:grid;gap:6px}
+.goo-ai-job-title{font-weight:800}
+.goo-ai-job-company{color:#aaa}
+.goo-ai-job-score{color:#00ff88}
+.goo-ai-job-link{color:#ffdd00;text-decoration:none}
+@media(max-width:700px){
+.goo-live-head{align-items:flex-start;flex-direction:column}
+.goo-live-nav{width:100%;overflow:auto;white-space:nowrap}
+.goo-live-foot{grid-template-columns:1fr}
+}

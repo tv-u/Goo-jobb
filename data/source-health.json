@@ -1,311 +1,36 @@
 {
-  "checkedAt": 1788684503,
-  "total": 27,
-  "live": 21,
-  "failed": 6,
+  "updated_at": "2026-09-06T08:55:07.842152+00:00",
   "sources": [
     {
-      "id": "remoteok",
-      "name": "Remote OK",
-      "url": "https://remoteok.com/api",
-      "type": "json",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 370268,
-      "checkedAt": 1788684380
+      "source": "arbeitnow",
+      "status": "ok",
+      "jobs": 0
     },
     {
-      "id": "jobicy",
-      "name": "Jobicy",
-      "url": "https://jobicy.com/api/v2/remote-jobs?count=200",
-      "type": "json",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 1000000,
-      "checkedAt": 1788684383
+      "source": "remoteok",
+      "status": "error",
+      "jobs": 0,
+      "error": "'list' object has no attribute 'get'"
     },
     {
-      "id": "himalayas",
-      "name": "Himalayas",
-      "url": "https://himalayas.app/jobs/api?limit=20",
-      "type": "json",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 117217,
-      "checkedAt": 1788684388
+      "source": "remotive",
+      "status": "ok",
+      "jobs": 15
     },
     {
-      "id": "arbeitnow",
-      "name": "Arbeitnow",
-      "url": "https://www.arbeitnow.com/api/job-board-api",
-      "type": "json",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 1000000,
-      "checkedAt": 1788684391
+      "source": "jobicy",
+      "status": "ok",
+      "jobs": 0
     },
     {
-      "id": "remotive",
-      "name": "Remotive",
-      "url": "https://remotive.com/api/remote-jobs",
-      "type": "json",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 179594,
-      "checkedAt": 1788684397
+      "source": "himalayas",
+      "status": "ok",
+      "jobs": 0
     },
     {
-      "id": "wwr",
-      "name": "We Work Remotely",
-      "url": "https://weworkremotely.com/remote-jobs.rss",
-      "type": "rss",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 924955,
-      "checkedAt": 1788684400
-    },
-    {
-      "id": "himalayas-rss",
-      "name": "Himalayas RSS",
-      "url": "https://himalayas.app/jobs/rss",
-      "type": "rss",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 187965,
-      "checkedAt": 1788684407
-    },
-    {
-      "id": "onjob-json",
-      "name": "OnJob.io",
-      "url": "https://onjob.io/feeds/jobs.json",
-      "type": "json",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 1000000,
-      "checkedAt": 1788684409
-    },
-    {
-      "id": "onjob-xml",
-      "name": "OnJob.io XML",
-      "url": "https://onjob.io/feeds/jobs.xml",
-      "type": "rss",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 1000000,
-      "checkedAt": 1788684414
-    },
-    {
-      "id": "workingnomads",
-      "name": "Working Nomads",
-      "url": "https://www.workingnomads.com/api/exposed_jobs/",
-      "type": "json",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 132936,
-      "checkedAt": 1788684422
-    },
-    {
-      "id": "lobsters",
-      "name": "Lobsters Jobs",
-      "url": "https://lobste.rs/t/jobs.json",
-      "type": "json",
-      "enabled": true,
-      "status": "FAILED",
-      "http": 0,
-      "bytes": 0,
-      "checkedAt": 1788684428,
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "id": "hn-whoishiring",
-      "name": "Hacker News Who Is Hiring",
-      "url": "https://hn.algolia.com/api/v1/search_by_date?tags=story,author_whoishiring",
-      "type": "json",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 139819,
-      "checkedAt": 1788684430
-    },
-    {
-      "id": "devitjobs",
-      "name": "DevITjobs",
-      "url": "https://devitjobs.uk/rss",
-      "type": "rss",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 1000000,
-      "checkedAt": 1788684433
-    },
-    {
-      "id": "remotelyawesome",
-      "name": "Remotely Awesome Jobs",
-      "url": "https://www.remotelyawesomejobs.com/feed",
-      "type": "rss",
-      "enabled": true,
-      "status": "FAILED",
-      "http": 0,
-      "bytes": 0,
-      "checkedAt": 1788684439,
-      "error": "<urlopen error _ssl.c:1015: The handshake operation timed out>"
-    },
-    {
-      "id": "remoteleaf",
-      "name": "RemoteLeaf",
-      "url": "https://remoteleaf.com/feed",
-      "type": "rss",
-      "enabled": true,
-      "status": "FAILED",
-      "http": 0,
-      "bytes": 0,
-      "checkedAt": 1788684455,
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "id": "remote-co",
-      "name": "Remote.co",
-      "url": "https://remote.co/remote-jobs/feed/",
-      "type": "rss",
-      "enabled": true,
-      "status": "FAILED",
-      "http": 0,
-      "bytes": 0,
-      "checkedAt": 1788684457,
-      "error": "The read operation timed out"
-    },
-    {
-      "id": "startupjobs",
-      "name": "Startup Jobs",
-      "url": "https://startup.jobs/feed",
-      "type": "rss",
-      "enabled": true,
-      "status": "FAILED",
-      "http": 0,
-      "bytes": 0,
-      "checkedAt": 1788684473,
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "id": "jobspresso",
-      "name": "Jobspresso",
-      "url": "https://jobspresso.co/feed/",
-      "type": "rss",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 975,
-      "checkedAt": 1788684475
-    },
-    {
-      "id": "justremote",
-      "name": "JustRemote",
-      "url": "https://justremote.co/feed",
-      "type": "rss",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 135713,
-      "checkedAt": 1788684476
-    },
-    {
-      "id": "remoteok-rss",
-      "name": "Remote OK RSS",
-      "url": "https://remoteok.com/remote-jobs.rss",
-      "type": "rss",
-      "enabled": true,
-      "status": "FAILED",
-      "http": 0,
-      "bytes": 0,
-      "checkedAt": 1788684479,
-      "error": "HTTP Error 410: Gone"
-    },
-    {
-      "id": "weworkremotely-tech",
-      "name": "WWR Programming",
-      "url": "https://weworkremotely.com/categories/remote-programming-jobs.rss",
-      "type": "rss",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 183454,
-      "checkedAt": 1788684480
-    },
-    {
-      "id": "weworkremotely-support",
-      "name": "WWR Support",
-      "url": "https://weworkremotely.com/categories/remote-customer-support-jobs.rss",
-      "type": "rss",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 266181,
-      "checkedAt": 1788684483
-    },
-    {
-      "id": "weworkremotely-sales",
-      "name": "WWR Sales",
-      "url": "https://weworkremotely.com/categories/remote-sales-and-marketing-jobs.rss",
-      "type": "rss",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 565170,
-      "checkedAt": 1788684486
-    },
-    {
-      "id": "weworkremotely-design",
-      "name": "WWR Design",
-      "url": "https://weworkremotely.com/categories/remote-design-jobs.rss",
-      "type": "rss",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 220929,
-      "checkedAt": 1788684492
-    },
-    {
-      "id": "weworkremotely-finance",
-      "name": "WWR Finance",
-      "url": "https://weworkremotely.com/categories/remote-management-and-finance-jobs.rss",
-      "type": "rss",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 187543,
-      "checkedAt": 1788684495
-    },
-    {
-      "id": "weworkremotely-devops",
-      "name": "WWR DevOps",
-      "url": "https://weworkremotely.com/categories/remote-devops-sysadmin-jobs.rss",
-      "type": "rss",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 151608,
-      "checkedAt": 1788684498
-    },
-    {
-      "id": "weworkremotely-product",
-      "name": "WWR Product",
-      "url": "https://weworkremotely.com/categories/remote-product-jobs.rss",
-      "type": "rss",
-      "enabled": true,
-      "status": "LIVE",
-      "http": 200,
-      "bytes": 162278,
-      "checkedAt": 1788684500
+      "source": "weworkremotely",
+      "status": "ok",
+      "jobs": 91
     }
   ]
 }

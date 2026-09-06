@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T04:18:57.854Z",
+  "generatedAt": "2026-09-06T05:16:58.741Z",
   "connectorCount": 20,
   "healthySources": 16,
   "failedSources": 4,
@@ -13,7 +13,7 @@
       "fetched": 0,
       "accepted": 0,
       "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
-      "checkedAt": "2026-09-06T04:18:50.203Z"
+      "checkedAt": "2026-09-06T05:16:51.663Z"
     },
     {
       "id": "himalayas-rss",
@@ -22,7 +22,7 @@
       "fetched": 0,
       "accepted": 0,
       "error": "Unexpected token '<', \"<?xml vers\"... is not valid JSON",
-      "checkedAt": "2026-09-06T04:18:50.500Z"
+      "checkedAt": "2026-09-06T05:16:51.932Z"
     },
     {
       "id": "jobicy",
@@ -30,7 +30,7 @@
       "status": "healthy",
       "fetched": 200,
       "accepted": 0,
-      "checkedAt": "2026-09-06T04:18:50.813Z"
+      "checkedAt": "2026-09-06T05:16:52.236Z"
     },
     {
       "id": "jobicy-engineering",
@@ -38,7 +38,7 @@
       "status": "healthy",
       "fetched": 200,
       "accepted": 0,
-      "checkedAt": "2026-09-06T04:18:51.100Z"
+      "checkedAt": "2026-09-06T05:16:52.518Z"
     },
     {
       "id": "jobicy-marketing",
@@ -46,7 +46,7 @@
       "status": "healthy",
       "fetched": 200,
       "accepted": 0,
-      "checkedAt": "2026-09-06T04:18:51.386Z"
+      "checkedAt": "2026-09-06T05:16:52.794Z"
     },
     {
       "id": "jobicy-data-science",
@@ -54,7 +54,7 @@
       "status": "healthy",
       "fetched": 94,
       "accepted": 0,
-      "checkedAt": "2026-09-06T04:18:51.657Z"
+      "checkedAt": "2026-09-06T05:16:53.064Z"
     },
     {
       "id": "remotejobs-org",
@@ -62,7 +62,7 @@
       "status": "healthy",
       "fetched": 50,
       "accepted": 50,
-      "checkedAt": "2026-09-06T04:18:52.219Z"
+      "checkedAt": "2026-09-06T05:16:53.554Z"
     },
     {
       "id": "remotejobs-programming",
@@ -70,7 +70,7 @@
       "status": "healthy",
       "fetched": 50,
       "accepted": 50,
-      "checkedAt": "2026-09-06T04:18:52.554Z"
+      "checkedAt": "2026-09-06T05:16:53.870Z"
     },
     {
       "id": "remotejobs-design",
@@ -78,7 +78,7 @@
       "status": "healthy",
       "fetched": 50,
       "accepted": 50,
-      "checkedAt": "2026-09-06T04:18:52.878Z"
+      "checkedAt": "2026-09-06T05:16:54.174Z"
     },
     {
       "id": "remotejobs-marketing",
@@ -86,7 +86,7 @@
       "status": "healthy",
       "fetched": 50,
       "accepted": 50,
-      "checkedAt": "2026-09-06T04:18:53.189Z"
+      "checkedAt": "2026-09-06T05:16:54.472Z"
     },
     {
       "id": "remotejobs-data-science",
@@ -94,7 +94,7 @@
       "status": "healthy",
       "fetched": 50,
       "accepted": 50,
-      "checkedAt": "2026-09-06T04:18:53.504Z"
+      "checkedAt": "2026-09-06T05:16:54.776Z"
     },
     {
       "id": "remotejobs-devops",
@@ -102,7 +102,7 @@
       "status": "healthy",
       "fetched": 50,
       "accepted": 50,
-      "checkedAt": "2026-09-06T04:18:53.822Z"
+      "checkedAt": "2026-09-06T05:16:55.077Z"
     },
     {
       "id": "remote-landers",
@@ -111,7 +111,7 @@
       "fetched": 0,
       "accepted": 0,
       "error": "HTTP 403",
-      "checkedAt": "2026-09-06T04:18:54.101Z"
+      "checkedAt": "2026-09-06T05:16:55.345Z"
     },
     {
       "id": "jobremotely",
@@ -119,7 +119,7 @@
       "status": "healthy",
       "fetched": 0,
       "accepted": 0,
-      "checkedAt": "2026-09-06T04:18:54.851Z"
+      "checkedAt": "2026-09-06T05:16:55.836Z"
     },
     {
       "id": "arbeitnow",
@@ -127,7 +127,7 @@
       "status": "healthy",
       "fetched": 250,
       "accepted": 250,
-      "checkedAt": "2026-09-06T04:18:55.767Z"
+      "checkedAt": "2026-09-06T05:16:56.488Z"
     },
     {
       "id": "remotive",
@@ -135,7 +135,7 @@
       "status": "healthy",
       "fetched": 15,
       "accepted": 15,
-      "checkedAt": "2026-09-06T04:18:56.050Z"
+      "checkedAt": "2026-09-06T05:16:56.767Z"
     },
     {
       "id": "remote-landers-engineering",
@@ -144,7 +144,7 @@
       "fetched": 0,
       "accepted": 0,
       "error": "HTTP 403",
-      "checkedAt": "2026-09-06T04:18:56.322Z"
+      "checkedAt": "2026-09-06T05:16:57.051Z"
     },
     {
       "id": "remote-landers-us",
@@ -152,7 +152,7 @@
       "status": "healthy",
       "fetched": 50,
       "accepted": 50,
-      "checkedAt": "2026-09-06T04:18:56.624Z"
+      "checkedAt": "2026-09-06T05:16:57.628Z"
     },
     {
       "id": "jobremotely-engineering",
@@ -160,7 +160,7 @@
       "status": "healthy",
       "fetched": 0,
       "accepted": 0,
-      "checkedAt": "2026-09-06T04:18:57.191Z"
+      "checkedAt": "2026-09-06T05:16:58.104Z"
     },
     {
       "id": "jobremotely-design",
@@ -168,7 +168,7 @@
       "status": "healthy",
       "fetched": 0,
       "accepted": 0,
-      "checkedAt": "2026-09-06T04:18:57.602Z"
+      "checkedAt": "2026-09-06T05:16:58.489Z"
     }
   ]
 }

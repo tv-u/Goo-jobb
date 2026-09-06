@@ -17,12 +17,17 @@
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Sales</loc>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Marketing</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Design</loc>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Healthcare</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Customer%20Support</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -37,7 +42,12 @@
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Marketing</loc>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Design</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Sales</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -53,16 +63,6 @@
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?category=Legal</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Healthcare</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Customer%20Support</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -16182,6 +16182,26 @@
   <priority>0.6</priority>
  </url>
  <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Watershed</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Bridgemaker%20GmbH</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Thiga</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Odaseva</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
   <loc>https://tv-u.github.io/Goo-jobb/?location=Worldwide</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
@@ -25133,6 +25153,11 @@
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?location=Saint-Denis</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Hybrid</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>

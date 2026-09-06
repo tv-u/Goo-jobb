@@ -1,0 +1,103 @@
+name: GOO-JOBB Always Live Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "index.html"
+      - "live/**"
+      - "public/**"
+      - "jobs*.json"
+      - "manifest.webmanifest"
+      - "robots.txt"
+      - "sitemap.xml"
+      - ".github/workflows/goo-jobb-pages-live.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: goo-jobb-pages-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare production site
+        shell: bash
+        run: |
+          set -e
+
+          rm -rf _site
+          mkdir -p _site
+
+          cp -f index.html _site/index.html
+
+          if [ -d public ]; then
+            cp -R public/. _site/
+          fi
+
+          if [ -d live ]; then
+            mkdir -p _site/live
+            cp -R live/. _site/live/
+          fi
+
+          for f in \
+            jobs.json \
+            jobs-worldwide.json \
+            jobs-enterprise.json \
+            jobs-search-index.json \
+            jobs-seo-index.json \
+            manifest.webmanifest \
+            robots.txt \
+            sitemap.xml \
+            .nojekyll
+          do
+            if [ -f "$f" ]; then
+              cp -f "$f" "_site/$f"
+            fi
+          done
+
+          test -s _site/index.html
+          test -s _site/live/live-features.json
+          test -s _site/live/live-runtime.js
+
+          echo "=== PRODUCTION ROOT ==="
+          find _site -maxdepth 2 -type f | sort | head -200
+
+      - name: Verify homepage contains live runtime
+        shell: bash
+        run: |
+          set -e
+          grep -q "live/live-runtime.js" _site/index.html
+          grep -q "GOO-JOBB" _site/index.html
+          grep -q '"homeVisible":true' _site/live/live-features.json
+          echo "Homepage verification: OK"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Show deployed URL
+        run: |
+          echo "GOO-JOBB LIVE:"
+          echo "https://tv-u.github.io/Goo-jobb/"

@@ -1,0 +1,25 @@
+name: GOO-JOBB Live Jobs
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync real public jobs
+        run: python scripts/live_sync.py
+      - name: Validate generated data
+        run: python -m json.tool jobs-worldwide.json >/dev/null && python -m json.tool data/source-health.json >/dev/null
+      - name: Commit real data
+        run: |
+          git config user.name "GOO-JOBB Bot"
+          git config user.email "goo-jobb-bot@users.noreply.github.com"
+          git add jobs-worldwide.json data/source-health.json
+          git diff --cached --quiet || git commit -m "chore: sync real worldwide jobs"
+          git push

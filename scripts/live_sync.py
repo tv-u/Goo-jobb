@@ -1,40 +1,113 @@
-import json,urllib.request,urllib.parse,ssl,re,hashlib,datetime,xml.etree.ElementTree as ET
-S=[("Arbeitnow","https://www.arbeitnow.com/api/job-board-api","json"),("Jobicy","https://jobicy.com/api/v2/remote-jobs","json"),("RemoteOK","https://remoteok.com/api","json"),("Remotive","https://remotive.com/api/remote-jobs","json"),("Himalayas","https://himalayas.app/jobs/api","json"),("We Work Remotely","https://weworkremotely.com/remote-jobs.rss","rss"),("Working Nomads","https://www.workingnomads.com/jobs/rss","rss"),("Remote.co","https://remote.co/remote-jobs/feed/","rss"),("Startup Jobs","https://startup.jobs/feed","rss"),("Jobspresso","https://jobspresso.co/feed/","rss")]
-ctx=ssl.create_default_context(); jobs=[]; health=[]
-def get(u):
- r=urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":"GOO-JOBB-Live/1.0","Accept":"application/json,application/rss+xml,application/xml,text/xml"}),timeout=20,context=ctx); return r.read()
-def clean(x): return re.sub(r"\\s+"," ",re.sub(r"<[^>]+>"," ",str(x or ""))).strip()
-def add(src,title,company,loc,desc,url,pub="",remote=False):
- title=clean(title); url=str(url or "").strip()
- if not title or not url.startswith(("http://","https://")): return
- jobs.append({"id":hashlib.sha256((src+"|"+url).encode()).hexdigest()[:24],"source":src,"title":title,"company":clean(company),"location":clean(loc),"description":clean(desc)[:5000],"apply_url":url,"published_at":str(pub or datetime.datetime.now(datetime.timezone.utc).isoformat()),"remote":bool(remote or "remote" in clean(loc).lower())})
-for name,url,typ in S:
- try:
-  raw=get(url)
-  if typ=="json":
-   d=json.loads(raw.decode("utf-8","replace")); arr=d if isinstance(d,list) else d.get("jobs",d.get("data",[]))
-   if name=="RemoteOK" and isinstance(arr,list) and arr and isinstance(arr[0],dict) and "legal" in arr[0]: arr=arr[1:]
-   for x in arr if isinstance(arr,list) else []:
-    add(name,x.get("title"),x.get("company_name") or x.get("company"),x.get("location") or x.get("candidate_required_location"),x.get("description"),x.get("url") or x.get("apply_url"),x.get("publication_date") or x.get("published_at") or x.get("date"),x.get("remote",False))
-  else:
-   root=ET.fromstring(raw); items=root.findall(".//item")
-   for x in items:
-    def tx(t):
-     z=x.find(t); return z.text if z is not None else ""
-    add(name,tx("title"),tx("author") or tx("creator"),"",tx("description"),tx("link"),tx("pubDate"))
-  health.append({"source":name,"endpoint":url,"status":"LIVE","jobs":sum(1 for j in jobs if j["source"]==name)})
- except Exception as e: health.append({"source":name,"endpoint":url,"status":"DEGRADED","jobs":0,"error":str(e)[:180]})
+import json,urllib.request,urllib.parse,hashlib,datetime,os
+from pathlib import Path
+
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/"jobs-worldwide.json"
+HEALTH=ROOT/"data/source-health.json"
+UA="GOO-JOBB/5.0 public-job-feed-sync"
+
+SOURCES=[
+{"id":"arbeitnow","name":"Arbeitnow","url":"https://www.arbeitnow.com/api/job-board-api","type":"json"},
+{"id":"remoteok","name":"Remote OK","url":"https://remoteok.com/api","type":"json"},
+{"id":"remotive","name":"Remotive","url":"https://remotive.com/api/remote-jobs","type":"json"},
+{"id":"jobicy","name":"Jobicy","url":"https://jobicy.com/api/v2/remote-jobs?count=100","type":"json"},
+{"id":"himalayas","name":"Himalayas","url":"https://himalayas.app/jobs/api","type":"json"},
+{"id":"workingnomads","name":"Working Nomads","url":"https://www.workingnomads.com/api/exposed_jobs/","type":"json"},
+{"id":"remotejobs","name":"Remote Jobs","url":"https://remote.co/remote-jobs/feed/","type":"rss"},
+{"id":"jobspresso","name":"Jobspresso","url":"https://jobspresso.co/feed/","type":"rss"},
+{"id":"wwr","name":"We Work Remotely","url":"https://weworkremotely.com/remote-jobs.rss","type":"rss"}
+]
+
+def clean(v):
+    if v is None:return ""
+    return str(v).strip()
+
+def get(o,*keys):
+    for k in keys:
+        if isinstance(o,dict) and o.get(k) not in (None,""): return o.get(k)
+    return ""
+
+def fetch(url):
+    req=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":"application/json,application/rss+xml,text/xml,*/*"})
+    with urllib.request.urlopen(req,timeout=25) as r:
+        body=r.read(8000000)
+        return r.status,body,r.headers.get("content-type","")
+
+def normalize(x,source):
+    if not isinstance(x,dict): return None
+    title=clean(get(x,"title","name","position"))
+    company=clean(get(x,"company","company_name","organization"))
+    apply=clean(get(x,"url","apply_url","apply","link"))
+    if not title or not apply or not apply.startswith(("http://","https://")): return None
+    location=clean(get(x,"location","candidate_required_location","job_location"))
+    description=clean(get(x,"description","description_text","content"))
+    published=clean(get(x,"published_at","publication_date","date","created_at"))
+    remote=bool(x.get("remote") or "remote" in location.lower() or "remote" in title.lower())
+    sid=source["id"]
+    jid=hashlib.sha256((sid+"|"+apply).encode()).hexdigest()[:32]
+    return {"id":jid,"title":title,"company":company,"location":location,"description":description,"apply_url":apply,"url":apply,"source":source["name"],"source_id":sid,"published_at":published,"remote":remote,"status":"active"}
+
+def parse_json(body,source):
+    d=json.loads(body.decode("utf-8","replace"))
+    if isinstance(d,list): arr=d
+    elif isinstance(d,dict):
+        arr=d.get("jobs") or d.get("data") or d.get("results") or d.get("postings") or []
+        if not isinstance(arr,list): arr=[]
+    else: arr=[]
+    return [normalize(x,source) for x in arr]
+
+def parse_rss(body,source):
+    import xml.etree.ElementTree as ET
+    root=ET.fromstring(body)
+    out=[]
+    for item in root.iter():
+        if item.tag.lower().endswith(("item","entry")):
+            d={}
+            for c in list(item):
+                tag=c.tag.split("}")[-1].lower()
+                d[tag]=c.text or c.attrib.get("href","")
+            out.append(normalize({"title":d.get("title"),"link":d.get("link") or d.get("guid"),"description":d.get("description") or d.get("summary"),"published_at":d.get("pubdate") or d.get("published")},source))
+    return out
+
 old=[]
-try:
- old=json.load(open("jobs-worldwide.json"))
- if not isinstance(old,list): old=[]
-except: pass
-allj=old+jobs; seen=set(); out=[]
-for j in allj:
- k=j.get("apply_url") or j.get("id")
- if k in seen: continue
- seen.add(k); out.append(j)
-out.sort(key=lambda x:x.get("published_at",""),reverse=True)
-json.dump(out,open("jobs-worldwide.json","w"),ensure_ascii=False,indent=2)
-json.dump({"generated_at":datetime.datetime.now(datetime.timezone.utc).isoformat(),"configured_sources":len(S),"live_sources":sum(x["status"]=="LIVE" for x in health),"degraded_sources":sum(x["status"]!="LIVE" for x in health),"total_jobs":len(out),"sources":health},open("data/source-health.json","w"),ensure_ascii=False,indent=2)
-print("REAL_JOBS="+str(len(out)));print("LIVE_SOURCES="+str(sum(x["status"]=="LIVE" for x in health)));print("DEGRADED="+str(sum(x["status"]!="LIVE" for x in health)))
+if OUT.exists():
+    try:
+        d=json.loads(OUT.read_text(encoding="utf-8"))
+        old=d.get("jobs",[]) if isinstance(d,dict) else d
+        if not isinstance(old,list): old=[]
+    except Exception: old=[]
+
+jobs={}
+for j in old:
+    if isinstance(j,dict) and j.get("apply_url"): jobs[j["apply_url"]]=j
+
+health=[]
+for source in SOURCES:
+    started=datetime.datetime.now(datetime.timezone.utc)
+    try:
+        status,body,ct=fetch(source["url"])
+        if status!=200: raise RuntimeError("HTTP "+str(status))
+        if source["type"]=="json": parsed=parse_json(body,source)
+        else: parsed=parse_rss(body,source)
+        parsed=[j for j in parsed if j]
+        added=0;updated=0
+        for j in parsed:
+            if j["apply_url"] in jobs:
+                oldj=jobs[j["apply_url"]]
+                oldj.update(j);updated+=1
+            else:
+                jobs[j["apply_url"]]=j;added+=1
+        health.append({"id":source["id"],"name":source["name"],"status":"LIVE","http_status":status,"jobs_seen":len(parsed),"jobs_added":added,"jobs_updated":updated,"checked_at":started.isoformat()})
+    except Exception as e:
+        health.append({"id":source["id"],"name":source["name"],"status":"ERROR","jobs_seen":0,"jobs_added":0,"jobs_updated":0,"error":str(e),"checked_at":started.isoformat()})
+
+arr=list(jobs.values())
+arr=[j for j in arr if j.get("title") and j.get("apply_url") and j.get("apply_url","").startswith(("http://","https://"))]
+arr.sort(key=lambda x:x.get("published_at",""),reverse=True)
+OUT.write_text(json.dumps({"updated_at":datetime.datetime.now(datetime.timezone.utc).isoformat(),"count":len(arr),"jobs":arr},ensure_ascii=False,indent=2),encoding="utf-8")
+HEALTH.write_text(json.dumps({"updated_at":datetime.datetime.now(datetime.timezone.utc).isoformat(),"total_sources":len(SOURCES),"live_sources":sum(x["status"]=="LIVE" for x in health),"failed_sources":sum(x["status"]!="LIVE" for x in health),"sources":health},ensure_ascii=False,indent=2),encoding="utf-8")
+print("REAL_JOBS="+str(len(arr)))
+print("SOURCES_TOTAL="+str(len(SOURCES)))
+print("SOURCES_LIVE="+str(sum(x["status"]=="LIVE" for x in health)))
+print("SOURCES_FAILED="+str(sum(x["status"]!="LIVE" for x in health)))
+if not arr: raise SystemExit("NO_REAL_JOBS_RETURNED")

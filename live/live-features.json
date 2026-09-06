@@ -1,0 +1,55 @@
+{
+  "version": "2.0",
+  "site": "GOO-JOBB",
+  "autoDeploy": true,
+  "cacheBust": true,
+  "features": {
+    "worldwideJobs": {
+      "enabled": true
+    },
+    "smartSearch": {
+      "enabled": true
+    },
+    "localAI": {
+      "enabled": true
+    },
+    "jobMatch": {
+      "enabled": true
+    },
+    "resumeAnalyzer": {
+      "enabled": true
+    },
+    "skillExtractor": {
+      "enabled": true
+    },
+    "salaryIntel": {
+      "enabled": true
+    },
+    "remoteDetector": {
+      "enabled": true
+    },
+    "seoJobPages": {
+      "enabled": true
+    },
+    "sourceHealth": {
+      "enabled": true
+    },
+    "liveUpdates": {
+      "enabled": true
+    },
+    "pwa": {
+      "enabled": true
+    }
+  },
+  "ai": {
+    "engine": "local-browser",
+    "apiKeyRequired": false,
+    "externalLLM": false
+  },
+  "ui": {
+    "header": true,
+    "footer": true,
+    "aiPanel": true,
+    "mobileNav": true
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "updated_at": "2026-09-06T07:51:39.724362+00:00",
+  "sources": [
+    {
+      "source": "arbeitnow",
+      "status": "ok",
+      "jobs": 0
+    },
+    {
+      "source": "remoteok",
+      "status": "error",
+      "jobs": 0,
+      "error": "'list' object has no attribute 'get'"
+    },
+    {
+      "source": "remotive",
+      "status": "ok",
+      "jobs": 15
+    },
+    {
+      "source": "jobicy",
+      "status": "ok",
+      "jobs": 0
+    },
+    {
+      "source": "himalayas",
+      "status": "ok",
+      "jobs": 0
+    },
+    {
+      "source": "weworkremotely",
+      "status": "ok",
+      "jobs": 91
+    }
+  ]
+}

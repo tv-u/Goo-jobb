@@ -1,3 +1,6 @@
+# GOO-JOBB worldwide crawler policy
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
 Sitemap: https://tv-u.github.io/Goo-jobb/sitemap.xml

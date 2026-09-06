@@ -17,22 +17,22 @@
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Healthcare</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.6</priority>
- </url>
- <url>
   <loc>https://tv-u.github.io/Goo-jobb/?category=Technology</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Design</loc>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Sales</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
  <url>
-  <loc>https://tv-u.github.io/Goo-jobb/?category=Sales</loc>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Healthcare</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?category=Design</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>
@@ -16152,6 +16152,36 @@
   <priority>0.6</priority>
  </url>
  <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Hirehire</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Matera</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Biggie</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Veepee</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=RWS%20TrainAI</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?company=Propellerhead</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
   <loc>https://tv-u.github.io/Goo-jobb/?location=Worldwide</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
@@ -25098,6 +25128,11 @@
  </url>
  <url>
   <loc>https://tv-u.github.io/Goo-jobb/?location=DE%20%7C%20M%C3%BCnchen</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://tv-u.github.io/Goo-jobb/?location=Saint-Denis</loc>
   <changefreq>daily</changefreq>
   <priority>0.6</priority>
  </url>

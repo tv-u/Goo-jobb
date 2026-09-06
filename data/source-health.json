@@ -1,36 +1,31 @@
 {
-  "updated_at": "2026-09-06T07:52:20.749337+00:00",
+  "updated_at": "2026-09-06T07:59:22Z",
+  "total_jobs": 365,
   "sources": [
     {
       "source": "arbeitnow",
-      "status": "ok",
+      "status": "LIVE",
+      "jobs": 250
+    },
+    {
+      "source": "jobicy",
+      "status": "LIVE",
       "jobs": 0
     },
     {
       "source": "remoteok",
-      "status": "error",
-      "jobs": 0,
-      "error": "'list' object has no attribute 'get'"
+      "status": "LIVE",
+      "jobs": 100
     },
     {
       "source": "remotive",
-      "status": "ok",
+      "status": "LIVE",
       "jobs": 15
     },
     {
-      "source": "jobicy",
-      "status": "ok",
-      "jobs": 0
-    },
-    {
       "source": "himalayas",
-      "status": "ok",
+      "status": "LIVE",
       "jobs": 0
-    },
-    {
-      "source": "weworkremotely",
-      "status": "ok",
-      "jobs": 91
     }
   ]
 }

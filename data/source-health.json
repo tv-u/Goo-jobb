@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T23:04:28.862429+00:00",
+  "updated_at": "2026-09-11T23:34:13.080979+00:00",
   "total_sources": 9,
   "live_sources": 8,
   "failed_sources": 1,
@@ -10,9 +10,9 @@
       "status": "LIVE",
       "http_status": 200,
       "jobs_seen": 250,
-      "jobs_added": 0,
-      "jobs_updated": 250,
-      "checked_at": "2026-09-11T23:04:25.821726+00:00"
+      "jobs_added": 15,
+      "jobs_updated": 235,
+      "checked_at": "2026-09-11T23:34:11.050036+00:00"
     },
     {
       "id": "remoteok",
@@ -22,7 +22,7 @@
       "jobs_seen": 99,
       "jobs_added": 0,
       "jobs_updated": 99,
-      "checked_at": "2026-09-11T23:04:26.116411+00:00"
+      "checked_at": "2026-09-11T23:34:11.129655+00:00"
     },
     {
       "id": "remotive",
@@ -32,7 +32,7 @@
       "jobs_seen": 16,
       "jobs_added": 0,
       "jobs_updated": 16,
-      "checked_at": "2026-09-11T23:04:26.974997+00:00"
+      "checked_at": "2026-09-11T23:34:11.474024+00:00"
     },
     {
       "id": "jobicy",
@@ -42,7 +42,7 @@
       "jobs_seen": 0,
       "jobs_added": 0,
       "jobs_updated": 0,
-      "checked_at": "2026-09-11T23:04:27.048596+00:00"
+      "checked_at": "2026-09-11T23:34:11.504002+00:00"
     },
     {
       "id": "himalayas",
@@ -52,7 +52,7 @@
       "jobs_seen": 0,
       "jobs_added": 0,
       "jobs_updated": 0,
-      "checked_at": "2026-09-11T23:04:27.159353+00:00"
+      "checked_at": "2026-09-11T23:34:11.570868+00:00"
     },
     {
       "id": "workingnomads",
@@ -62,7 +62,7 @@
       "jobs_seen": 43,
       "jobs_added": 0,
       "jobs_updated": 43,
-      "checked_at": "2026-09-11T23:04:27.225490+00:00"
+      "checked_at": "2026-09-11T23:34:11.610055+00:00"
     },
     {
       "id": "remotejobs",
@@ -71,8 +71,8 @@
       "jobs_seen": 0,
       "jobs_added": 0,
       "jobs_updated": 0,
-      "error": "HTTP Error 403: Forbidden",
-      "checked_at": "2026-09-11T23:04:27.899299+00:00"
+      "error": "HTTP Error 404: Not Found",
+      "checked_at": "2026-09-11T23:34:11.939854+00:00"
     },
     {
       "id": "jobspresso",
@@ -82,7 +82,7 @@
       "jobs_seen": 0,
       "jobs_added": 0,
       "jobs_updated": 0,
-      "checked_at": "2026-09-11T23:04:28.161890+00:00"
+      "checked_at": "2026-09-11T23:34:12.618136+00:00"
     },
     {
       "id": "wwr",
@@ -92,7 +92,7 @@
       "jobs_seen": 89,
       "jobs_added": 89,
       "jobs_updated": 0,
-      "checked_at": "2026-09-11T23:04:28.308470+00:00"
+      "checked_at": "2026-09-11T23:34:12.677496+00:00"
     }
   ]
 }

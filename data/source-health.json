@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T00:38:40.757209+00:00",
+  "updated_at": "2026-09-13T00:42:05.536437+00:00",
   "total_sources": 9,
   "live_sources": 8,
   "failed_sources": 1,
@@ -10,9 +10,9 @@
       "status": "LIVE",
       "http_status": 200,
       "jobs_seen": 250,
-      "jobs_added": 250,
-      "jobs_updated": 0,
-      "checked_at": "2026-09-13T00:38:38.752603+00:00"
+      "jobs_added": 0,
+      "jobs_updated": 250,
+      "checked_at": "2026-09-13T00:42:02.324921+00:00"
     },
     {
       "id": "remoteok",
@@ -20,9 +20,9 @@
       "status": "LIVE",
       "http_status": 200,
       "jobs_seen": 99,
-      "jobs_added": 99,
-      "jobs_updated": 0,
-      "checked_at": "2026-09-13T00:38:38.966696+00:00"
+      "jobs_added": 0,
+      "jobs_updated": 99,
+      "checked_at": "2026-09-13T00:42:02.751528+00:00"
     },
     {
       "id": "remotive",
@@ -30,9 +30,9 @@
       "status": "LIVE",
       "http_status": 200,
       "jobs_seen": 16,
-      "jobs_added": 16,
-      "jobs_updated": 0,
-      "checked_at": "2026-09-13T00:38:39.408047+00:00"
+      "jobs_added": 0,
+      "jobs_updated": 16,
+      "checked_at": "2026-09-13T00:42:03.774059+00:00"
     },
     {
       "id": "jobicy",
@@ -42,7 +42,7 @@
       "jobs_seen": 0,
       "jobs_added": 0,
       "jobs_updated": 0,
-      "checked_at": "2026-09-13T00:38:39.492954+00:00"
+      "checked_at": "2026-09-13T00:42:03.864296+00:00"
     },
     {
       "id": "himalayas",
@@ -52,7 +52,7 @@
       "jobs_seen": 0,
       "jobs_added": 0,
       "jobs_updated": 0,
-      "checked_at": "2026-09-13T00:38:39.598994+00:00"
+      "checked_at": "2026-09-13T00:42:04.028333+00:00"
     },
     {
       "id": "workingnomads",
@@ -60,9 +60,9 @@
       "status": "LIVE",
       "http_status": 200,
       "jobs_seen": 45,
-      "jobs_added": 45,
-      "jobs_updated": 0,
-      "checked_at": "2026-09-13T00:38:39.777655+00:00"
+      "jobs_added": 0,
+      "jobs_updated": 45,
+      "checked_at": "2026-09-13T00:42:04.132853+00:00"
     },
     {
       "id": "remotejobs",
@@ -72,7 +72,7 @@
       "jobs_added": 0,
       "jobs_updated": 0,
       "error": "not well-formed (invalid token): line 12, column 90",
-      "checked_at": "2026-09-13T00:38:40.070326+00:00"
+      "checked_at": "2026-09-13T00:42:04.777675+00:00"
     },
     {
       "id": "jobspresso",
@@ -82,7 +82,7 @@
       "jobs_seen": 0,
       "jobs_added": 0,
       "jobs_updated": 0,
-      "checked_at": "2026-09-13T00:38:40.199205+00:00"
+      "checked_at": "2026-09-13T00:42:05.070796+00:00"
     },
     {
       "id": "wwr",
@@ -90,9 +90,9 @@
       "status": "LIVE",
       "http_status": 200,
       "jobs_seen": 89,
-      "jobs_added": 89,
-      "jobs_updated": 0,
-      "checked_at": "2026-09-13T00:38:40.265991+00:00"
+      "jobs_added": 0,
+      "jobs_updated": 89,
+      "checked_at": "2026-09-13T00:42:05.121463+00:00"
     }
   ]
 }

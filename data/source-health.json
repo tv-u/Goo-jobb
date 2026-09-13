@@ -1,98 +1,36 @@
 {
-  "updated_at": "2026-09-13T06:07:48.152631+00:00",
-  "total_sources": 9,
-  "live_sources": 8,
-  "failed_sources": 1,
+  "updated_at": "2026-09-13T06:35:08.449685+00:00",
   "sources": [
     {
-      "id": "arbeitnow",
-      "name": "Arbeitnow",
-      "status": "LIVE",
-      "http_status": 200,
-      "jobs_seen": 250,
-      "jobs_added": 0,
-      "jobs_updated": 250,
-      "checked_at": "2026-09-13T06:07:45.734108+00:00"
+      "source": "arbeitnow",
+      "status": "ok",
+      "jobs": 0
     },
     {
-      "id": "remoteok",
-      "name": "Remote OK",
-      "status": "LIVE",
-      "http_status": 200,
-      "jobs_seen": 99,
-      "jobs_added": 0,
-      "jobs_updated": 99,
-      "checked_at": "2026-09-13T06:07:45.875630+00:00"
+      "source": "remoteok",
+      "status": "error",
+      "jobs": 0,
+      "error": "'list' object has no attribute 'get'"
     },
     {
-      "id": "remotive",
-      "name": "Remotive",
-      "status": "LIVE",
-      "http_status": 200,
-      "jobs_seen": 16,
-      "jobs_added": 0,
-      "jobs_updated": 16,
-      "checked_at": "2026-09-13T06:07:46.326090+00:00"
+      "source": "remotive",
+      "status": "ok",
+      "jobs": 16
     },
     {
-      "id": "jobicy",
-      "name": "Jobicy",
-      "status": "LIVE",
-      "http_status": 200,
-      "jobs_seen": 0,
-      "jobs_added": 0,
-      "jobs_updated": 0,
-      "checked_at": "2026-09-13T06:07:46.416240+00:00"
+      "source": "jobicy",
+      "status": "ok",
+      "jobs": 0
     },
     {
-      "id": "himalayas",
-      "name": "Himalayas",
-      "status": "LIVE",
-      "http_status": 200,
-      "jobs_seen": 0,
-      "jobs_added": 0,
-      "jobs_updated": 0,
-      "checked_at": "2026-09-13T06:07:46.532722+00:00"
+      "source": "himalayas",
+      "status": "ok",
+      "jobs": 0
     },
     {
-      "id": "workingnomads",
-      "name": "Working Nomads",
-      "status": "LIVE",
-      "http_status": 200,
-      "jobs_seen": 45,
-      "jobs_added": 0,
-      "jobs_updated": 45,
-      "checked_at": "2026-09-13T06:07:46.618332+00:00"
-    },
-    {
-      "id": "remotejobs",
-      "name": "Remote Jobs",
-      "status": "ERROR",
-      "jobs_seen": 0,
-      "jobs_added": 0,
-      "jobs_updated": 0,
-      "error": "not well-formed (invalid token): line 12, column 90",
-      "checked_at": "2026-09-13T06:07:47.381362+00:00"
-    },
-    {
-      "id": "jobspresso",
-      "name": "Jobspresso",
-      "status": "LIVE",
-      "http_status": 200,
-      "jobs_seen": 0,
-      "jobs_added": 0,
-      "jobs_updated": 0,
-      "checked_at": "2026-09-13T06:07:47.624858+00:00"
-    },
-    {
-      "id": "wwr",
-      "name": "We Work Remotely",
-      "status": "LIVE",
-      "http_status": 200,
-      "jobs_seen": 89,
-      "jobs_added": 89,
-      "jobs_updated": 0,
-      "checked_at": "2026-09-13T06:07:47.685528+00:00"
+      "source": "weworkremotely",
+      "status": "ok",
+      "jobs": 89
     }
   ]
 }

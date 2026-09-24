@@ -1,0 +1,49 @@
+/*
+GOO-JOBB PERFORMANCE CSS
+Layout-safe optimization layer.
+*/
+
+img {
+    content-visibility: auto;
+}
+
+.job-card,
+.job-item,
+.job-result,
+.job-listing,
+.card {
+    contain: layout style paint;
+}
+
+/*
+Avoid expensive rendering of content below viewport.
+*/
+.jobs-container,
+.job-results,
+.job-list,
+.results-list {
+    content-visibility: auto;
+    contain-intrinsic-size: 800px;
+}
+
+/*
+Prevent accidental huge text/layout overflow.
+*/
+pre,
+code {
+    overflow-wrap: anywhere;
+}
+
+/*
+Reduce animation workload when device requests it.
+*/
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

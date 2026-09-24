@@ -1,0 +1,68 @@
+html{
+  scroll-behavior:auto!important;
+}
+
+html,body{
+  overflow-x:hidden!important;
+}
+
+.job-card,
+.job-item,
+.job,
+.job-result,
+.job-result-card,
+.jobs-grid,
+.job-grid,
+.jobs-list,
+#jobs,
+#job-list,
+#jobs-list,
+#results,
+#jobResults,
+[data-jobs],
+[data-job-list],
+[data-job-card]{
+  content-visibility:visible!important;
+  contain:none!important;
+  visibility:visible!important;
+}
+
+.jobs-grid,
+.job-grid,
+.jobs-list,
+#jobs,
+#job-list,
+#jobs-list,
+#results,
+#jobResults,
+[data-jobs],
+[data-job-list]{
+  min-height:1px;
+}
+
+.job-card img,
+.job-item img,
+.job-result img,
+.job-result-card img,
+[data-job-card] img{
+  max-width:100%;
+  height:auto;
+}
+
+.goo-scroll-loader{
+  width:100%;
+  min-height:1px;
+  display:block;
+  visibility:visible;
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
+}

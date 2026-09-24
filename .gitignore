@@ -3,3 +3,6 @@
 goo-jobb-audit-*.log
 *.backup.*
 index.html.backup.*
+
+# Local desktop presentation override
+css/goo-desktop-mode.css

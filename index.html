@@ -1,1121 +1,1559 @@
-<!doctype html>
+<!--GOOJOBB_ADSTERRA_SMARTLINKS_V2--><style>.goo-adsterra{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:18px 0}.goo-adsterra a{display:block;padding:16px;border-radius:14px;text-decoration:none;color:inherit;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14)}.goo-adsterra a:hover{transform:translateY(-2px)}</style><!--GOOJOBB_ADSTERRA_SMARTLINKS_V2-END--><!doctype html>
 <html lang="en">
 <head>
-
-
 <meta charset="utf-8">
 
-<meta name="theme-color" content="#08090d">
-<meta name="description" content="GOO-JOBB — Worldwide real job discovery, smart search and career intelligence.">
+<meta name="theme-color" content="#050505">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta name="robots-old" content="index,follow">
+<meta name="description" content="GOO-JOBB — Search real worldwide jobs from multiple public sources. Remote, hybrid and onsite opportunities.">
 <link rel="canonical" href="https://tv-u.github.io/Goo-jobb/">
-<title>GOO-JOBB — Worldwide Live Jobs</title>
+<title>GOO-JOBB — Worldwide Real Jobs</title>
 
 <style>
 :root{
- --bg:#07080c;
- --bg2:#0b0d13;
- --card:rgba(18,20,29,.78);
- --card2:#11141c;
- --line:rgba(255,255,255,.09);
- --text:#f7f8fb;
- --muted:#9299aa;
+ --bg:#030303;
+ --card:#0c0c0c;
+ --card2:#111;
+ --text:#f8f8f8;
+ --muted:#858585;
  --pink:#ff0080;
  --green:#00ff88;
  --yellow:#ffdd00;
- --cyan:#00d9ff;
- --shadow:0 24px 70px rgba(0,0,0,.38);
- --radius:24px;
+ --line:#242424;
+ --radius:18px;
 }
 
+*{box-sizing:border-box}
+
 html{scroll-behavior:smooth}
+
 body{
  margin:0;
  background:
- radial-gradient(circle at 10% 0%,rgba(255,0,128,.13),transparent 30%),
- radial-gradient(circle at 90% 10%,rgba(0,255,136,.08),transparent 28%),
- linear-gradient(180deg,#07080c,#0a0b10 45%,#07080c);
+ radial-gradient(circle at 10% 0%,rgba(255,0,128,.11),transparent 28%),
+ radial-gradient(circle at 90% 0%,rgba(0,255,136,.08),transparent 28%),
+ var(--bg);
  color:var(--text);
  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
- min-height:100vh;
-}
-button,input,select{font:inherit}
-button{cursor:pointer}
-a{color:inherit;text-decoration:none}
-::selection{background:var(--pink);color:#fff}
-
-#app{min-height:100vh}
-.topline{
- height:3px;
- background:linear-gradient(90deg,var(--pink),var(--yellow),var(--green),var(--cyan));
- position:fixed;
- top:0;left:0;right:0;
- z-index:9999;
 }
 
-header{
- position:sticky;
- top:3px;
- z-index:1000;
- backdrop-filter:blur(24px);
- -webkit-backdrop-filter:blur(24px);
- background:rgba(7,8,12,.78);
- border-bottom:1px solid var(--line);
+button,input,select{
+ font:inherit;
 }
-.nav{
- max-width:1450px;
+
+button{
+ cursor:pointer;
+}
+
+.container{
+ width:min(1500px,94%);
  margin:auto;
- padding:15px 20px;
+}
+
+.header{
+ position:sticky;
+ top:0;
+ z-index:100;
+ border-bottom:1px solid var(--line);
+ background:rgba(3,3,3,.88);
+ backdrop-filter:blur(20px);
+}
+
+.nav{
+ min-height:72px;
  display:flex;
  align-items:center;
- gap:18px;
+ justify-content:space-between;
+ gap:15px;
 }
+
 .logo{
- display:flex;
- align-items:center;
- gap:11px;
- font-weight:900;
- letter-spacing:-.7px;
- font-size:21px;
- white-space:nowrap;
+ font-size:28px;
+ font-weight:950;
+ letter-spacing:-1.5px;
 }
-.logoMark{
- width:40px;height:40px;
- border-radius:14px;
- display:grid;place-items:center;
- background:linear-gradient(135deg,var(--pink),#7b00ff);
- box-shadow:0 10px 35px rgba(255,0,128,.28);
- font-weight:1000;
-}
-.live{
- display:inline-flex;
- align-items:center;
- gap:7px;
- padding:7px 11px;
- border-radius:999px;
- border:1px solid rgba(0,255,136,.2);
- background:rgba(0,255,136,.06);
+
+.logo b{color:var(--pink)}
+.logo i{
  color:var(--green);
+ font-style:normal;
+}
+
+.live{
  font-size:11px;
+ color:var(--green);
  font-weight:900;
- letter-spacing:.7px;
+ letter-spacing:1px;
 }
-.dot{
- width:7px;height:7px;border-radius:50%;
- background:var(--green);
- box-shadow:0 0 12px var(--green);
-}
-.navlinks{
- margin-left:auto;
- display:flex;
- gap:5px;
-}
-.navlinks a,.navBtn{
- border:0;
- background:transparent;
- color:#b9becb;
- padding:10px 13px;
- border-radius:12px;
- font-weight:700;
-}
-.navlinks a:hover,.navBtn:hover{
- color:#fff;
- background:rgba(255,255,255,.06);
-}
-.mobileMenu{display:none}
 
 .hero{
- max-width:1450px;
- margin:auto;
- padding:72px 20px 35px;
+ padding:65px 0 30px;
 }
-.heroGrid{
- display:grid;
- grid-template-columns:minmax(0,1.4fr) minmax(300px,.6fr);
- gap:28px;
- align-items:end;
-}
-.eyebrow{
+
+.pill{
  display:inline-flex;
- gap:8px;
- align-items:center;
+ border:1px solid rgba(0,255,136,.25);
+ background:rgba(0,255,136,.05);
+ color:var(--green);
+ border-radius:999px;
  padding:8px 12px;
- border:1px solid var(--line);
- background:rgba(255,255,255,.035);
- border-radius:999px;
- color:#bfc4d1;
- font-size:12px;
- font-weight:800;
-}
-h1{
- margin:18px 0 13px;
- max-width:850px;
- font-size:clamp(42px,7vw,86px);
- line-height:.95;
- letter-spacing:-5px;
-}
-.gradientText{
- background:linear-gradient(90deg,#fff,var(--pink),var(--yellow));
- -webkit-background-clip:text;
- background-clip:text;
- color:transparent;
-}
-.hero p{
- color:var(--muted);
- max-width:700px;
- line-height:1.7;
- font-size:16px;
-}
-.liveStats{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:10px;
-}
-.stat{
- padding:18px;
- border:1px solid var(--line);
- border-radius:20px;
- background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));
- box-shadow:var(--shadow);
-}
-.stat b{display:block;font-size:25px}
-.stat span{display:block;color:var(--muted);font-size:11px;margin-top:5px}
-
-.searchShell{
- max-width:1450px;
- margin:15px auto 0;
- padding:0 20px;
-}
-.searchBox{
- border:1px solid rgba(255,255,255,.12);
- background:rgba(17,20,28,.86);
- border-radius:27px;
- padding:12px;
- box-shadow:0 25px 90px rgba(0,0,0,.4);
- backdrop-filter:blur(25px);
-}
-.searchRow{
- display:grid;
- grid-template-columns:1fr auto;
- gap:10px;
-}
-.searchInput{
- width:100%;
- border:0;
- outline:0;
- background:transparent;
- color:#fff;
- padding:16px 18px;
- font-size:17px;
-}
-.searchInput::placeholder{color:#666d7d}
-.searchBtn{
- border:0;
- border-radius:18px;
- padding:0 24px;
- color:#fff;
+ font-size:11px;
  font-weight:900;
- background:linear-gradient(135deg,var(--pink),#a000ff);
- box-shadow:0 12px 35px rgba(255,0,128,.22);
-}
-.filterBar{
- display:flex;
- gap:8px;
- flex-wrap:wrap;
- padding-top:10px;
-}
-.select{
- flex:1 1 150px;
- min-width:130px;
- border:1px solid var(--line);
- background:#0e1017;
- color:#cbd0db;
- border-radius:14px;
- padding:11px 12px;
- outline:0;
-}
-.chips{
- display:flex;
- gap:8px;
- overflow:auto;
- padding:12px 1px 2px;
- scrollbar-width:none;
-}
-.chip{
- flex:0 0 auto;
- border:1px solid var(--line);
- color:#aeb4c1;
- background:rgba(255,255,255,.035);
- padding:9px 13px;
- border-radius:999px;
- font-weight:800;
- font-size:12px;
-}
-.chip.active{
- color:#fff;
- border-color:rgba(255,0,128,.5);
- background:rgba(255,0,128,.12);
 }
 
-.main{
- max-width:1450px;
- margin:auto;
- padding:32px 20px 110px;
+h1{
+ margin:18px 0 12px;
+ font-size:clamp(42px,7vw,84px);
+ line-height:.93;
+ letter-spacing:-4px;
+ max-width:900px;
 }
-.toolbar{
- display:flex;
- align-items:center;
- justify-content:space-between;
- gap:15px;
- margin-bottom:16px;
-}
-.toolbar h2{margin:0;font-size:20px}
-.toolbar small{color:var(--muted)}
-.toolbarBtns{display:flex;gap:7px;flex-wrap:wrap}
-.pillBtn{
- border:1px solid var(--line);
- background:rgba(255,255,255,.04);
- color:#dfe2e9;
- border-radius:999px;
- padding:9px 13px;
- font-weight:800;
- font-size:12px;
-}
-.pillBtn:hover{border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.08)}
 
-.grid{
+h1 span{color:var(--pink)}
+
+.hero p{
+ max-width:850px;
+ color:var(--muted);
+ font-size:17px;
+ line-height:1.7;
+}
+
+.search{
  display:grid;
- grid-template-columns:repeat(3,minmax(0,1fr));
- gap:15px;
-}
-.job{
- position:relative;
- overflow:hidden;
- border:1px solid var(--line);
- background:linear-gradient(145deg,rgba(20,23,33,.88),rgba(11,13,19,.88));
- border-radius:22px;
- padding:18px;
- transition:.22s ease;
- box-shadow:0 12px 40px rgba(0,0,0,.2);
-}
-.job:hover{
- transform:translateY(-4px);
- border-color:rgba(255,255,255,.18);
- box-shadow:0 25px 70px rgba(0,0,0,.38);
-}
-.jobTop{
- display:flex;
- justify-content:space-between;
+ grid-template-columns:1.8fr 1.2fr auto;
  gap:10px;
- align-items:flex-start;
+ margin-top:25px;
 }
-.source{
+
+input,select{
+ width:100%;
+ min-height:52px;
+ border:1px solid var(--line);
+ background:var(--card);
+ color:var(--text);
+ border-radius:13px;
+ padding:0 15px;
+ outline:none;
+}
+
+input:focus,select:focus{
+ border-color:var(--pink);
+ box-shadow:0 0 0 3px rgba(255,0,128,.08);
+}
+
+.btn{
+ min-height:52px;
+ padding:0 20px;
+ border-radius:13px;
+ border:1px solid var(--line);
+ background:var(--card);
+ color:var(--text);
+ font-weight:900;
+}
+
+.primary{
+ background:linear-gradient(135deg,#ff0080,#ff46a7);
+ border:0;
+}
+
+.stats{
+ display:grid;
+ grid-template-columns:repeat(5,1fr);
+ gap:10px;
+ margin:20px 0 25px;
+}
+
+.stat{
+ padding:20px;
+ border:1px solid var(--line);
+ background:linear-gradient(145deg,#111,#080808);
+ border-radius:var(--radius);
+}
+
+.stat strong{
+ display:block;
+ font-size:27px;
+ color:var(--green);
+}
+
+.stat small{
+ color:var(--muted);
  font-size:10px;
  font-weight:900;
- color:var(--green);
- background:rgba(0,255,136,.07);
- border:1px solid rgba(0,255,136,.15);
- padding:6px 8px;
- border-radius:999px;
+ letter-spacing:1px;
 }
-.save{
- width:36px;height:36px;
+
+.tabs{
+ display:flex;
+ gap:7px;
+ overflow:auto;
+ padding-bottom:10px;
+}
+
+.tab{
+ white-space:nowrap;
  border:1px solid var(--line);
- border-radius:12px;
- background:rgba(255,255,255,.035);
- color:#8e95a5;
+ background:var(--card);
+ color:#aaa;
+ padding:10px 15px;
+ border-radius:999px;
+ font-weight:800;
 }
-.save.saved{color:var(--yellow);border-color:rgba(255,221,0,.35)}
-.job h3{
- margin:16px 0 7px;
- font-size:18px;
- line-height:1.25;
+
+.tab.active{
+ background:var(--pink);
+ color:#fff;
+ border-color:var(--pink);
 }
-.company{font-weight:800;color:#d9dce4}
-.meta{
+
+.workspace{
+ display:grid;
+ grid-template-columns:285px 1fr;
+ gap:18px;
+ align-items:start;
+}
+
+.sidebar{
+ position:sticky;
+ top:90px;
+ border:1px solid var(--line);
+ background:rgba(10,10,10,.94);
+ border-radius:var(--radius);
+ padding:17px;
+}
+
+.sidebar h3{
+ margin:0 0 15px;
+}
+
+.filter{
+ margin:12px 0;
+}
+
+.filter label{
+ display:block;
+ margin-bottom:6px;
+ color:var(--muted);
+ font-size:11px;
+ font-weight:800;
+}
+
+.filter input,.filter select{
+ min-height:44px;
+}
+
+.resultbar{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:10px;
+ margin-bottom:12px;
+}
+
+.resultbar strong{
+ color:var(--yellow);
+}
+
+.jobs{
+ display:grid;
+ gap:11px;
+}
+
+.job{
+ border:1px solid var(--line);
+ background:linear-gradient(145deg,#111,#080808);
+ border-radius:var(--radius);
+ padding:20px;
+ transition:.2s;
+}
+
+.job:hover{
+ transform:translateY(-2px);
+ border-color:rgba(255,0,128,.35);
+}
+
+.jobhead{
+ display:flex;
+ justify-content:space-between;
+ gap:12px;
+}
+
+.job h2{
+ margin:0 0 7px;
+ font-size:20px;
+}
+
+.company{
+ color:var(--pink);
+ font-weight:900;
+}
+
+.badges{
+ display:flex;
+ flex-wrap:wrap;
+ gap:6px;
+ margin:12px 0;
+}
+
+.badge{
+ border:1px solid #292929;
+ background:#151515;
+ color:#aaa;
+ border-radius:999px;
+ padding:6px 9px;
+ font-size:10px;
+ font-weight:800;
+}
+
+.badge.remote{
+ color:var(--green);
+ border-color:rgba(0,255,136,.25);
+}
+
+.desc{
+ color:#aaa;
+ line-height:1.6;
+ display:-webkit-box;
+ -webkit-line-clamp:3;
+ -webkit-box-orient:vertical;
+ overflow:hidden;
+}
+
+.actions{
  display:flex;
  flex-wrap:wrap;
  gap:7px;
- margin:14px 0;
+ margin-top:15px;
 }
-.meta span{
- color:#979ead;
- background:rgba(255,255,255,.04);
- border-radius:9px;
- padding:6px 8px;
- font-size:11px;
-}
-.jobBottom{
- display:flex;
- justify-content:space-between;
- align-items:center;
- gap:8px;
- border-top:1px solid var(--line);
- padding-top:13px;
-}
-.view{
- border:0;
+
+.actions button,
+.actions a{
+ min-height:40px;
+ padding:0 12px;
+ border-radius:10px;
+ border:1px solid var(--line);
+ background:#151515;
  color:#fff;
- background:linear-gradient(135deg,var(--pink),#7500ff);
- border-radius:12px;
- padding:9px 13px;
- font-weight:900;
- font-size:12px;
-}
-.external{color:#7e8696;font-size:11px}
-
-.loading{
- padding:60px 20px;
- text-align:center;
- border:1px dashed var(--line);
- border-radius:22px;
- color:var(--muted);
-}
-.spinner{
- width:35px;height:35px;
- border:3px solid rgba(255,255,255,.1);
- border-top-color:var(--pink);
- border-radius:50%;
- margin:0 auto 15px;
- animation:spin .8s linear infinite;
-}
-@keyframes spin{to{transform:rotate(360deg)}}
-
-.empty{
- padding:55px 20px;
- text-align:center;
- border:1px solid var(--line);
- border-radius:22px;
- background:rgba(255,255,255,.025);
- color:var(--muted);
-}
-
-.features{
- display:grid;
- grid-template-columns:repeat(4,1fr);
- gap:12px;
- margin-top:42px;
-}
-.feature{
- border:1px solid var(--line);
- border-radius:20px;
- padding:20px;
- background:rgba(255,255,255,.025);
-}
-.feature strong{display:block;margin-bottom:8px}
-.feature span{font-size:12px;color:var(--muted);line-height:1.55}
-
-footer{
- border-top:1px solid var(--line);
- padding:35px 20px 90px;
- color:#777e8d;
-}
-.footerIn{
- max-width:1450px;
- margin:auto;
- display:flex;
- justify-content:space-between;
- gap:20px;
- flex-wrap:wrap;
-}
-.footerLinks{display:flex;gap:15px;flex-wrap:wrap}
-.footerLinks a:hover{color:#fff}
-
-.modalBack{
- position:fixed;
- inset:0;
- z-index:5000;
- background:rgba(0,0,0,.72);
- backdrop-filter:blur(14px);
- display:none;
- align-items:flex-end;
- justify-content:center;
- padding:15px;
-}
-.modalBack.show{display:flex}
-.modal{
- width:min(850px,100%);
- max-height:90vh;
- overflow:auto;
- border:1px solid var(--line);
- border-radius:28px;
- background:#0d1017;
- box-shadow:0 40px 120px rgba(0,0,0,.65);
-}
-.modalHead{
- padding:20px;
- border-bottom:1px solid var(--line);
- display:flex;
- justify-content:space-between;
- gap:15px;
-}
-.close{
- width:38px;height:38px;
- border:1px solid var(--line);
- background:rgba(255,255,255,.04);
- color:#fff;
- border-radius:12px;
-}
-.modalBody{padding:22px}
-.modalBody h2{margin-top:0}
-.detailGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.detail{
- padding:14px;
- border:1px solid var(--line);
- border-radius:15px;
- background:rgba(255,255,255,.025);
-}
-.detail small{display:block;color:#737b8b;margin-bottom:5px}
-.modalActions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
-.apply{
  display:inline-flex;
  align-items:center;
  justify-content:center;
- padding:13px 18px;
- border-radius:14px;
- background:linear-gradient(135deg,var(--green),#00a86b);
- color:#00160d;
- font-weight:1000;
-}
-
-.toast{
- position:fixed;
- left:50%;
- bottom:25px;
- transform:translate(-50%,20px);
- opacity:0;
- pointer-events:none;
- z-index:9000;
- padding:12px 17px;
- border:1px solid var(--line);
- border-radius:999px;
- background:#151821;
- color:#fff;
- box-shadow:var(--shadow);
- transition:.25s;
  font-size:12px;
- font-weight:800;
+ font-weight:900;
 }
-.toast.show{opacity:1;transform:translate(-50%,0)}
 
-.bottomNav{
- display:none;
+.actions .apply{
+ background:var(--green);
+ color:#00170e;
+ border:0;
+}
+
+.actions .saved{
+ background:#24111c;
+ color:var(--pink);
+}
+
+.empty{
+ padding:70px 20px;
+ text-align:center;
+ border:1px dashed #333;
+ border-radius:var(--radius);
+ color:var(--muted);
+}
+
+.drawer{
  position:fixed;
- bottom:0;left:0;right:0;
- z-index:3000;
- background:rgba(7,8,12,.9);
+ inset:0;
+ background:rgba(0,0,0,.65);
+ display:none;
+ z-index:200;
+}
+
+.drawer.open{
+ display:block;
+}
+
+.drawerbox{
+ margin-left:auto;
+ width:min(680px,100%);
+ height:100%;
+ overflow:auto;
+ background:#0a0a0a;
+ border-left:1px solid var(--line);
+ padding:25px;
+}
+
+.close{
+ float:right;
+}
+
+.detail-title{
+ margin-top:60px;
+ font-size:32px;
+}
+
+.section{
  border-top:1px solid var(--line);
- backdrop-filter:blur(22px);
- padding:8px max(8px,env(safe-area-inset-left)) calc(8px + env(safe-area-inset-bottom));
+ margin-top:20px;
+ padding-top:20px;
+ color:#aaa;
+ line-height:1.7;
 }
-.bottomNav button{
- flex:1;
- border:0;background:transparent;color:#858c9b;
- font-size:10px;font-weight:900;
- padding:7px;
+
+.bottom{
+ display:none;
 }
-.bottomNav button.active{color:#fff}
 
 @media(max-width:1050px){
- .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
- .features{grid-template-columns:repeat(2,1fr)}
+ .stats{grid-template-columns:repeat(3,1fr)}
+ .workspace{grid-template-columns:1fr}
+ .sidebar{position:static}
 }
-@media(max-width:760px){
- .nav{padding:11px 14px}
- .navlinks{display:none}
- .mobileMenu{display:block;margin-left:auto}
- .hero{padding:48px 14px 25px}
- .heroGrid{grid-template-columns:1fr}
- h1{letter-spacing:-3px}
- .liveStats{grid-template-columns:repeat(3,1fr)}
- .stat{padding:13px 10px}
- .stat b{font-size:18px}
- .searchShell{padding:0 14px}
- .searchRow{grid-template-columns:1fr}
- .searchBtn{height:48px}
- .main{padding:25px 14px 100px}
- .grid{grid-template-columns:1fr}
- .features{grid-template-columns:1fr 1fr}
- .toolbar{align-items:flex-start;flex-direction:column}
- .bottomNav{display:flex}
- footer{padding-bottom:100px}
-}
-@media(max-width:430px){
- .features{grid-template-columns:1fr}
- .liveStats{gap:6px}
- .stat span{font-size:9px}
- .detailGrid{grid-template-columns:1fr}
+
+@media(max-width:700px){
+ .search{grid-template-columns:1fr}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ h1{letter-spacing:-2px}
+ .live{display:none}
+ .bottom{
+  display:flex;
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:120;
+  background:rgba(5,5,5,.95);
+  border-top:1px solid var(--line);
+  padding:8px;
+  gap:6px;
+ }
+ .bottom button{
+  flex:1;
+  min-height:42px;
+  border:0;
+  background:#111;
+  color:#aaa;
+  border-radius:10px;
+  font-size:11px;
+  font-weight:900;
+ }
 }
 </style>
-<link rel="stylesheet" href="css/goo-premium.css">
-  
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- GOO_JOBB_FINAL_SEO_RUNTIME -->
+<link rel="sitemap" type="application/xml" href="./sitemap.xml">
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+
+<script>
+window.GOO_JOBB_CONFIG={
+  site:"https://tv-u.github.io/Goo-jobb",
+  jobs:"https://feashliaa.github.io/job-board-data/data/chunks/jobs_manifest.json",
+  enterprise:"https://feashliaa.github.io/job-board-data/data/chunks/jobs_manifest.json",
+  searchIndex:"https://feashliaa.github.io/job-board-data/data/chunks/jobs_manifest.json",
+  liveData:"https://feashliaa.github.io/job-board-data/data/chunks/",
+  sitemap:"./sitemap.xml",
+  jobPages:"./jobs/"
+};
+</script>
+
+
+
+
+
+<script src="./ai/goo-jobb-ads.js" defer></script>
+<!-- /GOO_JOBB_FINAL_SEO_RUNTIME -->
+
+<script src="./live/live-runtime.js?v=2" defer></script>  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/goo-mobile-responsive.css">
 </head>
 
-<body>
-<div class="topline"></div>
-<div id="app">
+<body><!-- GOO-JOBB-MASTER-NAV --><nav id="goo-master-nav" aria-label="Primary navigation" style="position:sticky;top:0;z-index:9999;display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;padding:10px;background:rgba(0,0,0,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,0,128,.25)"><a href="./" style="color:#fff;text-decoration:none;padding:8px 12px">Home</a><a href="./#jobs" style="color:#fff;text-decoration:none;padding:8px 12px">Jobs</a><a href="./#career-intelligence" style="color:#fff;text-decoration:none;padding:8px 12px">Career</a><a href="./about.html" style="color:#fff;text-decoration:none;padding:8px 12px">About</a><a href="./security.html" style="color:#fff;text-decoration:none;padding:8px 12px">Security</a><a href="./terms.html" style="color:#fff;text-decoration:none;padding:8px 12px">Terms</a></nav>
 
-<header>
- <nav class="nav">
-  <a class="logo" href="#">
-   <span class="logoMark">G</span>
-   <span>GOO-JOBB</span>
-  </a>
-  <span class="live"><i class="dot"></i> LIVE SYSTEM</span>
-
-  <div class="navlinks">
-   <a href="#jobs">Jobs</a>
-   <a href="#career">Career</a>
-   <a href="#about">About</a>
-   <a href="#security">Security</a>
-   <a href="#terms">Terms</a>
-  </div>
-
-  <button class="navBtn mobileMenu" id="focusSearch">Search</button>
- </nav>
+<header class="header">
+<div class="container nav">
+<a class="logo" href="./"><b>GOO</b>-<i>JOBB</i></a>
+<div class="live">● LIVE REAL-JOB DATA</div>
+</div>
 </header>
 
+<!-- GOO-JOBB-STATIC-LIVE-FEATURES --><section id="goo-live-features" style="margin:24px 0;padding:20px;border:1px solid rgba(255,0,128,.35);border-radius:22px;background:linear-gradient(135deg,rgba(255,0,128,.08),rgba(0,255,136,.06),rgba(255,221,0,.05));"><div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px"><div><div style="font-size:12px;font-weight:800;letter-spacing:1.5px;color:#00ff88">LIVE SYSTEM</div><h2 style="margin:5px 0;font-size:24px">GOO-JOBB Live Features</h2><p style="margin:0;opacity:.7">Production features enabled on GOO-JOBB.</p></div><span style="padding:7px 12px;border-radius:999px;background:rgba(0,255,136,.1);color:#00ff88;font-weight:800;font-size:12px">AUTO SYNC</span></div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px"><div style="padding:15px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)"><b>Worldwide Live Jobs</b><small style="display:block;margin-top:6px;opacity:.65">Live worldwide opportunities</small></div><div style="padding:15px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)"><b>Smart Job Search</b><small style="display:block;margin-top:6px;opacity:.65">Search and filter jobs</small></div><div style="padding:15px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)"><b>Career Intelligence</b><small style="display:block;margin-top:6px;opacity:.65">Career intelligence tools</small></div><div style="padding:15px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)"><b>Remote Jobs</b><small style="display:block;margin-top:6px;opacity:.65">Remote opportunities</small></div><div style="padding:15px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)"><b>SEO Job Pages</b><small style="display:block;margin-top:6px;opacity:.65">Search-friendly job pages</small></div><div style="padding:15px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)"><b>Source Health</b><small style="display:block;margin-top:6px;opacity:.65">Source monitoring</small></div><div style="padding:15px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)"><b>Progressive Web App</b><small style="display:block;margin-top:6px;opacity:.65">Installable web experience</small></div></div></section><main class="container">
 
+<section class="hero">
+<span class="pill">● WORLDWIDE REAL JOB SEARCH</span>
 
-<section class="searchShell">
- <div class="searchBox">
-  <div class="searchRow">
-   <input id="q" class="searchInput" autocomplete="off"
-    placeholder="Job title, company, skill, technology, keyword…">
-   <button id="searchBtn" class="searchBtn">Search Jobs</button>
-  </div>
+<h1>Find your next <span>real job.</span></h1>
 
-  <div class="filterBar">
-   <select id="location" class="select"><option value="">All locations</option></select>
-   <select id="source" class="select"><option value="">All sources</option></select>
-   <select id="remote" class="select">
-    <option value="">All modes</option>
-    <option value="remote">Remote</option>
-    <option value="hybrid">Hybrid</option>
-    <option value="onsite">On-site</option>
-   </select>
-   <select id="sort" class="select">
-    <option value="newest">Newest</option>
-    <option value="company">Company A–Z</option>
-    <option value="title">Title A–Z</option>
-   </select>
-  </div>
+<p>
+Discover public job listings from multiple sources in one place.
+Search by skill, company, location, category, experience,
+employment type and remote status.
+</p>
 
-  <div class="chips">
-   <button class="chip active" data-mode="all">All Jobs</button>
-   <button class="chip" data-mode="remote">Remote</button>
-   <button class="chip" data-mode="saved">Saved</button>
-   <button class="chip" data-mode="recent">Recently Viewed</button>
-   <button class="chip" data-mode="compare">Compare</button>
-  </div>
- </div>
+<div class="search">
+<input id="q" placeholder="Job title, company, skill, technology...">
+<input id="loc" placeholder="Country, city, region or Remote">
+<button class="btn primary" id="search">Search Jobs</button>
+</div>
 </section>
 
-<main class="main" id="jobs">
+<section class="stats">
+<div class="stat"><strong id="total">—</strong><small>REAL LISTINGS</small></div>
+<div class="stat"><strong id="companies">—</strong><small>COMPANIES</small></div>
+<div class="stat"><strong id="categories">—</strong><small>CATEGORIES</small></div>
+<div class="stat"><strong id="locations">—</strong><small>LOCATIONS</small></div>
+<div class="stat"><strong id="sources">—</strong><small>SOURCES</small></div>
+</section>
 
- <div class="toolbar">
-  <div>
-   <h2>Worldwide Live Jobs</h2>
-   <small id="resultInfo">Connecting to live dataset…</small>
-  </div>
-  <div class="toolbarBtns">
-   <button class="pillBtn" id="clearBtn">Reset</button>
-   <button class="pillBtn" id="alertBtn">Create Alert</button>
-  </div>
- </div>
+<div class="tabs">
+<button class="tab active" data-tab="all">All Jobs</button>
+<button class="tab" data-tab="remote">Remote</button>
+<button class="tab" data-tab="saved">Saved</button>
+<button class="tab" data-tab="recent">Recently Viewed</button>
+<button class="tab" data-tab="compare">Compare</button>
+</div>
 
- <div id="jobGrid" class="grid">
-  <div class="loading" style="grid-column:1/-1">
-   <div class="spinner"></div>
-   Connecting to real live job data…
-  </div>
- </div>
+<section class="workspace">
 
- <div id="features" class="features">
-  <div class="feature"><strong>⚡ Smart Search</strong><span>Search title, company, skills, technology, location and source across loaded live records.</span></div>
-  <div class="feature"><strong>🔖 Saved Jobs</strong><span>Save jobs locally on this device without creating a fake account or sending saved data anywhere.</span></div>
-  <div class="feature"><strong>🌍 Worldwide</strong><span>Real listings are supplied by the connected public job-source dataset.</span></div>
-  <div class="feature"><strong>📱 Mobile First</strong><span>Responsive interface designed for phones, tablets and desktop screens.</span></div>
- </div>
+<aside class="sidebar">
+<h3>Advanced Search</h3>
 
- <section id="career" style="margin-top:55px">
-  <div class="feature" style="padding:25px">
-   <h2>Career Intelligence</h2>
-   <p style="color:var(--muted);line-height:1.7">
-    Use GOO-JOBB search, saved jobs and recently viewed listings to organize
-    your real job discovery workflow.
-   </p>
-  </div>
- </section>
+<div class="filter">
+<label>Category</label>
+<select id="category"><option value="">All categories</option></select>
+</div>
 
- <section id="about" style="margin-top:18px">
-  <div class="feature" style="padding:25px">
-   <h2>About GOO-JOBB</h2>
-   <p style="color:var(--muted);line-height:1.7">
-    GOO-JOBB is a worldwide job discovery interface. Job availability and
-    application links are provided by external public sources.
-   </p>
-  </div>
- </section>
+<div class="filter">
+<label>Employment Type</label>
+<select id="type"><option value="">All employment</option></select>
+</div>
 
- <section id="security" style="margin-top:18px">
-  <div class="feature" style="padding:25px">
-   <h2>Security & Privacy</h2>
-   <p style="color:var(--muted);line-height:1.7">
-    Saved and recently viewed state is stored locally in your browser.
-    Application destinations remain the original source URLs.
-   </p>
-  </div>
- </section>
+<div class="filter">
+<label>Experience</label>
+<select id="experience"><option value="">All experience</option></select>
+</div>
 
- <section id="terms" style="margin-top:18px">
-  <div class="feature" style="padding:25px">
-   <h2>Terms</h2>
-   <p style="color:var(--muted);line-height:1.7">
-    GOO-JOBB is a discovery interface. External employers and job sources
-    control their listings, requirements and application processes.
-   </p>
-  </div>
- </section>
+<div class="filter">
+<label>Source</label>
+<select id="source"><option value="">All sources</option></select>
+</div>
 
+<div class="filter">
+<label>Mode</label>
+<select id="mode">
+<option value="">All modes</option>
+<option value="remote">Remote</option>
+<option value="onsite">On-site / Hybrid</option>
+</select>
+</div>
+
+<div class="filter">
+<label>Sort</label>
+<select id="sort">
+<option value="newest">Newest</option>
+<option value="company">Company A-Z</option>
+<option value="title">Job title A-Z</option>
+</select>
+</div>
+
+<button class="btn" style="width:100%" id="reset">
+Reset Filters
+</button>
+</aside>
+
+<section>
+
+<div class="resultbar">
+<div><strong id="count">0</strong> matching jobs</div>
+<button class="btn" id="alertBtn">Create Alert</button>
+</div>
+
+<div id="jobs" class="jobs"></div>
+
+</section>
+</section>
 </main>
 
-<footer>
- <div class="footerIn">
-  <div><b style="color:#fff">GOO-JOBB</b><br><small>Worldwide live job discovery</small></div>
-  <div class="footerLinks">
-   <a href="#jobs">Jobs</a>
-   <a href="#career">Career</a>
-   <a href="#about">About</a>
-   <a href="#security">Security</a>
-   <a href="#terms">Terms</a>
-  </div>
- </div>
-</footer>
-
+<div class="drawer" id="drawer">
+<div class="drawerbox">
+<button class="btn close" id="close">Close</button>
+<div id="detail"></div>
+</div>
 </div>
 
-<div class="modalBack" id="modalBack">
- <div class="modal">
-  <div class="modalHead">
-   <div>
-    <small style="color:var(--green);font-weight:900">REAL JOB LISTING</small>
-    <h2 id="modalTitle" style="margin:7px 0 0"></h2>
-   </div>
-   <button class="close" id="closeModal">×</button>
-  </div>
-  <div class="modalBody">
-   <div id="modalCompany" style="font-weight:900;color:#dfe3eb"></div>
-   <div class="detailGrid" style="margin-top:18px">
-    <div class="detail"><small>Location</small><b id="modalLocation">—</b></div>
-    <div class="detail"><small>Source</small><b id="modalSource">—</b></div>
-    <div class="detail"><small>Employment</small><b id="modalEmployment">—</b></div>
-    <div class="detail"><small>Remote mode</small><b id="modalMode">—</b></div>
-   </div>
-   <div class="modalActions">
-    <a id="applyBtn" class="apply" target="_blank" rel="noopener noreferrer">Open Original Job →</a>
-    <button class="pillBtn" id="modalSave">Save Job</button>
-    <button class="pillBtn" id="modalCompare">Add to Compare</button>
-   </div>
-  </div>
- </div>
-</div>
-
-<div class="toast" id="toast"></div>
-
-<div class="bottomNav">
- <button class="active" onclick="location.hash='jobs'">Jobs</button>
- <button onclick="setMode('saved')">Saved</button>
- <button onclick="setMode('recent')">Recent</button>
- <button onclick="document.getElementById('q').focus()">Search</button>
-</div>
+<nav class="bottom">
+<button data-tab="all">Jobs</button>
+<button data-tab="remote">Remote</button>
+<button data-tab="saved">Saved</button>
+<button data-tab="recent">Recent</button>
+</nav>
 
 <script>
-"use strict";
+let jobs=[];
+let filtered=[];
+let activeTab="all";
 
-const DATA_ROOT="https://feashliaa.github.io/job-board-data/data/chunks/";
-const MANIFEST=DATA_ROOT+"jobs_manifest.json";
+const saved=new Set(
+ JSON.parse(
+  localStorage.getItem("goo-jobb-saved")||"[]"
+ )
+);
 
-let allJobs=[];
-let visible=[];
-let manifest=null;
-let currentJob=null;
-let currentMode="all";
-let loading=false;
-let loadedChunks=0;
+let recent=JSON.parse(
+ localStorage.getItem("goo-jobb-recent")||"[]"
+);
 
 const $=id=>document.getElementById(id);
 
 function esc(v){
- return String(v??"").replace(/[&<>"']/g,m=>({
-  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
- }[m]));
+ return String(v??"")
+  .replaceAll("&","&amp;")
+  .replaceAll("<","&lt;")
+  .replaceAll(">","&gt;")
+  .replaceAll('"',"&quot;")
+  .replaceAll("'","&#039;");
 }
 
-function key(j){
- return String(j.id || j.url || (j.title+"|"+j.company+"|"+j.location));
-}
-
-function store(name, fallback=[]){
- try{return JSON.parse(localStorage.getItem(name)||JSON.stringify(fallback))}
- catch{return fallback}
-}
-
-function saveStore(name,data){
- try{localStorage.setItem(name,JSON.stringify(data))}
- catch{}
-}
-
-function savedSet(){return new Set(store("goo_saved_jobs"))}
-function recentSet(){return new Set(store("goo_recent_jobs"))}
-function compareSet(){return new Set(store("goo_compare_jobs"))}
-
-function isRemote(j){
- const s=(j.location||"")+" "+(j.mode||"")+" "+(j.remote||"")+" "+(j.title||"");
- return /remote|work from home|wfh|distributed/i.test(s);
-}
-
-function jobText(j){
+function unique(field){
  return [
-  j.title,j.company,j.location,j.description,j.category,j.categories,
-  j.skills,j.technologies,j.employment_type,j.employmentType,j.source
- ].flat(Infinity).filter(Boolean).join(" ").toLowerCase();
+  ...new Set(
+   jobs.map(j=>j[field]).filter(Boolean)
+  )
+ ].sort((a,b)=>String(a).localeCompare(String(b)));
 }
 
-function fmt(n){
- if(!Number.isFinite(n))return "—";
- return n.toLocaleString();
+function populate(id,values){
+ const el=$(id);
+ const first=el.options[0].textContent;
+ el.innerHTML=`<option value="">${first}</option>`;
+
+ values.forEach(v=>{
+  const o=document.createElement("option");
+  o.value=v;
+  o.textContent=v;
+  el.appendChild(o);
+ });
 }
 
-function toast(msg){
- const t=$("toast");
- t.textContent=msg;
- t.classList.add("show");
- clearTimeout(window.__toast);
- window.__toast=setTimeout(()=>t.classList.remove("show"),2200);
-}
-
-function addRecent(j){
- const a=store("goo_recent_jobs");
- const k=key(j);
- const next=[k,...a.filter(x=>x!==k)].slice(0,100);
- saveStore("goo_recent_jobs",next);
-}
-
-function toggleSaved(j){
- const a=store("goo_saved_jobs");
- const k=key(j);
- const has=a.includes(k);
- saveStore("goo_saved_jobs",has?a.filter(x=>x!==k):[k,...a].slice(0,500));
- toast(has?"Removed from saved":"Job saved");
- render();
-}
-
-function toggleCompare(j){
- const a=store("goo_compare_jobs");
- const k=key(j);
- if(a.includes(k)){
-  saveStore("goo_compare_jobs",a.filter(x=>x!==k));
-  toast("Removed from compare");
- }else{
-  if(a.length>=4){toast("Compare limit is 4 jobs");return}
-  saveStore("goo_compare_jobs",[...a,k]);
-  toast("Added to compare");
- }
- render();
-}
-
-function sourceName(j){
- return j.source || j.platform || j.ats || "Live Source";
-}
-
-function employment(j){
- return j.employment_type || j.employmentType || j.type || "Not specified";
-}
-
-function modeName(j){
- if(isRemote(j))return "Remote";
- return j.mode || j.work_mode || "Not specified";
+function text(j){
+ return [
+  j.title,
+  j.company,
+  j.location,
+  j.category,
+  j.employmentType,
+  j.experience,
+  j.salary,
+  j.description,
+  j.source
+ ].join(" ").toLowerCase();
 }
 
 function applyFilters(){
+
  const q=$("q").value.trim().toLowerCase();
- const loc=$("location").value.toLowerCase();
- const src=$("source").value.toLowerCase();
- const rem=$("remote").value.toLowerCase();
+ const loc=$("loc").value.trim().toLowerCase();
+ const cat=$("category").value;
+ const type=$("type").value;
+ const exp=$("experience").value;
+ const src=$("source").value;
+ const mode=$("mode").value;
  const sort=$("sort").value;
 
- const saved=savedSet();
- const recent=recentSet();
- const comp=compareSet();
+ filtered=jobs.filter(j=>{
 
- visible=allJobs.filter(j=>{
-  const text=jobText(j);
-  if(q && !text.includes(q))return false;
-  if(loc && !String(j.location||"").toLowerCase().includes(loc))return false;
-  if(src && sourceName(j).toLowerCase()!==src)return false;
+  if(activeTab==="remote"&&!j.remote)
+   return false;
 
-  if(rem==="remote" && !isRemote(j))return false;
-  if(rem==="hybrid" && !/hybrid/i.test(String(j.mode||j.work_mode||"")))return false;
-  if(rem==="onsite" && isRemote(j))return false;
+  if(activeTab==="saved"&&!saved.has(j.id))
+   return false;
 
-  const k=key(j);
-  if(currentMode==="saved" && !saved.has(k))return false;
-  if(currentMode==="recent" && !recent.has(k))return false;
-  if(currentMode==="compare" && !comp.has(k))return false;
+  if(activeTab==="recent"&&!recent.includes(j.id))
+   return false;
+
+  if(activeTab==="compare")
+   return false;
+
+  if(q&&!text(j).includes(q))
+   return false;
+
+  if(loc&&!String(j.location||"")
+   .toLowerCase().includes(loc))
+   return false;
+
+  if(cat&&j.category!==cat)
+   return false;
+
+  if(type&&j.employmentType!==type)
+   return false;
+
+  if(exp&&j.experience!==exp)
+   return false;
+
+  if(src&&j.source!==src)
+   return false;
+
+  if(mode==="remote"&&!j.remote)
+   return false;
+
+  if(mode==="onsite"&&j.remote)
+   return false;
 
   return true;
  });
 
- visible.sort((a,b)=>{
+ filtered.sort((a,b)=>{
+
   if(sort==="company")
-   return String(a.company||"").localeCompare(String(b.company||""));
+   return String(a.company)
+    .localeCompare(String(b.company));
+
   if(sort==="title")
-   return String(a.title||"").localeCompare(String(b.title||""));
-  const da=new Date(a.posted_at||a.postedAt||a.created_at||a.updated_at||0).getTime();
-  const db=new Date(b.posted_at||b.postedAt||b.created_at||b.updated_at||0).getTime();
-  return db-da;
+   return String(a.title)
+    .localeCompare(String(b.title));
+
+  return (
+   (Date.parse(b.postedAt||"")||0)-
+   (Date.parse(a.postedAt||"")||0)
+  );
  });
 
  render();
 }
 
 function render(){
- const grid=$("jobGrid");
- const saved=savedSet();
 
- if(!visible.length){
-  grid.innerHTML='<div class="empty" style="grid-column:1/-1"><strong>No matching live jobs</strong><br><span style="display:block;margin-top:8px">Try another keyword, location or filter.</span></div>';
- }else{
-  grid.innerHTML=visible.slice(0,60).map(j=>{
-   const k=key(j);
-   return `
-   <article class="job">
-    <div class="jobTop">
-     <span class="source">${esc(sourceName(j))} • LIVE</span>
-     <button class="save ${saved.has(k)?"saved":""}" data-save="${esc(k)}" title="Save job">
-      ${saved.has(k)?"★":"☆"}
-     </button>
-    </div>
-    <h3>${esc(j.title||"Untitled position")}</h3>
-    <div class="company">${esc(j.company||"Company not specified")}</div>
-    <div class="meta">
-     <span>📍 ${esc(j.location||"Worldwide")}</span>
-     <span>◉ ${esc(modeName(j))}</span>
-     <span>▣ ${esc(employment(j))}</span>
-    </div>
-    <div class="jobBottom">
-     <span class="external">${esc(j.url||j.apply_url?"Original listing":"Live listing")}</span>
-     <button class="view" data-view="${esc(k)}">View Job</button>
-    </div>
-   </article>`;
-  }).join("");
+ $("count").textContent=
+  filtered.length.toLocaleString();
+
+ if(!filtered.length){
+  $("jobs").innerHTML=
+   `<div class="empty">
+      No matching jobs found.
+    </div>`;
+  return;
  }
 
- $("resultInfo").textContent=
-  `${fmt(visible.length)} matching loaded jobs • ${fmt(allJobs.length)} loaded • ${fmt(manifest?.totalJobs||allJobs.length)} total in live dataset`;
+ const frag=document.createDocumentFragment();
 
- grid.querySelectorAll("[data-save]").forEach(b=>{
-  b.onclick=e=>{
-   e.stopPropagation();
-   const j=allJobs.find(x=>key(x)===b.dataset.save);
-   if(j)toggleSaved(j);
-  };
+ filtered.slice(0,500).forEach(j=>{
+
+  const card=document.createElement("article");
+  card.className="job";
+
+  const isSaved=saved.has(j.id);
+
+  card.innerHTML=`
+   <div class="jobhead">
+    <div>
+     <h2>${esc(j.title)}</h2>
+     <div class="company">${esc(j.company)}</div>
+    </div>
+   </div>
+
+   <div class="badges">
+    <span class="badge">${esc(j.location)}</span>
+    <span class="badge">${esc(j.category)}</span>
+    ${
+      j.remote
+      ? `<span class="badge remote">● REMOTE</span>`
+      : `<span class="badge">ON-SITE / HYBRID</span>`
+    }
+    ${
+      j.employmentType
+      ? `<span class="badge">${esc(j.employmentType)}</span>`
+      : ""
+    }
+    ${
+      j.experience
+      ? `<span class="badge">${esc(j.experience)}</span>`
+      : ""
+    }
+    <span class="badge">🔗 ${esc(j.source)}</span>
+   </div>
+
+   ${
+    j.salary
+    ? `<div class="badge">${esc(j.salary)}</div>`
+    : ""
+   }
+
+   <p class="desc">
+    ${esc(j.description||"Original listing available from the source.")}
+   </p>
+
+   <div class="actions">
+
+    <a
+      class="apply"
+      href="${esc(j.applyUrl||j.url)}"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+    >Apply ↗</a>
+
+    <button data-view="${esc(j.id)}">
+      View Details
+    </button>
+
+    <button
+      class="${isSaved?"saved":""}"
+      data-save="${esc(j.id)}"
+    >
+      ${isSaved?"★ Saved":"☆ Save"}
+    </button>
+
+    <button data-share="${esc(j.id)}">
+      Share
+    </button>
+   </div>
+  `;
+
+  frag.appendChild(card);
  });
 
- grid.querySelectorAll("[data-view]").forEach(b=>{
-  b.onclick=()=>{
-   const j=allJobs.find(x=>key(x)===b.dataset.view);
-   if(j)openJob(j);
-  };
- });
+ $("jobs").replaceChildren(frag);
+
+ document.querySelectorAll("[data-save]")
+  .forEach(btn=>{
+   btn.onclick=()=>{
+    const id=btn.dataset.save;
+
+    if(saved.has(id))
+      saved.delete(id);
+    else
+      saved.add(id);
+
+    localStorage.setItem(
+      "goo-jobb-saved",
+      JSON.stringify([...saved])
+    );
+
+    applyFilters();
+   };
+  });
+
+ document.querySelectorAll("[data-view]")
+  .forEach(btn=>{
+   btn.onclick=()=>openJob(btn.dataset.view);
+  });
+
+ document.querySelectorAll("[data-share]")
+  .forEach(btn=>{
+   btn.onclick=async()=>{
+    const j=jobs.find(
+     x=>x.id===btn.dataset.share
+    );
+
+    if(!j)return;
+
+    const data={
+     title:j.title,
+     text:`${j.title} — ${j.company}`,
+     url:j.applyUrl||j.url
+    };
+
+    try{
+     if(navigator.share){
+      await navigator.share(data);
+     }else{
+      await navigator.clipboard.writeText(data.url);
+      btn.textContent="Copied";
+      setTimeout(()=>{
+       btn.textContent="Share";
+      },1200);
+     }
+    }catch{}
+   };
+  });
 }
 
-function openJob(j){
- currentJob=j;
- addRecent(j);
+function openJob(id){
 
- $("modalTitle").textContent=j.title||"Untitled position";
- $("modalCompany").textContent=j.company||"Company not specified";
- $("modalLocation").textContent=j.location||"Worldwide";
- $("modalSource").textContent=sourceName(j);
- $("modalEmployment").textContent=employment(j);
- $("modalMode").textContent=modeName(j);
+ const j=jobs.find(x=>x.id===id);
 
- const url=j.apply_url||j.url||j.link||"";
- $("applyBtn").href=url;
- $("applyBtn").style.display=url?"inline-flex":"none";
+ if(!j)return;
 
- const saved=savedSet().has(key(j));
- $("modalSave").textContent=saved?"★ Saved":"Save Job";
+ recent=[
+  id,
+  ...recent.filter(x=>x!==id)
+ ].slice(0,100);
 
- $("modalBack").classList.add("show");
+ localStorage.setItem(
+  "goo-jobb-recent",
+  JSON.stringify(recent)
+ );
+
+ $("detail").innerHTML=`
+  <h1 class="detail-title">${esc(j.title)}</h1>
+
+  <div class="company">
+   ${esc(j.company)}
+  </div>
+
+  <div class="badges">
+   <span class="badge">${esc(j.location)}</span>
+   <span class="badge">${esc(j.category)}</span>
+   ${
+    j.remote
+    ? '<span class="badge remote">REMOTE</span>'
+    : ""
+   }
+   ${
+    j.employmentType
+    ? `<span class="badge">${esc(j.employmentType)}</span>`
+    : ""
+   }
+  </div>
+
+  <div class="actions">
+   <a
+    class="apply"
+    href="${esc(j.applyUrl||j.url)}"
+    target="_blank"
+    rel="nofollow noopener noreferrer"
+   >Apply on Original Source ↗</a>
+  </div>
+
+  <div class="section">
+   <b>Job Description</b>
+   <p>${esc(j.description||"")}</p>
+  </div>
+
+  <div class="section">
+   <b>Location</b>
+   <p>${esc(j.location)}</p>
+  </div>
+
+  <div class="section">
+   <b>Source</b>
+   <p>${esc(j.source)}</p>
+   <a href="${esc(j.sourceUrl||j.url)}"
+      target="_blank"
+      rel="noopener noreferrer">
+      Open source ↗
+   </a>
+  </div>
+ `;
+
+ $("drawer").classList.add("open");
 }
 
-function setMode(mode){
- currentMode=mode;
- document.querySelectorAll(".chip").forEach(x=>{
-  x.classList.toggle("active",x.dataset.mode===mode);
- });
+function activateTab(tab){
+
+ activeTab=tab;
+
+ document.querySelectorAll(".tab")
+  .forEach(x=>{
+   x.classList.toggle(
+    "active",
+    x.dataset.tab===tab
+   );
+  });
+
  applyFilters();
 }
 
-window.setMode=setMode;
+document.querySelectorAll("[data-tab]")
+ .forEach(x=>{
+  x.onclick=()=>activateTab(x.dataset.tab);
+ });
 
-function populateFilters(){
- const locations=[...new Set(allJobs.map(j=>String(j.location||"").trim()).filter(Boolean))]
-  .sort((a,b)=>a.localeCompare(b)).slice(0,300);
+$("close").onclick=()=>{
+ $("drawer").classList.remove("open");
+};
 
- const sources=[...new Set(allJobs.map(sourceName).filter(Boolean))]
-  .sort((a,b)=>a.localeCompare(b));
+$("drawer").onclick=e=>{
+ if(e.target===$("drawer"))
+  $("drawer").classList.remove("open");
+};
 
- $("location").innerHTML='<option value="">All locations</option>'+
- locations.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join("");
-
- $("source").innerHTML='<option value="">All sources</option>'+
- sources.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join("");
-
- $("statSources").textContent=sources.length||"—";
-
- const companies=new Set(allJobs.map(j=>j.company).filter(Boolean));
- $("statCompanies").textContent=fmt(companies.size);
-}
-
-async function fetchJSON(url){
- const r=await fetch(url,{cache:"no-store"});
- if(!r.ok)throw new Error("HTTP "+r.status);
- return r.json();
-}
-
-async function loadChunk(name){
- const r=await fetch(DATA_ROOT+name,{cache:"no-store"});
- if(!r.ok)throw new Error("Chunk HTTP "+r.status);
-
- let data;
- if("DecompressionStream" in window){
-  const ds=new DecompressionStream("gzip");
-  const stream=r.body.pipeThrough(ds);
-  data=JSON.parse(await new Response(stream).text());
- }else{
-  throw new Error("Browser gzip decompression unsupported");
- }
-
- if(Array.isArray(data))return data;
- if(Array.isArray(data.jobs))return data.jobs;
- return [];
-}
-
-async function boot(){
- try{
-  manifest=await fetchJSON(MANIFEST);
-
-  $("statJobs").textContent=fmt(manifest.totalJobs||0);
-
-  const chunks=Array.isArray(manifest.chunks)?manifest.chunks:[];
-  if(!chunks.length)throw new Error("No chunks");
-
-  $("resultInfo").textContent=
-   `Live dataset connected • ${fmt(manifest.totalJobs)} real jobs • loading chunks…`;
-
-  // First chunk = immediate real jobs.
-  const first=await loadChunk(chunks[0]);
-  allJobs.push(...first);
-  loadedChunks=1;
-  populateFilters();
-  applyFilters();
-
-  // Remaining chunks load progressively without blocking initial UI.
-  for(let i=1;i<chunks.length;i++){
-   try{
-    const jobs=await loadChunk(chunks[i]);
-    allJobs.push(...jobs);
-    loadedChunks=i+1;
-
-    if(i%2===0){
-     populateFilters();
-     applyFilters();
-    }
-   }catch(e){
-    console.warn("Chunk failed",i,e);
-   }
-
-   // Give mobile browsers breathing room.
-   await new Promise(r=>setTimeout(r,20));
-  }
-
-  populateFilters();
-  applyFilters();
-
-  $("resultInfo").textContent=
-   `${fmt(allJobs.length)} real jobs loaded • ${fmt(manifest.totalJobs)} total in live dataset`;
-
- }catch(e){
-  console.error(e);
-  $("jobGrid").innerHTML=`
-   <div class="empty" style="grid-column:1/-1">
-    <strong>Live job connection temporarily unavailable.</strong>
-    <br><span style="display:block;margin-top:8px">The interface is online. Please refresh and reconnect to the live source.</span>
-   </div>`;
-  $("resultInfo").textContent="Live dataset connection failed";
- }
-}
-
-$("q").addEventListener("input",applyFilters);
-$("searchBtn").onclick=()=>{$("jobs").scrollIntoView({behavior:"smooth"})};
-
-["location","source","remote","sort"].forEach(id=>$(id).addEventListener("change",applyFilters));
-
-document.querySelectorAll(".chip").forEach(c=>{
- c.onclick=()=>setMode(c.dataset.mode);
+[
+ "q","loc","category","type",
+ "experience","source","mode","sort"
+].forEach(id=>{
+ $(id).addEventListener("input",applyFilters);
+ $(id).addEventListener("change",applyFilters);
 });
 
-$("clearBtn").onclick=()=>{
+$("search").onclick=applyFilters;
+
+$("reset").onclick=()=>{
  $("q").value="";
- $("location").value="";
+ $("loc").value="";
+ $("category").value="";
+ $("type").value="";
+ $("experience").value="";
  $("source").value="";
- $("remote").value="";
+ $("mode").value="";
  $("sort").value="newest";
- setMode("all");
- toast("Filters reset");
-};
-
-$("focusSearch").onclick=()=>{
- $("q").focus();
- window.scrollTo({top:document.querySelector(".searchShell").offsetTop-70,behavior:"smooth"});
-};
-
-$("closeModal").onclick=()=>$("modalBack").classList.remove("show");
-
-$("modalBack").onclick=e=>{
- if(e.target===$("modalBack"))$("modalBack").classList.remove("show");
-};
-
-$("modalSave").onclick=()=>{
- if(currentJob)toggleSaved(currentJob);
- if(currentJob)openJob(currentJob);
-};
-
-$("modalCompare").onclick=()=>{
- if(currentJob)toggleCompare(currentJob);
+ activeTab="all";
+ applyFilters();
 };
 
 $("alertBtn").onclick=()=>{
  const q=$("q").value.trim();
- if(!q){toast("Enter a job keyword first");$("q").focus();return}
- saveStore("goo_job_alert",{query:q,location:$("location").value,createdAt:Date.now()});
- toast("Alert saved on this device");
+ const loc=$("loc").value.trim();
+
+ const alerts=JSON.parse(
+  localStorage.getItem("goo-jobb-alerts")||"[]"
+ );
+
+ alerts.push({
+  query:q,
+  location:loc,
+  createdAt:new Date().toISOString()
+ });
+
+ localStorage.setItem(
+  "goo-jobb-alerts",
+  JSON.stringify(alerts)
+ );
+
+ alert(
+  "Job alert saved on this device."
+ );
 };
 
-document.addEventListener("keydown",e=>{
- if(e.key==="/" && document.activeElement.tagName!=="INPUT"){
-  e.preventDefault();
-  $("q").focus();
- }
- if(e.key==="Escape")$("modalBack").classList.remove("show");
-});
+async function boot(){
+
+  const DATA_ROOT =
+    "https://feashliaa.github.io/job-board-data/data/chunks/";
+
+  const MANIFEST_URL =
+    DATA_ROOT + "jobs_manifest.json";
+
+  const CHUNK_SIZE = 25000;
+
+  let loadedChunks = 0;
+  let loading = false;
+
+  function normalizeJob(j,i){
+
+    if(!j || typeof j!=="object")
+      return null;
+
+    const location =
+      j.location ||
+      j.locationName ||
+      j.location_name ||
+      "Worldwide";
+
+    const title =
+      j.title ||
+      j.jobTitle ||
+      j.name ||
+      "Untitled Job";
+
+    const company =
+      j.company ||
+      j.company_name ||
+      j.companyName ||
+      "Unknown Company";
+
+    const url =
+      j.url ||
+      j.absolute_url ||
+      j.absoluteUrl ||
+      j.applyUrl ||
+      j.apply_url ||
+      "#";
+
+    const text = [
+      title,
+      location,
+      j.description || "",
+      j.workplaceType || "",
+      j.workplace_type || ""
+    ].join(" ");
+
+    return {
+      ...j,
+
+      id:
+        String(
+          j.id ||
+          j.job_id ||
+          j.jobId ||
+          ("goo-live-"+i)
+        ),
+
+      title,
+      company,
+      location,
+
+      description:
+        j.description ||
+        j.summary ||
+        "",
+
+      url,
+
+      applyUrl:
+        j.applyUrl ||
+        j.apply_url ||
+        url,
+
+      source:
+        j.source ||
+        j.ats ||
+        j.platform ||
+        "Public ATS",
+
+      sourceUrl:
+        j.sourceUrl ||
+        url,
+
+      category:
+        j.category ||
+        j.department ||
+        j.ats ||
+        "Other",
+
+      employmentType:
+        j.employmentType ||
+        j.employment_type ||
+        j.type ||
+        "",
+
+      experience:
+        j.experience ||
+        j.skill_level ||
+        j.skillLevel ||
+        "",
+
+      postedAt:
+        j.postedAt ||
+        j.posted_at ||
+        j.published_at ||
+        j.updated_at ||
+        j.scraped_at ||
+        "",
+
+      remote:
+        Boolean(
+          j.remote ||
+          j.isRemote ||
+          j.is_remote ||
+          /remote/i.test(text)
+        )
+    };
+  }
+
+  function normalizePayload(payload){
+
+    if(Array.isArray(payload))
+      return payload;
+
+    if(
+      payload &&
+      Array.isArray(payload.jobs)
+    )
+      return payload.jobs;
+
+    if(
+      payload &&
+      Array.isArray(payload.data)
+    )
+      return payload.data;
+
+    if(
+      payload &&
+      Array.isArray(payload.results)
+    )
+      return payload.results;
+
+    return [];
+  }
+
+  async function getJSON(url){
+
+    const r =
+      await fetch(
+        url + "?v=" + Date.now(),
+        {
+          cache:"no-store",
+          mode:"cors"
+        }
+      );
+
+    if(!r.ok)
+      throw new Error(
+        "HTTP "+r.status+" "+url
+      );
+
+    return r.json();
+  }
+
+  async function getGzip(url){
+
+    const r =
+      await fetch(
+        url + "?v=" + Date.now(),
+        {
+          cache:"no-store",
+          mode:"cors"
+        }
+      );
+
+    if(!r.ok)
+      throw new Error(
+        "HTTP "+r.status+" "+url
+      );
+
+    /*
+     * GitHub Pages serves the .gz file as a gzip
+     * asset. DecompressionStream is supported by
+     * modern Chrome/Android browsers.
+     */
+
+    if(
+      typeof DecompressionStream !==
+      "undefined"
+    ){
+
+      const stream =
+        r.body.pipeThrough(
+          new DecompressionStream("gzip")
+        );
+
+      return JSON.parse(
+        await new Response(stream).text()
+      );
+
+    }
+
+    /*
+     * Fallback for browsers that cannot use
+     * DecompressionStream.
+     */
+
+    const buffer =
+      await r.arrayBuffer();
+
+    const bytes =
+      new Uint8Array(buffer);
+
+    /*
+     * The main production path is modern browsers.
+     * Do not attempt to load a 1.4M dataset through
+     * an unbounded JS decompressor fallback.
+     */
+
+    throw new Error(
+      "This browser does not support gzip streaming."
+    );
+  }
+
+  function updateStats(){
+
+    if($("total"))
+      $("total").textContent =
+        jobs.length.toLocaleString();
+
+    if($("companies"))
+      $("companies").textContent =
+        new Set(
+          jobs
+            .map(j=>j.company)
+            .filter(Boolean)
+        ).size.toLocaleString();
+
+    if($("categories"))
+      $("categories").textContent =
+        new Set(
+          jobs
+            .map(j=>j.category)
+            .filter(Boolean)
+        ).size.toLocaleString();
+
+    if($("locations"))
+      $("locations").textContent =
+        new Set(
+          jobs
+            .map(j=>j.location)
+            .filter(Boolean)
+        ).size.toLocaleString();
+
+    if($("sources"))
+      $("sources").textContent =
+        new Set(
+          jobs
+            .map(j=>j.source)
+            .filter(Boolean)
+        ).size.toLocaleString();
+  }
+
+  async function loadChunk(filename){
+
+    const payload =
+      await getGzip(
+        DATA_ROOT +
+        encodeURIComponent(filename)
+      );
+
+    const list =
+      normalizePayload(payload);
+
+    if(!list.length)
+      return 0;
+
+    const base =
+      jobs.length;
+
+    for(let i=0;i<list.length;i++){
+
+      const normalized =
+        normalizeJob(
+          list[i],
+          base+i
+        );
+
+      if(normalized)
+        jobs.push(normalized);
+    }
+
+    return list.length;
+  }
+
+  async function backgroundLoad(
+    filenames,
+    startIndex
+  ){
+
+    if(loading)
+      return;
+
+    loading=true;
+
+    try{
+
+      for(
+        let i=startIndex;
+        i<filenames.length;
+        i++
+      ){
+
+        try{
+
+          await loadChunk(
+            filenames[i]
+          );
+
+          loadedChunks++;
+
+          updateStats();
+
+          /*
+           * Re-apply current filters so search results
+           * progressively become complete.
+           */
+
+          applyFilters();
+
+        }catch(e){
+
+          console.warn(
+            "Chunk failed:",
+            filenames[i],
+            e
+          );
+
+        }
+
+        /*
+         * Give Android browser UI time to breathe.
+         */
+
+        await new Promise(
+          resolve=>setTimeout(resolve,0)
+        );
+      }
+
+      console.log(
+        "GOO-JOBB COMPLETE REAL DATA:",
+        jobs.length.toLocaleString()
+      );
+
+      updateStats();
+      applyFilters();
+
+    }finally{
+
+      loading=false;
+
+    }
+  }
+
+  try{
+
+    /*
+     * Manifest currently contains the real aggregator
+     * chunk inventory. It is external so the main
+     * GOO-JOBB repository remains small.
+     */
+
+    const manifest =
+      await getJSON(MANIFEST_URL);
+
+    if(
+      !manifest ||
+      !Array.isArray(manifest.chunks) ||
+      !manifest.chunks.length
+    ){
+      throw new Error(
+        "Live aggregator manifest invalid"
+      );
+    }
+
+    const filenames =
+      manifest.chunks.map(
+        x =>
+          typeof x==="string"
+          ? x
+          : x.file
+      ).filter(Boolean);
+
+    /*
+     * IMPORTANT:
+     * Use the real total immediately rather than waiting
+     * for 58 chunks before the UI can show the count.
+     */
+
+    const announcedTotal =
+      Number(
+        manifest.totalJobs ||
+        0
+      );
+
+    if($("total") && announcedTotal){
+      $("total").textContent =
+        announcedTotal.toLocaleString();
+    }
+
+    /*
+     * Load the first chunk immediately.
+     * This makes real jobs appear quickly.
+     */
+
+    await loadChunk(
+      filenames[0]
+    );
+
+    loadedChunks=1;
+
+    updateStats();
+
+    populate(
+      "category",
+      unique("category")
+    );
+
+    populate(
+      "type",
+      unique("employmentType")
+    );
+
+    populate(
+      "experience",
+      unique("experience")
+    );
+
+    populate(
+      "source",
+      unique("source")
+    );
+
+    applyFilters();
+
+    /*
+     * Load every remaining real chunk in background.
+     *
+     * The data source currently contains:
+     * 1,445,142 real jobs across 58 chunks.
+     *
+     * The exact number is always taken from the
+     * live manifest, never hard-coded.
+     */
+
+    backgroundLoad(
+      filenames,
+      1
+    );
+
+  }catch(e){
+
+    console.error(
+      "GOO-JOBB LIVE AGGREGATOR ERROR:",
+      e
+    );
+
+    /*
+     * Fallback to existing repository data.
+     * Current repository dataset is an object with
+     * a jobs[] property.
+     */
+
+    try{
+
+      const fallback =
+        await getJSON(
+          "./jobs-worldwide.json"
+        );
+
+      const list =
+        normalizePayload(
+          fallback
+        );
+
+      jobs =
+        list
+          .map(normalizeJob)
+          .filter(Boolean);
+
+      updateStats();
+
+      populate(
+        "category",
+        unique("category")
+      );
+
+      populate(
+        "type",
+        unique("employmentType")
+      );
+
+      populate(
+        "experience",
+        unique("experience")
+      );
+
+      populate(
+        "source",
+        unique("source")
+      );
+
+      applyFilters();
+
+    }catch(fallbackError){
+
+      console.error(
+        "GOO-JOBB fallback error:",
+        fallbackError
+      );
+
+      $("jobs").innerHTML =
+        `<div class="empty">
+          <strong>Real job data connection failed.</strong>
+          <br><br>
+          Please refresh the page.
+        </div>`;
+
+    }
+
+  }
+}
 
 boot();
 </script>
-<script src="js/goo-premium.js" defer></script></body>
+<script src="./ai/goo-jobb-live.js" defer></script>
+<script src="./career/goo-career-hub.js" defer></script><section style="margin:40px auto;max-width:1400px;padding:28px;border:1px solid rgba(255,255,255,.1);border-radius:20px"><h2>GOO-JOBB Career Intelligence</h2><p>Jobs, profiles, companies, salary data, career tools and interview preparation.</p><a href="./career/">Open Career Hub →</a></section><script src="./ai/goo-jobb-local-intelligence.js" defer></script><script src="./live/live-home.js?v=202609061"></script><!-- GOO-JOBB-MASTER-FOOTER --><footer id="goo-master-footer" style="margin-top:40px;padding:30px 20px;text-align:center;border-top:1px solid rgba(255,255,255,.1);opacity:.9"><strong>GOO-JOBB</strong><div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:12px"><a href="./about.html">About Us</a><a href="./terms.html">Terms & Conditions</a><a href="./security.html">Security</a><a href="./robots.txt">Robots</a></div><small style="display:block;margin-top:14px;opacity:.6">Worldwide job discovery platform. Job availability is provided by external sources.</small></footer><!-- GOO-JOBB-MONETIZATION --><section id="goo-monetization" aria-label="Supported content and partner links" style="margin:32px auto;max-width:1180px;padding:24px;border:1px solid rgba(255,255,255,.1);border-radius:20px;background:rgba(255,255,255,.035);backdrop-filter:blur(12px)"><div style="display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap"><div><strong style="font-size:20px">GOO-JOBB</strong><div style="opacity:.72;margin-top:5px">Support this free job platform</div></div><span style="font-size:12px;opacity:.6">Partner links</span></div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:18px"><a data-goo-smartlink="smartlink-a" href="https://www.effectivecpmnetwork.com/x0wcj4zk?key=c2b46070b44982014166acafd6074c3d&psid=home_a" target="_blank" rel="sponsored noopener noreferrer" style="display:block;text-decoration:none;padding:15px 18px;border-radius:14px;background:rgba(255,255,255,.06);color:inherit"><b></b><small style="display:block;opacity:.65;margin-top:5px">Sponsored link</small></a><a data-goo-smartlink="smartlink-b" href="https://www.effectivecpmnetwork.com/sa8mca36sv?key=3711015d24018cf89ccb362976c4a2e0&psid=home_b" target="_blank" rel="sponsored noopener noreferrer" style="display:block;text-decoration:none;padding:15px 18px;border-radius:14px;background:rgba(255,255,255,.06);color:inherit"><b>Explore Partner</b><small style="display:block;opacity:.65;margin-top:5px">Sponsored link</small></a><a data-goo-smartlink="smartlink-c" href="https://www.profitableratecpmnetwork.com/sa8mca36sv?key=3711015d24018cf89ccb362976c4a2e0&psid=home_c" target="_blank" rel="sponsored noopener noreferrer" style="display:block;text-decoration:none;padding:15px 18px;border-radius:14px;background:rgba(255,255,255,.06);color:inherit"><b></b><small style="display:block;opacity:.65;margin-top:5px">Sponsored link</small></a><a data-goo-smartlink="smartlink-d" href="https://www.profitableratecpmnetwork.com/x0wcj4zk?key=c2b46070b44982014166acafd6074c3d&psid=home_d" target="_blank" rel="sponsored noopener noreferrer" style="display:block;text-decoration:none;padding:15px 18px;border-radius:14px;background:rgba(255,255,255,.06);color:inherit"><b></b><small style="display:block;opacity:.65;margin-top:5px">Sponsored link</small></a></div></section><script>(function(){document.querySelectorAll("[data-goo-smartlink]").forEach(function(a){a.addEventListener("click",function(){try{localStorage.setItem("goo_job_last_smartlink",a.getAttribute("data-goo-smartlink")+"|"+Date.now())}catch(e){}})})})();</script><script src="./ai/goo-jobb-ai-agent.js?v=3"></script><script src="./ads/adsterra-smartlinks.js?v=4"></script><script src="./dashboard/live-dashboard.js" defer></script></body>
 </html>

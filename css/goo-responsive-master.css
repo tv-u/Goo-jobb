@@ -1,371 +1,198 @@
-/* GOO-JOBB Responsive Master
-   Mobile + Tablet + Desktop
-   Does not alter job data or the real jobs engine.
-*/
+/* GOO-JOBB RESPONSIVE MASTER — SAFE LAYOUT LAYER */
 
-*,*::before,*::after{
-  box-sizing:border-box;
-}
+*,*::before,*::after{box-sizing:border-box}
 
 html{
-  width:100%;
-  min-width:0;
-  overflow-x:hidden;
-  scroll-behavior:auto;
+ width:100%;
+ min-width:0;
+ max-width:100%;
+ overflow-x:hidden;
+ scroll-behavior:auto;
+ -webkit-text-size-adjust:100%;
 }
 
 body{
-  width:100%;
-  min-width:0;
-  max-width:100%;
-  margin:0;
-  overflow-x:hidden;
-  -webkit-text-size-adjust:100%;
-  text-rendering:optimizeLegibility;
+ width:100%;
+ min-width:0;
+ max-width:100%;
+ margin:0;
+ overflow-x:hidden;
 }
 
 img,video,svg,canvas,iframe{
-  max-width:100%;
+ max-width:100%;
 }
 
 img{
-  height:auto;
+ height:auto;
 }
 
-button,
-input,
-select,
-textarea{
-  max-width:100%;
-  font:inherit;
+button,input,select,textarea{
+ max-width:100%;
+ font:inherit;
 }
 
-button,
-a,
-input,
-select,
-textarea{
-  touch-action:manipulation;
+button,a{
+ touch-action:manipulation;
 }
 
 a{
-  overflow-wrap:anywhere;
+ overflow-wrap:anywhere;
 }
 
-main,
-header,
-footer,
-section,
-article,
-nav,
-aside,
-.container,
-.wrapper,
-.content,
-.page,
-.page-content{
-  min-width:0;
-  max-width:100%;
+main,header,footer,section,article,nav,aside,
+.container,.wrapper,.content,.page,.page-content{
+ min-width:0;
+ max-width:100%;
+}
+
+.container,.wrapper,.content,.page-container{
+ width:min(1400px,calc(100% - 32px));
+ margin-inline:auto;
+}
+
+.jobs-grid,.job-grid{
+ width:100%;
+ max-width:100%;
+ min-width:0;
+ display:grid;
+ grid-template-columns:repeat(1,minmax(0,1fr));
+ gap:16px;
+}
+
+.jobs-list,#jobs,#job-list,#jobs-list,#results,#jobResults,
+[data-jobs],[data-job-list]{
+ width:100%;
+ max-width:100%;
+ min-width:0;
+}
+
+.job-card,.job-item,.job-result,.job-result-card,[data-job-card]{
+ min-width:0;
+ max-width:100%;
+ overflow-wrap:anywhere;
+}
+
+.card,.job-card,.job-item,.job-result,.job-result-card{
+ overflow:hidden;
+}
+
+input,select,textarea{
+ min-width:0;
+}
+
+input[type=search],
+input[type=text],
+input[type=email],
+input[type=url],
+select,textarea{
+ width:100%;
+}
+
+button,.btn,.button,a[role=button]{
+ min-height:42px;
+}
+
+pre,code{
+ max-width:100%;
+ overflow-x:auto;
 }
 
 table{
-  max-width:100%;
+ max-width:100%;
 }
 
-pre,
-code{
-  max-width:100%;
-  overflow-x:auto;
-}
-
-/* Safe responsive containers */
-.container,
-.wrapper,
-.content,
-.page-container{
-  width:min(1400px,100% - 32px);
-  margin-inline:auto;
-}
-
-/* Job grids */
-.jobs-grid,
-.job-grid,
-.jobs-list,
-#jobs,
-#job-list,
-#jobs-list,
-#results,
-#jobResults,
-[data-jobs],
-[data-job-list]{
-  width:100%;
-  min-width:0;
-  max-width:100%;
-}
-
-/* Never force huge fixed cards */
-.job-card,
-.job-item,
-.job-result,
-.job-result-card,
-[data-job-card]{
-  min-width:0;
-  max-width:100%;
-  overflow-wrap:anywhere;
-}
-
-/* Mobile-first job grid */
-.jobs-grid,
-.job-grid{
-  display:grid;
-  grid-template-columns:repeat(1,minmax(0,1fr));
-  gap:16px;
-}
-
-/* Navigation wrapping safety */
-nav,
-.nav,
-.navbar,
-.header,
-.site-header{
-  max-width:100%;
-  min-width:0;
-}
-
-nav ul,
-.nav ul,
-.nav-links,
-.nav-menu{
-  min-width:0;
-  max-width:100%;
-}
-
-/* Forms */
-input,
-select,
-textarea{
-  min-width:0;
-}
-
-input[type="search"],
-input[type="text"],
-input[type="email"],
-input[type="url"],
-select,
-textarea{
-  width:100%;
-}
-
-/* Buttons remain usable on touch screens */
-button,
-.btn,
-.button,
-a[role="button"]{
-  min-height:42px;
-}
-
-/* Avoid accidental horizontal overflow from long labels */
-button,
-.btn,
-.button{
-  overflow-wrap:anywhere;
-}
-
-/* Cards */
-.card,
-.job-card,
-.job-item,
-.job-result,
-.job-result-card{
-  overflow:hidden;
-}
-
-/* Small phones */
-@media(max-width:480px){
-
-  .container,
-  .wrapper,
-  .content,
-  .page-container{
-    width:calc(100% - 20px);
-  }
-
-  .jobs-grid,
-  .job-grid{
-    grid-template-columns:1fr;
-    gap:12px;
-  }
-
-  nav ul,
-  .nav-links,
-  .nav-menu{
-    gap:8px;
-  }
-
-  h1{
-    font-size:clamp(1.55rem,8vw,2.3rem);
-    line-height:1.12;
-  }
-
-  h2{
-    font-size:clamp(1.3rem,6vw,1.8rem);
-  }
-
-  h3{
-    font-size:1.1rem;
-  }
-
-  button,
-  .btn,
-  .button{
-    max-width:100%;
-  }
-}
-
-/* Phones / large phones */
-@media(min-width:481px) and (max-width:767px){
-
-  .container,
-  .wrapper,
-  .content,
-  .page-container{
-    width:calc(100% - 28px);
-  }
-
-  .jobs-grid,
-  .job-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-}
-
-/* Tablet */
-@media(min-width:768px) and (max-width:1023px){
-
-  .container,
-  .wrapper,
-  .content,
-  .page-container{
-    width:min(940px,calc(100% - 40px));
-  }
-
-  .jobs-grid,
-  .job-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-}
-
-/* Desktop */
-@media(min-width:1024px){
-
-  .container,
-  .wrapper,
-  .content,
-  .page-container{
-    width:min(1400px,calc(100% - 48px));
-  }
-
-  .jobs-grid,
-  .job-grid{
-    grid-template-columns:repeat(3,minmax(0,1fr));
-  }
-}
-
-/* Large desktop */
-@media(min-width:1440px){
-
-  .container,
-  .wrapper,
-  .content,
-  .page-container{
-    width:min(1500px,calc(100% - 64px));
-  }
-
-  .jobs-grid,
-  .job-grid{
-    grid-template-columns:repeat(4,minmax(0,1fr));
-  }
-}
-
-/* Ultra-wide screens */
-@media(min-width:1800px){
-
-  .container,
-  .wrapper,
-  .content,
-  .page-container{
-    width:min(1650px,calc(100% - 80px));
-  }
-}
-
-/* Mobile navigation compatibility.
-   Existing hamburger/menu systems are preserved. */
-@media(max-width:767px){
-
-  .desktop-only,
-  [data-desktop-only]{
-    display:none !important;
-  }
-
-  .mobile-only,
-  [data-mobile-only]{
-    display:block;
-  }
-
-  .nav-toggle,
-  .menu-toggle,
-  .hamburger,
-  [aria-label*="menu" i],
-  [aria-label*="navigation" i]{
-    max-width:52px;
-  }
-
-  header,
-  .site-header,
-  .navbar{
-    width:100%;
-    max-width:100%;
-  }
-}
-
-/* Desktop */
-@media(min-width:768px){
-
-  .mobile-only,
-  [data-mobile-only]{
-    display:none;
-  }
-}
-
-/* Accessibility */
-@media(prefers-reduced-motion:reduce){
-  *,
-  *::before,
-  *::after{
-    animation-duration:.01ms !important;
-    animation-iteration-count:1 !important;
-    transition-duration:.01ms !important;
-    scroll-behavior:auto !important;
-  }
-}
-
-/* Prevent common blank/overflow rendering problems */
-[style*="width:100vw"]{
-  max-width:100% !important;
+picture{
+ display:block;
+ max-width:100%;
 }
 
 iframe{
-  border:0;
+ border:0;
 }
 
-/* Safe media containers */
-picture{
-  display:block;
-  max-width:100%;
-}
-
-/* Existing no-blank layer stays compatible */
 .goo-scroll-loader{
-  width:100%;
-  min-height:1px;
-  clear:both;
+ width:100%;
+ min-height:1px;
+ clear:both;
+}
+
+@media(max-width:480px){
+ .container,.wrapper,.content,.page-container{
+  width:calc(100% - 20px);
+ }
+ .jobs-grid,.job-grid{
+  grid-template-columns:1fr;
+  gap:12px;
+ }
+ h1{
+  font-size:clamp(1.5rem,8vw,2.25rem);
+  line-height:1.12;
+ }
+ h2{
+  font-size:clamp(1.3rem,6vw,1.8rem);
+ }
+}
+
+@media(min-width:481px) and (max-width:767px){
+ .container,.wrapper,.content,.page-container{
+  width:calc(100% - 28px);
+ }
+ .jobs-grid,.job-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+ }
+}
+
+@media(min-width:768px) and (max-width:1023px){
+ .container,.wrapper,.content,.page-container{
+  width:min(940px,calc(100% - 40px));
+ }
+ .jobs-grid,.job-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+ }
+}
+
+@media(min-width:1024px){
+ .container,.wrapper,.content,.page-container{
+  width:min(1400px,calc(100% - 48px));
+ }
+ .jobs-grid,.job-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+ }
+}
+
+@media(min-width:1440px){
+ .container,.wrapper,.content,.page-container{
+  width:min(1500px,calc(100% - 64px));
+ }
+ .jobs-grid,.job-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+ }
+}
+
+@media(min-width:1800px){
+ .container,.wrapper,.content,.page-container{
+  width:min(1650px,calc(100% - 80px));
+ }
+}
+
+@media(max-width:767px){
+ .desktop-only,[data-desktop-only]{
+  display:none!important;
+ }
+}
+
+@media(min-width:768px){
+ .mobile-only,[data-mobile-only]{
+  display:none!important;
+ }
+}
+
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{
+  animation-duration:.01ms!important;
+  animation-iteration-count:1!important;
+  transition-duration:.01ms!important;
+  scroll-behavior:auto!important;
+ }
 }

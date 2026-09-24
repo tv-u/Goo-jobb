@@ -447,9 +447,10 @@ input:focus,select:focus{
 <script>
 window.GOO_JOBB_CONFIG={
   site:"https://tv-u.github.io/Goo-jobb",
-  jobs:"./jobs-worldwide.json",
-  enterprise:"./jobs-worldwide.json",
-  searchIndex:"./jobs-worldwide.json",
+  jobs:"https://feashliaa.github.io/job-board-data/data/chunks/jobs_manifest.json",
+  enterprise:"https://feashliaa.github.io/job-board-data/data/chunks/jobs_manifest.json",
+  searchIndex:"https://feashliaa.github.io/job-board-data/data/chunks/jobs_manifest.json",
+  liveData:"https://feashliaa.github.io/job-board-data/data/chunks/",
   sitemap:"./sitemap.xml",
   jobPages:"./jobs/"
 };
@@ -1012,64 +1013,541 @@ $("alertBtn").onclick=()=>{
 
 async function boot(){
 
- try{
+  const DATA_ROOT =
+    "https://feashliaa.github.io/job-board-data/data/chunks/";
 
-  const r=await fetch(
-   "./jobs-worldwide.json",
-   {cache:"no-store"}
-  );
+  const MANIFEST_URL =
+    DATA_ROOT + "jobs_manifest.json";
 
-  if(!r.ok)
-   throw new Error("dataset");
+  const CHUNK_SIZE = 25000;
 
-  jobs=await r.json();
+  let loadedChunks = 0;
+  let loading = false;
 
-  if(!Array.isArray(jobs))
-   throw new Error("invalid");
+  function normalizeJob(j,i){
 
-  jobs.forEach((j,i)=>{
-   if(!j.id)
-    j.id=`job-${i+1}`;
-  });
+    if(!j || typeof j!=="object")
+      return null;
 
-  $("total").textContent=
-   jobs.length.toLocaleString();
+    const location =
+      j.location ||
+      j.locationName ||
+      j.location_name ||
+      "Worldwide";
 
-  $("companies").textContent=
-   new Set(
-    jobs.map(j=>j.company).filter(Boolean)
-   ).size.toLocaleString();
+    const title =
+      j.title ||
+      j.jobTitle ||
+      j.name ||
+      "Untitled Job";
 
-  $("categories").textContent=
-   new Set(
-    jobs.map(j=>j.category).filter(Boolean)
-   ).size.toLocaleString();
+    const company =
+      j.company ||
+      j.company_name ||
+      j.companyName ||
+      "Unknown Company";
 
-  $("locations").textContent=
-   new Set(
-    jobs.map(j=>j.location).filter(Boolean)
-   ).size.toLocaleString();
+    const url =
+      j.url ||
+      j.absolute_url ||
+      j.absoluteUrl ||
+      j.applyUrl ||
+      j.apply_url ||
+      "#";
 
-  $("sources").textContent=
-   new Set(
-    jobs.map(j=>j.source).filter(Boolean)
-   ).size.toLocaleString();
+    const text = [
+      title,
+      location,
+      j.description || "",
+      j.workplaceType || "",
+      j.workplace_type || ""
+    ].join(" ");
 
-  populate("category",unique("category"));
-  populate("type",unique("employmentType"));
-  populate("experience",unique("experience"));
-  populate("source",unique("source"));
+    return {
+      ...j,
 
-  applyFilters();
+      id:
+        String(
+          j.id ||
+          j.job_id ||
+          j.jobId ||
+          ("goo-live-"+i)
+        ),
 
- }catch(e){
+      title,
+      company,
+      location,
 
-  $("jobs").innerHTML=
-   `<div class="empty">
-    Real job dataset unavailable.
-    Please refresh after the next repository sync.
-   </div>`;
- }
+      description:
+        j.description ||
+        j.summary ||
+        "",
+
+      url,
+
+      applyUrl:
+        j.applyUrl ||
+        j.apply_url ||
+        url,
+
+      source:
+        j.source ||
+        j.ats ||
+        j.platform ||
+        "Public ATS",
+
+      sourceUrl:
+        j.sourceUrl ||
+        url,
+
+      category:
+        j.category ||
+        j.department ||
+        j.ats ||
+        "Other",
+
+      employmentType:
+        j.employmentType ||
+        j.employment_type ||
+        j.type ||
+        "",
+
+      experience:
+        j.experience ||
+        j.skill_level ||
+        j.skillLevel ||
+        "",
+
+      postedAt:
+        j.postedAt ||
+        j.posted_at ||
+        j.published_at ||
+        j.updated_at ||
+        j.scraped_at ||
+        "",
+
+      remote:
+        Boolean(
+          j.remote ||
+          j.isRemote ||
+          j.is_remote ||
+          /remote/i.test(text)
+        )
+    };
+  }
+
+  function normalizePayload(payload){
+
+    if(Array.isArray(payload))
+      return payload;
+
+    if(
+      payload &&
+      Array.isArray(payload.jobs)
+    )
+      return payload.jobs;
+
+    if(
+      payload &&
+      Array.isArray(payload.data)
+    )
+      return payload.data;
+
+    if(
+      payload &&
+      Array.isArray(payload.results)
+    )
+      return payload.results;
+
+    return [];
+  }
+
+  async function getJSON(url){
+
+    const r =
+      await fetch(
+        url + "?v=" + Date.now(),
+        {
+          cache:"no-store",
+          mode:"cors"
+        }
+      );
+
+    if(!r.ok)
+      throw new Error(
+        "HTTP "+r.status+" "+url
+      );
+
+    return r.json();
+  }
+
+  async function getGzip(url){
+
+    const r =
+      await fetch(
+        url + "?v=" + Date.now(),
+        {
+          cache:"no-store",
+          mode:"cors"
+        }
+      );
+
+    if(!r.ok)
+      throw new Error(
+        "HTTP "+r.status+" "+url
+      );
+
+    /*
+     * GitHub Pages serves the .gz file as a gzip
+     * asset. DecompressionStream is supported by
+     * modern Chrome/Android browsers.
+     */
+
+    if(
+      typeof DecompressionStream !==
+      "undefined"
+    ){
+
+      const stream =
+        r.body.pipeThrough(
+          new DecompressionStream("gzip")
+        );
+
+      return JSON.parse(
+        await new Response(stream).text()
+      );
+
+    }
+
+    /*
+     * Fallback for browsers that cannot use
+     * DecompressionStream.
+     */
+
+    const buffer =
+      await r.arrayBuffer();
+
+    const bytes =
+      new Uint8Array(buffer);
+
+    /*
+     * The main production path is modern browsers.
+     * Do not attempt to load a 1.4M dataset through
+     * an unbounded JS decompressor fallback.
+     */
+
+    throw new Error(
+      "This browser does not support gzip streaming."
+    );
+  }
+
+  function updateStats(){
+
+    if($("total"))
+      $("total").textContent =
+        jobs.length.toLocaleString();
+
+    if($("companies"))
+      $("companies").textContent =
+        new Set(
+          jobs
+            .map(j=>j.company)
+            .filter(Boolean)
+        ).size.toLocaleString();
+
+    if($("categories"))
+      $("categories").textContent =
+        new Set(
+          jobs
+            .map(j=>j.category)
+            .filter(Boolean)
+        ).size.toLocaleString();
+
+    if($("locations"))
+      $("locations").textContent =
+        new Set(
+          jobs
+            .map(j=>j.location)
+            .filter(Boolean)
+        ).size.toLocaleString();
+
+    if($("sources"))
+      $("sources").textContent =
+        new Set(
+          jobs
+            .map(j=>j.source)
+            .filter(Boolean)
+        ).size.toLocaleString();
+  }
+
+  async function loadChunk(filename){
+
+    const payload =
+      await getGzip(
+        DATA_ROOT +
+        encodeURIComponent(filename)
+      );
+
+    const list =
+      normalizePayload(payload);
+
+    if(!list.length)
+      return 0;
+
+    const base =
+      jobs.length;
+
+    for(let i=0;i<list.length;i++){
+
+      const normalized =
+        normalizeJob(
+          list[i],
+          base+i
+        );
+
+      if(normalized)
+        jobs.push(normalized);
+    }
+
+    return list.length;
+  }
+
+  async function backgroundLoad(
+    filenames,
+    startIndex
+  ){
+
+    if(loading)
+      return;
+
+    loading=true;
+
+    try{
+
+      for(
+        let i=startIndex;
+        i<filenames.length;
+        i++
+      ){
+
+        try{
+
+          await loadChunk(
+            filenames[i]
+          );
+
+          loadedChunks++;
+
+          updateStats();
+
+          /*
+           * Re-apply current filters so search results
+           * progressively become complete.
+           */
+
+          applyFilters();
+
+        }catch(e){
+
+          console.warn(
+            "Chunk failed:",
+            filenames[i],
+            e
+          );
+
+        }
+
+        /*
+         * Give Android browser UI time to breathe.
+         */
+
+        await new Promise(
+          resolve=>setTimeout(resolve,0)
+        );
+      }
+
+      console.log(
+        "GOO-JOBB COMPLETE REAL DATA:",
+        jobs.length.toLocaleString()
+      );
+
+      updateStats();
+      applyFilters();
+
+    }finally{
+
+      loading=false;
+
+    }
+  }
+
+  try{
+
+    /*
+     * Manifest currently contains the real aggregator
+     * chunk inventory. It is external so the main
+     * GOO-JOBB repository remains small.
+     */
+
+    const manifest =
+      await getJSON(MANIFEST_URL);
+
+    if(
+      !manifest ||
+      !Array.isArray(manifest.chunks) ||
+      !manifest.chunks.length
+    ){
+      throw new Error(
+        "Live aggregator manifest invalid"
+      );
+    }
+
+    const filenames =
+      manifest.chunks.map(
+        x =>
+          typeof x==="string"
+          ? x
+          : x.file
+      ).filter(Boolean);
+
+    /*
+     * IMPORTANT:
+     * Use the real total immediately rather than waiting
+     * for 58 chunks before the UI can show the count.
+     */
+
+    const announcedTotal =
+      Number(
+        manifest.totalJobs ||
+        0
+      );
+
+    if($("total") && announcedTotal){
+      $("total").textContent =
+        announcedTotal.toLocaleString();
+    }
+
+    /*
+     * Load the first chunk immediately.
+     * This makes real jobs appear quickly.
+     */
+
+    await loadChunk(
+      filenames[0]
+    );
+
+    loadedChunks=1;
+
+    updateStats();
+
+    populate(
+      "category",
+      unique("category")
+    );
+
+    populate(
+      "type",
+      unique("employmentType")
+    );
+
+    populate(
+      "experience",
+      unique("experience")
+    );
+
+    populate(
+      "source",
+      unique("source")
+    );
+
+    applyFilters();
+
+    /*
+     * Load every remaining real chunk in background.
+     *
+     * The data source currently contains:
+     * 1,445,142 real jobs across 58 chunks.
+     *
+     * The exact number is always taken from the
+     * live manifest, never hard-coded.
+     */
+
+    backgroundLoad(
+      filenames,
+      1
+    );
+
+  }catch(e){
+
+    console.error(
+      "GOO-JOBB LIVE AGGREGATOR ERROR:",
+      e
+    );
+
+    /*
+     * Fallback to existing repository data.
+     * Current repository dataset is an object with
+     * a jobs[] property.
+     */
+
+    try{
+
+      const fallback =
+        await getJSON(
+          "./jobs-worldwide.json"
+        );
+
+      const list =
+        normalizePayload(
+          fallback
+        );
+
+      jobs =
+        list
+          .map(normalizeJob)
+          .filter(Boolean);
+
+      updateStats();
+
+      populate(
+        "category",
+        unique("category")
+      );
+
+      populate(
+        "type",
+        unique("employmentType")
+      );
+
+      populate(
+        "experience",
+        unique("experience")
+      );
+
+      populate(
+        "source",
+        unique("source")
+      );
+
+      applyFilters();
+
+    }catch(fallbackError){
+
+      console.error(
+        "GOO-JOBB fallback error:",
+        fallbackError
+      );
+
+      $("jobs").innerHTML =
+        `<div class="empty">
+          <strong>Real job data connection failed.</strong>
+          <br><br>
+          Please refresh the page.
+        </div>`;
+
+    }
+
+  }
 }
 
 boot();

@@ -1,0 +1,53 @@
+name: GOO-JOBB Live Data Health
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-live-data:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Verify live aggregator manifest
+        run: |
+          set -e
+
+          URL="https://feashliaa.github.io/job-board-data/data/chunks/jobs_manifest.json"
+
+          echo "Checking:"
+          echo "$URL"
+
+          curl \
+            --fail \
+            --location \
+            --silent \
+            --show-error \
+            "$URL" \
+            -o /tmp/manifest.json
+
+          python - <<'PY'
+          import json
+
+          with open("/tmp/manifest.json") as f:
+              data=json.load(f)
+
+          chunks=data.get("chunks", [])
+          total=int(data.get("totalJobs", 0))
+
+          print("LIVE CHUNKS:", len(chunks))
+          print("LIVE JOBS:", f"{total:,}")
+
+          if not chunks:
+              raise SystemExit("No live chunks")
+
+          if total <= 0:
+              raise SystemExit("Live job count is zero")
+
+          print("GOO-JOBB LIVE DATA: HEALTHY")
+          PY

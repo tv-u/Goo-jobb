@@ -1,16 +1,16 @@
-/* GOO-JOBB MOBILE RESPONSIVE SYSTEM */
+/* GOO JOBB — MOBILE SCREEN FIT */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-}
-
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 img,
@@ -18,155 +18,249 @@ svg,
 video,
 canvas,
 iframe {
-    max-width: 100%;
+  max-width: 100% !important;
 }
 
 img,
 video,
 canvas {
-    height: auto;
+  height: auto;
 }
 
 iframe {
-    border: 0;
+  width: 100%;
+  border: 0;
 }
 
+button,
 input,
 select,
-textarea,
-button {
-    max-width: 100%;
+textarea {
+  max-width: 100%;
+  min-width: 0;
+  font: inherit;
 }
 
 input,
 select,
 textarea {
-    min-width: 0;
-}
-
-button {
-    touch-action: manipulation;
+  width: 100%;
 }
 
 a,
 button,
 input,
 select,
-textarea {
-    overflow-wrap: anywhere;
+textarea,
+.card,
+.job-card,
+.company-card,
+.category-card,
+.feature-card {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
-table {
-    max-width: 100%;
+pre,
+code {
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 @media (max-width: 900px) {
 
-    .jobs-grid,
-    .job-grid,
-    .companies-grid,
-    .company-grid,
-    .categories-grid,
-    .category-grid,
-    .featured-jobs-grid,
-    .latest-jobs-grid {
-        grid-template-columns: 1fr !important;
-    }
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
 
-    .two-column,
-    .two-col,
-    .content-grid,
-    .main-grid {
-        grid-template-columns: 1fr !important;
-    }
+  main,
+  header,
+  footer,
+  nav,
+  section,
+  article,
+  aside,
+  .container,
+  .wrapper,
+  .content,
+  .page {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
 
-    .search-row,
-    .search-bar,
-    .filter-row,
-    .filters-row {
-        flex-wrap: wrap !important;
-    }
+  .container,
+  .wrapper {
+    width: 100% !important;
+  }
+
+  .jobs-grid,
+  .job-grid,
+  .companies-grid,
+  .company-grid,
+  .categories-grid,
+  .category-grid,
+  .featured-jobs-grid,
+  .latest-jobs-grid,
+  .features-grid,
+  .feature-grid,
+  .stats-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .two-column,
+  .two-col,
+  .content-sidebar,
+  .main-sidebar,
+  .split-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .search-row,
+  .filter-row,
+  .filters-row,
+  .hero-search,
+  .search-box,
+  .toolbar,
+  .actions-row {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-wrap: wrap !important;
+  }
+
+  .search-row > *,
+  .filter-row > *,
+  .filters-row > *,
+  .hero-search > *,
+  .search-box > *,
+  .toolbar > *,
+  .actions-row > * {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .card,
+  .job-card,
+  .company-card,
+  .category-card,
+  .feature-card,
+  .stat-card,
+  .testimonial-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .hero,
+  .hero-section,
+  .hero-content,
+  .section,
+  .section-inner,
+  .footer,
+  .footer-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .nav-links {
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 9vw, 3.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 7vw, 2.5rem);
+  }
+
+  .table-wrapper,
+  .table-responsive,
+  .overflow-table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 
-    .container,
-    .container-fluid,
-    .section-container {
-        width: 100%;
-        max-width: 100%;
-    }
+  body {
+    font-size: 15px;
+  }
 
-    .hero,
-    .hero-section {
-        max-width: 100%;
-        overflow: hidden;
-    }
+  section {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
 
-    .card,
-    .job-card,
-    .company-card,
-    .category-card {
-        min-width: 0;
-        max-width: 100%;
-    }
+  .container,
+  .wrapper {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
 
-    .search-row > *,
-    .search-bar > *,
-    .filter-row > *,
-    .filters-row > * {
-        min-width: 0;
-        max-width: 100%;
-    }
+  .jobs-grid,
+  .job-grid,
+  .companies-grid,
+  .company-grid,
+  .categories-grid,
+  .category-grid,
+  .featured-jobs-grid,
+  .latest-jobs-grid,
+  .features-grid,
+  .feature-grid {
+    gap: 12px !important;
+  }
 
-    table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-}
+  .card,
+  .job-card,
+  .company-card,
+  .category-card,
+  .feature-card {
+    padding: 14px !important;
+  }
 
-@media (max-width: 520px) {
-
-    h1 {
-        font-size: clamp(1.8rem, 8vw, 2.5rem);
-    }
-
-    h2 {
-        font-size: clamp(1.45rem, 6vw, 2rem);
-    }
-
-    button,
-    .btn {
-        min-height: 44px;
-    }
-
-    .search-row,
-    .search-bar,
-    .filter-row,
-    .filters-row {
-        width: 100%;
-    }
-
-    .search-row input,
-    .search-row select,
-    .search-row button,
-    .search-bar input,
-    .search-bar select,
-    .search-bar button {
-        width: 100%;
-        max-width: 100%;
-    }
+  button,
+  input,
+  select,
+  textarea,
+  .btn {
+    max-width: 100% !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

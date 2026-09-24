@@ -1,0 +1,68 @@
+/* GOO-JOBB PERFORMANCE SAFE LAYER
+   Progressive real-job rendering.
+   No fake jobs. No content-visibility. No forced hidden content.
+*/
+
+html{
+  scroll-behavior:auto;
+  overflow-x:hidden;
+}
+
+body{
+  overflow-x:hidden;
+  overscroll-behavior-x:none;
+}
+
+img,video,iframe{
+  max-width:100%;
+}
+
+img{
+  content-visibility:visible;
+}
+
+.jobs-grid,
+.job-grid,
+.jobs-list,
+#jobs,
+#job-list,
+#jobs-list,
+#results,
+#jobResults,
+[data-jobs],
+[data-job-list]{
+  min-height:1px;
+  contain:layout style;
+}
+
+.job-card,
+.job-item,
+.job-result,
+.job-result-card,
+[data-job-card]{
+  min-width:0;
+  contain:layout style;
+  overflow-wrap:anywhere;
+}
+
+.goo-performance-loader{
+  width:100%;
+  min-height:1px;
+  clear:both;
+  contain:layout;
+}
+
+.goo-performance-status{
+  min-height:1px;
+  width:100%;
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+}

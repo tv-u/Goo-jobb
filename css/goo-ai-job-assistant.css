@@ -1,0 +1,173 @@
+#goo-ai-launch{
+position:fixed;
+right:18px;
+bottom:22px;
+z-index:99999;
+border:1px solid rgba(0,255,136,.55);
+border-radius:999px;
+padding:12px 18px;
+background:#10151a;
+color:#00ff88;
+font-weight:900;
+font-size:14px;
+box-shadow:0 10px 35px rgba(0,0,0,.45);
+cursor:pointer;
+}
+
+#goo-ai-launch:hover{
+transform:translateY(-2px);
+}
+
+#goo-ai-panel{
+position:fixed;
+right:18px;
+bottom:78px;
+z-index:99998;
+width:min(420px,calc(100vw - 24px));
+max-height:78vh;
+display:none;
+overflow:hidden;
+border:1px solid #29313a;
+border-radius:24px;
+background:#0b0f14;
+color:#f5f7fa;
+box-shadow:0 25px 80px rgba(0,0,0,.65);
+}
+
+#goo-ai-panel.open{
+display:block;
+}
+
+.goo-ai-head{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:16px 18px;
+border-bottom:1px solid #252c34;
+}
+
+.goo-ai-head b{
+font-size:18px;
+color:#00ff88;
+}
+
+.goo-ai-head small{
+display:block;
+margin-top:3px;
+color:#8f9aa7;
+}
+
+#goo-ai-close{
+border:0;
+background:transparent;
+color:#fff;
+font-size:25px;
+cursor:pointer;
+}
+
+.goo-ai-body{
+padding:18px;
+overflow:auto;
+max-height:calc(78vh - 70px);
+}
+
+.goo-ai-note{
+padding:11px 13px;
+border:1px solid #29313a;
+border-radius:14px;
+color:#9da8b5;
+font-size:13px;
+line-height:1.5;
+}
+
+.goo-ai-body label{
+display:block;
+margin:16px 0 8px;
+font-weight:800;
+}
+
+#goo-ai-profile{
+width:100%;
+min-height:100px;
+resize:vertical;
+padding:13px;
+border:1px solid #303944;
+border-radius:15px;
+background:#11161d;
+color:#fff;
+outline:none;
+font:inherit;
+}
+
+#goo-ai-profile:focus{
+border-color:#00ff88;
+}
+
+#goo-ai-analyze{
+width:100%;
+margin-top:10px;
+padding:13px 16px;
+border:0;
+border-radius:999px;
+background:#00ff88;
+color:#06110b;
+font-weight:900;
+cursor:pointer;
+}
+
+.goo-ai-card{
+margin-top:13px;
+padding:14px;
+border:1px solid #29313a;
+border-radius:16px;
+background:#11161d;
+}
+
+.goo-ai-card p{
+color:#9da8b5;
+font-size:13px;
+line-height:1.55;
+}
+
+.goo-ai-job{
+padding:12px 0;
+border-top:1px solid #252c34;
+}
+
+.goo-ai-job:first-of-type{
+border-top:0;
+}
+
+.goo-ai-job b{
+display:block;
+line-height:1.4;
+}
+
+.goo-ai-job span{
+display:inline-block;
+margin-top:5px;
+font-size:12px;
+color:#00ff88;
+}
+
+.goo-ai-job a{
+display:inline-block;
+margin-top:7px;
+color:#ffdd00;
+font-size:13px;
+font-weight:800;
+text-decoration:none;
+}
+
+@media(max-width:600px){
+#goo-ai-launch{
+right:12px;
+bottom:14px;
+}
+
+#goo-ai-panel{
+right:12px;
+bottom:68px;
+width:calc(100vw - 24px);
+}
+}

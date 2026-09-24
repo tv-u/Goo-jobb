@@ -1,0 +1,82 @@
+/* GOO-JOBB × Adsterra
+   Non-intrusive SmartLink UI.
+   No fixed overlay.
+   No forced popup.
+   No horizontal overflow.
+*/
+
+#goo-adsterra-smartlink {
+  width: 100%;
+  max-width: 100%;
+  margin: 24px auto;
+  box-sizing: border-box;
+  padding: 0;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+#goo-adsterra-smartlink .goo-adsterra-inner {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  background: rgba(255,255,255,.025);
+}
+
+#goo-adsterra-smartlink .goo-adsterra-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  opacity: .55;
+}
+
+#goo-adsterra-smartlink .goo-adsterra-text {
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: .78;
+}
+
+#goo-adsterra-smartlink .goo-adsterra-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  #goo-adsterra-smartlink {
+    margin: 16px auto;
+  }
+
+  #goo-adsterra-smartlink .goo-adsterra-inner {
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 14px;
+  }
+
+  #goo-adsterra-smartlink .goo-adsterra-text {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #goo-adsterra-smartlink * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

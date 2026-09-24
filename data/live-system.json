@@ -1,0 +1,14 @@
+{
+  "system": "GOO-JOBB Live Aggregation Engine",
+  "version": "3.0.0",
+  "authentication": false,
+  "apiKeysRequired": false,
+  "publicFeedsOnly": true,
+  "originalApplyLinks": true,
+  "sourceAttribution": true,
+  "existingJobsPreserved": true,
+  "sourceFailureProtection": true,
+  "deduplication": true,
+  "progressiveLoading": true,
+  "generatedBy": "scripts/sync-jobs.py"
+}

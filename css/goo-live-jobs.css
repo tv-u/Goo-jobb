@@ -1,0 +1,76 @@
+.goo-live-job {
+  position: relative;
+}
+
+.goo-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.goo-live-badge::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.goo-source-attribution {
+  font-size: 11px;
+  opacity: .72;
+}
+
+.goo-source-attribution a {
+  text-decoration: underline;
+}
+
+.goo-live-health {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(120px, 1fr)
+    );
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.goo-live-health-card {
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.goo-live-health-number {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.goo-live-health-label {
+  font-size: 11px;
+  opacity: .7;
+}
+
+.goo-language-option {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  padding: 9px 13px;
+  border-radius: 999px;
+  font: inherit;
+  background: transparent;
+}
+
+.goo-language-option:hover {
+  transform: translateY(-1px);
+}
+
+.goo-language-option[aria-current="true"] {
+  font-weight: 800;
+}

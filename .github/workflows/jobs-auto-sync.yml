@@ -1,0 +1,174 @@
+name: GOO-JOBB Live Jobs Auto Sync
+
+on:
+  schedule:
+    - cron: "17 1,7,13,19 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: goo-jobb-live-sync
+  cancel-in-progress: true
+
+jobs:
+
+  sync:
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 15
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Sync public feeds
+        run: |
+          set -Eeuo pipefail
+          python3 scripts/sync-jobs.py
+
+      - name: Validate generated dataset
+        run: |
+          set -Eeuo pipefail
+
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          required = [
+              "data/live-jobs.json",
+              "data/job-source-health.json",
+              "data/job-sources.json",
+              "data/languages.json"
+          ]
+
+          for filename in required:
+              path = Path(filename)
+
+              if not path.exists():
+                  raise SystemExit(
+                      f"Missing: {filename}"
+                  )
+
+              json.loads(
+                  path.read_text(
+                      encoding="utf-8"
+                  )
+              )
+
+          data = json.loads(
+              Path(
+                  "data/live-jobs.json"
+              ).read_text(
+                  encoding="utf-8"
+              )
+          )
+
+          jobs = data.get(
+              "jobs"
+          )
+
+          if not isinstance(
+              jobs,
+              list
+          ):
+              raise SystemExit(
+                  "Invalid jobs array"
+              )
+
+          for index, job in enumerate(
+              jobs
+          ):
+
+              if not job.get(
+                  "title"
+              ):
+                  raise SystemExit(
+                      f"Job {index}: title missing"
+                  )
+
+              if not job.get(
+                  "url"
+              ):
+                  raise SystemExit(
+                      f"Job {index}: URL missing"
+                  )
+
+          if (
+              data.get(
+                  "sourceCount",
+                  0
+              ) > 0
+              and data.get(
+                  "healthySources",
+                  0
+              ) == 0
+          ):
+              raise SystemExit(
+                  "ALL SOURCES FAILED"
+              )
+
+          print(
+              "Jobs:",
+              data.get(
+                  "jobCount",
+                  0
+              )
+          )
+
+          print(
+              "Healthy:",
+              data.get(
+                  "healthySources",
+                  0
+              )
+          )
+
+          print(
+              "Failed:",
+              data.get(
+                  "failedSources",
+                  0
+              )
+          )
+          PY
+
+      - name: Validate Python
+        run: |
+          set -Eeuo pipefail
+          python3 -m py_compile \
+            scripts/sync-jobs.py
+
+      - name: Commit live dataset
+        run: |
+          set -Eeuo pipefail
+
+          git config user.name \
+            "GOO-JOBB Auto Sync"
+
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add \
+            data/live-jobs.json \
+            data/job-source-health.json
+
+          if git diff --cached --quiet; then
+            echo "No live dataset changes"
+            exit 0
+          fi
+
+          git commit \
+            -m "chore: sync live jobs"
+
+          git push origin HEAD:main

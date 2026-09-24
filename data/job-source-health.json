@@ -1,0 +1,219 @@
+{
+  "version": "3.0.0",
+  "generatedAt": "2026-09-24T22:34:08.979343+00:00",
+  "sourceCount": 20,
+  "healthySources": 17,
+  "failedSources": 3,
+  "networkGroups": [
+    "arbeitnow",
+    "himalayas",
+    "jobicy",
+    "remoteok",
+    "wwr"
+  ],
+  "sources": [
+    {
+      "id": "remoteok-json",
+      "source": "Remote OK",
+      "networkGroup": "remoteok",
+      "url": "https://remoteok.com/api",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 99,
+      "durationMs": 2722
+    },
+    {
+      "id": "remoteok-rss",
+      "source": "Remote OK RSS",
+      "networkGroup": "remoteok",
+      "url": "https://remoteok.com/remote-jobs.rss",
+      "ok": false,
+      "httpStatus": null,
+      "count": 0,
+      "durationMs": 1388,
+      "error": "HTTP Error 410: Gone"
+    },
+    {
+      "id": "wwr-all",
+      "source": "We Work Remotely",
+      "networkGroup": "wwr",
+      "url": "https://weworkremotely.com/remote-jobs.rss",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 84,
+      "durationMs": 1808
+    },
+    {
+      "id": "wwr-programming",
+      "source": "WWR Programming",
+      "networkGroup": "wwr",
+      "url": "https://weworkremotely.com/categories/remote-programming-jobs.rss",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 25,
+      "durationMs": 837
+    },
+    {
+      "id": "wwr-fullstack",
+      "source": "WWR Full Stack",
+      "networkGroup": "wwr",
+      "url": "https://weworkremotely.com/categories/remote-full-stack-programming-jobs.rss",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 44,
+      "durationMs": 1093
+    },
+    {
+      "id": "wwr-backend",
+      "source": "WWR Back End",
+      "networkGroup": "wwr",
+      "url": "https://weworkremotely.com/categories/remote-back-end-programming-jobs.rss",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 6,
+      "durationMs": 529
+    },
+    {
+      "id": "wwr-frontend",
+      "source": "WWR Front End",
+      "networkGroup": "wwr",
+      "url": "https://weworkremotely.com/categories/remote-front-end-programming-jobs.rss",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 0,
+      "durationMs": 562
+    },
+    {
+      "id": "wwr-devops",
+      "source": "WWR DevOps",
+      "networkGroup": "wwr",
+      "url": "https://weworkremotely.com/categories/remote-devops-sysadmin-jobs.rss",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 18,
+      "durationMs": 835
+    },
+    {
+      "id": "wwr-design",
+      "source": "WWR Design",
+      "networkGroup": "wwr",
+      "url": "https://weworkremotely.com/categories/remote-design-jobs.rss",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 9,
+      "durationMs": 675
+    },
+    {
+      "id": "wwr-support",
+      "source": "WWR Customer Support",
+      "networkGroup": "wwr",
+      "url": "https://weworkremotely.com/categories/remote-customer-support-jobs.rss",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 29,
+      "durationMs": 1550
+    },
+    {
+      "id": "wwr-sales",
+      "source": "WWR Sales Marketing",
+      "networkGroup": "wwr",
+      "url": "https://weworkremotely.com/categories/remote-sales-and-marketing-jobs.rss",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 72,
+      "durationMs": 1513
+    },
+    {
+      "id": "wwr-management",
+      "source": "WWR Management Finance",
+      "networkGroup": "wwr",
+      "url": "https://weworkremotely.com/categories/remote-management-and-finance-jobs.rss",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 16,
+      "durationMs": 723
+    },
+    {
+      "id": "wwr-product",
+      "source": "WWR Product",
+      "networkGroup": "wwr",
+      "url": "https://weworkremotely.com/categories/remote-product-jobs.rss",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 9,
+      "durationMs": 653
+    },
+    {
+      "id": "wwr-other",
+      "source": "WWR Other",
+      "networkGroup": "wwr",
+      "url": "https://weworkremotely.com/categories/all-other-remote-jobs.rss",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 55,
+      "durationMs": 1771
+    },
+    {
+      "id": "remotive",
+      "source": "Remotive",
+      "networkGroup": "remotive",
+      "url": "https://remotive.com/feed",
+      "ok": false,
+      "httpStatus": null,
+      "count": 0,
+      "durationMs": 308,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "arbeitnow",
+      "source": "Arbeitnow",
+      "networkGroup": "arbeitnow",
+      "url": "https://www.arbeitnow.com/api/job-board-api",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 250,
+      "durationMs": 1785
+    },
+    {
+      "id": "himalayas",
+      "source": "Himalayas",
+      "networkGroup": "himalayas",
+      "url": "https://himalayas.app/jobs/api",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 20,
+      "durationMs": 333
+    },
+    {
+      "id": "jobicy",
+      "source": "Jobicy",
+      "networkGroup": "jobicy",
+      "url": "https://jobicy.com/api/v2/remote-jobs",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 200,
+      "durationMs": 3964
+    },
+    {
+      "id": "workingnomads",
+      "source": "Working Nomads",
+      "networkGroup": "workingnomads",
+      "url": "https://www.workingnomads.com/jobs/rss",
+      "ok": false,
+      "httpStatus": null,
+      "count": 0,
+      "durationMs": 2874,
+      "error": "not well-formed (invalid token): line 10, column 18"
+    },
+    {
+      "id": "jobspresso",
+      "source": "Jobspresso",
+      "networkGroup": "jobspresso",
+      "url": "https://jobspresso.co/feed/",
+      "ok": true,
+      "httpStatus": 200,
+      "count": 0,
+      "durationMs": 730
+    }
+  ]
+}

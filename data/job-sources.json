@@ -1,0 +1,223 @@
+{
+  "version": "3.0.0",
+  "generatedAt": null,
+
+  "policy": {
+    "authentication": "none",
+    "onlyPublicFeeds": true,
+    "preserveExistingRealJobs": true,
+    "preserveOnSourceFailure": true,
+    "neverInventFields": true,
+    "neverInventSalary": true,
+    "neverInventDeadline": true,
+    "keepOriginalApplyUrl": true,
+    "keepSourceAttribution": true,
+    "deduplicate": true,
+    "maxAgeDays": 60,
+    "maxJobsPerSource": 10000
+  },
+
+  "sources": [
+
+    {
+      "id": "remoteok-json",
+      "networkGroup": "remoteok",
+      "name": "Remote OK",
+      "type": "json",
+      "url": "https://remoteok.com/api",
+      "enabled": true,
+      "attribution": "Remote OK"
+    },
+
+    {
+      "id": "remoteok-rss",
+      "networkGroup": "remoteok",
+      "name": "Remote OK RSS",
+      "type": "rss",
+      "url": "https://remoteok.com/remote-jobs.rss",
+      "enabled": true,
+      "attribution": "Remote OK"
+    },
+
+    {
+      "id": "wwr-all",
+      "networkGroup": "wwr",
+      "name": "We Work Remotely",
+      "type": "rss",
+      "url": "https://weworkremotely.com/remote-jobs.rss",
+      "enabled": true,
+      "attribution": "We Work Remotely"
+    },
+
+    {
+      "id": "wwr-programming",
+      "networkGroup": "wwr",
+      "name": "WWR Programming",
+      "type": "rss",
+      "url": "https://weworkremotely.com/categories/remote-programming-jobs.rss",
+      "enabled": true,
+      "attribution": "We Work Remotely"
+    },
+
+    {
+      "id": "wwr-fullstack",
+      "networkGroup": "wwr",
+      "name": "WWR Full Stack",
+      "type": "rss",
+      "url": "https://weworkremotely.com/categories/remote-full-stack-programming-jobs.rss",
+      "enabled": true,
+      "attribution": "We Work Remotely"
+    },
+
+    {
+      "id": "wwr-backend",
+      "networkGroup": "wwr",
+      "name": "WWR Back End",
+      "type": "rss",
+      "url": "https://weworkremotely.com/categories/remote-back-end-programming-jobs.rss",
+      "enabled": true,
+      "attribution": "We Work Remotely"
+    },
+
+    {
+      "id": "wwr-frontend",
+      "networkGroup": "wwr",
+      "name": "WWR Front End",
+      "type": "rss",
+      "url": "https://weworkremotely.com/categories/remote-front-end-programming-jobs.rss",
+      "enabled": true,
+      "attribution": "We Work Remotely"
+    },
+
+    {
+      "id": "wwr-devops",
+      "networkGroup": "wwr",
+      "name": "WWR DevOps",
+      "type": "rss",
+      "url": "https://weworkremotely.com/categories/remote-devops-sysadmin-jobs.rss",
+      "enabled": true,
+      "attribution": "We Work Remotely"
+    },
+
+    {
+      "id": "wwr-design",
+      "networkGroup": "wwr",
+      "name": "WWR Design",
+      "type": "rss",
+      "url": "https://weworkremotely.com/categories/remote-design-jobs.rss",
+      "enabled": true,
+      "attribution": "We Work Remotely"
+    },
+
+    {
+      "id": "wwr-support",
+      "networkGroup": "wwr",
+      "name": "WWR Customer Support",
+      "type": "rss",
+      "url": "https://weworkremotely.com/categories/remote-customer-support-jobs.rss",
+      "enabled": true,
+      "attribution": "We Work Remotely"
+    },
+
+    {
+      "id": "wwr-sales",
+      "networkGroup": "wwr",
+      "name": "WWR Sales Marketing",
+      "type": "rss",
+      "url": "https://weworkremotely.com/categories/remote-sales-and-marketing-jobs.rss",
+      "enabled": true,
+      "attribution": "We Work Remotely"
+    },
+
+    {
+      "id": "wwr-management",
+      "networkGroup": "wwr",
+      "name": "WWR Management Finance",
+      "type": "rss",
+      "url": "https://weworkremotely.com/categories/remote-management-and-finance-jobs.rss",
+      "enabled": true,
+      "attribution": "We Work Remotely"
+    },
+
+    {
+      "id": "wwr-product",
+      "networkGroup": "wwr",
+      "name": "WWR Product",
+      "type": "rss",
+      "url": "https://weworkremotely.com/categories/remote-product-jobs.rss",
+      "enabled": true,
+      "attribution": "We Work Remotely"
+    },
+
+    {
+      "id": "wwr-other",
+      "networkGroup": "wwr",
+      "name": "WWR Other",
+      "type": "rss",
+      "url": "https://weworkremotely.com/categories/all-other-remote-jobs.rss",
+      "enabled": true,
+      "attribution": "We Work Remotely"
+    },
+
+    {
+      "id": "remotive",
+      "networkGroup": "remotive",
+      "name": "Remotive",
+      "type": "rss",
+      "url": "https://remotive.com/feed",
+      "enabled": true,
+      "attribution": "Remotive"
+    },
+
+    {
+      "id": "arbeitnow",
+      "networkGroup": "arbeitnow",
+      "name": "Arbeitnow",
+      "type": "json",
+      "url": "https://www.arbeitnow.com/api/job-board-api",
+      "enabled": true,
+      "attribution": "Arbeitnow"
+    },
+
+    {
+      "id": "himalayas",
+      "networkGroup": "himalayas",
+      "name": "Himalayas",
+      "type": "json",
+      "url": "https://himalayas.app/jobs/api",
+      "enabled": true,
+      "attribution": "Himalayas"
+    },
+
+    {
+      "id": "jobicy",
+      "networkGroup": "jobicy",
+      "name": "Jobicy",
+      "type": "json",
+      "url": "https://jobicy.com/api/v2/remote-jobs",
+      "enabled": true,
+      "attribution": "Jobicy"
+    },
+
+    {
+      "id": "workingnomads",
+      "networkGroup": "workingnomads",
+      "name": "Working Nomads",
+      "type": "rss",
+      "url": "https://www.workingnomads.com/jobs/rss",
+      "enabled": true,
+      "attribution": "Working Nomads"
+    },
+
+    {
+      "id": "jobspresso",
+      "networkGroup": "jobspresso",
+      "name": "Jobspresso",
+      "type": "rss",
+      "url": "https://jobspresso.co/feed/",
+      "enabled": true,
+      "attribution": "Jobspresso"
+    }
+
+  ]
+}

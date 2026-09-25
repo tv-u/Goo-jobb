@@ -1,6 +1,6 @@
 {
   "version": "3.0.0",
-  "generatedAt": "2026-09-25T17:59:10.814545+00:00",
+  "generatedAt": "2026-09-25T22:28:22.905420+00:00",
   "sourceCount": 20,
   "healthySources": 17,
   "failedSources": 3,
@@ -20,7 +20,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 99,
-      "durationMs": 526
+      "durationMs": 697
     },
     {
       "id": "remoteok-rss",
@@ -30,7 +30,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 56,
+      "durationMs": 54,
       "error": "HTTP Error 410: Gone"
     },
     {
@@ -41,7 +41,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 81,
-      "durationMs": 584
+      "durationMs": 509
     },
     {
       "id": "wwr-programming",
@@ -51,7 +51,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 25,
-      "durationMs": 223
+      "durationMs": 256
     },
     {
       "id": "wwr-fullstack",
@@ -61,7 +61,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 40,
-      "durationMs": 230
+      "durationMs": 297
     },
     {
       "id": "wwr-backend",
@@ -71,7 +71,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 6,
-      "durationMs": 82
+      "durationMs": 191
     },
     {
       "id": "wwr-frontend",
@@ -81,7 +81,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 0,
-      "durationMs": 90
+      "durationMs": 75
     },
     {
       "id": "wwr-devops",
@@ -91,7 +91,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 16,
-      "durationMs": 125
+      "durationMs": 191
     },
     {
       "id": "wwr-design",
@@ -101,7 +101,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 7,
-      "durationMs": 117
+      "durationMs": 127
     },
     {
       "id": "wwr-support",
@@ -110,8 +110,8 @@
       "url": "https://weworkremotely.com/categories/remote-customer-support-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 30,
-      "durationMs": 213
+      "count": 29,
+      "durationMs": 172
     },
     {
       "id": "wwr-sales",
@@ -121,7 +121,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 78,
-      "durationMs": 337
+      "durationMs": 305
     },
     {
       "id": "wwr-management",
@@ -131,7 +131,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 16,
-      "durationMs": 130
+      "durationMs": 117
     },
     {
       "id": "wwr-product",
@@ -141,7 +141,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 8,
-      "durationMs": 104
+      "durationMs": 153
     },
     {
       "id": "wwr-other",
@@ -151,7 +151,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 54,
-      "durationMs": 273
+      "durationMs": 304
     },
     {
       "id": "remotive",
@@ -161,7 +161,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 222,
+      "durationMs": 1761,
       "error": "HTTP Error 404: Not Found"
     },
     {
@@ -172,7 +172,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 250,
-      "durationMs": 395
+      "durationMs": 571
     },
     {
       "id": "himalayas",
@@ -182,7 +182,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 20,
-      "durationMs": 183
+      "durationMs": 89
     },
     {
       "id": "jobicy",
@@ -192,7 +192,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 200,
-      "durationMs": 406
+      "durationMs": 277
     },
     {
       "id": "workingnomads",
@@ -202,7 +202,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 347,
+      "durationMs": 328,
       "error": "not well-formed (invalid token): line 10, column 18"
     },
     {
@@ -213,7 +213,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 0,
-      "durationMs": 68
+      "durationMs": 98
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "version": "3.0.0",
-  "generatedAt": "2026-09-29T14:08:13.534558+00:00",
+  "generatedAt": "2026-09-29T23:01:20.403177+00:00",
   "sourceCount": 20,
   "healthySources": 17,
   "failedSources": 3,
@@ -20,7 +20,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 99,
-      "durationMs": 634
+      "durationMs": 899
     },
     {
       "id": "remoteok-rss",
@@ -30,7 +30,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 615,
+      "durationMs": 143,
       "error": "HTTP Error 410: Gone"
     },
     {
@@ -40,8 +40,8 @@
       "url": "https://weworkremotely.com/remote-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 85,
-      "durationMs": 1220
+      "count": 89,
+      "durationMs": 1253
     },
     {
       "id": "wwr-programming",
@@ -51,7 +51,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 25,
-      "durationMs": 120
+      "durationMs": 224
     },
     {
       "id": "wwr-fullstack",
@@ -61,7 +61,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 40,
-      "durationMs": 252
+      "durationMs": 280
     },
     {
       "id": "wwr-backend",
@@ -71,7 +71,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 5,
-      "durationMs": 93
+      "durationMs": 370
     },
     {
       "id": "wwr-frontend",
@@ -80,8 +80,8 @@
       "url": "https://weworkremotely.com/categories/remote-front-end-programming-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 2,
-      "durationMs": 63
+      "count": 4,
+      "durationMs": 148
     },
     {
       "id": "wwr-devops",
@@ -91,7 +91,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 19,
-      "durationMs": 138
+      "durationMs": 296
     },
     {
       "id": "wwr-design",
@@ -100,8 +100,8 @@
       "url": "https://weworkremotely.com/categories/remote-design-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 11,
-      "durationMs": 109
+      "count": 16,
+      "durationMs": 196
     },
     {
       "id": "wwr-support",
@@ -110,8 +110,8 @@
       "url": "https://weworkremotely.com/categories/remote-customer-support-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 34,
-      "durationMs": 176
+      "count": 36,
+      "durationMs": 270
     },
     {
       "id": "wwr-sales",
@@ -121,7 +121,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 77,
-      "durationMs": 504
+      "durationMs": 760
     },
     {
       "id": "wwr-management",
@@ -131,7 +131,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 16,
-      "durationMs": 146
+      "durationMs": 186
     },
     {
       "id": "wwr-product",
@@ -140,8 +140,8 @@
       "url": "https://weworkremotely.com/categories/remote-product-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 8,
-      "durationMs": 455
+      "count": 13,
+      "durationMs": 722
     },
     {
       "id": "wwr-other",
@@ -151,7 +151,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 68,
-      "durationMs": 371
+      "durationMs": 523
     },
     {
       "id": "remotive",
@@ -161,7 +161,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 5213,
+      "durationMs": 391,
       "error": "HTTP Error 404: Not Found"
     },
     {
@@ -172,7 +172,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 326,
-      "durationMs": 364
+      "durationMs": 437
     },
     {
       "id": "himalayas",
@@ -182,7 +182,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 20,
-      "durationMs": 63
+      "durationMs": 218
     },
     {
       "id": "jobicy",
@@ -192,7 +192,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 200,
-      "durationMs": 430
+      "durationMs": 2501
     },
     {
       "id": "workingnomads",
@@ -202,7 +202,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 165,
+      "durationMs": 710,
       "error": "not well-formed (invalid token): line 10, column 18"
     },
     {
@@ -213,7 +213,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 0,
-      "durationMs": 51
+      "durationMs": 86
     }
   ]
 }

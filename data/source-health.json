@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T13:38:37.371535+00:00",
+  "updated_at": "2026-10-01T19:10:11.039563+00:00",
   "total_sources": 9,
   "live_sources": 8,
   "failed_sources": 1,
@@ -10,9 +10,9 @@
       "status": "LIVE",
       "http_status": 200,
       "jobs_seen": 326,
-      "jobs_added": 0,
-      "jobs_updated": 326,
-      "checked_at": "2026-10-01T13:38:34.325776+00:00"
+      "jobs_added": 175,
+      "jobs_updated": 151,
+      "checked_at": "2026-10-01T19:10:06.553382+00:00"
     },
     {
       "id": "remoteok",
@@ -20,9 +20,9 @@
       "status": "LIVE",
       "http_status": 200,
       "jobs_seen": 99,
-      "jobs_added": 0,
-      "jobs_updated": 99,
-      "checked_at": "2026-10-01T13:38:34.470681+00:00"
+      "jobs_added": 2,
+      "jobs_updated": 97,
+      "checked_at": "2026-10-01T19:10:06.686438+00:00"
     },
     {
       "id": "remotive",
@@ -32,7 +32,7 @@
       "jobs_seen": 16,
       "jobs_added": 0,
       "jobs_updated": 16,
-      "checked_at": "2026-10-01T13:38:35.094825+00:00"
+      "checked_at": "2026-10-01T19:10:07.245956+00:00"
     },
     {
       "id": "jobicy",
@@ -42,7 +42,7 @@
       "jobs_seen": 0,
       "jobs_added": 0,
       "jobs_updated": 0,
-      "checked_at": "2026-10-01T13:38:35.195037+00:00"
+      "checked_at": "2026-10-01T19:10:07.291037+00:00"
     },
     {
       "id": "himalayas",
@@ -52,17 +52,17 @@
       "jobs_seen": 0,
       "jobs_added": 0,
       "jobs_updated": 0,
-      "checked_at": "2026-10-01T13:38:35.355722+00:00"
+      "checked_at": "2026-10-01T19:10:07.422175+00:00"
     },
     {
       "id": "workingnomads",
       "name": "Working Nomads",
       "status": "LIVE",
       "http_status": 200,
-      "jobs_seen": 57,
-      "jobs_added": 0,
+      "jobs_seen": 59,
+      "jobs_added": 2,
       "jobs_updated": 57,
-      "checked_at": "2026-10-01T13:38:35.428579+00:00"
+      "checked_at": "2026-10-01T19:10:07.485262+00:00"
     },
     {
       "id": "remotejobs",
@@ -71,8 +71,8 @@
       "jobs_seen": 0,
       "jobs_added": 0,
       "jobs_updated": 0,
-      "error": "HTTP Error 403: Forbidden",
-      "checked_at": "2026-10-01T13:38:36.112530+00:00"
+      "error": "HTTP Error 404: Not Found",
+      "checked_at": "2026-10-01T19:10:09.373250+00:00"
     },
     {
       "id": "jobspresso",
@@ -82,7 +82,7 @@
       "jobs_seen": 0,
       "jobs_added": 0,
       "jobs_updated": 0,
-      "checked_at": "2026-10-01T13:38:36.221897+00:00"
+      "checked_at": "2026-10-01T19:10:09.842324+00:00"
     },
     {
       "id": "wwr",
@@ -90,9 +90,9 @@
       "status": "LIVE",
       "http_status": 200,
       "jobs_seen": 89,
-      "jobs_added": 0,
-      "jobs_updated": 89,
-      "checked_at": "2026-10-01T13:38:36.506869+00:00"
+      "jobs_added": 88,
+      "jobs_updated": 1,
+      "checked_at": "2026-10-01T19:10:09.983814+00:00"
     }
   ]
 }

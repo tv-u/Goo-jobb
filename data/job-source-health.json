@@ -1,6 +1,6 @@
 {
   "version": "3.0.0",
-  "generatedAt": "2026-10-02T13:56:31.854729+00:00",
+  "generatedAt": "2026-10-02T23:02:42.397195+00:00",
   "sourceCount": 20,
   "healthySources": 17,
   "failedSources": 3,
@@ -20,7 +20,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 99,
-      "durationMs": 532
+      "durationMs": 704
     },
     {
       "id": "remoteok-rss",
@@ -30,7 +30,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 58,
+      "durationMs": 164,
       "error": "HTTP Error 410: Gone"
     },
     {
@@ -40,8 +40,8 @@
       "url": "https://weworkremotely.com/remote-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 89,
-      "durationMs": 801
+      "count": 90,
+      "durationMs": 1390
     },
     {
       "id": "wwr-programming",
@@ -51,7 +51,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 25,
-      "durationMs": 121
+      "durationMs": 486
     },
     {
       "id": "wwr-fullstack",
@@ -71,7 +71,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 5,
-      "durationMs": 122
+      "durationMs": 214
     },
     {
       "id": "wwr-frontend",
@@ -80,8 +80,8 @@
       "url": "https://weworkremotely.com/categories/remote-front-end-programming-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 4,
-      "durationMs": 72
+      "count": 5,
+      "durationMs": 237
     },
     {
       "id": "wwr-devops",
@@ -91,7 +91,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 15,
-      "durationMs": 123
+      "durationMs": 196
     },
     {
       "id": "wwr-design",
@@ -101,7 +101,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 23,
-      "durationMs": 170
+      "durationMs": 291
     },
     {
       "id": "wwr-support",
@@ -111,7 +111,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 36,
-      "durationMs": 217
+      "durationMs": 314
     },
     {
       "id": "wwr-sales",
@@ -120,8 +120,8 @@
       "url": "https://weworkremotely.com/categories/remote-sales-and-marketing-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 78,
-      "durationMs": 313
+      "count": 77,
+      "durationMs": 447
     },
     {
       "id": "wwr-management",
@@ -131,7 +131,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 17,
-      "durationMs": 126
+      "durationMs": 471
     },
     {
       "id": "wwr-product",
@@ -141,7 +141,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 14,
-      "durationMs": 473
+      "durationMs": 679
     },
     {
       "id": "wwr-other",
@@ -151,7 +151,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 64,
-      "durationMs": 433
+      "durationMs": 620
     },
     {
       "id": "remotive",
@@ -161,7 +161,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 320,
+      "durationMs": 295,
       "error": "HTTP Error 404: Not Found"
     },
     {
@@ -171,8 +171,8 @@
       "url": "https://www.arbeitnow.com/api/job-board-api",
       "ok": true,
       "httpStatus": 200,
-      "count": 326,
-      "durationMs": 439
+      "count": 325,
+      "durationMs": 559
     },
     {
       "id": "himalayas",
@@ -182,7 +182,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 20,
-      "durationMs": 110
+      "durationMs": 199
     },
     {
       "id": "jobicy",
@@ -192,7 +192,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 200,
-      "durationMs": 338
+      "durationMs": 1706
     },
     {
       "id": "workingnomads",
@@ -202,7 +202,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 128,
+      "durationMs": 709,
       "error": "not well-formed (invalid token): line 10, column 18"
     },
     {
@@ -213,7 +213,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 0,
-      "durationMs": 48
+      "durationMs": 136
     }
   ]
 }

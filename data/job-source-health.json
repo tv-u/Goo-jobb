@@ -1,6 +1,6 @@
 {
   "version": "3.0.0",
-  "generatedAt": "2026-10-03T17:27:34.867465+00:00",
+  "generatedAt": "2026-10-03T22:10:58.144824+00:00",
   "sourceCount": 20,
   "healthySources": 17,
   "failedSources": 3,
@@ -20,7 +20,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 99,
-      "durationMs": 623
+      "durationMs": 1031
     },
     {
       "id": "remoteok-rss",
@@ -30,7 +30,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 35,
+      "durationMs": 232,
       "error": "HTTP Error 410: Gone"
     },
     {
@@ -41,7 +41,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 89,
-      "durationMs": 866
+      "durationMs": 1171
     },
     {
       "id": "wwr-programming",
@@ -51,7 +51,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 25,
-      "durationMs": 125
+      "durationMs": 225
     },
     {
       "id": "wwr-fullstack",
@@ -61,7 +61,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 45,
-      "durationMs": 215
+      "durationMs": 439
     },
     {
       "id": "wwr-backend",
@@ -71,7 +71,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 4,
-      "durationMs": 69
+      "durationMs": 140
     },
     {
       "id": "wwr-frontend",
@@ -81,7 +81,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 5,
-      "durationMs": 87
+      "durationMs": 294
     },
     {
       "id": "wwr-devops",
@@ -91,7 +91,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 17,
-      "durationMs": 132
+      "durationMs": 212
     },
     {
       "id": "wwr-design",
@@ -101,7 +101,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 23,
-      "durationMs": 192
+      "durationMs": 265
     },
     {
       "id": "wwr-support",
@@ -111,7 +111,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 32,
-      "durationMs": 193
+      "durationMs": 399
     },
     {
       "id": "wwr-sales",
@@ -121,7 +121,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 76,
-      "durationMs": 325
+      "durationMs": 462
     },
     {
       "id": "wwr-management",
@@ -131,7 +131,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 19,
-      "durationMs": 124
+      "durationMs": 202
     },
     {
       "id": "wwr-product",
@@ -141,7 +141,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 16,
-      "durationMs": 492
+      "durationMs": 661
     },
     {
       "id": "wwr-other",
@@ -151,7 +151,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 66,
-      "durationMs": 298
+      "durationMs": 401
     },
     {
       "id": "remotive",
@@ -161,7 +161,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 204,
+      "durationMs": 267,
       "error": "HTTP Error 404: Not Found"
     },
     {
@@ -172,7 +172,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 325,
-      "durationMs": 587
+      "durationMs": 463
     },
     {
       "id": "himalayas",
@@ -182,7 +182,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 20,
-      "durationMs": 195
+      "durationMs": 155
     },
     {
       "id": "jobicy",
@@ -192,7 +192,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 200,
-      "durationMs": 360
+      "durationMs": 383
     },
     {
       "id": "workingnomads",
@@ -202,7 +202,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 205,
+      "durationMs": 680,
       "error": "not well-formed (invalid token): line 10, column 18"
     },
     {
@@ -213,7 +213,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 0,
-      "durationMs": 68
+      "durationMs": 75
     }
   ]
 }

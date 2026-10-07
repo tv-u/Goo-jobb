@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T13:26:08.382387+00:00",
+  "updated_at": "2026-10-07T13:32:03.877007+00:00",
   "sources": [
     {
       "source": "arbeitnow",
@@ -19,8 +19,9 @@
     },
     {
       "source": "jobicy",
-      "status": "ok",
-      "jobs": 0
+      "status": "error",
+      "jobs": 0,
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "source": "himalayas",

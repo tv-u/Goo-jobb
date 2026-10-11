@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11T12:52:07.265837+00:00",
+  "updated_at": "2026-10-11T12:58:24.944574+00:00",
   "sources": [
     {
       "source": "arbeitnow",
@@ -29,8 +29,9 @@
     },
     {
       "source": "weworkremotely",
-      "status": "ok",
-      "jobs": 89
+      "status": "error",
+      "jobs": 0,
+      "error": "The read operation timed out"
     }
   ]
 }

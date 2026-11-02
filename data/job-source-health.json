@@ -1,6 +1,6 @@
 {
   "version": "3.0.0",
-  "generatedAt": "2026-11-02T07:45:14.012702+00:00",
+  "generatedAt": "2026-11-02T22:22:19.373893+00:00",
   "sourceCount": 20,
   "healthySources": 17,
   "failedSources": 3,
@@ -20,7 +20,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 99,
-      "durationMs": 538
+      "durationMs": 663
     },
     {
       "id": "remoteok-rss",
@@ -30,7 +30,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 33,
+      "durationMs": 123,
       "error": "HTTP Error 410: Gone"
     },
     {
@@ -41,7 +41,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 100,
-      "durationMs": 549
+      "durationMs": 676
     },
     {
       "id": "wwr-programming",
@@ -51,7 +51,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 25,
-      "durationMs": 138
+      "durationMs": 262
     },
     {
       "id": "wwr-fullstack",
@@ -60,8 +60,8 @@
       "url": "https://weworkremotely.com/categories/remote-full-stack-programming-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 89,
-      "durationMs": 342
+      "count": 92,
+      "durationMs": 451
     },
     {
       "id": "wwr-backend",
@@ -71,7 +71,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 12,
-      "durationMs": 93
+      "durationMs": 202
     },
     {
       "id": "wwr-frontend",
@@ -81,7 +81,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 10,
-      "durationMs": 107
+      "durationMs": 164
     },
     {
       "id": "wwr-devops",
@@ -91,7 +91,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 32,
-      "durationMs": 206
+      "durationMs": 233
     },
     {
       "id": "wwr-design",
@@ -101,7 +101,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 18,
-      "durationMs": 127
+      "durationMs": 177
     },
     {
       "id": "wwr-support",
@@ -110,8 +110,8 @@
       "url": "https://weworkremotely.com/categories/remote-customer-support-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 79,
-      "durationMs": 284
+      "count": 81,
+      "durationMs": 477
     },
     {
       "id": "wwr-sales",
@@ -120,8 +120,8 @@
       "url": "https://weworkremotely.com/categories/remote-sales-and-marketing-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 135,
-      "durationMs": 519
+      "count": 138,
+      "durationMs": 556
     },
     {
       "id": "wwr-management",
@@ -131,7 +131,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 23,
-      "durationMs": 148
+      "durationMs": 216
     },
     {
       "id": "wwr-product",
@@ -141,7 +141,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 29,
-      "durationMs": 197
+      "durationMs": 236
     },
     {
       "id": "wwr-other",
@@ -151,7 +151,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 85,
-      "durationMs": 299
+      "durationMs": 529
     },
     {
       "id": "remotive",
@@ -161,7 +161,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 3090,
+      "durationMs": 2979,
       "error": "HTTP Error 404: Not Found"
     },
     {
@@ -172,7 +172,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 300,
-      "durationMs": 348
+      "durationMs": 756
     },
     {
       "id": "himalayas",
@@ -182,7 +182,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 20,
-      "durationMs": 108
+      "durationMs": 195
     },
     {
       "id": "jobicy",
@@ -192,7 +192,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 100,
-      "durationMs": 679
+      "durationMs": 1025
     },
     {
       "id": "workingnomads",
@@ -202,7 +202,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 188,
+      "durationMs": 485,
       "error": "not well-formed (invalid token): line 10, column 18"
     },
     {
@@ -213,7 +213,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 0,
-      "durationMs": 62
+      "durationMs": 137
     }
   ]
 }

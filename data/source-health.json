@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-22T19:49:04.407438+00:00",
+  "updated_at": "2026-11-22T23:42:29.305906+00:00",
   "total_sources": 9,
-  "live_sources": 8,
-  "failed_sources": 1,
+  "live_sources": 7,
+  "failed_sources": 2,
   "sources": [
     {
       "id": "arbeitnow",
@@ -10,9 +10,9 @@
       "status": "LIVE",
       "http_status": 200,
       "jobs_seen": 300,
-      "jobs_added": 300,
-      "jobs_updated": 0,
-      "checked_at": "2026-11-22T19:49:02.634268+00:00"
+      "jobs_added": 70,
+      "jobs_updated": 230,
+      "checked_at": "2026-11-22T23:42:27.736751+00:00"
     },
     {
       "id": "remoteok",
@@ -20,9 +20,9 @@
       "status": "LIVE",
       "http_status": 200,
       "jobs_seen": 100,
-      "jobs_added": 100,
-      "jobs_updated": 0,
-      "checked_at": "2026-11-22T19:49:02.913321+00:00"
+      "jobs_added": 0,
+      "jobs_updated": 100,
+      "checked_at": "2026-11-22T23:42:27.992328+00:00"
     },
     {
       "id": "remotive",
@@ -30,9 +30,9 @@
       "status": "LIVE",
       "http_status": 200,
       "jobs_seen": 16,
-      "jobs_added": 16,
-      "jobs_updated": 0,
-      "checked_at": "2026-11-22T19:49:03.361285+00:00"
+      "jobs_added": 0,
+      "jobs_updated": 16,
+      "checked_at": "2026-11-22T23:42:28.347492+00:00"
     },
     {
       "id": "jobicy",
@@ -42,7 +42,7 @@
       "jobs_seen": 0,
       "jobs_added": 0,
       "jobs_updated": 0,
-      "checked_at": "2026-11-22T19:49:03.446780+00:00"
+      "checked_at": "2026-11-22T23:42:28.377040+00:00"
     },
     {
       "id": "himalayas",
@@ -52,7 +52,7 @@
       "jobs_seen": 0,
       "jobs_added": 0,
       "jobs_updated": 0,
-      "checked_at": "2026-11-22T19:49:03.551206+00:00"
+      "checked_at": "2026-11-22T23:42:28.417453+00:00"
     },
     {
       "id": "workingnomads",
@@ -60,9 +60,9 @@
       "status": "LIVE",
       "http_status": 200,
       "jobs_seen": 35,
-      "jobs_added": 35,
-      "jobs_updated": 0,
-      "checked_at": "2026-11-22T19:49:03.606725+00:00"
+      "jobs_added": 0,
+      "jobs_updated": 35,
+      "checked_at": "2026-11-22T23:42:28.447075+00:00"
     },
     {
       "id": "remotejobs",
@@ -72,17 +72,17 @@
       "jobs_added": 0,
       "jobs_updated": 0,
       "error": "HTTP Error 403: Forbidden",
-      "checked_at": "2026-11-22T19:49:03.714745+00:00"
+      "checked_at": "2026-11-22T23:42:28.504108+00:00"
     },
     {
       "id": "jobspresso",
       "name": "Jobspresso",
-      "status": "LIVE",
-      "http_status": 200,
+      "status": "ERROR",
       "jobs_seen": 0,
       "jobs_added": 0,
       "jobs_updated": 0,
-      "checked_at": "2026-11-22T19:49:03.888964+00:00"
+      "error": "HTTP Error 403: Forbidden",
+      "checked_at": "2026-11-22T23:42:28.593959+00:00"
     },
     {
       "id": "wwr",
@@ -90,9 +90,9 @@
       "status": "LIVE",
       "http_status": 200,
       "jobs_seen": 100,
-      "jobs_added": 99,
-      "jobs_updated": 1,
-      "checked_at": "2026-11-22T19:49:03.929250+00:00"
+      "jobs_added": 0,
+      "jobs_updated": 100,
+      "checked_at": "2026-11-22T23:42:28.610924+00:00"
     }
   ]
 }

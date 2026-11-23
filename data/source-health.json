@@ -1,36 +1,98 @@
 {
-  "updated_at": "2026-11-23T07:47:24.346024+00:00",
+  "updated_at": "2026-11-23T07:51:09.048373+00:00",
+  "total_sources": 9,
+  "live_sources": 8,
+  "failed_sources": 1,
   "sources": [
     {
-      "source": "arbeitnow",
-      "status": "ok",
-      "jobs": 0
+      "id": "arbeitnow",
+      "name": "Arbeitnow",
+      "status": "LIVE",
+      "http_status": 200,
+      "jobs_seen": 300,
+      "jobs_added": 300,
+      "jobs_updated": 0,
+      "checked_at": "2026-11-23T07:51:06.728896+00:00"
     },
     {
-      "source": "remoteok",
-      "status": "error",
-      "jobs": 0,
-      "error": "'list' object has no attribute 'get'"
+      "id": "remoteok",
+      "name": "Remote OK",
+      "status": "LIVE",
+      "http_status": 200,
+      "jobs_seen": 100,
+      "jobs_added": 100,
+      "jobs_updated": 0,
+      "checked_at": "2026-11-23T07:51:06.888268+00:00"
     },
     {
-      "source": "remotive",
-      "status": "ok",
-      "jobs": 16
+      "id": "remotive",
+      "name": "Remotive",
+      "status": "LIVE",
+      "http_status": 200,
+      "jobs_seen": 16,
+      "jobs_added": 16,
+      "jobs_updated": 0,
+      "checked_at": "2026-11-23T07:51:07.528771+00:00"
     },
     {
-      "source": "jobicy",
-      "status": "ok",
-      "jobs": 0
+      "id": "jobicy",
+      "name": "Jobicy",
+      "status": "LIVE",
+      "http_status": 200,
+      "jobs_seen": 0,
+      "jobs_added": 0,
+      "jobs_updated": 0,
+      "checked_at": "2026-11-23T07:51:07.654658+00:00"
     },
     {
-      "source": "himalayas",
-      "status": "ok",
-      "jobs": 0
+      "id": "himalayas",
+      "name": "Himalayas",
+      "status": "LIVE",
+      "http_status": 200,
+      "jobs_seen": 0,
+      "jobs_added": 0,
+      "jobs_updated": 0,
+      "checked_at": "2026-11-23T07:51:07.762984+00:00"
     },
     {
-      "source": "weworkremotely",
-      "status": "ok",
-      "jobs": 100
+      "id": "workingnomads",
+      "name": "Working Nomads",
+      "status": "LIVE",
+      "http_status": 200,
+      "jobs_seen": 35,
+      "jobs_added": 35,
+      "jobs_updated": 0,
+      "checked_at": "2026-11-23T07:51:07.915255+00:00"
+    },
+    {
+      "id": "remotejobs",
+      "name": "Remote Jobs",
+      "status": "ERROR",
+      "jobs_seen": 0,
+      "jobs_added": 0,
+      "jobs_updated": 0,
+      "error": "HTTP Error 403: Forbidden",
+      "checked_at": "2026-11-23T07:51:08.193163+00:00"
+    },
+    {
+      "id": "jobspresso",
+      "name": "Jobspresso",
+      "status": "LIVE",
+      "http_status": 200,
+      "jobs_seen": 0,
+      "jobs_added": 0,
+      "jobs_updated": 0,
+      "checked_at": "2026-11-23T07:51:08.430674+00:00"
+    },
+    {
+      "id": "wwr",
+      "name": "We Work Remotely",
+      "status": "LIVE",
+      "http_status": 200,
+      "jobs_seen": 100,
+      "jobs_added": 99,
+      "jobs_updated": 1,
+      "checked_at": "2026-11-23T07:51:08.507937+00:00"
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
   "version": "3.0.0",
-  "generatedAt": "2026-11-23T09:12:30.584378+00:00",
+  "generatedAt": "2026-11-24T01:00:50.873496+00:00",
   "sourceCount": 20,
-  "healthySources": 17,
-  "failedSources": 3,
+  "healthySources": 16,
+  "failedSources": 4,
   "networkGroups": [
     "arbeitnow",
     "himalayas",
@@ -20,7 +20,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 100,
-      "durationMs": 530
+      "durationMs": 1318
     },
     {
       "id": "remoteok-rss",
@@ -30,7 +30,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 80,
+      "durationMs": 128,
       "error": "HTTP Error 410: Gone"
     },
     {
@@ -41,7 +41,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 100,
-      "durationMs": 994
+      "durationMs": 836
     },
     {
       "id": "wwr-programming",
@@ -51,17 +51,18 @@
       "ok": true,
       "httpStatus": 200,
       "count": 25,
-      "durationMs": 473
+      "durationMs": 285
     },
     {
       "id": "wwr-fullstack",
       "source": "WWR Full Stack",
       "networkGroup": "wwr",
       "url": "https://weworkremotely.com/categories/remote-full-stack-programming-jobs.rss",
-      "ok": true,
-      "httpStatus": 200,
-      "count": 169,
-      "durationMs": 882
+      "ok": false,
+      "httpStatus": null,
+      "count": 0,
+      "durationMs": 30033,
+      "error": "The read operation timed out"
     },
     {
       "id": "wwr-backend",
@@ -71,7 +72,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 17,
-      "durationMs": 596
+      "durationMs": 1882
     },
     {
       "id": "wwr-frontend",
@@ -81,7 +82,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 19,
-      "durationMs": 234
+      "durationMs": 335
     },
     {
       "id": "wwr-devops",
@@ -90,8 +91,8 @@
       "url": "https://weworkremotely.com/categories/remote-devops-sysadmin-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 62,
-      "durationMs": 845
+      "count": 69,
+      "durationMs": 1009
     },
     {
       "id": "wwr-design",
@@ -100,8 +101,8 @@
       "url": "https://weworkremotely.com/categories/remote-design-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 34,
-      "durationMs": 448
+      "count": 35,
+      "durationMs": 283
     },
     {
       "id": "wwr-support",
@@ -110,8 +111,8 @@
       "url": "https://weworkremotely.com/categories/remote-customer-support-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 97,
-      "durationMs": 636
+      "count": 106,
+      "durationMs": 897
     },
     {
       "id": "wwr-sales",
@@ -120,8 +121,8 @@
       "url": "https://weworkremotely.com/categories/remote-sales-and-marketing-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 247,
-      "durationMs": 1517
+      "count": 266,
+      "durationMs": 1719
     },
     {
       "id": "wwr-management",
@@ -130,8 +131,8 @@
       "url": "https://weworkremotely.com/categories/remote-management-and-finance-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 85,
-      "durationMs": 661
+      "count": 92,
+      "durationMs": 712
     },
     {
       "id": "wwr-product",
@@ -140,8 +141,8 @@
       "url": "https://weworkremotely.com/categories/remote-product-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 52,
-      "durationMs": 868
+      "count": 60,
+      "durationMs": 2276
     },
     {
       "id": "wwr-other",
@@ -150,8 +151,8 @@
       "url": "https://weworkremotely.com/categories/all-other-remote-jobs.rss",
       "ok": true,
       "httpStatus": 200,
-      "count": 118,
-      "durationMs": 676
+      "count": 134,
+      "durationMs": 755
     },
     {
       "id": "remotive",
@@ -161,7 +162,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 246,
+      "durationMs": 681,
       "error": "HTTP Error 404: Not Found"
     },
     {
@@ -172,7 +173,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 300,
-      "durationMs": 382
+      "durationMs": 654
     },
     {
       "id": "himalayas",
@@ -182,7 +183,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 20,
-      "durationMs": 95
+      "durationMs": 316
     },
     {
       "id": "jobicy",
@@ -192,7 +193,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 100,
-      "durationMs": 368
+      "durationMs": 315
     },
     {
       "id": "workingnomads",
@@ -202,7 +203,7 @@
       "ok": false,
       "httpStatus": null,
       "count": 0,
-      "durationMs": 441,
+      "durationMs": 748,
       "error": "not well-formed (invalid token): line 6, column 21"
     },
     {
@@ -213,7 +214,7 @@
       "ok": true,
       "httpStatus": 200,
       "count": 0,
-      "durationMs": 81
+      "durationMs": 149
     }
   ]
 }

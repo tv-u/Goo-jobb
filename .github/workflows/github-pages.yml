@@ -30,6 +30,10 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Sync public job feeds
+        timeout-minutes: 15
+        run: python scripts/live_sync.py
+
       - name: Validate job data
         run: python scripts/validate_site.py
 

@@ -5,6 +5,14 @@ on:
     - cron: "*/30 * * * *"
   push:
     branches: [main]
+    paths-ignore:
+      - 'jobs-worldwide.json'
+      - 'data/**'
+      - 'scripts/**'
+concurrency:
+  group: goo-jobb-main-data-writes
+  cancel-in-progress: false
+
 permissions:
   contents: write
   pages: write
@@ -29,4 +37,10 @@ jobs:
           git config user.email "goo-jobb-bot@users.noreply.github.com"
           git add jobs-worldwide.json data/ scripts/
           git diff --cached --quiet || git commit -m "chore: refresh worldwide live jobs"
-          git push
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then break; fi
+            if [ \"$attempt\" -eq 4 ]; then exit 1; fi
+            sleep 5
+          done

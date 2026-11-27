@@ -1,40 +1,122 @@
 name: GOO-JOBB GitHub Pages
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
   schedule:
     - cron: "23 */6 * * *"
+
+concurrency:
+  group: goo-jobb-pages-production
+  cancel-in-progress: false
+
 permissions:
-  contents: write
-  actions: read
+  contents: read
   pages: write
   id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Sync worldwide public jobs
-        run: python scripts/sync_jobs.py
-      - name: Validate site
+
+      - name: Validate job data
         run: python scripts/validate_site.py
-      - name: Commit generated data
-        run: |
-          git config user.name "GOO-JOBB Bot"
-          git config user.email "goo-jobb-bot@users.noreply.github.com"
-          git add data jobs-worldwide.json robots.txt sitemap.xml
-          git diff --cached --quiet || git commit -m "chore: refresh worldwide jobs"
-          git push
-      - name: Setup Pages
+
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+
+      - name: Assemble static website
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          rm -rf _site
+          mkdir -p _site
+          python - <<'PY'
+          from pathlib import Path
+          import shutil, subprocess
+
+          root = Path.cwd()
+          out = root / "_site"
+          excluded = {
+              ".git", ".github", "node_modules", "_site",
+              "scripts", "migrations", "functions"
+          }
+          excluded_files = {
+              ".gitignore", "README.md", "package.json",
+              "package-lock.json", "schema.sql", "wrangler.toml"
+          }
+          tracked = subprocess.check_output(
+              ["git", "ls-files", "-z"]
+          ).decode().split("\0")
+
+          count = 0
+          for name in tracked:
+              if not name:
+                  continue
+              p = Path(name)
+              if p.parts[0] in excluded:
+                  continue
+              if p.name in excluded_files:
+                  continue
+              if ".conflict-backup-" in p.name:
+                  continue
+              src = root / p
+              if not src.is_file():
+                  continue
+              dst = out / p
+              dst.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copy2(src, dst)
+              count += 1
+
+          for required in (
+              "index.html", "jobs-worldwide.json",
+              "robots.txt", "sitemap.xml"
+          ):
+              p = out / required
+              if not p.is_file() or p.stat().st_size == 0:
+                  raise SystemExit("Missing required file: " + required)
+
+          (out / ".nojekyll").touch()
+          print("STATIC_FILES:", count)
+          print("SITE_SIZE:", sum(
+              p.stat().st_size for p in out.rglob("*") if p.is_file()
+          ))
+          PY
+
+      - name: Verify website output
+        run: |
+          set -Eeuo pipefail
+          test -s _site/index.html
+          test -s _site/jobs-worldwide.json
+          grep -qi '<html' _site/index.html
+          echo "PAGES_OUTPUT_VALID"
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."
-      - name: Deploy Pages
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v4

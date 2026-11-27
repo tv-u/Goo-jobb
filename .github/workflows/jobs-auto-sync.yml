@@ -6,12 +6,12 @@ on:
 
   workflow_dispatch:
 
+concurrency:
+  group: goo-jobb-main-data-writes
+  cancel-in-progress: false
+
 permissions:
   contents: write
-
-concurrency:
-  group: goo-jobb-live-sync
-  cancel-in-progress: true
 
 jobs:
 
